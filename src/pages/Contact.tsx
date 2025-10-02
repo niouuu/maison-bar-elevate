@@ -269,6 +269,7 @@ const Contact = () => {
               </p>
             </div>
           </motion.div>
+          </div>
         </div>
       </section>
 
