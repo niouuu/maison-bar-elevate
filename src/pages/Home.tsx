@@ -54,7 +54,7 @@ const Home = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-6 text-lg group"
+                className="bg-white text-black hover:bg-black hover:text-white border-2 border-black px-8 py-6 text-lg group transition-all duration-300"
               >
                 Book Now
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -105,8 +105,8 @@ const Home = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Sparkles className="text-accent-foreground" size={32} />
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+                <Sparkles className="text-black" size={32} />
               </div>
               <h3 className="font-playfair text-2xl font-semibold mb-4 text-primary-foreground">
                 Premium Experience
@@ -118,8 +118,8 @@ const Home = () => {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Clock className="text-accent-foreground" size={32} />
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="text-black" size={32} />
               </div>
               <h3 className="font-playfair text-2xl font-semibold mb-4 text-primary-foreground">
                 Fully Portable
@@ -131,8 +131,8 @@ const Home = () => {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="text-accent-foreground" size={32} />
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="text-black" size={32} />
               </div>
               <h3 className="font-playfair text-2xl font-semibold mb-4 text-primary-foreground">
                 Customizable Service
@@ -174,7 +174,7 @@ const Home = () => {
               <Link to="/services">
                 <Button
                   size="lg"
-                  className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                  className="bg-white text-black hover:bg-black hover:text-white border-2 border-black transition-all duration-300"
                 >
                   View Services
                 </Button>
@@ -182,7 +182,7 @@ const Home = () => {
               <Link to="/contact">
                 <Button
                   size="lg"
-                  className="bg-accent text-accent-foreground hover:bg-accent/90"
+                  className="bg-black text-white hover:bg-white hover:text-black border-2 border-black transition-all duration-300"
                 >
                   Contact Us
                 </Button>
