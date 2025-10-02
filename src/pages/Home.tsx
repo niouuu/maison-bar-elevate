@@ -16,7 +16,7 @@ const Home = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div
           className="absolute inset-0 bg-cover bg-center grayscale-hover"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -28,13 +28,13 @@ const Home = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="relative z-10 text-center px-4 max-w-4xl mx-auto"
+          className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto py-16"
         >
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="font-playfair text-5xl md:text-7xl font-bold text-primary-foreground mb-6 luxury-text-shadow"
+            className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 luxury-text-shadow"
           >
             Maison du Bar
           </motion.h1>
@@ -42,7 +42,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-xl md:text-2xl text-primary-foreground/90 mb-8 font-light"
+            className="text-lg sm:text-xl md:text-2xl text-primary-foreground/90 mb-6 sm:mb-8 font-light px-4"
           >
             Luxury Mobile Bar – Anywhere, Anytime
           </motion.p>
@@ -54,7 +54,7 @@ const Home = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-white text-black hover:bg-black hover:text-white border-2 border-black px-8 py-6 text-lg group transition-all duration-300"
+                className="bg-white text-black hover:bg-black hover:text-white border-2 border-black px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg group transition-all duration-300 w-full sm:w-auto"
               >
                 Book Now
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -81,13 +81,13 @@ const Home = () => {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-20 bg-secondary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6 text-secondary-foreground">
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-secondary-foreground">
               Elevate Every Occasion
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
               Maison du Bar brings the luxury bar experience directly to your event.
               Whether it's a wedding, corporate gathering, or private celebration,
               our mobile bar service delivers exceptional cocktails and impeccable
@@ -98,46 +98,46 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4">
-          <h2 className="font-playfair text-4xl font-bold text-center mb-16 text-primary-foreground">
+      <section className="py-12 sm:py-16 md:py-20 bg-primary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 sm:mb-12 md:mb-16 text-primary-foreground">
             Why Choose Us
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 max-w-6xl mx-auto">
             <div className="text-center">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <Sparkles className="text-black" size={32} />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <Sparkles className="text-black" size={28} />
               </div>
-              <h3 className="font-playfair text-2xl font-semibold mb-4 text-primary-foreground">
+              <h3 className="font-playfair text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-primary-foreground">
                 Premium Experience
               </h3>
-              <p className="text-primary-foreground/80">
+              <p className="text-sm sm:text-base text-primary-foreground/80 px-2">
                 Expert bartenders crafting signature cocktails with top-shelf spirits
                 and fresh ingredients.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <Clock className="text-black" size={32} />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <Clock className="text-black" size={28} />
               </div>
-              <h3 className="font-playfair text-2xl font-semibold mb-4 text-primary-foreground">
+              <h3 className="font-playfair text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-primary-foreground">
                 Fully Portable
               </h3>
-              <p className="text-primary-foreground/80">
+              <p className="text-sm sm:text-base text-primary-foreground/80 px-2">
                 Our StationDeus bar adapts to any venue – indoors or outdoors,
                 bringing luxury wherever you need it.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="text-black" size={32} />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <Users className="text-black" size={28} />
               </div>
-              <h3 className="font-playfair text-2xl font-semibold mb-4 text-primary-foreground">
+              <h3 className="font-playfair text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-primary-foreground">
                 Customizable Service
               </h3>
-              <p className="text-primary-foreground/80">
+              <p className="text-sm sm:text-base text-primary-foreground/80 px-2">
                 Choose from our curated service packs or create a bespoke experience
                 tailored to your event.
               </p>
@@ -156,33 +156,34 @@ const Home = () => {
       <Testimonials />
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-12 sm:py-16 md:py-20 bg-primary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6 text-primary-foreground">
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-primary-foreground">
               Ready to Elevate Your Event?
             </h2>
-            <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Let's create an unforgettable bar experience for your guests.
+            <p className="text-base sm:text-lg text-primary-foreground/80 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+              Let's discuss your vision and create an unforgettable bar experience
+              for your guests.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/services">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto px-4">
+              <Link to="/services" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="bg-white text-black hover:bg-black hover:text-white border-2 border-black transition-all duration-300"
+                  className="bg-white text-black hover:bg-black hover:text-white border-2 border-black transition-all duration-300 w-full sm:w-auto"
                 >
                   View Services
                 </Button>
               </Link>
-              <Link to="/contact">
+              <Link to="/contact" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="bg-black text-white hover:bg-white hover:text-black border-2 border-black transition-all duration-300"
+                  className="bg-black text-white hover:bg-white hover:text-black border-2 border-black transition-all duration-300 w-full sm:w-auto"
                 >
                   Contact Us
                 </Button>

@@ -57,17 +57,17 @@ const Contact = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-primary">
-        <div className="container mx-auto px-4">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-14 md:pb-16 bg-primary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-playfair text-5xl md:text-6xl font-bold text-center mb-6 text-primary-foreground">
+            <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 sm:mb-6 text-primary-foreground">
               Get In Touch
             </h1>
-            <p className="text-xl text-center text-primary-foreground/80 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-center text-primary-foreground/80 max-w-3xl mx-auto px-4">
               Ready to bring luxury bar service to your event? Let's start planning
               your perfect experience.
             </p>
@@ -76,9 +76,9 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+      <section className="py-12 sm:py-16 md:py-20 bg-secondary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -87,12 +87,12 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2"
           >
-            <div className="bg-card p-8 rounded-lg shadow-lg border border-border">
-              <h2 className="font-playfair text-3xl font-bold mb-6 text-card-foreground">
+            <div className="bg-card p-6 sm:p-8 rounded-lg shadow-lg border border-border">
+              <h2 className="font-playfair text-2xl sm:text-3xl font-bold mb-6 text-card-foreground">
                 Send Us a Message
               </h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <Label htmlFor="name">Name *</Label>
                       <Input
@@ -118,7 +118,7 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <Label htmlFor="phone">Phone</Label>
                       <Input
@@ -142,7 +142,7 @@ const Contact = () => {
                         <SelectTrigger className="mt-1">
                           <SelectValue placeholder="Select event type" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className="bg-card z-50">
                           <SelectItem value="wedding">Wedding</SelectItem>
                           <SelectItem value="corporate">Corporate Event</SelectItem>
                           <SelectItem value="birthday">Birthday Party</SelectItem>
@@ -153,7 +153,7 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <Label htmlFor="eventDate">Event Date</Label>
                       <Input
@@ -196,7 +196,7 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                    className="w-full bg-black text-white hover:bg-white hover:text-black border-2 border-black transition-all duration-300"
                   >
                     Send Inquiry
                   </Button>
@@ -210,44 +210,44 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
           >
-            <div className="bg-card p-8 rounded-lg shadow-lg border border-border">
-              <h2 className="font-playfair text-2xl font-bold mb-6 text-card-foreground">
+            <div className="bg-card p-6 sm:p-8 rounded-lg shadow-lg border border-border">
+              <h2 className="font-playfair text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-card-foreground">
                 Contact Information
               </h2>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <Mail className="text-accent flex-shrink-0 mt-1" size={20} />
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <Mail className="text-black flex-shrink-0 mt-1" size={20} />
                     <div>
-                      <p className="font-semibold text-card-foreground">Email</p>
+                      <p className="font-semibold text-card-foreground text-sm sm:text-base">Email</p>
                       <a
                         href="mailto:contact@maisondubar.com"
-                        className="text-muted-foreground hover:text-accent transition-colors"
+                        className="text-muted-foreground hover:text-black transition-colors text-sm sm:text-base"
                       >
                         contact@maisondubar.com
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <Phone className="text-accent flex-shrink-0 mt-1" size={20} />
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <Phone className="text-black flex-shrink-0 mt-1" size={20} />
                     <div>
-                      <p className="font-semibold text-card-foreground">Phone</p>
+                      <p className="font-semibold text-card-foreground text-sm sm:text-base">Phone</p>
                       <a
                         href="tel:+1234567890"
-                        className="text-muted-foreground hover:text-accent transition-colors"
+                        className="text-muted-foreground hover:text-black transition-colors text-sm sm:text-base"
                       >
                         +1 (234) 567-890
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <MapPin className="text-accent flex-shrink-0 mt-1" size={20} />
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <MapPin className="text-black flex-shrink-0 mt-1" size={20} />
                     <div>
-                      <p className="font-semibold text-card-foreground">Service Area</p>
-                      <p className="text-muted-foreground">
+                      <p className="font-semibold text-card-foreground text-sm sm:text-base">Service Area</p>
+                      <p className="text-muted-foreground text-sm sm:text-base">
                         Available nationwide for events
                       </p>
                     </div>
@@ -255,16 +255,16 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-primary p-6 rounded-lg shadow-lg">
-              <h3 className="font-playfair text-2xl font-bold mb-4 text-primary-foreground">
+            <div className="bg-primary p-5 sm:p-6 rounded-lg shadow-lg">
+              <h3 className="font-playfair text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-primary-foreground">
                 Business Hours
               </h3>
-                <div className="space-y-2 text-primary-foreground/80">
+                <div className="space-y-1 sm:space-y-2 text-primary-foreground/80 text-sm sm:text-base">
                   <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                   <p>Saturday: 10:00 AM - 4:00 PM</p>
                   <p>Sunday: By appointment</p>
                 </div>
-              <p className="mt-4 text-sm text-primary-foreground/60 italic">
+              <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-primary-foreground/60 italic">
                 Event services available 7 days a week
               </p>
             </div>
