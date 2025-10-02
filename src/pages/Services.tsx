@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
+import FAQ from "@/components/FAQ";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Services = () => {
   const services = [
@@ -101,6 +103,10 @@ const Services = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <FAQ />
+
+      <ScrollToTop />
       <Footer />
     </div>
   );

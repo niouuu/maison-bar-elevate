@@ -1,9 +1,17 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import { CheckCircle2 } from "lucide-react";
 import teamImage from "@/assets/about-team.jpg";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   const differentiators = [
     {
       title: "Portable Luxury Bar",
@@ -99,15 +107,18 @@ const About = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-secondary" ref={ref}>
         <div className="container mx-auto px-4">
           <h2 className="font-playfair text-4xl font-bold text-center mb-16 text-secondary-foreground">
             Why Choose Us
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {differentiators.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
                 className="bg-card p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-border"
               >
                 <div className="flex items-start space-x-4">
@@ -121,12 +132,13 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+      <ScrollToTop />
       <Footer />
     </div>
   );

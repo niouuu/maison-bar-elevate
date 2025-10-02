@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -12,8 +13,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { toast } from "sonner";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -57,13 +59,19 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-primary">
         <div className="container mx-auto px-4">
-          <h1 className="font-playfair text-5xl md:text-6xl font-bold text-center mb-6 text-primary-foreground">
-            Get in Touch
-          </h1>
-          <p className="text-xl text-center text-primary-foreground/80 max-w-3xl mx-auto">
-            Ready to bring luxury bar service to your event? Fill out the form below
-            and we'll create a custom proposal for you.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="font-playfair text-5xl md:text-6xl font-bold text-center mb-6 text-primary-foreground">
+              Get In Touch
+            </h1>
+            <p className="text-xl text-center text-primary-foreground/80 max-w-3xl mx-auto">
+              Ready to bring luxury bar service to your event? Let's start planning
+              your perfect experience.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -71,12 +79,18 @@ const Contact = () => {
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <div className="bg-card p-8 rounded-lg shadow-lg">
-                <h2 className="font-playfair text-3xl font-bold mb-6 text-card-foreground">
-                  Request a Quote
-                </h2>
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-2"
+          >
+            <div className="bg-card p-8 rounded-lg shadow-lg border border-border">
+              <h2 className="font-playfair text-3xl font-bold mb-6 text-card-foreground">
+                Send Us a Message
+              </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -186,16 +200,22 @@ const Contact = () => {
                   >
                     Send Inquiry
                   </Button>
-                </form>
-              </div>
+              </form>
             </div>
+          </motion.div>
 
-            {/* Contact Info Sidebar */}
-            <div className="space-y-8">
-              <div className="bg-card p-6 rounded-lg shadow-lg">
-                <h3 className="font-playfair text-2xl font-bold mb-6 text-card-foreground">
-                  Contact Information
-                </h3>
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
+            <div className="bg-card p-8 rounded-lg shadow-lg border border-border">
+              <h2 className="font-playfair text-2xl font-bold mb-6 text-card-foreground">
+                Contact Information
+              </h2>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
                     <Mail className="text-accent flex-shrink-0 mt-1" size={20} />
@@ -232,27 +252,27 @@ const Contact = () => {
                       </p>
                     </div>
                   </div>
-                </div>
               </div>
+            </div>
 
-              <div className="bg-primary p-6 rounded-lg shadow-lg">
-                <h3 className="font-playfair text-2xl font-bold mb-4 text-primary-foreground">
-                  Business Hours
-                </h3>
+            <div className="bg-primary p-6 rounded-lg shadow-lg">
+              <h3 className="font-playfair text-2xl font-bold mb-4 text-primary-foreground">
+                Business Hours
+              </h3>
                 <div className="space-y-2 text-primary-foreground/80">
                   <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                   <p>Saturday: 10:00 AM - 4:00 PM</p>
                   <p>Sunday: By appointment</p>
                 </div>
-                <p className="mt-4 text-sm text-primary-foreground/60 italic">
-                  Event services available 7 days a week
-                </p>
-              </div>
+              <p className="mt-4 text-sm text-primary-foreground/60 italic">
+                Event services available 7 days a week
+              </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
+      <ScrollToTop />
       <Footer />
     </div>
   );

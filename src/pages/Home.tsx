@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Users, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-bar.jpg";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Statistics from "@/components/Statistics";
+import Testimonials from "@/components/Testimonials";
+import FeaturedEvents from "@/components/FeaturedEvents";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Home = () => {
   return (
@@ -19,23 +24,60 @@ const Home = () => {
           <div className="absolute inset-0 bg-primary/60" />
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="font-playfair text-5xl md:text-7xl font-bold text-primary-foreground mb-6 luxury-text-shadow">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="relative z-10 text-center px-4 max-w-4xl mx-auto"
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="font-playfair text-5xl md:text-7xl font-bold text-primary-foreground mb-6 luxury-text-shadow"
+          >
             Maison du Bar
-          </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 font-light">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="text-xl md:text-2xl text-primary-foreground/90 mb-8 font-light"
+          >
             Luxury Mobile Bar – Anywhere, Anytime
-          </p>
-          <Link to="/contact">
-            <Button
-              size="lg"
-              className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-6 text-lg group"
-            >
-              Book Now
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-        </div>
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+          >
+            <Link to="/contact">
+              <Button
+                size="lg"
+                className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-6 text-lg group"
+              >
+                Book Now
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+          </motion.div>
+        </motion.div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        >
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex items-start justify-center p-2"
+          >
+            <motion.div className="w-1 h-2 bg-primary-foreground/50 rounded-full" />
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Introduction Section */}
@@ -104,36 +146,53 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Statistics Section */}
+      <Statistics />
+
+      {/* Featured Events */}
+      <FeaturedEvents />
+
+      {/* Testimonials */}
+      <Testimonials />
+
       {/* CTA Section */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6 text-secondary-foreground">
-            Ready to Elevate Your Event?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let's create an unforgettable bar experience for your guests.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/services">
-              <Button
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90"
-              >
-                View Services
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button
-                size="lg"
-                className="bg-accent text-accent-foreground hover:bg-accent/90"
-              >
-                Contact Us
-              </Button>
-            </Link>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6 text-primary-foreground">
+              Ready to Elevate Your Event?
+            </h2>
+            <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+              Let's create an unforgettable bar experience for your guests.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/services">
+                <Button
+                  size="lg"
+                  className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                >
+                  View Services
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button
+                  size="lg"
+                  className="bg-accent text-accent-foreground hover:bg-accent/90"
+                >
+                  Contact Us
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
+      <ScrollToTop />
       <Footer />
     </div>
   );
