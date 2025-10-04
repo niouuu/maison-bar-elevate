@@ -1,152 +1,132 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Clock, Users, Sparkles } from "lucide-react";
+import { Sparkles, Truck, Settings } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-bar.jpg";
+import { useInView } from "react-intersection-observer";
+import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Statistics from "@/components/Statistics";
-import Testimonials from "@/components/Testimonials";
 import FeaturedEvents from "@/components/FeaturedEvents";
+import Testimonials from "@/components/Testimonials";
 import ScrollToTop from "@/components/ScrollToTop";
+import heroImage from "@/assets/hero-bar.jpg";
 
 const Home = () => {
+  const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [valueRef, valueInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [ctaRef, ctaInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Navbar />
+      <ScrollToTop />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24">
         <div
           className="absolute inset-0 bg-cover bg-center grayscale-hover"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{
+            backgroundImage: `url(${heroImage})`,
+          }}
         >
-          <div className="absolute inset-0 bg-primary/60" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         <motion.div
+          ref={heroRef}
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto py-16"
+          animate={heroInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
         >
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 luxury-text-shadow"
-          >
+          <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 elegant-text-shadow">
             Maison du Bar
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="text-lg sm:text-xl md:text-2xl text-primary-foreground/90 mb-6 sm:mb-8 font-light px-4"
-          >
+          </h1>
+          <p className="font-sans text-lg sm:text-xl md:text-2xl text-white mb-8 sm:mb-12 max-w-3xl mx-auto">
             Luxury Mobile Bar – Anywhere, Anytime
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-          >
-            <Link to="/contact">
-              <Button
-                size="lg"
-                className="bg-white text-black hover:bg-black hover:text-white border-2 border-black px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg group transition-all duration-300 w-full sm:w-auto"
-              >
-                Book Now
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </motion.div>
-        </motion.div>
+          </p>
+          <Link to="/contact">
+            <Button
+              size="lg"
+              variant="elegant"
+              className="text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 h-auto font-sans font-medium"
+            >
+              Book Now
+            </Button>
+          </Link>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
+          {/* Scroll Indicator */}
           <motion.div
             animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex items-start justify-center p-2"
+            transition={{ repeat: Infinity, duration: 2 }}
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           >
-            <motion.div className="w-1 h-2 bg-primary-foreground/50 rounded-full" />
+            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center pt-2">
+              <div className="w-1 h-3 bg-white rounded-full" />
+            </div>
           </motion.div>
         </motion.div>
       </section>
 
-      {/* Introduction Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-secondary">
+      {/* Value Proposition */}
+      <section className="py-16 sm:py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-secondary-foreground">
+          <motion.div
+            ref={valueRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={valueInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12 sm:mb-16 lg:mb-20"
+          >
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 sm:mb-6">
               Elevate Every Occasion
             </h2>
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
-              Maison du Bar brings the luxury bar experience directly to your event.
-              Whether it's a wedding, corporate gathering, or private celebration,
-              our mobile bar service delivers exceptional cocktails and impeccable
-              service that your guests will remember.
+            <p className="font-sans text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Transform your event with our premium mobile bar service. We bring sophistication, style, and exceptional service directly to your venue.
             </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
+            {[
+              {
+                icon: Sparkles,
+                title: "Premium Experience",
+                description: "Curated selection of premium beverages and professional service",
+              },
+              {
+                icon: Truck,
+                title: "Fully Portable",
+                description: "Complete mobile bar setup, ready anywhere in Belgium",
+              },
+              {
+                icon: Settings,
+                title: "Customizable Service",
+                description: "Tailored packages to match your event's unique needs",
+              },
+            ].map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={valueInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="text-center group"
+              >
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center border-2 border-black rounded-full group-hover:bg-black transition-all duration-300">
+                  <feature.icon className="w-8 h-8 sm:w-10 sm:h-10 text-black group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 className="font-playfair text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">
+                  {feature.title}
+                </h3>
+                <p className="font-sans text-sm sm:text-base text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-primary">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 sm:mb-12 md:mb-16 text-primary-foreground">
-            Why Choose Us
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                <Sparkles className="text-black" size={28} />
-              </div>
-              <h3 className="font-playfair text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-primary-foreground">
-                Premium Experience
-              </h3>
-              <p className="text-sm sm:text-base text-primary-foreground/80 px-2">
-                Expert bartenders crafting signature cocktails with top-shelf spirits
-                and fresh ingredients.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                <Clock className="text-black" size={28} />
-              </div>
-              <h3 className="font-playfair text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-primary-foreground">
-                Fully Portable
-              </h3>
-              <p className="text-sm sm:text-base text-primary-foreground/80 px-2">
-                Our StationDeus bar adapts to any venue – indoors or outdoors,
-                bringing luxury wherever you need it.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                <Users className="text-black" size={28} />
-              </div>
-              <h3 className="font-playfair text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-primary-foreground">
-                Customizable Service
-              </h3>
-              <p className="text-sm sm:text-base text-primary-foreground/80 px-2">
-                Choose from our curated service packs or create a bespoke experience
-                tailored to your event.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Statistics Section */}
+      {/* Statistics */}
       <Statistics />
 
       {/* Featured Events */}
@@ -156,44 +136,43 @@ const Home = () => {
       <Testimonials />
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-primary">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-primary-foreground">
-              Ready to Elevate Your Event?
-            </h2>
-            <p className="text-base sm:text-lg text-primary-foreground/80 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-              Let's discuss your vision and create an unforgettable bar experience
-              for your guests.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto px-4">
-              <Link to="/services" className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  className="bg-white text-black hover:bg-black hover:text-white border-2 border-black transition-all duration-300 w-full sm:w-auto"
-                >
-                  View Services
-                </Button>
-              </Link>
-              <Link to="/contact" className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  className="bg-black text-white hover:bg-white hover:text-black border-2 border-black transition-all duration-300 w-full sm:w-auto"
-                >
-                  Contact Us
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
+      <section className="py-16 sm:py-20 lg:py-32 bg-black text-white">
+        <motion.div
+          ref={ctaRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={ctaInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="container mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        >
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+            Ready to Elevate Your Event?
+          </h2>
+          <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto">
+            Let's create an unforgettable experience for your guests
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link to="/services">
+              <Button
+                size="lg"
+                variant="elegant-inverted"
+                className="text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 h-auto font-sans font-medium w-full sm:w-auto"
+              >
+                View Services
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button
+                size="lg"
+                variant="elegant-inverted"
+                className="text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 h-auto font-sans font-medium w-full sm:w-auto"
+              >
+                Get in Touch
+              </Button>
+            </Link>
+          </div>
+        </motion.div>
       </section>
 
-      <ScrollToTop />
       <Footer />
     </div>
   );

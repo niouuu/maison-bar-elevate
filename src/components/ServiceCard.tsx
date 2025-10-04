@@ -1,7 +1,9 @@
-import { Check, Award } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Check } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface ServiceCardProps {
   title: string;
@@ -16,87 +18,58 @@ const ServiceCard = ({ title, description, features, variant = "standard" }: Ser
     threshold: 0.1,
   });
 
-  const getVariantStyles = () => {
-    switch (variant) {
-      case "premium":
-        return "border-accent bg-card border-2";
-      case "ultra":
-        return "border-accent bg-accent/5 border-2";
-      default:
-        return "border-border bg-card";
+  const getCardStyles = () => {
+    if (variant === "premium") {
+      return "border-2 border-black bg-white shadow-lg relative";
     }
-  };
-
-  const getBackgroundImage = () => {
-    switch (variant) {
-      case "standard":
-        return "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80";
-      case "premium":
-        return "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80";
-      case "ultra":
-        return "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80";
-    }
+    return "border-2 border-gray-300 bg-white hover:border-black transition-all duration-300";
   };
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6 }}
-      className="h-full"
-    >
-      <Card className={`${getVariantStyles()} shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col h-full overflow-hidden group relative`}>
-        {/* Background Image Overlay */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
-          <img
-            src={getBackgroundImage()}
-            alt={title}
-            className="w-full h-full object-cover grayscale"
-          />
-        </div>
-
-        {/* Popular Badge */}
-        {variant === "premium" && (
-          <div className="absolute top-4 right-4 z-10">
-            <div className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-lg">
-              <Award className="w-3 h-3" />
-              Most Popular
-            </div>
+    <Card ref={ref} className={`h-full flex flex-col ${getCardStyles()}`}>
+      {variant === "premium" && (
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+          <div className="bg-black text-white px-4 py-1 font-sans text-sm font-medium">
+            Most Popular
           </div>
-        )}
-
-        <CardHeader className="relative z-10">
-          <CardTitle className="font-playfair text-2xl mb-2 text-card-foreground">
-            {title}
-          </CardTitle>
-          <CardDescription className="text-muted-foreground">
-            {description}
-          </CardDescription>
-          {variant === "ultra" && (
-            <p className="text-accent font-semibold text-sm mt-2">
-              Ultimate Luxury Experience
-            </p>
-          )}
-        </CardHeader>
-        <CardContent className="flex-grow relative z-10">
-          <ul className="space-y-3">
-            {features.map((feature, index) => (
-              <motion.li
-                key={index}
-                initial={{ opacity: 0, x: -10 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="flex items-start space-x-3"
-              >
-                <Check className="text-accent flex-shrink-0 mt-0.5" size={20} />
-                <span className="text-muted-foreground">{feature}</span>
-              </motion.li>
-            ))}
-          </ul>
-        </CardContent>
-      </Card>
-    </motion.div>
+        </div>
+      )}
+      
+      <CardHeader className="text-center pb-4 pt-8">
+        <CardTitle className="font-playfair text-2xl sm:text-3xl font-bold text-black mb-2">
+          {title}
+        </CardTitle>
+        <CardDescription className="font-sans text-sm sm:text-base text-gray-600">
+          {description}
+        </CardDescription>
+      </CardHeader>
+      
+      <CardContent className="flex-1 flex flex-col">
+        <ul className="space-y-3 mb-8 flex-1">
+          {features.map((feature, index) => (
+            <motion.li
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="flex items-start gap-3"
+            >
+              <Check className="w-5 h-5 text-black flex-shrink-0 mt-0.5" />
+              <span className="font-sans text-sm text-gray-700">{feature}</span>
+            </motion.li>
+          ))}
+        </ul>
+        
+        <Link to="/contact" className="w-full">
+          <Button
+            variant={variant === "premium" ? "default" : "outline"}
+            className="w-full font-sans font-medium text-base py-6"
+          >
+            Get a Quote
+          </Button>
+        </Link>
+      </CardContent>
+    </Card>
   );
 };
 

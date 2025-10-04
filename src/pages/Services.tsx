@@ -1,34 +1,43 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import FAQ from "@/components/FAQ";
 import ScrollToTop from "@/components/ScrollToTop";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Services = () => {
+  const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [customRef, customInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
   const services = [
     {
       title: "Standard Pack",
-      description: "Perfect for intimate gatherings and smaller events",
+      description: "Perfect for intimate gatherings and small events",
       features: [
-        "Basic bar setup with essential equipment",
-        "Selection of standard cocktails and spirits",
-        "Professional bartender for up to 4 hours",
-        "Basic glassware and bar accessories",
-        "Setup and cleanup included",
+        "Professional bartender service",
+        "Basic bar setup and equipment",
+        "Standard beverage selection",
+        "Glassware and ice provision",
+        "3-hour service duration",
+        "Setup and breakdown included",
       ],
       variant: "standard" as const,
     },
     {
       title: "Premium Pack",
-      description: "Ideal for weddings and corporate events",
+      description: "Our most popular choice for special occasions",
       features: [
-        "Everything in Standard Pack",
-        "Extended cocktail menu with 15+ signature drinks",
-        "Premium spirits and champagne selection",
-        "Two professional bartenders",
-        "Upgraded glassware and garnish station",
-        "Custom menu consultation",
-        "6 hours of service",
+        "Expert mixologist team",
+        "Premium bar setup with lighting",
+        "Extended beverage selection",
+        "Custom cocktail menu design",
+        "Premium glassware collection",
+        "5-hour service duration",
+        "Signature drink creation",
+        "Bar decoration included",
       ],
       variant: "premium" as const,
     },
@@ -36,77 +45,95 @@ const Services = () => {
       title: "Ultra Premium Pack",
       description: "The ultimate luxury bar experience",
       features: [
-        "Everything in Premium Pack",
-        "Top-shelf luxury spirits and rare bottles",
-        "Bespoke cocktail creation for your event",
-        "Branded glassware with your event logo",
-        "Three expert mixologists",
-        "VIP bar manager and sommelier",
-        "8 hours of unlimited service",
-        "Post-event cocktail recipe booklet",
+        "Master mixologist & support staff",
+        "StationDeus luxury bar setup",
+        "Unlimited premium beverages",
+        "Bespoke cocktail menu creation",
+        "Crystal glassware collection",
+        "Full-day service (8+ hours)",
+        "Multiple signature drinks",
+        "Complete custom decoration",
+        "VIP concierge service",
+        "Photo-worthy bar presentation",
       ],
       variant: "ultra" as const,
     },
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Navbar />
+      <ScrollToTop />
 
       {/* Hero Section */}
-      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-14 md:pb-16 bg-primary">
+      <section className="pt-32 sm:pt-40 pb-16 sm:pb-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 sm:mb-6 text-primary-foreground">
-            Our Services
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl text-center text-primary-foreground/80 max-w-3xl mx-auto px-4">
-            Choose the perfect package for your event. Each service is designed to
-            deliver an exceptional bar experience tailored to your needs.
-          </p>
+          <motion.div
+            ref={heroRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={heroInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-6 sm:mb-8">
+              Our Services
+            </h1>
+            <p className="font-sans text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
+              Choose the perfect package for your event. From intimate gatherings to grand celebrations, we have a service tier designed to exceed your expectations.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 sm:py-16 md:py-20 bg-secondary">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                title={service.title}
-                description={service.description}
-                features={service.features}
-                variant={service.variant}
-              />
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+              >
+                <ServiceCard {...service} />
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Additional Info Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-primary">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-primary-foreground">
-              Custom Packages Available
-            </h2>
-            <p className="text-base sm:text-lg text-primary-foreground/80 leading-relaxed mb-6 sm:mb-8 px-4">
-              Need something unique? We specialize in creating bespoke bar experiences.
-              From themed cocktail menus to specific brand partnerships, we'll work
-              with you to design the perfect service for your event.
-            </p>
-            <p className="text-sm sm:text-base text-primary-foreground/60 italic px-4">
-              All packages include setup, service, and cleanup. Additional customizations
-              and add-ons available upon request.
-            </p>
-          </div>
-        </div>
+      {/* Custom Package Section */}
+      <section className="py-16 sm:py-20 lg:py-32 bg-black text-white">
+        <motion.div
+          ref={customRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={customInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="container mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        >
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+            Need Something Unique?
+          </h2>
+          <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
+            We specialize in creating custom packages tailored to your exact needs. Let's discuss how we can make your vision a reality.
+          </p>
+          <Link to="/contact">
+            <Button
+              size="lg"
+              variant="elegant-inverted"
+              className="text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 h-auto font-sans font-medium"
+            >
+              Get a Custom Quote
+            </Button>
+          </Link>
+        </motion.div>
       </section>
 
       {/* FAQ Section */}
       <FAQ />
 
-      <ScrollToTop />
       <Footer />
     </div>
   );

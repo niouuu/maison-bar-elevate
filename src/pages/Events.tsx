@@ -87,21 +87,23 @@ const Events = () => {
       : events.filter((event) => event.category === selectedCategory);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Navbar />
+      <ScrollToTop />
 
       {/* Hero Section */}
-      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-14 md:pb-16 bg-primary">
+      <section className="pt-32 sm:pt-40 pb-16 sm:pb-20 bg-black text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 sm:mb-6 text-primary-foreground">
-              Our Event Portfolio
+            <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8">
+              Events by Maison du Bar
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-center text-primary-foreground/80 max-w-3xl mx-auto px-4">
+            <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
               Explore our collection of luxury bar experiences across weddings,
               corporate events, and private celebrations
             </p>
@@ -110,17 +112,17 @@ const Events = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-6 sm:py-8 bg-secondary border-b border-border">
+      <section className="py-8 bg-gray-50 border-b-2 border-gray-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 sm:px-6 py-2 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
+                className={`px-6 py-2 font-sans text-sm sm:text-base font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? "bg-black text-white shadow-lg"
-                    : "bg-card text-muted-foreground hover:bg-black/10 border border-border"
+                    ? "bg-black text-white"
+                    : "bg-white text-black border-2 border-gray-300 hover:border-black"
                 }`}
               >
                 {category}
@@ -131,37 +133,37 @@ const Events = () => {
       </section>
 
       {/* Events Masonry Grid */}
-      <section className="py-12 sm:py-16 md:py-20 bg-secondary" ref={ref}>
+      <section className="py-16 sm:py-20 lg:py-32 bg-white" ref={ref}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
+          <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 max-w-7xl mx-auto">
             {filteredEvents.map((event, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="break-inside-avoid mb-4 sm:mb-6"
+                className="break-inside-avoid mb-6"
               >
-                <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer bg-card">
+                <div className="group relative overflow-hidden bg-white border-2 border-gray-200 hover:border-black transition-all duration-300 cursor-pointer">
                   <div className="relative aspect-[4/5] overflow-hidden">
                     <img
                       src={event.image}
                       alt={event.title}
-                      className="w-full h-full object-cover grayscale-hover transition-all duration-500 group-hover:scale-110"
+                      className="w-full h-full object-cover grayscale-hover transition-all duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
-                      <span className="inline-block px-2 sm:px-3 py-1 bg-white text-black text-xs sm:text-sm font-semibold rounded-full mb-2">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <span className="inline-block px-3 py-1 bg-white text-black font-sans text-xs font-semibold mb-2">
                         {event.category}
                       </span>
-                      <h3 className="font-playfair text-lg sm:text-xl md:text-2xl font-bold text-white mb-1 sm:mb-2">
+                      <h3 className="font-playfair text-xl md:text-2xl font-bold text-white mb-2">
                         {event.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-white/80 mb-1">
+                      <p className="font-sans text-sm text-white/80 mb-1">
                         {event.guests}
                       </p>
-                      <p className="text-xs sm:text-sm text-white/90">
+                      <p className="font-sans text-sm text-white/90">
                         {event.description}
                       </p>
                     </div>
@@ -173,7 +175,6 @@ const Events = () => {
         </div>
       </section>
 
-      <ScrollToTop />
       <Footer />
     </div>
   );
