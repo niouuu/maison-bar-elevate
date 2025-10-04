@@ -101,7 +101,7 @@ const Home = () => {
               {
                 icon: Settings,
                 title: "Customizable Service",
-                description: "Tailored packages to match your event's unique needs",
+                description: "Tailor-made packages designed to reflect your unique style and create an unforgettable experience.",
               },
             ].map((feature, index) => (
               <motion.div
