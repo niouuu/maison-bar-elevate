@@ -16,7 +16,7 @@ const About = () => {
     {
       title: "Portable Luxury Bar",
       description:
-        "Our  bar is fully portable yet maintains the elegance of a premium cocktail lounge.",
+        "Our StationDeus bar is fully portable yet maintains the elegance of a premium cocktail lounge.",
     },
     {
       title: "Customizable Packages",
@@ -29,9 +29,9 @@ const About = () => {
         "Expert bartenders and mixologists with years of experience in luxury hospitality and event services.",
     },
     {
-      title: "Premium Spirits",
+      title: "Fine Selection",
       description:
-        "We source only the finest spirits, liqueurs, and ingredients to craft exceptional cocktails.",
+        "We carefully curate a refined collection of spirits, wines, and ingredients to elevate every event.",
     },
   ];
 
