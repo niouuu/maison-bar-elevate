@@ -71,21 +71,13 @@ const TheBar = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-black">
-              Portable Luxury, Seamless Design
-
+              Portable Luxury, Uncompromising Quality
             </h2>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-              The StationDeus is not just a mobile bar – it's a statement piece that
-              transforms any space into a premium cocktail destination. Designed with
-              both aesthetics and functionality in mind, our signature bar features
-              elegant finishes, professional equipment, and a layout that allows our
-              bartenders to work their magic efficiently.
+              Our mobile bar is more than just a setup – it’s a statement piece that transforms any location into a refined cocktail destination. Designed with both aesthetics and functionality in mind, it combines elegant finishes, professional equipment, and a modular structure that adapts effortlessly to any venue.
             </p>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-              Every detail has been carefully considered, from the LED accent lighting
-              to the premium countertop surfaces and integrated storage systems. The
-              result is a bar that looks stunning while providing everything needed
-              to craft world-class cocktails.
+              Every detail has been considered: from compact storage that fits into travel cases, to sleek surfaces and integrated systems that ensure fast assembly, efficient service, and a flawless presentation. The result is a bar that delivers luxury and performance, wherever your event takes place.
             </p>
           </div>
         </div>
