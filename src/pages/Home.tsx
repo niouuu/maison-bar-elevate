@@ -96,7 +96,7 @@ const Home = () => {
               {
                 icon: Truck,
                 title: "Fully Portable",
-                description: "Complete mobile bar setup, ready anywhere in Belgium",
+                description: "A complete luxury mobile bar setup, ready to elevate your event anywhere in Greece – from city venues to the islands.",
               },
               {
                 icon: Settings,
