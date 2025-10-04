@@ -91,7 +91,7 @@ const Home = () => {
               {
                 icon: Sparkles,
                 title: "Premium Experience",
-                description: "Curated selection of premium beverages and professional service",
+                description: "Exceptional service and a curated selection of premium drinks, designed to elevate every celebration.",
               },
               {
                 icon: Truck,
