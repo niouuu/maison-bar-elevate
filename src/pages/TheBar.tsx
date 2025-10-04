@@ -17,23 +17,22 @@ const TheBar = () => {
   const features = [
     {
       icon: Sparkles,
-      title: "Elegant Design",
+      title: "Premium Quality",
       description:
-        "A refined, minimal aesthetic that enhances any event.",
+        "Built with high-grade materials and elegant finishes that reflect luxury in every detail.",
     },
     {
       icon: Zap,
-      title: "Modular Flexibility",
+      title: "Quick Setup",
       description:
-        "Adaptable to any space, from intimate gatherings to grand celebrations.",
+        "Our portable design allows for rapid deployment at any venue, saving time without compromising elegance.",
     },
     {
       icon: Users,
-      title: "Effortless Setup",
+      title: "Versatile Service",
       description:
-        "Quick to assemble, discreet to transport, always event-ready.",
+        "Accommodates events from intimate gatherings to large celebrations with professional efficiency.",
     },
-    
   ];
 
   const galleryPlaceholders = Array.from({ length: 6 }, (_, i) => i);
@@ -59,7 +58,7 @@ const TheBar = () => {
           className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
         >
           <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 elegant-text-shadow">
-            The StationDeus Experience
+            The Maison Du Bar Experience
           </h1>
           <p className="font-sans text-lg sm:text-xl md:text-2xl text-white max-w-3xl mx-auto">
             Our signature portable bar – where luxury meets versatility
@@ -72,15 +71,20 @@ const TheBar = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-black">
-              Portable Luxury, Seamless Design
+              Portable Luxury, Uncompromising Quality
             </h2>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-              Our mobile bar is more than just a setup – it’s a statement piece that transforms any location into a refined cocktail destination. 
-              Designed with both aesthetics and functionality in mind, it combines elegant finishes, professional equipment, and a modular structure that adapts effortlessly to any venue.
+              The Bar is not just a mobile bar – it's a statement piece that
+              transforms any space into a premium cocktail destination. Designed with
+              both aesthetics and functionality in mind, our signature bar features
+              elegant finishes, professional equipment, and a layout that allows our
+              bartenders to work their magic efficiently.
             </p>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-              Every detail has been considered: from compact storage that fits into travel cases, to sleek surfaces and integrated systems that ensure fast assembly, efficient service, and a flawless presentation. 
-              The result is a bar that delivers luxury and performance, wherever your event takes place.
+              Every detail has been carefully considered, from the LED accent lighting
+              to the premium countertop surfaces and integrated storage systems. The
+              result is a bar that looks stunning while providing everything needed
+              to craft world-class cocktails.
             </p>
           </div>
         </div>
@@ -140,7 +144,7 @@ const TheBar = () => {
             ))}
           </div>
           <p className="text-center font-sans text-gray-500 italic text-sm sm:text-base max-w-2xl mx-auto">
-            Professional photography and drone footage of the StationDeus bar in various
+            Professional photography and drone footage of the bar in various
             event settings will be available soon.
           </p>
         </div>
@@ -156,7 +160,7 @@ const TheBar = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Book the StationDeus Bar Today
+              Book the  Bar Today
             </h2>
             <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
               Transform your event with our stunning portable bar. Contact us to

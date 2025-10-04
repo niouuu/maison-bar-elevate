@@ -30,7 +30,7 @@ const FAQ = () => {
     {
       question: "What if the weather is bad for an outdoor event?",
       answer:
-        "Our StationDeus bar is designed to work both indoors and outdoors. For outdoor events, we recommend having a backup indoor location or tent coverage. We'll work with you to ensure a seamless setup regardless of weather conditions.",
+        "Our  bar is designed to work both indoors and outdoors. For outdoor events, we recommend having a backup indoor location or tent coverage. We'll work with you to ensure a seamless setup regardless of weather conditions.",
     },
     {
       question: "Are your bartenders licensed and insured?",
@@ -45,7 +45,7 @@ const FAQ = () => {
     {
       question: "Can we see the bar before booking?",
       answer:
-        "Yes! We encourage potential clients to schedule a consultation where you can see the StationDeus bar in person, discuss your event details, and sample some of our signature cocktails. Contact us to arrange a viewing.",
+        "Yes! We encourage potential clients to schedule a consultation where you can see the  bar in person, discuss your event details, and sample some of our signature cocktails. Contact us to arrange a viewing.",
     },
   ];
 

@@ -16,7 +16,7 @@ const About = () => {
     {
       title: "Portable Luxury Bar",
       description:
-        "Our StationDeus bar is fully portable yet maintains the elegance of a premium cocktail lounge.",
+        "Our  bar is fully portable yet maintains the elegance of a premium cocktail lounge.",
     },
     {
       title: "Customizable Packages",
@@ -29,9 +29,9 @@ const About = () => {
         "Expert bartenders and mixologists with years of experience in luxury hospitality and event services.",
     },
     {
-      title: "Fine Selection",
+      title: "Premium Spirits",
       description:
-        "We carefully curate a refined collection of spirits, wines, and ingredients to elevate every event.",
+        "We source only the finest spirits, liqueurs, and ingredients to craft exceptional cocktails.",
     },
   ];
 
@@ -73,7 +73,7 @@ const About = () => {
               bars often compromised on quality or aesthetics.
             </p>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-              Our difference lies in our fully portable luxury bar, the StationDeus,
+              Our difference lies in our fully portable luxury bar,
               which can adapt to any event space with ease. Whether you're hosting an
               outdoor garden wedding, a rooftop corporate event, or an intimate private
               celebration, we deliver the same level of sophistication you'd expect from
