@@ -74,7 +74,7 @@ const TheBar = () => {
               Portable Luxury, Uncompromising Quality
             </h2>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-              The StationDeus is not just a mobile bar – it's a statement piece that
+              The bar is not just a mobile bar – it's a statement piece that
               transforms any space into a premium cocktail destination. Designed with
               both aesthetics and functionality in mind, our signature bar features
               elegant finishes, professional equipment, and a layout that allows our
@@ -94,7 +94,7 @@ const TheBar = () => {
       <section className="py-16 sm:py-20 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 lg:mb-20 text-black">
-            What Makes Maison Du Bar Unique
+            What Makes StationDeus Unique
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto" ref={ref}>
             {features.map((feature, index) => (
