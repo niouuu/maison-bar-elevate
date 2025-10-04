@@ -73,7 +73,7 @@ const About = () => {
               bars often compromised on quality or aesthetics.
             </p>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-              Our difference lies in our fully portable luxury bar, the StationDeus,
+              Our difference lies in our fully portable luxury bar,
               which can adapt to any event space with ease. Whether you're hosting an
               outdoor garden wedding, a rooftop corporate event, or an intimate private
               celebration, we deliver the same level of sophistication you'd expect from
@@ -98,11 +98,15 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-                At Maison du Bar, our mission is simple: to make every event unforgettable.
-We don’t just serve beverages – we create an atmosphere where guests feel cared for, entertained, and connected. With our expertise in cocktail production, guest management, and hospitality, we transform each event into a celebration that flows effortlessly.
+                At Maison du Bar, we're committed to providing premium bar experiences
+                that elevate every occasion. Our mission is to craft unique cocktail
+                moments that your guests will remember long after the event ends.
               </p>
               <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-                Our unique mobile bar is fully modular and designed for flexibility. Packed into compact cases, it can be set up in any location – from luxury villas to rooftops, gardens, and island weddings. Whether you need one bartender for an intimate party or a full team for a large-scale event, we adapt to your vision with elegance and precision.
+                We believe that great drinks are more than just beverages – they're
+                conversation starters, memory makers, and essential elements of any
+                celebration. That's why we pour our expertise, passion, and attention
+                to detail into every cocktail we serve.
               </p>
             </motion.div>
             <motion.div
