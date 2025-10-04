@@ -14,24 +14,24 @@ const About = () => {
 
   const differentiators = [
     {
-      title: "Over a Decade of Experience",
+      title: "Portable Luxury Bar",
       description:
-        "Our team has years of hands-on expertise in hospitality and bar management.",
+        "Our  bar is fully portable yet maintains the elegance of a premium cocktail lounge.",
     },
     {
-      title: "Client-Centered Approach",
+      title: "Customizable Packages",
       description:
-        "We know how to understand and deliver exactly what your guests need.",
+        "From intimate gatherings to large celebrations, we tailor our services to match your vision perfectly.",
     },
     {
-      title: "Flexible Mobile Bar",
+      title: "Professional Staff",
       description:
-        "A modular bar system that fits any venue and scales from 1 to 4 bartenders.",
+        "Expert bartenders and mixologists with years of experience in luxury hospitality and event services.",
     },
     {
-      title: "Tailor-Made Service",
+      title: "Premium Spirits",
       description:
-        "From cocktails to complete drink lists, everything is designed for your event’s unique style.",
+        "We source only the finest spirits, liqueurs, and ingredients to craft exceptional cocktails.",
     },
   ];
 
