@@ -67,12 +67,17 @@ const About = () => {
               Our Story
             </h2>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-              Maison du Bar was founded by a team with more than a decade of experience in the hospitality industry and a true passion for the art of the bar.
-              Having spent years mastering cocktail creation, designing bespoke drink lists, and managing high-end venues, we understood one thing clearly: every guest deserves an experience, not just a drink.
+              Maison du Bar was born from a simple vision: to bring the sophistication
+              and craft of premium cocktail bars to any location. We recognized that
+              exceptional events deserve exceptional bar service, but traditional mobile
+              bars often compromised on quality or aesthetics.
             </p>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-              After working in some of the most demanding environments in Greece, we recognized how to anticipate and fulfill client needs seamlessly.
-              This knowledge became the foundation of Maison du Bar – a mobile bar concept designed to bring sophistication, service, and joy to any event.
+              Our difference lies in our fully portable luxury bar, the StationDeus,
+              which can adapt to any event space with ease. Whether you're hosting an
+              outdoor garden wedding, a rooftop corporate event, or an intimate private
+              celebration, we deliver the same level of sophistication you'd expect from
+              the finest cocktail establishments.
             </p>
           </div>
         </div>
@@ -93,15 +98,11 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-                At Maison du Bar, we're committed to providing premium bar experiences
-                that elevate every occasion. Our mission is to craft unique cocktail
-                moments that your guests will remember long after the event ends.
+                At Maison du Bar, our mission is simple: to make every event unforgettable.
+We don’t just serve beverages – we create an atmosphere where guests feel cared for, entertained, and connected. With our expertise in cocktail production, guest management, and hospitality, we transform each event into a celebration that flows effortlessly.
               </p>
               <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-                We believe that great drinks are more than just beverages – they're
-                conversation starters, memory makers, and essential elements of any
-                celebration. That's why we pour our expertise, passion, and attention
-                to detail into every cocktail we serve.
+                Our unique mobile bar is fully modular and designed for flexibility. Packed into compact cases, it can be set up in any location – from luxury villas to rooftops, gardens, and island weddings. Whether you need one bartender for an intimate party or a full team for a large-scale event, we adapt to your vision with elegance and precision.
               </p>
             </motion.div>
             <motion.div
