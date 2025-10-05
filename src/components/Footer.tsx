@@ -45,18 +45,25 @@ const Footer = () => {
             <h4 className="font-sans text-lg font-bold text-black mb-4">Contact Us</h4>
             <div className="space-y-3">
               <a
-                href="mailto:contact@maisondubar.be"
+                href="mailto:maisondubar25@gmail.com"
                 className="flex items-center gap-3 font-sans text-sm text-gray-600 hover:text-black transition-colors duration-200"
               >
                 <Mail className="w-5 h-5" />
-                contact@maisondubar.be
+                maisondubar25@gmail.com
               </a>
               <a
-                href="tel:+32123456789"
+                href="tel:6973291777"
                 className="flex items-center gap-3 font-sans text-sm text-gray-600 hover:text-black transition-colors duration-200"
               >
                 <Phone className="w-5 h-5" />
-                +32 123 456 789
+                697 329 1777
+              </a>
+              <a
+                href="tel:6944199717"
+                className="flex items-center gap-3 font-sans text-sm text-gray-600 hover:text-black transition-colors duration-200"
+              >
+                <Phone className="w-5 h-5" />
+                694 419 9717
               </a>
               <div className="flex gap-4 pt-2">
                 <a

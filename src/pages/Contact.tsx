@@ -224,10 +224,10 @@ const Contact = () => {
                     <div>
                       <p className="font-sans font-semibold text-black text-sm">Email</p>
                       <a
-                        href="mailto:contact@maisondubar.be"
+                        href="mailto:maisondubar25@gmail.com"
                         className="font-sans text-gray-600 hover:text-black transition-colors text-sm"
                       >
-                        contact@maisondubar.be
+                        maisondubar25@gmail.com
                       </a>
                     </div>
                   </div>
@@ -237,10 +237,16 @@ const Contact = () => {
                     <div>
                       <p className="font-sans font-semibold text-black text-sm">Phone</p>
                       <a
-                        href="tel:+32123456789"
-                        className="font-sans text-gray-600 hover:text-black transition-colors text-sm"
+                        href="tel:6973291777"
+                        className="font-sans text-gray-600 hover:text-black transition-colors text-sm block"
                       >
-                        +32 123 456 789
+                        697 329 1777
+                      </a>
+                      <a
+                        href="tel:6944199717"
+                        className="font-sans text-gray-600 hover:text-black transition-colors text-sm block"
+                      >
+                        694 419 9717
                       </a>
                     </div>
                   </div>
