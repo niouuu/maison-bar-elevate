@@ -12,8 +12,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
 import frontView from "@/assets/Maison_du_Bar_0085.jpg";
-import topView from "@/assets/Maison_du_Bar_0079.jpg";
-import dimensionsView from "@/assets/Maison_du_Bar_0101.jpg";
+import topView from "@/assets/Maison_du_Bar_0038.jpg";
+import dimensionsView from "@/assets/Maison_du_Bar_0099.jpg";
 
 const TheBar = () => {
   const [ref, inView] = useInView({
@@ -48,9 +48,9 @@ const TheBar = () => {
       title: "Option 1",
       subtitle: "1 Bartender Setup",
       images: [
-        { label: "Front View", placeholder: true },
-        { label: "Top View", placeholder: true },
-        { label: "Dimensions", placeholder: true },
+        { label: "Front View", src: frontView },
+        { label: "Top View", src: topView },
+        { label: "Dimensions", src: dimensionsView },
       ],
     },
     {
@@ -58,9 +58,9 @@ const TheBar = () => {
       title: "Option 2",
       subtitle: "2 Bartender Setup",
       images: [
-        { label: "Front View", placeholder: true },
-        { label: "Top View", placeholder: true },
-        { label: "Dimensions", placeholder: true },
+        { label: "Front View", src: frontView },
+        { label: "Top View", src: topView },
+        { label: "Dimensions", src: dimensionsView },
       ],
     },
     {
@@ -68,9 +68,9 @@ const TheBar = () => {
       title: "Option 3",
       subtitle: "3 Bartender Setup",
       images: [
-        { label: "Front View", placeholder: true },
-        { label: "Top View", placeholder: true },
-        { label: "Dimensions", placeholder: true },
+        { label: "Front View", src: frontView },
+        { label: "Top View", src: topView },
+        { label: "Dimensions", src: dimensionsView },
       ],
     },
     {
@@ -78,9 +78,9 @@ const TheBar = () => {
       title: "Option 4",
       subtitle: "4 Bartender Setup",
       images: [
-        { label: "Front View", placeholder: true },
-        { label: "Top View", placeholder: true },
-        { label: "Dimensions", placeholder: true },
+        { label: "Front View", src: frontView },
+        { label: "Top View", src: topView },
+        { label: "Dimensions", src: dimensionsView },
       ],
     },
     {
@@ -88,9 +88,9 @@ const TheBar = () => {
       title: "Option 5",
       subtitle: "4 Bartender Setup",
       images: [
-        { label: "Front View", placeholder: true },
-        { label: "Top View", placeholder: true },
-        { label: "Dimensions", placeholder: true },
+        { label: "Front View", src: frontView },
+        { label: "Top View", src: topView },
+        { label: "Dimensions", src: dimensionsView },
       ],
     },
     {
@@ -98,9 +98,9 @@ const TheBar = () => {
       title: "Option 6",
       subtitle: "4 Bartender Setup",
       images: [
-        { label: "Front View", placeholder: true },
-        { label: "Top View", placeholder: true },
-        { label: "Dimensions", placeholder: true },
+        { label: "Front View", src: frontView },
+        { label: "Top View", src: topView },
+        { label: "Dimensions", src: dimensionsView },
       ],
     },
   ];
@@ -220,14 +220,15 @@ const TheBar = () => {
                     {option.images.map((image, idx) => (
                       <div
                         key={idx}
-                        className="aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group"
+                        className="aspect-[4/3] bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group relative"
                       >
-                        <div className="text-center p-6">
-                          <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-black/10 transition-colors">
-                            <span className="text-3xl">📸</span>
-                          </div>
-                          <p className="font-chamberi text-lg font-bold text-gray-700 mb-1">{image.label}</p>
-                          <p className="font-sans text-gray-500 text-sm">Coming Soon</p>
+                        <img 
+                          src={image.src} 
+                          alt={image.label}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-3">
+                          <p className="font-chamberi text-base font-bold text-white text-center">{image.label}</p>
                         </div>
                       </div>
                     ))}
@@ -249,13 +250,14 @@ const TheBar = () => {
                     <CarouselContent>
                       {option.images.map((image, idx) => (
                         <CarouselItem key={idx}>
-                          <div className="aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center border border-gray-200 shadow-md overflow-hidden">
-                            <div className="text-center p-6">
-                              <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3">
-                                <span className="text-3xl">📸</span>
-                              </div>
-                              <p className="font-chamberi text-lg font-bold text-gray-700 mb-1">{image.label}</p>
-                              <p className="font-sans text-gray-500 text-sm">Coming Soon</p>
+                          <div className="aspect-[4/3] bg-gray-100 rounded-lg border border-gray-200 shadow-md overflow-hidden relative">
+                            <img 
+                              src={image.src} 
+                              alt={image.label}
+                              className="w-full h-full object-cover"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-3">
+                              <p className="font-chamberi text-base font-bold text-white text-center">{image.label}</p>
                             </div>
                           </div>
                         </CarouselItem>
