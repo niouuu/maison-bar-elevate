@@ -36,11 +36,13 @@ All colors MUST be HSL.
     --input: 0 0% 85%;
     --ring: 0 0% 0%;
 
-    --radius: 0rem;
+    --radius: 0.5rem;
     
     /* Elegant black & white system */
     --elegant-black: 0 0% 0%;
+    --elegant-off-black: 0 0% 6.7%;
     --elegant-white: 0 0% 100%;
+    --elegant-off-white: 0 0% 96.1%;
     --elegant-gray: 0 0% 50%;
     --elegant-gray-light: 0 0% 95%;
     
@@ -48,6 +50,7 @@ All colors MUST be HSL.
     --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.08);
     --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.12);
     --shadow-elegant: 0 8px 32px hsl(0 0% 0% / 0.16);
+    --shadow-glow: 0 0 20px rgba(255, 255, 255, 0.1);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
