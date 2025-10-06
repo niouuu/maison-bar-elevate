@@ -14,7 +14,7 @@ const Footer = () => {
             <img
               src={logoImage}
               alt="Maison du Bar"
-              className="h-24 sm:h-28 lg:h-32 w-auto object-contain mx-auto md:mx-0 max-w-[180px] sm:max-w-[200px]"
+              className="h-24 sm:h-28 lg:h-32 w-auto object-contain mx-auto md:mx-0 max-w-[240px] sm:max-w-[280px]"
             />
             <p className="font-sans text-sm lg:text-base text-muted-foreground leading-relaxed max-w-xs mx-auto md:mx-0">
               Bringing luxury and sophistication to every event across Belgium.
