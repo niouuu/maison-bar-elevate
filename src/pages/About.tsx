@@ -73,7 +73,7 @@ const About = () => {
               bars often compromised on quality or aesthetics.
             </p>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-              Our difference lies in our fully portable luxury bar, the StationDeus,
+              Our difference lies in our fully portable luxury bar,
               which can adapt to any event space with ease. Whether you're hosting an
               outdoor garden wedding, a rooftop corporate event, or an intimate private
               celebration, we deliver the same level of sophistication you'd expect from
