@@ -4,7 +4,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Gem, Boxes, PackageCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import stationDeusImage from "@/assets/stationdeus-bar.jpg";
+import stationDeusImage from "@/assets/Maison_du_Bar_0085.jpg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -17,7 +17,7 @@ const TheBar = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
-  
+
   const isMobile = useIsMobile();
   const [selectedOption, setSelectedOption] = useState("option1");
 
@@ -25,20 +25,17 @@ const TheBar = () => {
     {
       icon: Gem,
       title: "Elegant Design",
-      description:
-        "A refined, minimal aesthetic that enhances any event.",
+      description: "A refined, minimal aesthetic that enhances any event.",
     },
     {
       icon: Boxes,
       title: "Modular Flexibility",
-      description:
-        "Adaptable to any space, from intimate gatherings to grand celebrations.",
+      description: "Adaptable to any space, from intimate gatherings to grand celebrations.",
     },
     {
       icon: PackageCheck,
       title: "Effortless Setup",
-      description:
-        "Quick to assemble, discreet to transport, always event-ready.",
+      description: "Quick to assemble, discreet to transport, always event-ready.",
     },
   ];
 
@@ -122,10 +119,14 @@ const TheBar = () => {
               Portable Luxury, Seamless Design
             </h2>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-              Our mobile bar is more than just a setup – it’s a statement piece that transforms any location into a refined cocktail destination. Designed with both aesthetics and functionality in mind, it combines elegant finishes, professional equipment, and a modular structure that adapts effortlessly to any venue.
+              Our mobile bar is more than just a setup – it’s a statement piece that transforms any location into a
+              refined cocktail destination. Designed with both aesthetics and functionality in mind, it combines elegant
+              finishes, professional equipment, and a modular structure that adapts effortlessly to any venue.
             </p>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-              Every detail has been considered: from compact storage that fits into travel cases, to sleek surfaces and integrated systems that ensure fast assembly, efficient service, and a flawless presentation. The result is a bar that delivers luxury and performance, wherever your event takes place.
+              Every detail has been considered: from compact storage that fits into travel cases, to sleek surfaces and
+              integrated systems that ensure fast assembly, efficient service, and a flawless presentation. The result
+              is a bar that delivers luxury and performance, wherever your event takes place.
             </p>
           </div>
         </div>
@@ -149,12 +150,8 @@ const TheBar = () => {
                 <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 flex items-center justify-center border-2 border-black rounded-full group-hover:bg-black transition-all duration-300">
                   <feature.icon className="w-8 h-8 sm:w-10 sm:h-10 text-black group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="font-chamberi text-xl sm:text-2xl font-bold mb-4 text-black">
-                  {feature.title}
-                </h3>
-                <p className="font-sans text-sm sm:text-base text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
+                <h3 className="font-chamberi text-xl sm:text-2xl font-bold mb-4 text-black">{feature.title}</h3>
+                <p className="font-sans text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -206,12 +203,8 @@ const TheBar = () => {
                           <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-black/10 transition-colors">
                             <span className="text-3xl">📸</span>
                           </div>
-                          <p className="font-chamberi text-lg font-bold text-gray-700 mb-1">
-                            {image.label}
-                          </p>
-                          <p className="font-sans text-gray-500 text-sm">
-                            Coming Soon
-                          </p>
+                          <p className="font-chamberi text-lg font-bold text-gray-700 mb-1">{image.label}</p>
+                          <p className="font-sans text-gray-500 text-sm">Coming Soon</p>
                         </div>
                       </div>
                     ))}
@@ -228,7 +221,7 @@ const TheBar = () => {
                     <h3 className="font-chamberi text-2xl font-bold text-black">{option.title}</h3>
                     <p className="font-sans text-gray-600 text-sm">{option.subtitle}</p>
                   </div>
-                  
+
                   <Carousel className="w-full max-w-sm mx-auto">
                     <CarouselContent>
                       {option.images.map((image, idx) => (
@@ -238,12 +231,8 @@ const TheBar = () => {
                               <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3">
                                 <span className="text-3xl">📸</span>
                               </div>
-                              <p className="font-chamberi text-lg font-bold text-gray-700 mb-1">
-                                {image.label}
-                              </p>
-                              <p className="font-sans text-gray-500 text-sm">
-                                Coming Soon
-                              </p>
+                              <p className="font-chamberi text-lg font-bold text-gray-700 mb-1">{image.label}</p>
+                              <p className="font-sans text-gray-500 text-sm">Coming Soon</p>
                             </div>
                           </div>
                         </CarouselItem>
@@ -276,8 +265,7 @@ const TheBar = () => {
               Book Our Signature Bar Today
             </h2>
             <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-              Transform your event with our stunning portable bar. Contact us to
-              discuss availability and packages.
+              Transform your event with our stunning portable bar. Contact us to discuss availability and packages.
             </p>
             <Link to="/contact">
               <Button
