@@ -5,7 +5,6 @@ import { useInView } from "react-intersection-observer";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Testimonials from "@/components/Testimonials";
 import ScrollToTop from "@/components/ScrollToTop";
 import heroImage from "@/assets/Maison_du_Bar_0007.jpg";
 
@@ -103,9 +102,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Testimonials */}
-      <Testimonials />
 
       {/* CTA Section */}
       <section className="py-16 sm:py-20 lg:py-32 bg-black text-white">
