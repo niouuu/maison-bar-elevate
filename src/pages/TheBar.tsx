@@ -71,7 +71,7 @@ const TheBar = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-black">
-              Portable Luxury, Uncompromising Quality
+              Portable Luxury, Seamless Design
             </h2>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
               Our mobile bar is more than just a setup – it’s a statement piece that transforms any location into a refined cocktail destination. Designed with both aesthetics and functionality in mind, it combines elegant finishes, professional equipment, and a modular structure that adapts effortlessly to any venue.
