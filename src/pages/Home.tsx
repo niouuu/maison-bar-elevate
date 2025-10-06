@@ -43,26 +43,6 @@ const Home = () => {
           <p className="font-sans text-lg sm:text-xl md:text-2xl text-white mb-8 sm:mb-12 max-w-3xl mx-auto">
             Luxury Mobile Bar – Anywhere, Anytime
           </p>
-          <Link to="/contact">
-            <Button
-              size="lg"
-              variant="elegant"
-              className="text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 h-auto font-sans font-medium"
-            >
-              Book Now
-            </Button>
-          </Link>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
-            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center pt-2">
-              <div className="w-1 h-3 bg-white rounded-full" />
-            </div>
-          </motion.div>
         </motion.div>
       </section>
 
