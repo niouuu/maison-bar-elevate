@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, Instagram, Facebook } from "lucide-react";
-import logoImage from "@/assets/maison-du-bar-logo.jpg";
+import logoImage from "@/assets/maison-du-bar-new-logo.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,7 +14,7 @@ const Footer = () => {
             <img
               src={logoImage}
               alt="Maison du Bar"
-              className="h-16 sm:h-20 lg:h-24 w-auto object-contain mx-auto md:mx-0"
+              className="h-20 sm:h-24 lg:h-28 w-auto object-contain mx-auto md:mx-0"
             />
             <p className="font-sans text-sm lg:text-base text-muted-foreground leading-relaxed max-w-xs mx-auto md:mx-0">
               Bringing luxury and sophistication to every event across Belgium.

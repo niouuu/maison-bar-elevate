@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoImage from "@/assets/maison-du-bar-logo.jpg";
+import logoImage from "@/assets/maison-du-bar-new-logo.jpg";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,7 +39,7 @@ const Navbar = () => {
             <img
               src={logoImage}
               alt="Maison du Bar"
-              className="h-[80px] sm:h-[100px] md:h-[120px] lg:h-[140px] xl:h-[160px] w-auto object-contain"
+              className="h-[70px] md:h-[110px] w-auto object-contain"
             />
           </Link>
 
