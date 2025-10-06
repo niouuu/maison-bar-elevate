@@ -13,7 +13,10 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
 import frontView from "@/assets/Maison_du_Bar_0085.jpg";
 import topView from "@/assets/Maison_du_Bar_0038.jpg";
-import dimensionsView from "@/assets/dimension_bar.png";
+import dimensionsView from "@/assets/Maison_du_Bar_0099.jpg";
+import detailWood from "@/assets/Maison_du_Bar_0047.jpg";
+import detailTools from "@/assets/Maison_du_Bar_0034.jpg";
+import detailInterior from "@/assets/Maison_du_Bar_0014.jpg";
 
 const TheBar = () => {
   const [ref, inView] = useInView({
@@ -48,11 +51,14 @@ const TheBar = () => {
       title: "Option 1",
       subtitle: "1 Bartender Setup",
       images: [
-        { label: "Front View", src: frontView },
-        { label: "Top View", src: topView },
-        { label: "Dimensions", src: dimensionsView },
-      ],
-    },
+            { label: "Front View", src: frontView },
+            { label: "Top View", src: topView },
+            { label: "Dimensions", src: dimensionsView },
+            { label: "Wood Detail", src: detailWood },
+            { label: "Bar Tools", src: detailTools },
+            { label: "Interior Mechanics", src: detailInterior },
+          ],
+        },
     {
       id: "option2",
       title: "Option 2",
@@ -61,6 +67,9 @@ const TheBar = () => {
         { label: "Front View", src: frontView },
         { label: "Top View", src: topView },
         { label: "Dimensions", src: dimensionsView },
+        { label: "Wood Detail", src: detailWood },
+        { label: "Bar Tools", src: detailTools },
+        { label: "Interior Mechanics", src: detailInterior },
       ],
     },
     {
@@ -71,6 +80,9 @@ const TheBar = () => {
         { label: "Front View", src: frontView },
         { label: "Top View", src: topView },
         { label: "Dimensions", src: dimensionsView },
+        { label: "Wood Detail", src: detailWood },
+        { label: "Bar Tools", src: detailTools },
+        { label: "Interior Mechanics", src: detailInterior },
       ],
     },
     {
@@ -81,6 +93,9 @@ const TheBar = () => {
         { label: "Front View", src: frontView },
         { label: "Top View", src: topView },
         { label: "Dimensions", src: dimensionsView },
+        { label: "Wood Detail", src: detailWood },
+        { label: "Bar Tools", src: detailTools },
+        { label: "Interior Mechanics", src: detailInterior },
       ],
     },
     {
@@ -91,6 +106,9 @@ const TheBar = () => {
         { label: "Front View", src: frontView },
         { label: "Top View", src: topView },
         { label: "Dimensions", src: dimensionsView },
+        { label: "Wood Detail", src: detailWood },
+        { label: "Bar Tools", src: detailTools },
+        { label: "Interior Mechanics", src: detailInterior },
       ],
     },
     {
@@ -101,6 +119,9 @@ const TheBar = () => {
         { label: "Front View", src: frontView },
         { label: "Top View", src: topView },
         { label: "Dimensions", src: dimensionsView },
+        { label: "Wood Detail", src: detailWood },
+        { label: "Bar Tools", src: detailTools },
+        { label: "Interior Mechanics", src: detailInterior },
       ],
     },
   ];
