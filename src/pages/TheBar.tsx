@@ -17,21 +17,21 @@ const TheBar = () => {
   const features = [
     {
       icon: Sparkles,
-      title: "Premium Quality",
+      title: "Elegant Design",
       description:
-        "Built with high-grade materials and elegant finishes that reflect luxury in every detail.",
+        "A refined, minimal aesthetic that enhances any event.",
     },
     {
       icon: Zap,
-      title: "Quick Setup",
+      title: "Modular Flexibility",
       description:
-        "Our portable design allows for rapid deployment at any venue, saving time without compromising elegance.",
+        "Adaptable to any space, from intimate gatherings to grand celebrations.",
     },
     {
       icon: Users,
-      title: "Versatile Service",
+      title: "Effortless Setup",
       description:
-        "Accommodates events from intimate gatherings to large celebrations with professional efficiency.",
+        "Quick to assemble, discreet to transport, always event-ready.",
     },
   ];
 
