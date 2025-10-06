@@ -20,7 +20,7 @@ const Testimonials = () => {
       name: "Sarah & Michael",
       role: "Wedding Clients",
       content:
-        "Maison du Bar made our wedding absolutely perfect. The StationDeus bar was stunning, and our guests are still talking about the cocktails. Professional, elegant, and unforgettable!",
+        "Maison du Bar made our wedding absolutely perfect. The bar was stunning, and our guests are still talking about the cocktails. Professional, elegant, and unforgettable!",
       rating: 5,
     },
     {
