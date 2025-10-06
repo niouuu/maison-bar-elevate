@@ -87,7 +87,7 @@ const TheBar = () => {
       <section className="py-16 sm:py-20 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 lg:mb-20 text-black">
-            What Makes StationDeus Unique
+            What Makes Unique
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto" ref={ref}>
             {features.map((feature, index) => (
