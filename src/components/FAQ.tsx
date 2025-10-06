@@ -83,7 +83,7 @@ const FAQ = () => {
     <section className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-center mb-4 text-secondary-foreground">
+          <h2 className="font-chamberi text-4xl md:text-5xl font-bold text-center mb-4 text-secondary-foreground">
             Frequently Asked Questions
           </h2>
           <p className="text-center text-muted-foreground mb-12">

@@ -37,7 +37,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
         >
-          <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 elegant-text-shadow">
+          <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 elegant-text-shadow">
             Maison du Bar
           </h1>
           <p className="font-sans text-lg sm:text-xl md:text-2xl text-white mb-8 sm:mb-12 max-w-3xl mx-auto">
@@ -76,7 +76,7 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-16 lg:mb-20"
           >
-            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 sm:mb-6">
+            <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 sm:mb-6">
               Elevate Every Occasion
             </h2>
             <p className="font-sans text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -112,7 +112,7 @@ const Home = () => {
                 <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center border-2 border-black rounded-full group-hover:bg-black transition-all duration-300">
                   <feature.icon className="w-8 h-8 sm:w-10 sm:h-10 text-black group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="font-playfair text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">
+                <h3 className="font-chamberi text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">
                   {feature.title}
                 </h3>
                 <p className="font-sans text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -137,7 +137,7 @@ const Home = () => {
           transition={{ duration: 0.6 }}
           className="container mx-auto px-4 sm:px-6 lg:px-8 text-center"
         >
-          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
             Ready to Elevate Your Event?
           </h2>
           <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto">

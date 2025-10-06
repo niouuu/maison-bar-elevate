@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {/* Brand */}
           <div>
-            <h3 className="font-playfair text-2xl sm:text-3xl font-bold text-black mb-4">
+            <h3 className="font-chamberi text-2xl sm:text-3xl font-bold text-black mb-4">
               Maison du Bar
             </h3>
             <p className="font-sans text-sm text-gray-600 leading-relaxed">

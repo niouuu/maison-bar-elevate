@@ -36,7 +36,7 @@ const ServiceCard = ({ title, description, features, variant = "standard" }: Ser
       )}
       
       <CardHeader className="text-center pb-4 pt-8">
-        <CardTitle className="font-playfair text-2xl sm:text-3xl font-bold text-black mb-2">
+        <CardTitle className="font-chamberi text-2xl sm:text-3xl font-bold text-black mb-2">
           {title}
         </CardTitle>
         <CardDescription className="font-sans text-sm sm:text-base text-gray-600">

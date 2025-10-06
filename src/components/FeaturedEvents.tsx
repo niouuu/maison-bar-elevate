@@ -35,7 +35,7 @@ const FeaturedEvents = () => {
     <section className="py-20 bg-primary" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4 text-primary-foreground">
+          <h2 className="font-chamberi text-4xl md:text-5xl font-bold mb-4 text-primary-foreground">
             Recent Events
           </h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto">
@@ -64,7 +64,7 @@ const FeaturedEvents = () => {
                   <span className="inline-block px-3 py-1 bg-accent text-accent-foreground text-xs font-semibold rounded-full mb-3">
                     {event.category}
                   </span>
-                  <h3 className="font-playfair text-2xl font-bold mb-2">
+                  <h3 className="font-chamberi text-2xl font-bold mb-2">
                     {event.title}
                   </h3>
                   <p className="text-primary-foreground/80 text-sm">

@@ -49,7 +49,7 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8">
+            <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8">
               About Maison du Bar
             </h1>
             <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
@@ -63,7 +63,7 @@ const About = () => {
       <section className="py-16 sm:py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-black">
+            <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-black">
               Our Story
             </h2>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
@@ -94,7 +94,7 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="order-2 lg:order-1"
             >
-              <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-black">
+              <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-black">
                 Our Mission
               </h2>
               <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
@@ -129,7 +129,7 @@ const About = () => {
       {/* Why Choose Us */}
       <section className="py-16 sm:py-20 lg:py-32 bg-white" ref={ref}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 lg:mb-20 text-black">
+          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 lg:mb-20 text-black">
             Why Choose Us
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
@@ -144,7 +144,7 @@ const About = () => {
                 <div className="flex items-start space-x-4">
                   <CheckCircle2 className="text-black flex-shrink-0 mt-1" size={24} />
                   <div>
-                    <h3 className="font-playfair text-xl sm:text-2xl font-semibold mb-3 text-black">
+                    <h3 className="font-chamberi text-xl sm:text-2xl font-semibold mb-3 text-black">
                       {item.title}
                     </h3>
                     <p className="font-sans text-sm sm:text-base text-gray-600 leading-relaxed">

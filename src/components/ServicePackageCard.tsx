@@ -26,7 +26,7 @@ const ServicePackageCard = ({
     <Card className="h-full bg-white border-2 border-black hover:shadow-2xl transition-all duration-300">
       <CardContent className="p-6 sm:p-8">
         <div className="space-y-4">
-          <h3 className="font-playfair text-2xl sm:text-3xl font-bold text-black">
+          <h3 className="font-chamberi text-2xl sm:text-3xl font-bold text-black">
             {title}
           </h3>
           <p className="font-sans text-base text-gray-600 leading-relaxed">
@@ -58,7 +58,7 @@ const ServicePackageCard = ({
                 <div className="pt-6 space-y-6 border-t border-gray-200">
                   {/* Includes Section */}
                   <div className="space-y-3">
-                    <h4 className="font-playfair text-xl font-bold text-black">
+                    <h4 className="font-chamberi text-xl font-bold text-black">
                       Includes:
                     </h4>
                     <ul className="space-y-2">
@@ -76,7 +76,7 @@ const ServicePackageCard = ({
 
                   {/* Spirits Section */}
                   <div className="space-y-2">
-                    <h4 className="font-playfair text-lg font-bold text-black">
+                    <h4 className="font-chamberi text-lg font-bold text-black">
                       Recommended Spirits:
                     </h4>
                     <p className="font-sans text-sm text-gray-700 leading-relaxed">
@@ -86,7 +86,7 @@ const ServicePackageCard = ({
 
                   {/* Cocktails Section */}
                   <div className="space-y-2">
-                    <h4 className="font-playfair text-lg font-bold text-black">
+                    <h4 className="font-chamberi text-lg font-bold text-black">
                       Recommended Cocktails:
                     </h4>
                     <p className="font-sans text-sm text-gray-700 leading-relaxed">

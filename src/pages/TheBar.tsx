@@ -57,7 +57,7 @@ const TheBar = () => {
           transition={{ duration: 0.8 }}
           className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
         >
-          <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 elegant-text-shadow">
+          <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 elegant-text-shadow">
             Our Signature Bar Experience
           </h1>
           <p className="font-sans text-lg sm:text-xl md:text-2xl text-white max-w-3xl mx-auto">
@@ -70,7 +70,7 @@ const TheBar = () => {
       <section className="py-16 sm:py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-black">
+            <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-black">
               Portable Luxury, Seamless Design
             </h2>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
@@ -86,7 +86,7 @@ const TheBar = () => {
       {/* Feature Highlights */}
       <section className="py-16 sm:py-20 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 lg:mb-20 text-black">
+          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 lg:mb-20 text-black">
             What Makes Maison Du Bar Unique
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto" ref={ref}>
@@ -101,7 +101,7 @@ const TheBar = () => {
                 <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 flex items-center justify-center border-2 border-black rounded-full group-hover:bg-black transition-all duration-300">
                   <feature.icon className="w-8 h-8 sm:w-10 sm:h-10 text-black group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="font-playfair text-xl sm:text-2xl font-bold mb-4 text-black">
+                <h3 className="font-chamberi text-xl sm:text-2xl font-bold mb-4 text-black">
                   {feature.title}
                 </h3>
                 <p className="font-sans text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -116,7 +116,7 @@ const TheBar = () => {
       {/* Gallery Section */}
       <section className="py-16 sm:py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-black">
+          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-black">
             Gallery
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
@@ -152,7 +152,7 @@ const TheBar = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Book Our Signature Bar Today
             </h2>
             <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">

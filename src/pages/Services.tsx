@@ -109,7 +109,7 @@ const Services = () => {
             transition={{ duration: 0.6 }}
             className="max-w-5xl mx-auto"
           >
-            <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-8 sm:mb-12 text-center">
+            <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-8 sm:mb-12 text-center">
               Exclusively Designed for You, by You
             </h1>
             <p className="font-sans text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-12 text-center">
@@ -125,7 +125,7 @@ const Services = () => {
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
                   className="space-y-3"
                 >
-                  <h3 className="font-playfair text-2xl font-bold text-black">
+                  <h3 className="font-chamberi text-2xl font-bold text-black">
                     {feature.title}
                   </h3>
                   <p className="font-sans text-base text-gray-600 leading-relaxed">
@@ -146,7 +146,7 @@ const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-black text-center mb-12 sm:mb-16"
+            className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-black text-center mb-12 sm:mb-16"
           >
             Our Service Packages
           </motion.h2>
@@ -182,7 +182,7 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="container mx-auto px-4 sm:px-6 lg:px-8 text-center"
         >
-          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Need Something Unique?
           </h2>
           <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">

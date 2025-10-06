@@ -65,7 +65,7 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8">
+            <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8">
               Get In Touch
             </h1>
             <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
@@ -89,7 +89,7 @@ const Contact = () => {
               className="lg:col-span-2"
             >
               <div className="bg-white p-8 border-2 border-gray-200">
-                <h2 className="font-playfair text-3xl font-bold mb-6 text-black">
+                <h2 className="font-chamberi text-3xl font-bold mb-6 text-black">
                   Send Us a Message
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -215,7 +215,7 @@ const Contact = () => {
               className="space-y-6"
             >
               <div className="bg-white p-8 border-2 border-gray-200">
-                <h2 className="font-playfair text-2xl font-bold mb-6 text-black">
+                <h2 className="font-chamberi text-2xl font-bold mb-6 text-black">
                   Contact Information
                 </h2>
                 <div className="space-y-4">
