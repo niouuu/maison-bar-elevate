@@ -49,8 +49,8 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-4 lg:px-6 py-2 text-sm lg:text-base text-black hover:bg-black hover:text-white transition-all duration-300 rounded font-medium ${
-                  isActive(link.path) ? "bg-black text-white" : ""
+                className={`px-4 lg:px-6 py-2 text-sm lg:text-base text-foreground font-medium relative after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-[2px] after:bg-foreground after:transition-all after:duration-300 after:ease-in-out hover:after:w-[60%] ${
+                  isActive(link.path) ? "after:!w-[60%]" : ""
                 }`}
               >
                 {link.name}
@@ -71,13 +71,13 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-black/10 bg-white">
+          <div className="md:hidden py-4 border-t border-border bg-background">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`block py-3 text-black hover:bg-black hover:text-white transition-all duration-300 px-4 rounded font-medium ${
-                  isActive(link.path) ? "bg-black text-white" : ""
+                className={`block py-3 text-foreground px-4 font-medium relative after:content-[''] after:absolute after:bottom-2 after:left-4 after:w-0 after:h-[2px] after:bg-foreground after:transition-all after:duration-300 after:ease-in-out hover:after:w-[calc(100%-2rem)] ${
+                  isActive(link.path) ? "after:!w-[calc(100%-2rem)]" : ""
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
