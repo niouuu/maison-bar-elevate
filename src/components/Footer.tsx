@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, Instagram, Facebook } from "lucide-react";
+import logoImage from "@/assets/maison-du-bar-logo.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,9 +11,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {/* Brand */}
           <div>
-            <h3 className="font-chamberi text-2xl sm:text-3xl font-bold text-black mb-4">
-              Maison du Bar
-            </h3>
+            <img
+              src={logoImage}
+              alt="Maison du Bar"
+              className="h-16 w-auto object-contain mb-4"
+            />
             <p className="font-sans text-sm text-gray-600 leading-relaxed">
               Bringing luxury and sophistication to every event across Belgium.
             </p>
