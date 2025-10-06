@@ -13,7 +13,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
 import frontView from "@/assets/Maison_du_Bar_0085.jpg";
 import topView from "@/assets/Maison_du_Bar_0038.jpg";
-import dimensionsView from "@/assets/Maison_du_Bar_0099.jpg";
+import dimensionsView from "@/assets/dimension_bar.jpg";
 
 const TheBar = () => {
   const [ref, inView] = useInView({
