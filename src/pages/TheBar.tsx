@@ -44,14 +44,15 @@ const TheBar = () => {
 
   const barOptions = [
     {
-      id: "option1",
-      title: "Option 1",
-      subtitle: "1 Bartender Setup",
-      images: [
-        { label: "Front View", placeholder: true },
-        { label: "Top View", placeholder: true },
-        { label: "Dimensions", placeholder: true },
-      ],
+  id: "option1",
+  title: "Option 1",
+  subtitle: "1 Bartender Setup",
+  images: [
+    { label: "Front View", src: frontView },
+    { label: "Top View", src: topView },
+    { label: "Dimensions", src: dimensionsView },
+  ],
+},
     },
     {
       id: "option2",
