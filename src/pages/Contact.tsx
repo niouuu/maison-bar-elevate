@@ -16,6 +16,7 @@ import {
 import { MapPin, Phone, Mail } from "lucide-react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -27,19 +28,52 @@ const Contact = () => {
     guests: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you! We'll get back to you within 24 hours.");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      eventType: "",
-      eventDate: "",
-      guests: "",
-      message: "",
-    });
+    setIsSubmitting(true);
+
+    try {
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email)) {
+        toast.error("Please enter a valid email address");
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Call the edge function
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData,
+      });
+
+      if (error) {
+        console.error("Error sending email:", error);
+        toast.error("Failed to send message. Please try again or contact us directly.");
+        setIsSubmitting(false);
+        return;
+      }
+
+      console.log("Email sent successfully:", data);
+      toast.success("Thank you! We'll be in touch soon.");
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        eventType: "",
+        eventDate: "",
+        guests: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("An unexpected error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -199,8 +233,9 @@ const Contact = () => {
                     size="lg"
                     variant="elegant"
                     className="w-full font-sans font-medium text-base py-6"
+                    disabled={isSubmitting}
                   >
-                    Send Inquiry
+                    {isSubmitting ? "Sending..." : "Send Inquiry"}
                   </Button>
                 </form>
               </div>
