@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import { Sparkles, Zap, Users } from "lucide-react";
+import { Gem, Boxes, PackageCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import stationDeusImage from "@/assets/stationdeus-bar.jpg";
@@ -16,19 +16,19 @@ const TheBar = () => {
 
   const features = [
     {
-      icon: Sparkles,
+      icon: Gem,
       title: "Elegant Design",
       description:
         "A refined, minimal aesthetic that enhances any event.",
     },
     {
-      icon: Zap,
+      icon: Boxes,
       title: "Modular Flexibility",
       description:
         "Adaptable to any space, from intimate gatherings to grand celebrations.",
     },
     {
-      icon: Users,
+      icon: PackageCheck,
       title: "Effortless Setup",
       description:
         "Quick to assemble, discreet to transport, always event-ready.",
