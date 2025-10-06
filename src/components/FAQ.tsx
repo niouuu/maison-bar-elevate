@@ -8,44 +8,74 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "How far in advance should I book?",
+      question: "What packages do you offer?",
       answer:
-        "We recommend booking at least 4-6 weeks in advance for most events. For peak season (summer months and holidays), booking 8-12 weeks ahead ensures availability. However, we do our best to accommodate last-minute requests when possible.",
+        "We offer four main packages – Standard, Advanced, Premium, and Ultra Premium – each including a full mobile bar, professional bartenders, and a curated selection of drinks.",
     },
     {
-      question: "What areas do you service?",
+      question: "Can I create a fully customized package?",
       answer:
-        "We primarily service the greater metropolitan area and surrounding regions. For events outside our standard service area, we can arrange special accommodations. Contact us with your event location, and we'll work with you to make it happen.",
+        "Yes. In addition to our standard packages, you can design a 100% personalized bar experience, choosing everything from cocktails and spirits to glassware and details.",
     },
     {
-      question: "Can you create custom cocktails for our event?",
+      question: "What drinks are included in each package?",
       answer:
-        "Absolutely! Our Premium and Ultra Premium packages include custom cocktail menu consultation. We work with you to create signature drinks that match your event theme, preferences, and guest demographics.",
+        "Each package includes an open bar with spirits, wines, beers, and cocktails tailored to the selected level (classic, premium, or ultra-premium).",
     },
     {
-      question: "Do you provide the alcohol, or do we purchase it?",
+      question: "Do you only serve cocktails?",
       answer:
-        "We offer both options. We can provide all alcohol as part of our service, or you can purchase it yourself (we'll provide a recommended shopping list). Our team will advise on quantities based on your guest count and event duration.",
+        "No. We provide a wide variety of drinks including spirits, wines, beers, soft drinks, and alcohol-free options.",
     },
     {
-      question: "What if the weather is bad for an outdoor event?",
+      question: "Can we choose our own cocktail menu?",
       answer:
-        "Our  bar is designed to work both indoors and outdoors. For outdoor events, we recommend having a backup indoor location or tent coverage. We'll work with you to ensure a seamless setup regardless of weather conditions.",
+        "Absolutely. You can select from our recommended cocktails or work with us to create a custom menu.",
     },
     {
-      question: "Are your bartenders licensed and insured?",
+      question: "What is included in the setup?",
       answer:
-        "Yes, all our bartenders are professionally trained, licensed, and fully insured. We carry comprehensive liability insurance, and our staff are experienced in responsible alcohol service.",
+        "We provide the full mobile bar setup, glassware (or disposables, depending on package), ice, equipment, and professional bartenders.",
     },
     {
-      question: "What's included in the setup and cleanup?",
+      question: "Do you provide the alcohol, or do we need to purchase it?",
       answer:
-        "All packages include complete setup (bar, equipment, glassware, garnishes) and post-event cleanup. We typically arrive 2-3 hours before service to set up and handle all breakdown and cleanup after the event concludes.",
+        "We supply all the drinks as part of our packages. However, if you prefer, we can also work with beverages you provide.",
     },
     {
-      question: "Can we see the bar before booking?",
+      question: "Where do you offer services?",
       answer:
-        "Yes! We encourage potential clients to schedule a consultation where you can see the  bar in person, discuss your event details, and sample some of our signature cocktails. Contact us to arrange a viewing.",
+        "We operate all across Greece, including mainland venues and every island destination.",
+    },
+    {
+      question: "Are transportation and accommodation included?",
+      answer:
+        "Transportation costs and staff accommodation are not included in the package and are charged separately depending on the location of your event.",
+    },
+    {
+      question: "What is your cancellation policy?",
+      answer:
+        "Cancellations made at least 30 days before the event qualify for a full refund. Later cancellations result in the deposit being retained.",
+    },
+    {
+      question: "What happens if the event lasts longer than booked?",
+      answer:
+        "Extra hours are possible and will be charged additionally.",
+    },
+    {
+      question: "What if there is damage to glassware or equipment?",
+      answer:
+        "If more than 15% of the glassware is damaged, replacement costs will be charged. Any equipment damage caused by guests is also the client’s responsibility.",
+    },
+    {
+      question: "Are your bartenders experienced?",
+      answer:
+        "Yes, our bartenders and barbacks are highly trained professionals with years of hospitality experience.",
+    },
+     {
+      question: "Do you provide staff beyond bartenders?",
+      answer:
+        "Yes, upon request we can provide barbacks, waitstaff, and additional event support.",
     },
   ];
 
