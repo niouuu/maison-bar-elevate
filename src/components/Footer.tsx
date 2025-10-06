@@ -6,25 +6,25 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white border-t-2 border-gray-200">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+    <footer className="bg-background border-t-2 border-border">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 lg:gap-16">
           {/* Brand */}
-          <div>
+          <div className="text-center md:text-left space-y-4">
             <img
               src={logoImage}
               alt="Maison du Bar"
-              className="h-16 w-auto object-contain mb-4"
+              className="h-16 sm:h-20 lg:h-24 w-auto object-contain mx-auto md:mx-0"
             />
-            <p className="font-sans text-sm text-gray-600 leading-relaxed">
+            <p className="font-sans text-sm lg:text-base text-muted-foreground leading-relaxed max-w-xs mx-auto md:mx-0">
               Bringing luxury and sophistication to every event across Belgium.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="font-sans text-lg font-bold text-black mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+          <div className="text-center md:text-left">
+            <h4 className="font-sans text-lg lg:text-xl font-bold text-foreground mb-4 lg:mb-6">Quick Links</h4>
+            <ul className="space-y-2 lg:space-y-3">
               {[
                 { name: "Services", path: "/services" },
                 { name: "About", path: "/about" },
@@ -34,7 +34,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="font-sans text-sm text-gray-600 hover:text-black transition-colors duration-200"
+                    className="font-sans text-sm lg:text-base text-muted-foreground hover:text-foreground transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -44,56 +44,56 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div>
-            <h4 className="font-sans text-lg font-bold text-black mb-4">Contact Us</h4>
-            <div className="space-y-3">
+          <div className="text-center md:text-left">
+            <h4 className="font-sans text-lg lg:text-xl font-bold text-foreground mb-4 lg:mb-6">Contact Us</h4>
+            <div className="space-y-3 lg:space-y-4">
               <a
                 href="mailto:maisondubar25@gmail.com"
-                className="flex items-center gap-3 font-sans text-sm text-gray-600 hover:text-black transition-colors duration-200"
+                className="flex items-center justify-center md:justify-start gap-3 font-sans text-sm lg:text-base text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
-                <Mail className="w-5 h-5" />
-                maisondubar25@gmail.com
+                <Mail className="w-5 h-5 flex-shrink-0" />
+                <span className="break-all">maisondubar25@gmail.com</span>
               </a>
               <a
                 href="tel:6973291777"
-                className="flex items-center gap-3 font-sans text-sm text-gray-600 hover:text-black transition-colors duration-200"
+                className="flex items-center justify-center md:justify-start gap-3 font-sans text-sm lg:text-base text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5 flex-shrink-0" />
                 697 329 1777
               </a>
               <a
                 href="tel:6944199717"
-                className="flex items-center gap-3 font-sans text-sm text-gray-600 hover:text-black transition-colors duration-200"
+                className="flex items-center justify-center md:justify-start gap-3 font-sans text-sm lg:text-base text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5 flex-shrink-0" />
                 694 419 9717
               </a>
-              <div className="flex gap-4 pt-2">
+              <div className="flex gap-4 lg:gap-6 pt-2 justify-center md:justify-start">
                 <a
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-black hover:opacity-70 transition-opacity duration-200"
+                  className="text-foreground hover:opacity-70 transition-opacity duration-200"
                   aria-label="Instagram"
                 >
-                  <Instagram className="w-6 h-6" />
+                  <Instagram className="w-6 h-6 lg:w-7 lg:h-7" />
                 </a>
                 <a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-black hover:opacity-70 transition-opacity duration-200"
+                  className="text-foreground hover:opacity-70 transition-opacity duration-200"
                   aria-label="Facebook"
                 >
-                  <Facebook className="w-6 h-6" />
+                  <Facebook className="w-6 h-6 lg:w-7 lg:h-7" />
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-200 mt-8 pt-8 text-center">
-          <p className="font-sans text-sm text-gray-600">
+        <div className="border-t border-border mt-10 sm:mt-12 lg:mt-16 pt-8 lg:pt-10 text-center">
+          <p className="font-sans text-sm lg:text-base text-muted-foreground">
             © {currentYear} Maison du Bar. All rights reserved.
           </p>
         </div>
