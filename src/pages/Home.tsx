@@ -7,19 +7,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
 import ScrollToTop from "@/components/ScrollToTop";
-import { useRandomImage } from "@/hooks/use-random-image";
 import heroImage from "@/assets/Maison_du_Bar_0007.jpg";
-import atmosphericImage1 from "@/assets/Maison_du_Bar_0075.jpg";
-import atmosphericImage2 from "@/assets/Maison_du_Bar_0059.jpg";
-import atmosphericImage3 from "@/assets/Maison_du_Bar_0054.jpg";
 
 const Home = () => {
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [valueRef, valueInView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [dividerRef, dividerInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [ctaRef, ctaInView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  
-  const randomAtmosphericImage = useRandomImage([atmosphericImage1, atmosphericImage2, atmosphericImage3]);
 
   return (
     <div className="min-h-screen bg-white">
@@ -110,24 +103,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Atmospheric Divider */}
-      <motion.section
-        ref={dividerRef}
-        initial={{ opacity: 0 }}
-        animate={dividerInView ? { opacity: 1 } : {}}
-        transition={{ duration: 1 }}
-        className="relative h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden"
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-center grayscale-hover"
-          style={{
-            backgroundImage: `url(${randomAtmosphericImage})`,
-          }}
-        >
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
-      </motion.section>
 
       {/* Testimonials */}
       <Testimonials />

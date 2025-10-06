@@ -17,7 +17,6 @@ import { MapPin, Phone, Mail } from "lucide-react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
-import textureImage from "@/assets/Maison_du_Bar_0047.jpg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -112,17 +111,8 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="relative py-16 sm:py-20 lg:py-32 bg-white overflow-hidden">
-        {/* Subtle background texture */}
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `url(${textureImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 lg:py-32 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
             <motion.div

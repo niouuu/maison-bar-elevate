@@ -2,23 +2,15 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { CheckCircle2 } from "lucide-react";
+import teamImage from "@/assets/about-team.jpg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useRandomImage } from "@/hooks/use-random-image";
-import teamImage from "@/assets/Maison_du_Bar_0054.jpg";
-import dividerImage1 from "@/assets/Maison_du_Bar_0062.jpg";
-import dividerImage2 from "@/assets/Maison_du_Bar_0025.jpg";
-import closingImage from "@/assets/Maison_du_Bar_0075.jpg";
 
 const About = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-  const [divider1Ref, divider1InView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [closingRef, closingInView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  
-  const randomDividerImage = useRandomImage([dividerImage1, dividerImage2]);
 
   const differentiators = [
     {
@@ -90,24 +82,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Atmospheric Divider */}
-      <motion.section
-        ref={divider1Ref}
-        initial={{ opacity: 0 }}
-        animate={divider1InView ? { opacity: 1 } : {}}
-        transition={{ duration: 1 }}
-        className="relative h-[250px] md:h-[350px] overflow-hidden"
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-center grayscale-hover"
-          style={{
-            backgroundImage: `url(${randomDividerImage})`,
-          }}
-        >
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
-      </motion.section>
 
       {/* Mission Section with Image */}
       <section className="py-16 sm:py-20 lg:py-32 bg-gray-50">
@@ -183,24 +157,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Closing Visual Section */}
-      <motion.section
-        ref={closingRef}
-        initial={{ opacity: 0 }}
-        animate={closingInView ? { opacity: 1 } : {}}
-        transition={{ duration: 1 }}
-        className="relative h-[300px] md:h-[450px] overflow-hidden"
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-center grayscale-hover"
-          style={{
-            backgroundImage: `url(${closingImage})`,
-          }}
-        >
-          <div className="absolute inset-0 bg-black/45" />
-        </div>
-      </motion.section>
 
       <Footer />
     </div>

@@ -7,19 +7,10 @@ import FAQ from "@/components/FAQ";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { useRandomImage } from "@/hooks/use-random-image";
-import dividerImage1 from "@/assets/Maison_du_Bar_0062.jpg";
-import dividerImage2 from "@/assets/Maison_du_Bar_0025.jpg";
-import dividerImage3 from "@/assets/Maison_du_Bar_0059.jpg";
 
 const Services = () => {
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [customRef, customInView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [divider1Ref, divider1InView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [divider2Ref, divider2InView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  
-  const randomDivider1 = useRandomImage([dividerImage1, dividerImage2]);
-  const randomDivider2 = useRandomImage([dividerImage3]);
 
   const customFeatures = [
     {
@@ -147,24 +138,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Atmospheric Divider 1 */}
-      <motion.section
-        ref={divider1Ref}
-        initial={{ opacity: 0 }}
-        animate={divider1InView ? { opacity: 1 } : {}}
-        transition={{ duration: 1 }}
-        className="relative h-[250px] md:h-[350px] overflow-hidden"
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-center grayscale-hover"
-          style={{
-            backgroundImage: `url(${randomDivider1})`,
-          }}
-        >
-          <div className="absolute inset-0 bg-black/45" />
-        </div>
-      </motion.section>
-
       {/* Service Packages Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,24 +172,6 @@ const Services = () => {
           </div>
         </div>
       </section>
-
-      {/* Atmospheric Divider 2 */}
-      <motion.section
-        ref={divider2Ref}
-        initial={{ opacity: 0 }}
-        animate={divider2InView ? { opacity: 1 } : {}}
-        transition={{ duration: 1 }}
-        className="relative h-[300px] md:h-[400px] overflow-hidden"
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-center grayscale-hover"
-          style={{
-            backgroundImage: `url(${randomDivider2})`,
-          }}
-        >
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
-      </motion.section>
 
       {/* Custom Package Section */}
       <section className="py-16 sm:py-20 lg:py-32 bg-black text-white">

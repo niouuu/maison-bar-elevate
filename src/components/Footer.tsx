@@ -1,23 +1,13 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, Instagram } from "lucide-react";
 import logoImage from "@/assets/maison-du-bar-new-logo.jpg";
-import textureImage from "@/assets/Maison_du_Bar_0034.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-background border-t-2 border-border overflow-x-hidden">
-      {/* Subtle background texture */}
-      <div 
-        className="absolute inset-0 opacity-[0.07]"
-        style={{
-          backgroundImage: `url(${textureImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 max-w-full">
+    <footer className="bg-background border-t-2 border-border overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 max-w-full">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 w-full">
           {/* Brand */}
           <div className="text-center md:text-left space-y-4">
