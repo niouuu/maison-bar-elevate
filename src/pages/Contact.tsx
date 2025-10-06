@@ -155,17 +155,7 @@ const Contact = () => {
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <Label htmlFor="eventDate" className="font-sans text-black">Event Date</Label>
-                      <Input
-                        id="eventDate"
-                        name="eventDate"
-                        type="date"
-                        value={formData.eventDate}
-                        onChange={handleChange}
-                        className="mt-2 border-2 border-gray-300 focus:border-black"
-                      />
-                    </div>
+            
                     <div>
                       <Label htmlFor="guests" className="font-sans text-black">Number of Guests</Label>
                       <Input
