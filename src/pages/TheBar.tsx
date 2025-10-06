@@ -80,6 +80,26 @@ const TheBar = () => {
         { label: "Dimensions", placeholder: true },
       ],
     },
+    {
+      id: "option5",
+      title: "Option 5",
+      subtitle: "4 Bartender Setup",
+      images: [
+        { label: "Front View", placeholder: true },
+        { label: "Top View", placeholder: true },
+        { label: "Dimensions", placeholder: true },
+      ],
+    },
+    {
+      id: "option6",
+      title: "Option 6",
+      subtitle: "4 Bartender Setup",
+      images: [
+        { label: "Front View", placeholder: true },
+        { label: "Top View", placeholder: true },
+        { label: "Dimensions", placeholder: true },
+      ],
+    },
   ];
 
   return (
