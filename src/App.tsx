@@ -9,6 +9,7 @@ import About from "./pages/About";
 import TheBar from "./pages/TheBar";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTopOnRouteChange />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
