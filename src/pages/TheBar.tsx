@@ -222,11 +222,7 @@ const TheBar = () => {
                         key={idx}
                         className="aspect-[4/3] bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group relative"
                       >
-                        <img 
-                          src={image.src} 
-                          alt={image.label}
-                          className="w-full h-full object-cover"
-                        />
+                        <img src={image.src} alt={image.label} className="w-full h-full object-cover" />
                         <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-3">
                           <p className="font-chamberi text-base font-bold text-white text-center">{image.label}</p>
                         </div>
@@ -251,11 +247,7 @@ const TheBar = () => {
                       {option.images.map((image, idx) => (
                         <CarouselItem key={idx}>
                           <div className="aspect-[4/3] bg-gray-100 rounded-lg border border-gray-200 shadow-md overflow-hidden relative">
-                            <img 
-                              src={image.src} 
-                              alt={image.label}
-                              className="w-full h-full object-cover"
-                            />
+                            <img src={image.src} alt={image.label} className="w-full h-full object-cover" />
                             <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-3">
                               <p className="font-chamberi text-base font-bold text-white text-center">{image.label}</p>
                             </div>
@@ -270,10 +262,6 @@ const TheBar = () => {
               ))}
             </div>
           )}
-
-          <p className="text-center font-sans text-gray-500 italic text-sm sm:text-base max-w-2xl mx-auto mt-12">
-            Professional photography of our modular bar configurations will be available soon.
-          </p>
         </div>
       </section>
 
