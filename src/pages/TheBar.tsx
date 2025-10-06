@@ -11,6 +11,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
+import frontView from "@/assets/Maison_du_Bar_0085.jpg";
+import topView from "@/assets/Maison_du_Bar_0079.jpg";
+import dimensionsView from "@/assets/Maison_du_Bar_0101.jpg";
 
 const TheBar = () => {
   const [ref, inView] = useInView({
