@@ -36,7 +36,7 @@ const Navbar = () => {
             <img
               src={logoImage}
               alt="Maison du Bar"
-              className="h-40 sm:h-48 lg:h-56 w-auto object-contain mx-auto md:mx-0 max-w-[480px]"
+              className="h-32 sm:h-36 lg:h-40 w-auto object-contain mx-auto md:mx-0 max-w-[340px] sm:max-w-[400px]"
             />
           </Link>
 
