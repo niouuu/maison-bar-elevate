@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
 import ScrollToTop from "@/components/ScrollToTop";
-import heroImage from "@/assets/hero-bar.jpg";
+import heroImage from "@/assets/Maison_du_Bar_0085(1).jpg";
 
 const Home = () => {
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -80,7 +80,8 @@ const Home = () => {
               Elevate Every Occasion
             </h2>
             <p className="font-sans text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Transform your event with our premium mobile bar service. We bring sophistication, style, and exceptional service directly to your venue.
+              Transform your event with our premium mobile bar service. We bring sophistication, style, and exceptional
+              service directly to your venue.
             </p>
           </motion.div>
 
@@ -89,17 +90,20 @@ const Home = () => {
               {
                 icon: Sparkles,
                 title: "Premium Experience",
-                description: "Exceptional service and a curated selection of premium drinks, designed to elevate every celebration.",
+                description:
+                  "Exceptional service and a curated selection of premium drinks, designed to elevate every celebration.",
               },
               {
                 icon: Truck,
                 title: "Fully Portable",
-                description: "A complete luxury mobile bar setup, ready to elevate your event anywhere in Greece – from city venues to the islands.",
+                description:
+                  "A complete luxury mobile bar setup, ready to elevate your event anywhere in Greece – from city venues to the islands.",
               },
               {
                 icon: Palette,
                 title: "Customizable Service",
-                description: "Tailor-made packages designed to reflect your unique style and create an unforgettable experience.",
+                description:
+                  "Tailor-made packages designed to reflect your unique style and create an unforgettable experience.",
               },
             ].map((feature, index) => (
               <motion.div
@@ -112,18 +116,13 @@ const Home = () => {
                 <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center border-2 border-black rounded-full group-hover:bg-black transition-all duration-300">
                   <feature.icon className="w-8 h-8 sm:w-10 sm:h-10 text-black group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="font-chamberi text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">
-                  {feature.title}
-                </h3>
-                <p className="font-sans text-sm sm:text-base text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
+                <h3 className="font-chamberi text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">{feature.title}</h3>
+                <p className="font-sans text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
 
       {/* Testimonials */}
       <Testimonials />
