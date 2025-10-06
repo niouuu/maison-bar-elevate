@@ -83,9 +83,9 @@ const handler = async (req: Request): Promise<Response> => {
       </div>
     `;
 
-    // ✅ Send email using verified domain
+    // Send email using verified domain maisondubar.com
     const emailResponse = await resend.emails.send({
-      from: "Maison du Bar <info@maisondubar.com>", // ✅ verified sender
+      from: "Maison du Bar <info@maisondubar.com>",
       to: ["maisondubar25@gmail.com"],
       replyTo: email,
       subject: "New Contact Form Submission – Maison du Bar",
