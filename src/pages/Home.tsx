@@ -5,7 +5,6 @@ import { useInView } from "react-intersection-observer";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Statistics from "@/components/Statistics";
 import Testimonials from "@/components/Testimonials";
 import ScrollToTop from "@/components/ScrollToTop";
 import heroImage from "@/assets/hero-bar.jpg";
@@ -125,8 +124,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Statistics */}
-      <Statistics />
 
       {/* Testimonials */}
       <Testimonials />
