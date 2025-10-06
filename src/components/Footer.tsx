@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, Instagram, Facebook } from "lucide-react";
+import { Mail, Phone, Instagram } from "lucide-react";
 import logoImage from "@/assets/maison-du-bar-new-logo.jpg";
 
 const Footer = () => {
@@ -70,22 +70,13 @@ const Footer = () => {
               </a>
               <div className="flex gap-4 lg:gap-6 pt-2 justify-center md:justify-start">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/maison_du_bar_/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-foreground hover:opacity-70 transition-opacity duration-200"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-6 h-6 lg:w-7 lg:h-7" />
-                </a>
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground hover:opacity-70 transition-opacity duration-200"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="w-6 h-6 lg:w-7 lg:h-7" />
                 </a>
               </div>
             </div>
