@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Sparkles, Truck, Settings } from "lucide-react";
+import { Sparkles, Truck, Palette } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Button } from "@/components/ui/button";
@@ -97,7 +97,7 @@ const Home = () => {
                 description: "A complete luxury mobile bar setup, ready to elevate your event anywhere in Greece – from city venues to the islands.",
               },
               {
-                icon: Settings,
+                icon: Palette,
                 title: "Customizable Service",
                 description: "Tailor-made packages designed to reflect your unique style and create an unforgettable experience.",
               },
