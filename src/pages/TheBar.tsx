@@ -58,7 +58,7 @@ const TheBar = () => {
           className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
         >
           <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 elegant-text-shadow">
-            The StationDeus Experience
+            Our Signature Bar Experience
           </h1>
           <p className="font-sans text-lg sm:text-xl md:text-2xl text-white max-w-3xl mx-auto">
             Our signature portable bar – where luxury meets versatility
@@ -137,7 +137,7 @@ const TheBar = () => {
             ))}
           </div>
           <p className="text-center font-sans text-gray-500 italic text-sm sm:text-base max-w-2xl mx-auto">
-            Professional photography and drone footage of the StationDeus bar in various
+            Professional photography and drone footage of our signature bar in various
             event settings will be available soon.
           </p>
         </div>
@@ -153,7 +153,7 @@ const TheBar = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Book the StationDeus Bar Today
+              Book Our Signature Bar Today
             </h2>
             <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
               Transform your event with our stunning portable bar. Contact us to
