@@ -155,7 +155,17 @@ const Contact = () => {
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            
+                    <div>
+                      <Label htmlFor="eventDate" className="font-sans text-black">Event Date</Label>
+                      <Input
+                        id="eventDate"
+                        name="eventDate"
+                        type="date"
+                        value={formData.eventDate}
+                        onChange={handleChange}
+                        className="mt-2 border-2 border-gray-300 focus:border-black"
+                      />
+                    </div>
                     <div>
                       <Label htmlFor="guests" className="font-sans text-black">Number of Guests</Label>
                       <Input
@@ -246,26 +256,14 @@ const Contact = () => {
                     <div>
                       <p className="font-sans font-semibold text-black text-sm">Service Area</p>
                       <p className="font-sans text-gray-600 text-sm">
-                        Available throughout Belgium
+                        All over Greece
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-black p-6 text-white">
-                <h3 className="font-playfair text-2xl font-bold mb-4">
-                  Business Hours
-                </h3>
-                <div className="space-y-2 font-sans text-sm text-gray-300">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p>Saturday: 10:00 AM - 4:00 PM</p>
-                  <p>Sunday: By appointment</p>
-                </div>
-                <p className="mt-4 font-sans text-xs text-gray-400 italic">
-                  Event services available 7 days a week
-                </p>
-              </div>
+              
             </motion.div>
           </div>
         </div>
