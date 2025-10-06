@@ -32,14 +32,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <div className="flex items-center justify-between h-20 sm:h-24 lg:h-28 gap-4">
           {/* Logo */}
-          <Link
-            to="/"
-            className="flex-shrink-0 hover:opacity-80 transition-opacity"
-          >
+          <Link to="/" className="flex-shrink-0 hover:opacity-80 transition-opacity">
             <img
               src={logoImage}
               alt="Maison du Bar"
-              className="h-[60px] sm:h-[70px] md:h-[80px] lg:h-[90px] w-auto object-contain max-w-[150px] sm:max-w-[180px] md:max-w-[200px]"
+              className="h-40 sm:h-48 lg:h-56 w-auto object-contain mx-auto md:mx-0 max-w-[480px]"
             />
           </Link>
 
