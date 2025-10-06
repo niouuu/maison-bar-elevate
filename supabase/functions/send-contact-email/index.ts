@@ -89,7 +89,7 @@ const handler = async (req: Request): Promise<Response> => {
     // ✅ Αποστολή email
     console.log("📤 Attempting to send email via Resend...");
     const emailResponse = await resend.emails.send({
-      from: "Maison du Bar <contact@maisondubar.com>", // ✅ verified domain sender
+      from: "Maison du Bar <info@maisondubar.com>", // ✅ verified domain sender
       to: ["maisondubar25@gmail.com"],
       replyTo: email,
       subject: "New Contact Form Submission – Maison du Bar",
