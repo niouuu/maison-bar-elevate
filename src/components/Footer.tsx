@@ -6,15 +6,15 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-background border-t-2 border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 lg:gap-16">
+    <footer className="bg-background border-t-2 border-border overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 max-w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 w-full">
           {/* Brand */}
           <div className="text-center md:text-left space-y-4">
             <img
               src={logoImage}
               alt="Maison du Bar"
-              className="h-20 sm:h-24 lg:h-28 w-auto object-contain mx-auto md:mx-0"
+              className="h-16 sm:h-20 lg:h-24 w-auto object-contain mx-auto md:mx-0 max-w-[180px] sm:max-w-[200px]"
             />
             <p className="font-sans text-sm lg:text-base text-muted-foreground leading-relaxed max-w-xs mx-auto md:mx-0">
               Bringing luxury and sophistication to every event across Belgium.
