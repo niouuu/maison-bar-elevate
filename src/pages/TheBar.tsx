@@ -7,12 +7,19 @@ import { Link } from "react-router-dom";
 import stationDeusImage from "@/assets/stationdeus-bar.jpg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { useState } from "react";
 
 const TheBar = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
+  
+  const isMobile = useIsMobile();
+  const [selectedOption, setSelectedOption] = useState("option1");
 
   const features = [
     {
@@ -35,7 +42,48 @@ const TheBar = () => {
     },
   ];
 
-  const galleryPlaceholders = Array.from({ length: 6 }, (_, i) => i);
+  const barOptions = [
+    {
+      id: "option1",
+      title: "Option 1",
+      subtitle: "1 Bartender Setup",
+      images: [
+        { label: "Front View", placeholder: true },
+        { label: "Top View", placeholder: true },
+        { label: "Dimensions", placeholder: true },
+      ],
+    },
+    {
+      id: "option2",
+      title: "Option 2",
+      subtitle: "2 Bartender Setup",
+      images: [
+        { label: "Front View", placeholder: true },
+        { label: "Top View", placeholder: true },
+        { label: "Dimensions", placeholder: true },
+      ],
+    },
+    {
+      id: "option3",
+      title: "Option 3",
+      subtitle: "3 Bartender Setup",
+      images: [
+        { label: "Front View", placeholder: true },
+        { label: "Top View", placeholder: true },
+        { label: "Dimensions", placeholder: true },
+      ],
+    },
+    {
+      id: "option4",
+      title: "Option 4",
+      subtitle: "4 Bartender Setup",
+      images: [
+        { label: "Front View", placeholder: true },
+        { label: "Top View", placeholder: true },
+        { label: "Dimensions", placeholder: true },
+      ],
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -113,32 +161,104 @@ const TheBar = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
+      {/* Gallery Section - Bar Configuration Options */}
       <section className="py-16 sm:py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-black">
-            Gallery
+          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-black">
+            Modular Bar Configurations
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
-            {galleryPlaceholders.map((index) => (
-              <div
-                key={index}
-                className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300 hover:border-black transition-colors duration-300 cursor-pointer group"
-              >
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-black/10 transition-colors">
-                    <span className="text-3xl">📸</span>
+          <p className="text-center font-sans text-gray-600 mb-12 max-w-2xl mx-auto">
+            Choose the perfect setup for your event
+          </p>
+
+          {!isMobile ? (
+            // Desktop: Tabs Layout
+            <Tabs value={selectedOption} onValueChange={setSelectedOption} className="max-w-6xl mx-auto">
+              <TabsList className="grid w-full grid-cols-4 mb-8 bg-gray-100 p-1 rounded-lg h-auto">
+                {barOptions.map((option) => (
+                  <TabsTrigger
+                    key={option.id}
+                    value={option.id}
+                    className="font-chamberi text-base sm:text-lg py-3 data-[state=active]:bg-black data-[state=active]:text-white rounded-md transition-all duration-300"
+                  >
+                    <div className="text-center">
+                      <div className="font-bold">{option.title}</div>
+                      <div className="text-xs sm:text-sm font-sans opacity-80">{option.subtitle}</div>
+                    </div>
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+
+              {barOptions.map((option) => (
+                <TabsContent key={option.id} value={option.id} className="mt-0">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                  >
+                    {option.images.map((image, idx) => (
+                      <div
+                        key={idx}
+                        className="aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group"
+                      >
+                        <div className="text-center p-6">
+                          <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-black/10 transition-colors">
+                            <span className="text-3xl">📸</span>
+                          </div>
+                          <p className="font-chamberi text-lg font-bold text-gray-700 mb-1">
+                            {image.label}
+                          </p>
+                          <p className="font-sans text-gray-500 text-sm">
+                            Coming Soon
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </motion.div>
+                </TabsContent>
+              ))}
+            </Tabs>
+          ) : (
+            // Mobile: Carousel Layout with Options
+            <div className="space-y-8">
+              {barOptions.map((option) => (
+                <div key={option.id} className="space-y-4">
+                  <div className="text-center">
+                    <h3 className="font-chamberi text-2xl font-bold text-black">{option.title}</h3>
+                    <p className="font-sans text-gray-600 text-sm">{option.subtitle}</p>
                   </div>
-                  <p className="font-sans text-gray-500 text-sm">
-                    Coming Soon
-                  </p>
+                  
+                  <Carousel className="w-full max-w-sm mx-auto">
+                    <CarouselContent>
+                      {option.images.map((image, idx) => (
+                        <CarouselItem key={idx}>
+                          <div className="aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center border border-gray-200 shadow-md overflow-hidden">
+                            <div className="text-center p-6">
+                              <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span className="text-3xl">📸</span>
+                              </div>
+                              <p className="font-chamberi text-lg font-bold text-gray-700 mb-1">
+                                {image.label}
+                              </p>
+                              <p className="font-sans text-gray-500 text-sm">
+                                Coming Soon
+                              </p>
+                            </div>
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </Carousel>
                 </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-center font-sans text-gray-500 italic text-sm sm:text-base max-w-2xl mx-auto">
-            Professional photography and drone footage of our signature bar in various
-            event settings will be available soon.
+              ))}
+            </div>
+          )}
+
+          <p className="text-center font-sans text-gray-500 italic text-sm sm:text-base max-w-2xl mx-auto mt-12">
+            Professional photography of our modular bar configurations will be available soon.
           </p>
         </div>
       </section>
