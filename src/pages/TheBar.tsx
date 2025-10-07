@@ -125,6 +125,7 @@ const TheBar = () => {
       title: "Option 1",
       bartenderSetup: "1 Bartender Setup",
       guestCount: "Guests: 1-50",
+      length: "Surface Length: 1.50 m",
       images: [{ label: "Front View", src: topView_op1 }],
     },
     {
@@ -132,6 +133,7 @@ const TheBar = () => {
       title: "Option 2",
       bartenderSetup: "1 Bartender and 1 Barback Setup",
       guestCount: "Guests: 1-50",
+      length: "Surface Length: 3.20 m",
       images: [
         { label: "Front View", src: frontView_op2 },
         { label: "Top View", src: topView_op2 },
@@ -142,6 +144,7 @@ const TheBar = () => {
       title: "Option 3",
       bartenderSetup: "1-2 Bartender and 1 Barback Setup",
       guestCount: "Guests: 50-100",
+      length: "Surface Length: 6.20 m",
       images: [
         { label: "Front View", src: frontView_op3 },
         { label: "Top View", src: topView_op3 },
@@ -152,6 +155,7 @@ const TheBar = () => {
       title: "Option 4",
       bartenderSetup: "2 Bartender and 1-2 Barback Setup",
       guestCount: "Guests: 50-100",
+      length: "Surface Length: 4.70 m",
       images: [
         { label: "Front View", src: frontView_op4 },
         { label: "Top View", src: topView_op4 },
@@ -162,6 +166,7 @@ const TheBar = () => {
       title: "Option 5",
       bartenderSetup: "2-4 Bartender and 2 Barback Setup",
       guestCount: "Guests: 100-200",
+      length: "Surface Length: 6.00 m",
       images: [
         { label: "Front View", src: frontView_op5 },
         { label: "Top View", src: topView_op5 },
@@ -172,6 +177,7 @@ const TheBar = () => {
       title: "Option 6",
       bartenderSetup: "2-4 Bartender and 2 Barback Setup",
       guestCount: "Guests: 100-250",
+      length: "Surface Length: 9.40 m",
       images: [
         { label: "Front View", src: frontView_op6 },
         { label: "Top View", src: topView_op6 },
@@ -360,6 +366,7 @@ const TheBar = () => {
                       <div className="font-bold">{option.title}</div>
                       <div className="text-xs sm:text-sm font-sans opacity-80">{option.bartenderSetup}</div>
                       <div className="text-xs sm:text-sm font-sans opacity-80">{option.guestCount}</div>
+                      <div className="text-xs sm:text-sm font-sans opacity-80">{option.length}</div>
                     </div>
                   </TabsTrigger>
                 ))}
@@ -399,6 +406,7 @@ const TheBar = () => {
                     <h3 className="font-chamberi text-2xl font-bold text-black">{option.title}</h3>
                     <p className="font-sans text-gray-600 text-sm">{option.bartenderSetup}</p>
                     <p className="font-sans text-gray-600 text-sm">{option.guestCount}</p>
+                    <p className="font-sans text-gray-600 text-sm">{option.length}</p>
                   </div>
 
                   <Carousel className="w-full max-w-sm mx-auto">
