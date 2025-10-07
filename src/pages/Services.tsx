@@ -15,25 +15,29 @@ const Services = () => {
   const customFeatures = [
     {
       title: "Cocktails",
-      description: "Choose what cocktails will be served, how many you'd like, and even create a fully personalized cocktail list. Whether you prefer timeless classics or specially crafted signature cocktails, everything is possible.",
+      description:
+        "Choose what cocktails will be served, how many you'd like, and even create a fully personalized cocktail list. Whether you prefer timeless classics or specially crafted signature cocktails, everything is possible.",
     },
     {
       title: "Bar Setup",
-      description: "Customize the bar layout and decide which type of bar will be used. Choose from different setup styles to match the vibe of your event.",
+      description:
+        "Customize the bar layout and decide which type of bar will be used. Choose from different setup styles to match the vibe of your event.",
     },
     {
       title: "Drinks & Beverages",
-      description: "Fully customize your selection. Choose from a wide range of spirits, wines, beers, and soft drinks to best suit your preferences.",
+      description:
+        "Fully customize your selection. Choose from a wide range of spirits, wines, beers, and soft drinks to best suit your preferences.",
     },
     {
       title: "Details & Extras",
-      description: "From the type of ice and glassware to every finishing touch, everything can be designed exactly the way you imagine.",
+      description:
+        "From the type of ice and glassware to every finishing touch, everything can be designed exactly the way you imagine.",
     },
   ];
 
   const servicePackages = [
     {
-      title: "🥂 Standard Pack",
+      title: "🍹 Standard Pack",
       description: "Perfect for intimate gatherings and small events.",
       includes: [
         "Full open bar with plain drinks (alcoholic spirits, beverages, wines, beers)",
@@ -44,7 +48,8 @@ const Services = () => {
         "Regular ice",
         "Disposable cups",
       ],
-      spirits: "Smirnoff Vodka, Gordons Gin, Pampero Blanco Rum, Jose Cuervo Blanco Tequila, Plain whiskey of your choice, Plain liquor & aperitif, Plain beverages, Plain wine of your choice.",
+      spirits:
+        "Smirnoff Vodka, Gordons Gin, Pampero Blanco Rum, Jose Cuervo Blanco Tequila, Plain whiskey of your choice, Plain liquor & aperitif, Plain beverages, Plain wine of your choice.",
       cocktails: "Margarita, Paloma, Pornstar Martini, Negroni.",
     },
     {
@@ -59,11 +64,12 @@ const Services = () => {
         "Regular ice",
         "Glassware or disposable cups",
       ],
-      spirits: "Ketel One Vodka, Tanqueray Gin, Havana Club Añejo 3 Rum, Havana Club Añejo Reserva Rum, El Jimador Blanco Tequila, El Jimador Reposado Tequila, Premium whiskey of your choice, Premium liquor & aperitif, Selected origin wines.",
+      spirits:
+        "Ketel One Vodka, Tanqueray Gin, Havana Club Añejo 3 Rum, Havana Club Añejo Reserva Rum, El Jimador Blanco Tequila, El Jimador Reposado Tequila, Premium whiskey of your choice, Premium liquor & aperitif, Selected origin wines.",
       cocktails: "Margarita, Paloma, Pornstar Martini, Negroni, Dry Martini.",
     },
     {
-      title: "🍹 Premium Pack",
+      title: "🥂 Premium Pack",
       description: "A luxury experience with aged spirits and signature creations.",
       includes: [
         "Full open bar with premium drinks (aged spirits, premium beverages, selected origin and aged wines, champagnes)",
@@ -74,7 +80,8 @@ const Services = () => {
         "Regular ice & ice cubes",
         "Glassware",
       ],
-      spirits: "Grey Goose Vodka, Belvedere Vodka, Tanqueray Ten Gin, Hendricks Gin, Ron Zacapa 23 Rum, Don Papa 7 Rum, Diplomatico Reserva Exclusiva Rum, Don Julio Blanco & Reposado Tequila, Premium whiskey of your choice, Premium beverages, Selected origin wines, Champagnes.",
+      spirits:
+        "Grey Goose Vodka, Belvedere Vodka, Tanqueray Ten Gin, Hendricks Gin, Ron Zacapa 23 Rum, Don Papa 7 Rum, Diplomatico Reserva Exclusiva Rum, Don Julio Blanco & Reposado Tequila, Premium whiskey of your choice, Premium beverages, Selected origin wines, Champagnes.",
       cocktails: "Spicy Basil Margarita, Mandarine Paloma, Strawberry Long Pepper Negroni, Cherry Mai Tai.",
     },
     {
@@ -89,8 +96,10 @@ const Services = () => {
         "Regular ice, ice cubes, ice columns",
         "Glassware",
       ],
-      spirits: "Beluga Vodka, Beluga Gold Line Vodka, Monkey 47 Gin, Hendrick's Gin, Roku Japanese Gin, Ron Zacapa 23 Rum, Ron Zacapa XO Rum, Casamigos Blanco, Reposado & Mezcal Tequila, Don Julio 1942 Añejo Tequila, Clase Azul Reposado Tequila, Premium whiskey of your choice, Ultra-premium liquors & aperitifs, Premium beverages, Selected origin & well-aged wines, Premium champagnes.",
-      cocktails: "Pineapple Mescalita, Spicy Mango Margarita, Strawberry & White Chocolate Foam Daiquiri, Belvedere / Apple / Cinnamon Lime Super Juice, Hazelnut Old Fashioned.",
+      spirits:
+        "Beluga Vodka, Beluga Gold Line Vodka, Monkey 47 Gin, Hendrick's Gin, Roku Japanese Gin, Ron Zacapa 23 Rum, Ron Zacapa XO Rum, Casamigos Blanco, Reposado & Mezcal Tequila, Don Julio 1942 Añejo Tequila, Clase Azul Reposado Tequila, Premium whiskey of your choice, Ultra-premium liquors & aperitifs, Premium beverages, Selected origin & well-aged wines, Premium champagnes.",
+      cocktails:
+        "Pineapple Mescalita, Spicy Mango Margarita, Strawberry & White Chocolate Foam Daiquiri, Belvedere / Apple / Cinnamon Lime Super Juice, Hazelnut Old Fashioned.",
     },
   ];
 
@@ -113,9 +122,11 @@ const Services = () => {
               Exclusively Designed for You, by You
             </h1>
             <p className="font-sans text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-12 text-center">
-              In addition to our main packages, we also offer the option to create a fully customized bar experience crafted entirely to your preferences. This 100% tailored solution allows you to choose every detail — guaranteeing a truly personalized experience that reflects your unique taste and style.
+              In addition to our main packages, we also offer the option to create a fully customized bar experience
+              crafted entirely to your preferences. This 100% tailored solution allows you to choose every detail —
+              guaranteeing a truly personalized experience that reflects your unique taste and style.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
               {customFeatures.map((feature, index) => (
                 <motion.div
@@ -125,12 +136,8 @@ const Services = () => {
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
                   className="space-y-3"
                 >
-                  <h3 className="font-chamberi text-2xl font-bold text-black">
-                    {feature.title}
-                  </h3>
-                  <p className="font-sans text-base text-gray-600 leading-relaxed">
-                    {feature.description}
-                  </p>
+                  <h3 className="font-chamberi text-2xl font-bold text-black">{feature.title}</h3>
+                  <p className="font-sans text-base text-gray-600 leading-relaxed">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -150,7 +157,7 @@ const Services = () => {
           >
             Our Service Packages
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {servicePackages.map((pkg, index) => (
               <motion.div
@@ -186,7 +193,8 @@ const Services = () => {
             Need Something Unique?
           </h2>
           <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
-            We specialize in creating custom packages tailored to your exact needs. Let's discuss how we can make your vision a reality.
+            We specialize in creating custom packages tailored to your exact needs. Let's discuss how we can make your
+            vision a reality.
           </p>
           <Link to="/contact">
             <Button
