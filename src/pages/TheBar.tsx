@@ -23,6 +23,15 @@ import frontView_op5 from "@/assets/option5.1.jpg";
 import topView_op5 from "@/assets/option5.2.jpg";
 import frontView_op6 from "@/assets/option6.1.jpg";
 import topView_op6 from "@/assets/option6.3.jpg";
+import detail1 from "@/assets/Maison_du_Bar_0003.jpg";
+import detail2 from "@/assets/Maison_du_Bar_0007.jpg";
+import detail3 from "@/assets/Maison_du_Bar_0021.jpg";
+import detail4 from "@/assets/Maison_du_Bar_0038.jpg";
+import detail5 from "@/assets/Maison_du_Bar_0061.jpg";
+import detail6 from "@/assets/Maison_du_Bar_0073.jpg";
+import detail7 from "@/assets/Maison_du_Bar_0076.jpg";
+import detail8 from "@/assets/Maison_du_Bar_0078.jpg";
+import detail9 from "@/assets/Maison_du_Bar_0079.jpg";
 
 const TheBar = () => {
   const [ref, inView] = useInView({
@@ -32,6 +41,11 @@ const TheBar = () => {
 
   const isMobile = useIsMobile();
   const [selectedOption, setSelectedOption] = useState("option1");
+
+  const [galleryRef, galleryInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   const features = [
     {
@@ -111,6 +125,18 @@ const TheBar = () => {
     },
   ];
 
+  const detailImages = [
+    { src: detail1, alt: "Bar craftsmanship detail" },
+    { src: detail2, alt: "Premium materials" },
+    { src: detail3, alt: "Elegant finish" },
+    { src: detail4, alt: "Design detail" },
+    { src: detail5, alt: "Bar setup detail" },
+    { src: detail6, alt: "Professional quality" },
+    { src: detail7, alt: "Walnut wood detail" },
+    { src: detail8, alt: "Stainless steel interior" },
+    { src: detail9, alt: "Modular components" },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -171,6 +197,61 @@ const TheBar = () => {
               professional setup.{" "}
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Design Details Gallery */}
+      <section className="py-16 sm:py-20 lg:py-32 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-black">
+            Craftsmanship Up Close
+          </h2>
+          <p className="text-center font-sans text-gray-600 mb-12 max-w-2xl mx-auto">
+            Explore the exquisite details that make our bar truly exceptional
+          </p>
+
+          {!isMobile ? (
+            // Desktop: Grid Layout
+            <motion.div 
+              ref={galleryRef}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+            >
+              {detailImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={galleryInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </motion.div>
+              ))}
+            </motion.div>
+          ) : (
+            // Mobile: Horizontal Carousel
+            <Carousel className="w-full max-w-sm mx-auto">
+              <CarouselContent>
+                {detailImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md overflow-hidden">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          )}
         </div>
       </section>
 
