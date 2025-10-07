@@ -4,7 +4,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Gem, Boxes, PackageCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import stationDeusImage from "@/assets/Maison_du_Bar_0062kin.jpg";
+import stationDeusImage from "@/assets/Maison_du_Bar_0004.jpg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
