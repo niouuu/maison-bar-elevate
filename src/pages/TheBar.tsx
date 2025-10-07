@@ -193,8 +193,13 @@ const TheBar = () => {
               Crafted from American dark walnut wood and featuring interior details made of stainless steel, the bar
               embodies both durability and sophistication. It is fully mobile, easily transportable, and can adapt to
               any type of event imaginable — from private gatherings and corporate functions to complete indoor
-              installations. A fully functional bar, it includes every feature you would expect from a world-class
-              professional setup.{" "}
+              installations.
+            </p>
+
+            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
+              It also includes built-in LED lighting inside and on the bottle shelves, adding a stylish glow and
+              enhancing the overall atmosphere. A fully functional bar, it includes every feature you would expect from
+              a world-class professional setup.
             </p>
           </div>
         </div>
