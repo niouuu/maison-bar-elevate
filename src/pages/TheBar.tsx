@@ -12,7 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
-import frontView_op1 from "@/assets/option1.1jpg";
+import frontView_op1 from "@/assets/option1.1.jpg";
 import topView_op1 from "@/assets/option1.2.jpg";
 import dimensionsView_op1 from "@/assets/option1.3.jpg";
 import frontView_op2 from "@/assets/option2.1.jpg";
