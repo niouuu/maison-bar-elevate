@@ -5,6 +5,7 @@ import { Gem, Boxes, PackageCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import stationDeusImage from "@/assets/Maison_du_Bar_0085.jpg";
+import stationDeusImageMobile from "@/assets/Maison_du_Bar_0085_mobile.jpg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -113,8 +114,11 @@ const TheBar = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24">
         <div
-          className="absolute inset-0 bg-cover bg-center grayscale-hover"
-          style={{ backgroundImage: `url(${stationDeusImage})` }}
+          className="absolute inset-0 bg-cover bg-center hero-bg-responsive"
+          style={{
+            '--hero-bg-mobile': `url(${stationDeusImageMobile})`,
+            '--hero-bg-desktop': `url(${stationDeusImage})`,
+          } as React.CSSProperties}
         >
           <div className="absolute inset-0 bg-black/50" />
         </div>

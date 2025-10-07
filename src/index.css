@@ -148,6 +148,16 @@ All colors MUST be HSL.
       transform: translateY(0);
     }
   }
+  
+  .hero-bg-responsive {
+    background-image: var(--hero-bg-mobile);
+  }
+
+  @media (min-width: 768px) {
+    .hero-bg-responsive {
+      background-image: var(--hero-bg-desktop);
+    }
+  }
 }
 
 @layer base {
