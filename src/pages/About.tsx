@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { CheckCircle2 } from "lucide-react";
-import teamImage from "@/assets/about-team.jpg";
+import teamImage from "@/assets/ourmission.jpg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -15,8 +15,7 @@ const About = () => {
   const differentiators = [
     {
       title: "Portable Luxury Bar",
-      description:
-        "Our  bar is fully portable yet maintains the elegance of a premium cocktail lounge.",
+      description: "Our  bar is fully portable yet maintains the elegance of a premium cocktail lounge.",
     },
     {
       title: "Customizable Packages",
@@ -30,8 +29,7 @@ const About = () => {
     },
     {
       title: "Premium Spirits",
-      description:
-        "We source only the finest spirits, liqueurs, and ingredients to craft exceptional cocktails.",
+      description: "We source only the finest spirits, liqueurs, and ingredients to craft exceptional cocktails.",
     },
   ];
 
@@ -67,17 +65,15 @@ const About = () => {
               Our Story
             </h2>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-              Maison du Bar was born from a simple vision: to bring the sophistication
-              and craft of premium cocktail bars to any location. We recognized that
-              exceptional events deserve exceptional bar service, but traditional mobile
-              bars often compromised on quality or aesthetics.
+              Maison du Bar was born from a simple vision: to bring the sophistication and craft of premium cocktail
+              bars to any location. We recognized that exceptional events deserve exceptional bar service, but
+              traditional mobile bars often compromised on quality or aesthetics.
             </p>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-              Our difference lies in our fully portable luxury bar,
-              which can adapt to any event space with ease. Whether you're hosting an
-              outdoor garden wedding, a rooftop corporate event, or an intimate private
-              celebration, we deliver the same level of sophistication you'd expect from
-              the finest cocktail establishments.
+              Our difference lies in our fully portable luxury bar, which can adapt to any event space with ease.
+              Whether you're hosting an outdoor garden wedding, a rooftop corporate event, or an intimate private
+              celebration, we deliver the same level of sophistication you'd expect from the finest cocktail
+              establishments.
             </p>
           </div>
         </div>
@@ -94,19 +90,15 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="order-2 lg:order-1"
             >
-              <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-black">
-                Our Mission
-              </h2>
+              <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-black">Our Mission</h2>
               <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-                At Maison du Bar, we're committed to providing premium bar experiences
-                that elevate every occasion. Our mission is to craft unique cocktail
-                moments that your guests will remember long after the event ends.
+                At Maison du Bar, we're committed to providing premium bar experiences that elevate every occasion. Our
+                mission is to craft unique cocktail moments that your guests will remember long after the event ends.
               </p>
               <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-                We believe that great drinks are more than just beverages – they're
-                conversation starters, memory makers, and essential elements of any
-                celebration. That's why we pour our expertise, passion, and attention
-                to detail into every cocktail we serve.
+                We believe that great drinks are more than just beverages – they're conversation starters, memory
+                makers, and essential elements of any celebration. That's why we pour our expertise, passion, and
+                attention to detail into every cocktail we serve.
               </p>
             </motion.div>
             <motion.div
@@ -144,12 +136,8 @@ const About = () => {
                 <div className="flex items-start space-x-4">
                   <CheckCircle2 className="text-black flex-shrink-0 mt-1" size={24} />
                   <div>
-                    <h3 className="font-chamberi text-xl sm:text-2xl font-semibold mb-3 text-black">
-                      {item.title}
-                    </h3>
-                    <p className="font-sans text-sm sm:text-base text-gray-600 leading-relaxed">
-                      {item.description}
-                    </p>
+                    <h3 className="font-chamberi text-xl sm:text-2xl font-semibold mb-3 text-black">{item.title}</h3>
+                    <p className="font-sans text-sm sm:text-base text-gray-600 leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               </motion.div>
