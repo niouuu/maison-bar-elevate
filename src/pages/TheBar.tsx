@@ -151,6 +151,7 @@ const TheBar = () => {
               integrated systems that ensure fast assembly, efficient service, and a flawless presentation. The result
               is a bar that delivers luxury and performance, wherever your event takes place.
             </p>
+
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
               Crafted from American dark walnut wood and featuring interior details made of stainless steel, the bar
               embodies both durability and sophistication. It is fully mobile, easily transportable, and can adapt to
