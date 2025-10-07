@@ -14,19 +14,14 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
 import frontView_op1 from "@/assets/option1.1.jpg";
 import topView_op1 from "@/assets/option1.2.jpg";
-import dimensionsView_op1 from "@/assets/option1.3.jpg";
 import frontView_op2 from "@/assets/option2.1.jpg";
 import topView_op2 from "@/assets/option2.2.jpg";
-import dimensionsView_op2 from "@/assets/option2.3.jpg";
 import frontView_op3 from "@/assets/option3.1.jpg";
 import topView_op3 from "@/assets/option3.2.jpg";
-import dimensionsView_op3 from "@/assets/option3.3.jpg";
 import frontView_op4 from "@/assets/option4.1.jpg";
 import topView_op4 from "@/assets/option4.2.jpg";
-import dimensionsView_op4 from "@/assets/option4.3.jpg";
 import frontView_op5 from "@/assets/option5.1.jpg";
 import topView_op5 from "@/assets/option5.2.jpg";
-import dimensionsView_op5 from "@/assets/option5.3.jpg";
 import frontView_op6 from "@/assets/option6.1.jpg";
 import topView_op6 from "@/assets/option6.2.jpg";
 import dimensionsView_op6 from "@/assets/option6.3.jpg";
@@ -64,9 +59,8 @@ const TheBar = () => {
       title: "Option 1",
       subtitle: "1 Bartender Setup",
       images: [
-        { label: "Front View_1", src: frontView_op1 },
-        { label: "Top View_1", src: topView_op1 },
-        { label: "Dimensions_1", src: dimensionsView_op1 },
+        { label: "Front View", src: frontView_op1 },
+        { label: "Top View", src: topView_op1 },
       ],
     },
     {
@@ -74,9 +68,8 @@ const TheBar = () => {
       title: "Option 2",
       subtitle: "2 Bartender Setup",
       images: [
-        { label: "Front View_2", src: frontView_op2 },
-        { label: "Top View_2", src: topView_op2 },
-        { label: "Dimensions_2", src: dimensionsView_op2 },
+        { label: "Front View", src: frontView_op2 },
+        { label: "Top View", src: topView_op2 },
       ],
     },
     {
@@ -84,9 +77,8 @@ const TheBar = () => {
       title: "Option 3",
       subtitle: "3 Bartender Setup",
       images: [
-        { label: "Front View_3", src: frontView_op3 },
-        { label: "Top View_3", src: topView_op3 },
-        { label: "Dimensions_3", src: dimensionsView_op3 },
+        { label: "Front View", src: frontView_op3 },
+        { label: "Top View", src: topView_op3 },
       ],
     },
     {
@@ -94,9 +86,8 @@ const TheBar = () => {
       title: "Option 4",
       subtitle: "4 Bartender Setup",
       images: [
-        { label: "Front View_4", src: frontView_op4 },
-        { label: "Top View_4", src: topView_op4 },
-        { label: "Dimensions_4", src: dimensionsView_op4 },
+        { label: "Front View", src: frontView_op4 },
+        { label: "Top View", src: topView_op4 },
       ],
     },
     {
@@ -104,9 +95,8 @@ const TheBar = () => {
       title: "Option 5",
       subtitle: "4 Bartender Setup",
       images: [
-        { label: "Front View_5", src: frontView_op5 },
-        { label: "Top View_5", src: topView_op5 },
-        { label: "Dimensions_5", src: dimensionsView_op5 },
+        { label: "Front View", src: frontView_op5 },
+        { label: "Top View", src: topView_op5 },
       ],
     },
     {
@@ -114,9 +104,9 @@ const TheBar = () => {
       title: "Option 6",
       subtitle: "4 Bartender Setup",
       images: [
-        { label: "Front View_6", src: frontView_op6 },
-        { label: "Top View_6", src: topView_op6 },
-        { label: "Dimensions_6", src: dimensionsView_op6 },
+        { label: "Front View", src: frontView_op6 },
+        { label: "Top View", src: topView_op6 },
+        { label: "Dimensions", src: dimensionsView_op6 },
       ],
     },
   ];
