@@ -62,8 +62,8 @@ const TheBar = () => {
     {
       id: "option2",
       title: "Option 2",
-      subtitle: "1 Bartender and 1 Barback Setup",
-      subtitle: "Guests: 1-50",
+      subtitle: "1 Bartender and 1 Barback Setup, Guest:50-100",
+
       images: [
         { label: "Front View", src: frontView_op2 },
         { label: "Top View", src: topView_op2 },
