@@ -68,24 +68,36 @@ const Footer = () => {
                 <Phone className="w-5 h-5 flex-shrink-0" />
                 694 419 9717
               </a>
-              <div className="flex gap-4 lg:gap-6 pt-2 justify-center md:justify-start">
+              <div className="flex gap-3 pt-2 justify-center md:justify-start items-center">
                 <a
                   href="https://www.instagram.com/maison_du_bar_/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground hover:opacity-70 transition-opacity duration-200"
-                  aria-label="Instagram"
+                  className="flex items-center gap-2 text-foreground hover:opacity-70 transition-opacity duration-200"
+                  aria-label="Instagram - maison_du_bar_"
                 >
                   <Instagram className="w-6 h-6 lg:w-7 lg:h-7" />
+                  <span className="font-sans text-sm lg:text-base">maison_du_bar_</span>
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-border mt-10 sm:mt-12 lg:mt-16 pt-8 lg:pt-10 text-center">
+        <div className="border-t border-border mt-10 sm:mt-12 lg:mt-16 pt-8 lg:pt-10 text-center space-y-2">
           <p className="font-sans text-sm lg:text-base text-muted-foreground">
             © {currentYear} Maison du Bar. All rights reserved.
+          </p>
+          <p className="font-sans text-sm lg:text-base text-muted-foreground">
+            Designed by{" "}
+            <a
+              href="https://www.amox.gr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:opacity-70 transition-opacity duration-200 font-semibold"
+            >
+              AMOX
+            </a>
           </p>
         </div>
       </div>
