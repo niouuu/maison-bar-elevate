@@ -23,8 +23,7 @@ import topView_op4 from "@/assets/option4.2.jpg";
 import frontView_op5 from "@/assets/option5.1.jpg";
 import topView_op5 from "@/assets/option5.2.jpg";
 import frontView_op6 from "@/assets/option6.1.jpg";
-import topView_op6 from "@/assets/option6.2.jpg";
-import dimensionsView_op6 from "@/assets/option6.3.jpg";
+import topView_op6 from "@/assets/option6.3.jpg";
 
 const TheBar = () => {
   const [ref, inView] = useInView({
@@ -106,7 +105,6 @@ const TheBar = () => {
       images: [
         { label: "Front View", src: frontView_op6 },
         { label: "Top View", src: topView_op6 },
-        { label: "Dimensions", src: dimensionsView_op6 },
       ],
     },
   ];
