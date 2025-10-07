@@ -4,7 +4,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Gem, Boxes, PackageCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import stationDeusImage from "@/assets/Maison_du_Bar_0004.jpg";
+import stationDeusImage from "@/assets/Maison_du_Bar_0085.jpg";
+import stationDeusImageMobile from "@/assets/Maison_du_Bar_0085_mobile.jpg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -113,8 +114,11 @@ const TheBar = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24">
         <div
-          className="absolute inset-0 bg-cover bg-center grayscale-hover"
-          style={{ backgroundImage: `url(${stationDeusImage})` }}
+          className="absolute inset-0 bg-cover bg-center hero-bg-responsive"
+          style={{
+            '--hero-bg-mobile': `url(${stationDeusImageMobile})`,
+            '--hero-bg-desktop': `url(${stationDeusImage})`,
+          } as React.CSSProperties}
         >
           <div className="absolute inset-0 bg-black/50" />
         </div>
@@ -146,7 +150,7 @@ const TheBar = () => {
               refined cocktail destination. Designed with both aesthetics and functionality in mind, it combines elegant
               finishes, professional equipment, and a modular structure that adapts effortlessly to any venue.
             </p>
-            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
+            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
               Every detail has been considered: from compact storage that fits into travel cases, to sleek surfaces and
               integrated systems that ensure fast assembly, efficient service, and a flawless presentation. The result
               is a bar that delivers luxury and performance, wherever your event takes place.
