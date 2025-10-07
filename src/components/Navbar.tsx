@@ -19,6 +19,7 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
+    { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
     { name: "The Bar", path: "/the-bar" },
     { name: "About", path: "/about" },
@@ -30,18 +31,18 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background shadow-sm overflow-x-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
-        <div className="flex items-center justify-between h-20 sm:h-24 lg:h-28 gap-4">
-          {/* Logo */}
-          <Link to="/" className="flex-shrink-0 hover:opacity-80 transition-opacity">
+        <div className="relative flex items-center justify-center h-20 sm:h-24 lg:h-28">
+          {/* Logo - Absolutely positioned left */}
+          <Link to="/" className="absolute left-0 flex-shrink-0 hover:opacity-80 transition-opacity">
             <img
               src={logoImage}
               alt="Maison du Bar"
-              className="h-24 sm:h-28 lg:h-32 w-auto object-contain mx-auto md:mx-0 max-w-[240px] sm:max-w-[280px]"
+              className="h-24 sm:h-28 lg:h-32 w-auto object-contain max-w-[240px] sm:max-w-[280px]"
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center justify-center gap-4 lg:gap-6 xl:gap-8 flex-1">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:flex items-center justify-center gap-4 lg:gap-6 xl:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -55,11 +56,11 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Absolutely positioned right */}
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden text-foreground hover:bg-muted flex-shrink-0"
+            className="absolute right-0 md:hidden text-foreground hover:bg-muted flex-shrink-0"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
