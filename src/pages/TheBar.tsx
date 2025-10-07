@@ -55,15 +55,15 @@ const TheBar = () => {
     {
       id: "option1",
       title: "Option 1",
-      subtitle: "1 Bartender Setup",
-      subtitle: "Guests: 1-50",
+      bartenderSetup: "1 Bartender Setup",
+      guestCount: "Guests: 1-50",
       images: [{ label: "Front View", src: topView_op1 }],
     },
     {
       id: "option2",
       title: "Option 2",
-      subtitle: "1 Bartender and 1 Barback Setup",
-      subtitle: "Guests: 1-50",
+      bartenderSetup: "1 Bartender and 1 Barback Setup",
+      guestCount: "Guests: 1-50",
       images: [
         { label: "Front View", src: frontView_op2 },
         { label: "Top View", src: topView_op2 },
@@ -72,8 +72,8 @@ const TheBar = () => {
     {
       id: "option3",
       title: "Option 3",
-      subtitle: "1-2 Bartender and 1 Barback Setup",
-      subtitle: "Guests: 50-100",
+      bartenderSetup: "1-2 Bartender and 1 Barback Setup",
+      guestCount: "Guests: 50-100",
       images: [
         { label: "Front View", src: frontView_op3 },
         { label: "Top View", src: topView_op3 },
@@ -82,8 +82,8 @@ const TheBar = () => {
     {
       id: "option4",
       title: "Option 4",
-      subtitle: "2 Bartender and 1-2 Barback Setup",
-      subtitle: "Guests: 50-100",
+      bartenderSetup: "2 Bartender and 1-2 Barback Setup",
+      guestCount: "Guests: 50-100",
       images: [
         { label: "Front View", src: frontView_op4 },
         { label: "Top View", src: topView_op4 },
@@ -92,8 +92,8 @@ const TheBar = () => {
     {
       id: "option5",
       title: "Option 5",
-      subtitle: "2-4 Bartender and 2 Barback Setup",
-      subtitle: "Guests: 100-200",
+      bartenderSetup: "2-4 Bartender and 2 Barback Setup",
+      guestCount: "Guests: 100-200",
       images: [
         { label: "Front View", src: frontView_op5 },
         { label: "Top View", src: topView_op5 },
@@ -102,8 +102,8 @@ const TheBar = () => {
     {
       id: "option6",
       title: "Option 6",
-      subtitle: "2-4 Bartender and 2 Barback Setup",
-      subtitle: "Guests: 100-250",
+      bartenderSetup: "2-4 Bartender and 2 Barback Setup",
+      guestCount: "Guests: 100-250",
       images: [
         { label: "Front View", src: frontView_op6 },
         { label: "Top View", src: topView_op6 },
@@ -222,7 +222,8 @@ const TheBar = () => {
                   >
                     <div className="text-center">
                       <div className="font-bold">{option.title}</div>
-                      <div className="text-xs sm:text-sm font-sans opacity-80">{option.subtitle}</div>
+                      <div className="text-xs sm:text-sm font-sans opacity-80">{option.bartenderSetup}</div>
+                      <div className="text-xs sm:text-sm font-sans opacity-80">{option.guestCount}</div>
                     </div>
                   </TabsTrigger>
                 ))}
@@ -260,7 +261,8 @@ const TheBar = () => {
                 <div key={option.id} className="space-y-4">
                   <div className="text-center">
                     <h3 className="font-chamberi text-2xl font-bold text-black">{option.title}</h3>
-                    <p className="font-sans text-gray-600 text-sm">{option.subtitle}</p>
+                    <p className="font-sans text-gray-600 text-sm">{option.bartenderSetup}</p>
+                    <p className="font-sans text-gray-600 text-sm">{option.guestCount}</p>
                   </div>
 
                   <Carousel className="w-full max-w-sm mx-auto">
