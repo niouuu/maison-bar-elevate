@@ -113,7 +113,7 @@ const TheBar = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24">
         <div
-          className="absolute inset-0 bg-black bg-no-repeat bg-contain md:bg-cover bg-center grayscale-hover"
+          className="absolute inset-0 bg-cover bg-center grayscale-hover"
           style={{ backgroundImage: `url(${stationDeusImage})` }}
         >
           <div className="absolute inset-0 bg-black/50" />
