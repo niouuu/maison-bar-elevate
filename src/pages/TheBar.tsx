@@ -70,7 +70,7 @@ const TheBar = () => {
     {
       id: "option3",
       title: "Option 3",
-      subtitle: "3 Bartender Setup",
+      subtitle: "1-2 Bartender and 1 Barback Setup",
       images: [
         { label: "Front View", src: frontView_op3 },
         { label: "Top View", src: topView_op3 },
@@ -79,7 +79,7 @@ const TheBar = () => {
     {
       id: "option4",
       title: "Option 4",
-      subtitle: "4 Bartender Setup",
+      subtitle: "2 Bartender and 1-2 Barback Setup",
       images: [
         { label: "Front View", src: frontView_op4 },
         { label: "Top View", src: topView_op4 },
@@ -88,7 +88,7 @@ const TheBar = () => {
     {
       id: "option5",
       title: "Option 5",
-      subtitle: "4 Bartender Setup",
+      subtitle: "2-4 Bartender and 2 Barback Setup",
       images: [
         { label: "Front View", src: frontView_op5 },
         { label: "Top View", src: topView_op5 },
@@ -97,7 +97,7 @@ const TheBar = () => {
     {
       id: "option6",
       title: "Option 6",
-      subtitle: "4 Bartender Setup",
+      subtitle: "2-4 Bartender and 2 Barback Setup",
       images: [
         { label: "Front View", src: frontView_op6 },
         { label: "Top View", src: topView_op6 },
