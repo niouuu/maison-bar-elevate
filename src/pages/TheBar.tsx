@@ -23,15 +23,15 @@ import frontView_op5 from "@/assets/option5.1.jpg";
 import topView_op5 from "@/assets/option5.2.jpg";
 import frontView_op6 from "@/assets/option6.1.jpg";
 import topView_op6 from "@/assets/option6.3.jpg";
-import detail1 from "@/assets/Maison_du_Bar_0003.jpg";
-import detail2 from "@/assets/Maison_du_Bar_0007.jpg";
-import detail3 from "@/assets/Maison_du_Bar_0021.jpg";
-import detail4 from "@/assets/Maison_du_Bar_0038.jpg";
-import detail5 from "@/assets/Maison_du_Bar_0061.jpg";
-import detail6 from "@/assets/Maison_du_Bar_0073.jpg";
-import detail7 from "@/assets/Maison_du_Bar_0076.jpg";
-import detail8 from "@/assets/Maison_du_Bar_0078.jpg";
-import detail9 from "@/assets/Maison_du_Bar_0079.jpg";
+import detail1 from "@/assets/craft1.jpg";
+import detail2 from "@/assets/craft2.jpg";
+import detail3 from "@/assets/craft3.jpg";
+import detail4 from "@/assets/craft4.jpg";
+import detail5 from "@/assets/craft5.jpg";
+import detail6 from "@/assets/craft6.jpg";
+import detail7 from "@/assets/craft7.jpg";
+import detail8 from "@/assets/craft8.jpg";
+import detail9 from "@/assets/craft9.jpg";
 
 const TheBar = () => {
   const [ref, inView] = useInView({
@@ -212,7 +212,7 @@ const TheBar = () => {
 
           {!isMobile ? (
             // Desktop: Grid Layout
-            <motion.div 
+            <motion.div
               ref={galleryRef}
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
             >
@@ -224,8 +224,8 @@ const TheBar = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
                 >
-                  <img 
-                    src={image.src} 
+                  <img
+                    src={image.src}
                     alt={image.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -239,11 +239,7 @@ const TheBar = () => {
                 {detailImages.map((image, index) => (
                   <CarouselItem key={index}>
                     <div className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md overflow-hidden">
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-full object-cover"
-                      />
+                      <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
                     </div>
                   </CarouselItem>
                 ))}
