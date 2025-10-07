@@ -12,7 +12,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
-import frontView_op1 from "@/assets/option1.1.jpg";
 import topView_op1 from "@/assets/option1.2.jpg";
 import frontView_op2 from "@/assets/option2.1.jpg";
 import topView_op2 from "@/assets/option2.2.jpg";
@@ -57,10 +56,7 @@ const TheBar = () => {
       id: "option1",
       title: "Option 1",
       subtitle: "1 Bartender Setup",
-      images: [
-        { label: "Front View", src: frontView_op1 },
-        { label: "Top View", src: topView_op1 },
-      ],
+      images: [{ label: "Top View", src: topView_op1 }],
     },
     {
       id: "option2",
