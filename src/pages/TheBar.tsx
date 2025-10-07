@@ -56,7 +56,7 @@ const TheBar = () => {
       id: "option1",
       title: "Option 1",
       subtitle: "1 Bartender Setup",
-      images: [{ label: "Top View", src: topView_op1 }],
+      images: [{ label: "Front View", src: topView_op1 }],
     },
     {
       id: "option2",
@@ -229,9 +229,7 @@ const TheBar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4 }}
                     className={`grid gap-6 max-w-5xl mx-auto justify-items-center place-items-center ${
-                      option.images.length === 1 
-                        ? 'grid-cols-1' 
-                        : 'grid-cols-1 md:grid-cols-2'
+                      option.images.length === 1 ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"
                     }`}
                   >
                     {option.images.map((image, idx) => (
