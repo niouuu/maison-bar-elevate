@@ -17,7 +17,7 @@ const Footer = () => {
               className="h-32 sm:h-36 lg:h-40 w-auto object-contain mx-auto md:mx-0 max-w-[340px] sm:max-w-[400px]"
             />
             <p className="font-sans text-sm lg:text-base text-muted-foreground leading-relaxed max-w-xs mx-auto md:mx-0">
-              Bringing luxury and sophistication to every event across Belgium.
+              Bringing luxury and sophistication to every event across Greece.
             </p>
           </div>
 
