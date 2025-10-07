@@ -12,24 +12,24 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
-import frontView_op1 from "@/assets/option1.1.jpg";
+import frontView_op1 from "@/assets/option1.1jpg";
 import topView_op1 from "@/assets/option1.2.jpg";
-import dimensionsView_op1 from "@/assets/option1.3.png";
+import dimensionsView_op1 from "@/assets/option1.3.jpg";
 import frontView_op2 from "@/assets/option2.1.jpg";
 import topView_op2 from "@/assets/option2.2.jpg";
-import dimensionsView_op2 from "@/assets/option2.3.png";
+import dimensionsView_op2 from "@/assets/option2.3.jpg";
 import frontView_op3 from "@/assets/option3.1.jpg";
 import topView_op3 from "@/assets/option3.2.jpg";
-import dimensionsView_op3 from "@/assets/option3.3.png";
+import dimensionsView_op3 from "@/assets/option3.3.jpg";
 import frontView_op4 from "@/assets/option4.1.jpg";
 import topView_op4 from "@/assets/option4.2.jpg";
-import dimensionsView_op4 from "@/assets/option4.3.png";
+import dimensionsView_op4 from "@/assets/option4.3.jpg";
 import frontView_op5 from "@/assets/option5.1.jpg";
 import topView_op5 from "@/assets/option5.2.jpg";
-import dimensionsView_op5 from "@/assets/option5.3.png";
+import dimensionsView_op5 from "@/assets/option5.3.jpg";
 import frontView_op6 from "@/assets/option6.1.jpg";
 import topView_op6 from "@/assets/option6.2.jpg";
-import dimensionsView_op6 from "@/assets/option6.3.png";
+import dimensionsView_op6 from "@/assets/option6.3.jpg";
 
 const TheBar = () => {
   const [ref, inView] = useInView({
