@@ -207,7 +207,7 @@ const TheBar = () => {
           {!isMobile ? (
             // Desktop: Tabs Layout
             <Tabs value={selectedOption} onValueChange={setSelectedOption} className="max-w-6xl mx-auto">
-              <TabsList className="grid w-full grid-cols-4 mb-8 bg-gray-100 p-1 rounded-lg h-auto">
+              <TabsList className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 bg-gray-100 p-2 rounded-lg h-auto">
                 {barOptions.map((option) => (
                   <TabsTrigger
                     key={option.id}
@@ -228,7 +228,7 @@ const TheBar = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4 }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto justify-items-center"
                   >
                     {option.images.map((image, idx) => (
                       <div
