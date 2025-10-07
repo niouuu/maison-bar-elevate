@@ -151,11 +151,13 @@ All colors MUST be HSL.
   
   .hero-bg-responsive {
     background-image: var(--hero-bg-mobile);
+    background-position: center bottom;
   }
 
   @media (min-width: 768px) {
     .hero-bg-responsive {
       background-image: var(--hero-bg-desktop);
+      background-position: center center;
     }
   }
 }

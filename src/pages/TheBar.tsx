@@ -304,7 +304,7 @@ const TheBar = () => {
                 {detailImages.map((image, index) => (
                   <CarouselItem key={index}>
                     <div className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md overflow-hidden">
-                      <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
+                      <img src={image.src} alt={image.alt} className="w-full h-full object-cover object-bottom md:object-center" />
                     </div>
                   </CarouselItem>
                 ))}
@@ -387,7 +387,7 @@ const TheBar = () => {
                         key={idx}
                         className="aspect-[4/3] bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group relative w-full max-w-2xl"
                       >
-                        <img src={image.src} alt={image.label} className="w-full h-full object-cover" />
+                        <img src={image.src} alt={image.label} className="w-full h-full object-cover object-bottom md:object-center" />
                         <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-3">
                           <p className="font-chamberi text-base font-bold text-white text-center">{image.label}</p>
                         </div>
@@ -414,7 +414,7 @@ const TheBar = () => {
                       {option.images.map((image, idx) => (
                         <CarouselItem key={idx}>
                           <div className="aspect-[4/3] bg-gray-100 rounded-lg border border-gray-200 shadow-md overflow-hidden relative">
-                            <img src={image.src} alt={image.label} className="w-full h-full object-cover" />
+                            <img src={image.src} alt={image.label} className="w-full h-full object-cover object-bottom md:object-center" />
                             <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-3">
                               <p className="font-chamberi text-base font-bold text-white text-center">{image.label}</p>
                             </div>
