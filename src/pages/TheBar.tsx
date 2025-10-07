@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import { Gem, Boxes, PackageCheck } from "lucide-react";
+import { Gem, Boxes, PackageCheck, ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import stationDeusImage from "@/assets/Maison_du_Bar_0085.jpg";
@@ -9,8 +9,9 @@ import stationDeusImageMobile from "@/assets/Maison_du_Bar_0090.jpg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, useCarousel } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { cn } from "@/lib/utils";
 import { useState } from "react";
 import topView_op1 from "@/assets/option1.2.jpg";
 import frontView_op2 from "@/assets/option2.1.jpg";
@@ -32,6 +33,59 @@ import detail6 from "@/assets/craft6.jpg";
 import detail7 from "@/assets/craft7.jpg";
 import detail8 from "@/assets/craft8.jpg";
 import detail9 from "@/assets/craft9.jpg";
+
+// Custom mobile-friendly carousel navigation arrows
+const MobileCarouselPrevious = () => {
+  const { scrollPrev, canScrollPrev } = useCarousel();
+  
+  return (
+    <button
+      onClick={scrollPrev}
+      disabled={!canScrollPrev}
+      className={cn(
+        "absolute left-2 top-1/2 -translate-y-1/2 z-10",
+        "h-10 w-10 rounded-full",
+        "bg-white/80 backdrop-blur-sm border border-gray-300",
+        "text-black",
+        "shadow-md hover:shadow-lg",
+        "transition-all duration-300",
+        "disabled:opacity-30 disabled:cursor-not-allowed",
+        "hover:bg-white hover:scale-110",
+        "active:scale-95",
+        "md:hidden"
+      )}
+      aria-label="Previous slide"
+    >
+      <ArrowLeft className="h-5 w-5 mx-auto" />
+    </button>
+  );
+};
+
+const MobileCarouselNext = () => {
+  const { scrollNext, canScrollNext } = useCarousel();
+  
+  return (
+    <button
+      onClick={scrollNext}
+      disabled={!canScrollNext}
+      className={cn(
+        "absolute right-2 top-1/2 -translate-y-1/2 z-10",
+        "h-10 w-10 rounded-full",
+        "bg-white/80 backdrop-blur-sm border border-gray-300",
+        "text-black",
+        "shadow-md hover:shadow-lg",
+        "transition-all duration-300",
+        "disabled:opacity-30 disabled:cursor-not-allowed",
+        "hover:bg-white hover:scale-110",
+        "active:scale-95",
+        "md:hidden"
+      )}
+      aria-label="Next slide"
+    >
+      <ArrowRight className="h-5 w-5 mx-auto" />
+    </button>
+  );
+};
 
 const TheBar = () => {
   const [ref, inView] = useInView({
@@ -249,8 +303,8 @@ const TheBar = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <MobileCarouselPrevious />
+              <MobileCarouselNext />
             </Carousel>
           )}
         </div>
@@ -360,8 +414,8 @@ const TheBar = () => {
                         </CarouselItem>
                       ))}
                     </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
+                    <MobileCarouselPrevious />
+                    <MobileCarouselNext />
                   </Carousel>
                 </div>
               ))}
