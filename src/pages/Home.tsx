@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import heroImage from "@/assets/Maison_du_Bar_0078.jpg";
-import heroImageMobile from "@/assets/Maison_du_Bar_0078_mobile.jpg";
+import heroImageMobile from "@/assets/Maison_du_Bar_0062kin.jpg";
 
 const Home = () => {
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -23,10 +23,12 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24">
         <div
           className="absolute inset-0 bg-cover bg-center hero-bg-responsive"
-          style={{
-            '--hero-bg-mobile': `url(${heroImageMobile})`,
-            '--hero-bg-desktop': `url(${heroImage})`,
-          } as React.CSSProperties}
+          style={
+            {
+              "--hero-bg-mobile": `url(${heroImageMobile})`,
+              "--hero-bg-desktop": `url(${heroImage})`,
+            } as React.CSSProperties
+          }
         >
           <div className="absolute inset-0 bg-black/40" />
         </div>
