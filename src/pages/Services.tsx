@@ -158,7 +158,7 @@ const Services = () => {
             Our Service Packages
           </motion.h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
             {servicePackages.map((pkg, index) => (
               <motion.div
                 key={pkg.title}
