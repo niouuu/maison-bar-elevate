@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import SEO from "@/components/SEO";
 import heroImage from "@/assets/Maison_du_Bar_0078.jpg";
 import heroImageMobile from "@/assets/Maison_du_Bar_0062kin.jpg";
 
@@ -17,12 +16,6 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Maison du Bar | Luxury Mobile Bar Services in Greece"
-        description="Transform your event with Maison du Bar's premium luxury mobile bar services. Professional bartenders, exquisite cocktails, and elegant bar setups across Greece."
-        keywords="luxury mobile bar Greece, event bar hire, cocktail catering Athens, premium bar setup, mobile bar Santorini, bespoke bar service, portable bar Greece"
-        canonicalUrl="https://maisondubar.com/"
-      />
       <Navbar />
       <ScrollToTop />
 

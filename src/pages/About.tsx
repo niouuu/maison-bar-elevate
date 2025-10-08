@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import SEO from "@/components/SEO";
 import { CheckCircle2 } from "lucide-react";
 import teamImage from "@/assets/ourmission.jpg";
 import { motion } from "framer-motion";
@@ -36,12 +35,6 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="About Us | Maison du Bar"
-        description="Learn about Maison du Bar's mission to bring luxury mobile bar services to events across Greece. Professional bartenders, premium spirits, and elegant portable bars."
-        keywords="about Maison du Bar, luxury bar service Greece, professional bartenders, event bar company"
-        canonicalUrl="https://maisondubar.com/about"
-      />
       <Navbar />
       <ScrollToTop />
 

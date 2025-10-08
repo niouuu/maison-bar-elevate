@@ -2,7 +2,6 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -88,12 +87,6 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Contact Us | Maison du Bar"
-        description="Get in touch with Maison du Bar for your luxury mobile bar services. We serve all regions of Greece for weddings, corporate events, and private celebrations."
-        keywords="contact Maison du Bar, mobile bar quote Greece, event bar inquiry, luxury bar booking"
-        canonicalUrl="https://maisondubar.com/contact"
-      />
       <Navbar />
       <ScrollToTop />
 

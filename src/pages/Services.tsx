@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServicePackageCard";
 import FAQ from "@/components/FAQ";
 import ScrollToTop from "@/components/ScrollToTop";
-import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -106,12 +105,6 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Bar Packages & Services | Maison du Bar"
-        description="Explore our luxury bar service packages - from Standard to Ultra Premium. Fully customizable cocktail catering with professional bartenders for events across Greece."
-        keywords="bar service packages Greece, cocktail catering, luxury bar hire, event bartenders, premium spirits, mobile bar services"
-        canonicalUrl="https://maisondubar.com/services"
-      />
       <Navbar />
       <ScrollToTop />
 

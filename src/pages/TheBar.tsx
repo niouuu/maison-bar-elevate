@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import SEO from "@/components/SEO";
 import { Gem, Boxes, PackageCheck, ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -207,12 +206,6 @@ const TheBar = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Our Signature Bar | Maison du Bar"
-        description="Discover our portable luxury bar - elegant design, modular flexibility, and premium craftsmanship. Featuring American walnut wood and stainless steel details."
-        keywords="portable bar Greece, luxury mobile bar, signature bar design, modular bar setup, premium bar equipment"
-        canonicalUrl="https://maisondubar.com/the-bar"
-      />
       <Navbar />
       <ScrollToTop />
 
