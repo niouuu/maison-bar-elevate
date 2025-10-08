@@ -9,7 +9,14 @@ import stationDeusImageMobile from "@/assets/Maison_du_Bar_0090.jpg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, useCarousel } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  useCarousel,
+} from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
@@ -37,7 +44,7 @@ import detail9 from "@/assets/craft9.jpg";
 // Custom mobile-friendly carousel navigation arrows
 const MobileCarouselPrevious = () => {
   const { scrollPrev, canScrollPrev } = useCarousel();
-  
+
   return (
     <button
       onClick={scrollPrev}
@@ -52,7 +59,7 @@ const MobileCarouselPrevious = () => {
         "disabled:opacity-30 disabled:cursor-not-allowed",
         "hover:bg-white hover:scale-110",
         "active:scale-95",
-        "md:hidden"
+        "md:hidden",
       )}
       aria-label="Previous slide"
     >
@@ -63,7 +70,7 @@ const MobileCarouselPrevious = () => {
 
 const MobileCarouselNext = () => {
   const { scrollNext, canScrollNext } = useCarousel();
-  
+
   return (
     <button
       onClick={scrollNext}
@@ -78,7 +85,7 @@ const MobileCarouselNext = () => {
         "disabled:opacity-30 disabled:cursor-not-allowed",
         "hover:bg-white hover:scale-110",
         "active:scale-95",
-        "md:hidden"
+        "md:hidden",
       )}
       aria-label="Next slide"
     >
@@ -125,7 +132,7 @@ const TheBar = () => {
       title: "Option 1",
       bartenderSetup: "1 Bartender Setup",
       guestCount: "Guests: 1-50",
-      length: "Surface Length: 1.50 m",
+      length: "Bar Surface Length: 1.50 m",
       images: [{ label: "Front View", src: topView_op1 }],
     },
     {
@@ -133,7 +140,7 @@ const TheBar = () => {
       title: "Option 2",
       bartenderSetup: "1 Bartender and 1 Barback Setup",
       guestCount: "Guests: 1-50",
-      length: "Surface Length: 3.20 m",
+      length: "Bar Surface Length: 3.20 m",
       images: [
         { label: "Front View", src: frontView_op2 },
         { label: "Top View", src: topView_op2 },
@@ -144,7 +151,7 @@ const TheBar = () => {
       title: "Option 3",
       bartenderSetup: "1-2 Bartender and 1 Barback Setup",
       guestCount: "Guests: 50-100",
-      length: "Surface Length: 6.20 m",
+      length: "Bar Surface Length: 6.20 m",
       images: [
         { label: "Front View", src: frontView_op3 },
         { label: "Top View", src: topView_op3 },
@@ -155,7 +162,7 @@ const TheBar = () => {
       title: "Option 4",
       bartenderSetup: "2 Bartender and 1-2 Barback Setup",
       guestCount: "Guests: 50-100",
-      length: "Surface Length: 4.70 m",
+      length: "Bar Surface Length: 4.70 m",
       images: [
         { label: "Front View", src: frontView_op4 },
         { label: "Top View", src: topView_op4 },
@@ -166,7 +173,7 @@ const TheBar = () => {
       title: "Option 5",
       bartenderSetup: "2-4 Bartender and 2 Barback Setup",
       guestCount: "Guests: 100-200",
-      length: "Surface Length: 6.00 m",
+      length: "Bar Surface Length: 6.00 m",
       images: [
         { label: "Front View", src: frontView_op5 },
         { label: "Top View", src: topView_op5 },
@@ -177,7 +184,7 @@ const TheBar = () => {
       title: "Option 6",
       bartenderSetup: "2-4 Bartender and 2 Barback Setup",
       guestCount: "Guests: 100-250",
-      length: "Surface Length: 9.40 m",
+      length: "Bar Surface Length: 9.40 m",
       images: [
         { label: "Front View", src: frontView_op6 },
         { label: "Top View", src: topView_op6 },
@@ -304,7 +311,11 @@ const TheBar = () => {
                 {detailImages.map((image, index) => (
                   <CarouselItem key={index}>
                     <div className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md overflow-hidden">
-                      <img src={image.src} alt={image.alt} className="w-full h-full object-cover object-bottom md:object-center" />
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover object-bottom md:object-center"
+                      />
                     </div>
                   </CarouselItem>
                 ))}
@@ -387,7 +398,11 @@ const TheBar = () => {
                         key={idx}
                         className="aspect-[4/3] bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group relative w-full max-w-2xl"
                       >
-                        <img src={image.src} alt={image.label} className="w-full h-full object-cover object-bottom md:object-center" />
+                        <img
+                          src={image.src}
+                          alt={image.label}
+                          className="w-full h-full object-cover object-bottom md:object-center"
+                        />
                         <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-3">
                           <p className="font-chamberi text-base font-bold text-white text-center">{image.label}</p>
                         </div>
@@ -414,7 +429,11 @@ const TheBar = () => {
                       {option.images.map((image, idx) => (
                         <CarouselItem key={idx}>
                           <div className="aspect-[4/3] bg-gray-100 rounded-lg border border-gray-200 shadow-md overflow-hidden relative">
-                            <img src={image.src} alt={image.label} className="w-full h-full object-cover object-bottom md:object-center" />
+                            <img
+                              src={image.src}
+                              alt={image.label}
+                              className="w-full h-full object-cover object-bottom md:object-center"
+                            />
                             <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-3">
                               <p className="font-chamberi text-base font-bold text-white text-center">{image.label}</p>
                             </div>
