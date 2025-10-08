@@ -23,18 +23,15 @@ const ServicePackageCard = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <Card className="h-full flex flex-col bg-white border-2 border-black shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 md:min-h-[680px]">
-      <CardContent className="p-6 sm:p-8 flex flex-col flex-1">
-        <div className="flex flex-col flex-1 space-y-4">
+    <Card className="h-full bg-white border-2 border-black shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+      <CardContent className="p-6 sm:p-8">
+        <div className="space-y-4">
           <h3 className="font-chamberi text-2xl sm:text-3xl font-bold text-black">
             {title}
           </h3>
           <p className="font-sans text-base text-gray-600 leading-relaxed">
             {description}
           </p>
-
-          {/* Spacer to push button to bottom */}
-          <div className="flex-1" />
 
           <Button
             variant="outline"
