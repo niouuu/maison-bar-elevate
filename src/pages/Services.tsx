@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServicePackageCard";
 import FAQ from "@/components/FAQ";
 import ScrollToTop from "@/components/ScrollToTop";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -105,11 +106,17 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Bar Packages & Services | Maison du Bar"
+        description="Explore our luxury bar service packages - from Standard to Ultra Premium. Fully customizable cocktail catering with professional bartenders for events across Greece."
+        keywords="bar service packages Greece, cocktail catering, luxury bar hire, event bartenders, premium spirits, mobile bar services"
+        canonicalUrl="https://maisondubar.com/services"
+      />
       <Navbar />
       <ScrollToTop />
 
       {/* Custom Design Intro Section */}
-      <section className="pt-32 sm:pt-40 pb-16 sm:pb-20 bg-white">
+      <section className="pt-32 sm:pt-40 pb-20 sm:pb-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={heroRef}
@@ -146,7 +153,7 @@ const Services = () => {
       </section>
 
       {/* Service Packages Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
+      <section className="py-20 sm:py-24 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -181,7 +188,7 @@ const Services = () => {
       </section>
 
       {/* Custom Package Section */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-black text-white">
+      <section className="py-20 sm:py-24 lg:py-40 bg-black text-white">
         <motion.div
           ref={customRef}
           initial={{ opacity: 0, y: 30 }}
@@ -202,7 +209,7 @@ const Services = () => {
               variant="elegant-inverted"
               className="text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 h-auto font-sans font-medium"
             >
-              Get a Custom Quote
+              Request a Quote
             </Button>
           </Link>
         </motion.div>

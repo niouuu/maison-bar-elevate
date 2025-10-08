@@ -88,7 +88,7 @@ const Footer = () => {
           <p className="font-sans text-sm lg:text-base text-muted-foreground">
             © {currentYear} Maison du Bar. All rights reserved.
           </p>
-          <p className="font-sans text-sm lg:text-base text-muted-foreground">
+          <p className="font-sans text-sm lg:text-base text-muted-foreground opacity-60">
             Designed by{" "}
             <a
               href="https://www.amox.gr/"

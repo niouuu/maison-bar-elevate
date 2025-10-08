@@ -23,7 +23,7 @@ const ServicePackageCard = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <Card className="h-full bg-white border-2 border-black hover:shadow-2xl transition-all duration-300">
+    <Card className="h-full bg-white border-2 border-black shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
       <CardContent className="p-6 sm:p-8">
         <div className="space-y-4">
           <h3 className="font-chamberi text-2xl sm:text-3xl font-bold text-black">
@@ -101,7 +101,7 @@ const ServicePackageCard = ({
                         size="lg"
                         className="w-full bg-black text-white hover:bg-gray-800 font-sans font-medium"
                       >
-                        Get a Quote
+                        Request a Quote
                       </Button>
                     </Link>
                   </div>

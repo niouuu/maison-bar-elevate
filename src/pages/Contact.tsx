@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -56,7 +57,7 @@ const Contact = () => {
       }
 
       console.log("Email sent successfully:", data);
-      toast.success("Thank you! We'll be in touch soon.");
+      toast.success("Thank you! We'll get back to you shortly.");
       
       // Reset form
       setFormData({
@@ -87,6 +88,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Contact Us | Maison du Bar"
+        description="Get in touch with Maison du Bar for your luxury mobile bar services. We serve all regions of Greece for weddings, corporate events, and private celebrations."
+        keywords="contact Maison du Bar, mobile bar quote Greece, event bar inquiry, luxury bar booking"
+        canonicalUrl="https://maisondubar.com/contact"
+      />
       <Navbar />
       <ScrollToTop />
 
@@ -231,8 +238,7 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    variant="elegant"
-                    className="w-full font-sans font-medium text-base py-6"
+                    className="w-full font-sans font-medium text-base py-6 bg-black text-white hover:bg-white hover:text-black border-2 border-black transition-all duration-300"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Sending..." : "Send Inquiry"}
@@ -291,7 +297,7 @@ const Contact = () => {
                     <div>
                       <p className="font-sans font-semibold text-black text-sm">Service Area</p>
                       <p className="font-sans text-gray-600 text-sm">
-                        All over Greece
+                        Serving all regions of Greece
                       </p>
                     </div>
                   </div>

@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import SEO from "@/components/SEO";
 import { Gem, Boxes, PackageCheck, ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -131,7 +132,7 @@ const TheBar = () => {
       id: "option1",
       title: "Option 1",
       bartenderSetup: "1 Bartender Setup",
-      guestCount: "Guests: 1-50",
+      guestCount: "Guest Capacity: 1-50",
       length: "Bar Surface Length: 1.50 m",
       images: [{ label: "Front View", src: topView_op1 }],
     },
@@ -139,7 +140,7 @@ const TheBar = () => {
       id: "option2",
       title: "Option 2",
       bartenderSetup: "1 Bartender and 1 Barback Setup",
-      guestCount: "Guests: 1-50",
+      guestCount: "Guest Capacity: 1-50",
       length: "Bar Surface Length: 3.20 m",
       images: [
         { label: "Front View", src: frontView_op2 },
@@ -150,7 +151,7 @@ const TheBar = () => {
       id: "option3",
       title: "Option 3",
       bartenderSetup: "1-2 Bartender and 1 Barback Setup",
-      guestCount: "Guests: 50-100",
+      guestCount: "Guest Capacity: 50-100",
       length: "Bar Surface Length: 6.20 m",
       images: [
         { label: "Front View", src: frontView_op3 },
@@ -161,7 +162,7 @@ const TheBar = () => {
       id: "option4",
       title: "Option 4",
       bartenderSetup: "2 Bartender and 1-2 Barback Setup",
-      guestCount: "Guests: 50-100",
+      guestCount: "Guest Capacity: 50-100",
       length: "Bar Surface Length: 4.70 m",
       images: [
         { label: "Front View", src: frontView_op4 },
@@ -172,7 +173,7 @@ const TheBar = () => {
       id: "option5",
       title: "Option 5",
       bartenderSetup: "2-4 Bartender and 2 Barback Setup",
-      guestCount: "Guests: 100-200",
+      guestCount: "Guest Capacity: 100-200",
       length: "Bar Surface Length: 6.00 m",
       images: [
         { label: "Front View", src: frontView_op5 },
@@ -183,7 +184,7 @@ const TheBar = () => {
       id: "option6",
       title: "Option 6",
       bartenderSetup: "2-4 Bartender and 2 Barback Setup",
-      guestCount: "Guests: 100-250",
+      guestCount: "Guest Capacity: 100-250",
       length: "Bar Surface Length: 9.40 m",
       images: [
         { label: "Front View", src: frontView_op6 },
@@ -193,19 +194,25 @@ const TheBar = () => {
   ];
 
   const detailImages = [
-    { src: detail1, alt: "Bar craftsmanship detail" },
-    { src: detail2, alt: "Premium materials" },
-    { src: detail3, alt: "Elegant finish" },
-    { src: detail4, alt: "Design detail" },
-    { src: detail5, alt: "Bar setup detail" },
-    { src: detail6, alt: "Professional quality" },
-    { src: detail7, alt: "Walnut wood detail" },
-    { src: detail8, alt: "Stainless steel interior" },
-    { src: detail9, alt: "Modular components" },
+    { src: detail1, alt: "Solid walnut countertop close-up view" },
+    { src: detail2, alt: "Premium materials and elegant finishes" },
+    { src: detail3, alt: "Elegant black walnut wood finish detail" },
+    { src: detail4, alt: "Precision craftsmanship design detail" },
+    { src: detail5, alt: "Professional bar setup with bottle display" },
+    { src: detail6, alt: "Professional quality construction and materials" },
+    { src: detail7, alt: "American dark walnut wood grain detail" },
+    { src: detail8, alt: "Stainless steel interior detail and fixtures" },
+    { src: detail9, alt: "Modular components and built-in LED lighting" },
   ];
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Our Signature Bar | Maison du Bar"
+        description="Discover our portable luxury bar - elegant design, modular flexibility, and premium craftsmanship. Featuring American walnut wood and stainless steel details."
+        keywords="portable bar Greece, luxury mobile bar, signature bar design, modular bar setup, premium bar equipment"
+        canonicalUrl="https://maisondubar.com/the-bar"
+      />
       <Navbar />
       <ScrollToTop />
 
@@ -220,7 +227,7 @@ const TheBar = () => {
             } as React.CSSProperties
           }
         >
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/50" />
         </div>
 
         <motion.div
@@ -300,6 +307,7 @@ const TheBar = () => {
                     src={image.src}
                     alt={image.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </motion.div>
               ))}
@@ -315,6 +323,7 @@ const TheBar = () => {
                         src={image.src}
                         alt={image.alt}
                         className="w-full h-full object-cover object-bottom md:object-center"
+                        loading="lazy"
                       />
                     </div>
                   </CarouselItem>
@@ -402,6 +411,7 @@ const TheBar = () => {
                           src={image.src}
                           alt={image.label}
                           className="w-full h-full object-cover object-bottom md:object-center"
+                          loading="lazy"
                         />
                         <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-3">
                           <p className="font-chamberi text-base font-bold text-white text-center">{image.label}</p>
@@ -433,6 +443,7 @@ const TheBar = () => {
                               src={image.src}
                               alt={image.label}
                               className="w-full h-full object-cover object-bottom md:object-center"
+                              loading="lazy"
                             />
                             <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-3">
                               <p className="font-chamberi text-base font-bold text-white text-center">{image.label}</p>
@@ -461,7 +472,7 @@ const TheBar = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Book Our Signature Bar Today
+              Reserve Our Signature Bar Experience
             </h2>
             <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
               Transform your event with our stunning portable bar. Contact us to discuss availability and packages.
@@ -472,7 +483,7 @@ const TheBar = () => {
                 variant="elegant-inverted"
                 className="text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 h-auto font-sans font-medium"
               >
-                Get In Touch
+                Contact Us
               </Button>
             </Link>
           </motion.div>

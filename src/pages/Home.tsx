@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/Maison_du_Bar_0078.jpg";
 import heroImageMobile from "@/assets/Maison_du_Bar_0062kin.jpg";
 
@@ -16,6 +17,12 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Maison du Bar | Luxury Mobile Bar Services in Greece"
+        description="Transform your event with Maison du Bar's premium luxury mobile bar services. Professional bartenders, exquisite cocktails, and elegant bar setups across Greece."
+        keywords="luxury mobile bar Greece, event bar hire, cocktail catering Athens, premium bar setup, mobile bar Santorini, bespoke bar service, portable bar Greece"
+        canonicalUrl="https://maisondubar.com/"
+      />
       <Navbar />
       <ScrollToTop />
 
@@ -30,7 +37,7 @@ const Home = () => {
             } as React.CSSProperties
           }
         >
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/50" />
         </div>
 
         <motion.div
@@ -44,13 +51,13 @@ const Home = () => {
             Maison du Bar
           </h1>
           <p className="font-sans text-lg sm:text-xl md:text-2xl text-white mb-8 sm:mb-12 max-w-3xl mx-auto">
-            Luxury Mobile Bar – Anywhere, Anytime
+            Luxury Mobile Bar — Wherever You Celebrate
           </p>
         </motion.div>
       </section>
 
       {/* Value Proposition */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-white">
+      <section className="py-20 sm:py-24 lg:py-40 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={valueRef}
@@ -108,7 +115,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-black text-white">
+      <section className="py-20 sm:py-24 lg:py-40 bg-black text-white">
         <motion.div
           ref={ctaRef}
           initial={{ opacity: 0, y: 30 }}
@@ -138,7 +145,7 @@ const Home = () => {
                 variant="elegant-inverted"
                 className="text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 h-auto font-sans font-medium w-full sm:w-auto"
               >
-                Get in Touch
+                Contact Us
               </Button>
             </Link>
           </div>
