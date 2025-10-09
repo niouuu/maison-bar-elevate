@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { SEO } from "@/components/SEO";
+import { seoConfig } from "@/utils/seo";
+import { localBusinessSchema } from "@/utils/schema";
 import {
   Select,
   SelectContent,
@@ -86,12 +89,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      <ScrollToTop />
+    <>
+      <SEO {...seoConfig.contact} schema={localBusinessSchema} />
+      <div className="min-h-screen bg-white">
+        <Navbar />
+        <ScrollToTop />
 
-      {/* Hero Section */}
-      <section className="pt-32 sm:pt-40 pb-16 sm:pb-20 bg-black text-white">
+        {/* Hero Section */}
+        <header className="pt-32 sm:pt-40 pb-16 sm:pb-20 bg-black text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -99,19 +104,20 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8">
-              Get In Touch
-            </h1>
-            <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
-              Ready to bring luxury bar service to your event? Let's start planning
-              your perfect experience.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+              <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8">
+                Get In Touch
+              </h1>
+              <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
+                Ready to bring luxury mobile bar service to your event in Greece? Let's start planning
+                your perfect cocktail experience.
+              </p>
+            </motion.div>
+          </div>
+        </header>
 
-      {/* Contact Section */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-white">
+        <main>
+          {/* Contact Section */}
+          <section className="py-16 sm:py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
@@ -290,7 +296,7 @@ const Contact = () => {
                     <div>
                       <p className="font-sans font-semibold text-black text-sm">Service Area</p>
                       <p className="font-sans text-gray-600 text-sm">
-                        Serving all regions of Greece
+                        Serving all regions of Greece — Athens, Thessaloniki, Greek Islands, and beyond
                       </p>
                     </div>
                   </div>
@@ -302,10 +308,12 @@ const Contact = () => {
           </div>
         </div>
       </section>
+    </main>
 
-      <Footer />
-    </div>
-  );
+    <Footer />
+  </div>
+  </>
+);
 };
 
 export default Contact;

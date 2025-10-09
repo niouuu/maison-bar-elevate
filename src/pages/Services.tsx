@@ -7,6 +7,9 @@ import FAQ from "@/components/FAQ";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+import { seoConfig } from "@/utils/seo";
+import { serviceSchema } from "@/utils/schema";
 
 const Services = () => {
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -104,12 +107,15 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      <ScrollToTop />
+    <>
+      <SEO {...seoConfig.services} schema={serviceSchema} />
+      <div className="min-h-screen bg-white">
+        <Navbar />
+        <ScrollToTop />
 
-      {/* Custom Design Intro Section */}
-      <section className="pt-32 sm:pt-40 pb-20 sm:pb-24 bg-white">
+        <main>
+          {/* Custom Design Intro Section */}
+          <section className="pt-32 sm:pt-40 pb-20 sm:pb-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={heroRef}
@@ -118,14 +124,12 @@ const Services = () => {
             transition={{ duration: 0.6 }}
             className="max-w-5xl mx-auto"
           >
-            <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-8 sm:mb-12 text-center">
-              Exclusively Designed for You, by You
-            </h1>
-            <p className="font-sans text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-12 text-center">
-              In addition to our main packages, we also offer the option to create a fully customized bar experience
-              crafted entirely to your preferences. This 100% tailored solution allows you to choose every detail —
-              guaranteeing a truly personalized experience that reflects your unique taste and style.
-            </p>
+              <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-8 sm:mb-12 text-center">
+                Custom Cocktail Bar Services for Events in Greece
+              </h1>
+              <p className="font-sans text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-12 text-center">
+                In addition to our main packages, we offer fully customized mobile bar experiences crafted entirely to your preferences. From intimate gatherings in Athens to grand celebrations on the Greek Islands, every detail is tailored to create an unforgettable cocktail catering experience for your wedding, corporate event, or private party.
+              </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
               {customFeatures.map((feature, index) => (
@@ -154,9 +158,9 @@ const Services = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-black text-center mb-12 sm:mb-16"
-          >
-            Our Service Packages
-          </motion.h2>
+            >
+              Mobile Bar Service Packages
+            </motion.h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {servicePackages.map((pkg, index) => (
@@ -202,17 +206,19 @@ const Services = () => {
               variant="elegant-inverted"
               className="text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 h-auto font-sans font-medium"
             >
-              Request a Quote
-            </Button>
-          </Link>
-        </motion.div>
-      </section>
+                Request a Quote
+              </Button>
+            </Link>
+          </motion.div>
+        </section>
 
-      {/* FAQ Section */}
-      <FAQ />
+        {/* FAQ Section */}
+        <FAQ />
+      </main>
 
       <Footer />
     </div>
+    </>
   );
 };
 
