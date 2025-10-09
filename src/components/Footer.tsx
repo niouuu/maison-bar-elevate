@@ -84,7 +84,29 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border mt-10 sm:mt-12 lg:mt-16 pt-8 lg:pt-10 text-center space-y-2">
+        <div className="border-t border-border mt-10 sm:mt-12 lg:mt-16 pt-8 lg:pt-10 text-center space-y-4">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-muted-foreground">
+            <Link 
+              to="/privacy-policy" 
+              className="hover:text-foreground transition-colors duration-200"
+            >
+              Privacy Policy
+            </Link>
+            <span className="text-border">|</span>
+            <Link 
+              to="/cookie-policy" 
+              className="hover:text-foreground transition-colors duration-200"
+            >
+              Cookie Policy
+            </Link>
+            <span className="text-border">|</span>
+            <Link 
+              to="/terms-and-conditions" 
+              className="hover:text-foreground transition-colors duration-200"
+            >
+              Terms & Conditions
+            </Link>
+          </div>
           <p className="font-sans text-sm lg:text-base text-muted-foreground">
             © {currentYear} Maison du Bar. All rights reserved.
           </p>

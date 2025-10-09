@@ -30,4 +30,22 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://maisondubar.com/privacy-policy</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://maisondubar.com/cookie-policy</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://maisondubar.com/terms-and-conditions</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 </urlset>
