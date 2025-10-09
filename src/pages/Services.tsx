@@ -49,7 +49,7 @@ const Services = () => {
         "Disposable cups",
       ],
       spirits:
-        "Smirnoff Vodka, Gordons Gin, Pampero Blanco Rum, Jose Cuervo Blanco Tequila, Plain whiskey of your choice, Plain liquor & aperitif, Plain beverages, Plain wine of your choice.",
+        "Smirnoff Vodka; Gordon's Gin; Pampero Blanco Rum; Jose Cuervo Blanco Tequila; plain whiskey of your choice; plain liqueurs/bitters/aperitifs; plain beverages; plain wine of your choice.",
       cocktails: "Margarita, Paloma, Pornstar Martini, Negroni.",
     },
     {
@@ -65,7 +65,7 @@ const Services = () => {
         "Glassware or disposable cups",
       ],
       spirits:
-        "Ketel One Vodka, Tanqueray Gin, Havana Club Añejo 3 Rum, Havana Club Añejo Reserva Rum, El Jimador Blanco Tequila, El Jimador Reposado Tequila, Premium whiskey of your choice, Premium liquor & aperitif, Selected origin wines.",
+        "Ketel One Vodka; Tanqueray Gin; Havana Club Añejo 3 Rum; Havana Club Añejo Reserva Rum; El Jimador Blanco & Reposado Tequila; premium whiskey of your choice; premium liqueurs/bitters/aperitifs; premium beverages; selected-origin wines.",
       cocktails: "Margarita, Paloma, Pornstar Martini, Negroni, Dry Martini.",
     },
     {
@@ -81,8 +81,8 @@ const Services = () => {
         "Glassware",
       ],
       spirits:
-        "Grey Goose Vodka, Belvedere Vodka, Tanqueray Ten Gin, Hendricks Gin, Ron Zacapa 23 Rum, Don Papa 7 Rum, Diplomatico Reserva Exclusiva Rum, Don Julio Blanco & Reposado Tequila, Premium whiskey of your choice, Premium beverages, Selected origin wines, Champagnes.",
-      cocktails: "Spicy Basil Margarita, Mandarine Paloma, Strawberry Long Pepper Negroni, Cherry Mai Tai.",
+        "Grey Goose Vodka; Belvedere Vodka; Tanqueray No. Ten; Hendrick's Gin; Ron Zacapa 23 Rum; Don Papa 7 Rum; Diplomático Reserva Exclusiva Rum; Don Julio Blanco & Reposado Tequila; premium whiskey of your choice; premium liqueurs/bitters/aperitifs; premium beverages; selected-origin wines & champagnes.",
+      cocktails: "Spicy Pineapple Margarita, Mandarin Paloma, Peachy Negroni, Cherry Mai Tai.",
     },
     {
       title: "🍾 Ultra Premium Pack",
@@ -97,9 +97,9 @@ const Services = () => {
         "Glassware",
       ],
       spirits:
-        "Beluga Vodka, Beluga Gold Line Vodka, Monkey 47 Gin, Hendrick's Gin, Roku Japanese Gin, Ron Zacapa 23 Rum, Ron Zacapa XO Rum, Casamigos Blanco, Reposado & Mezcal Tequila, Don Julio 1942 Añejo Tequila, Clase Azul Reposado Tequila, Premium whiskey of your choice, Ultra-premium liquors & aperitifs, Premium beverages, Selected origin & well-aged wines, Premium champagnes.",
+        "Beluga Vodka (including Beluga Gold Line); Monkey 47; Hendrick's; Roku Gin; Ron Zacapa 23 & XO; Casamigos Blanco, Reposado & Mezcal; Don Julio 1942 Añejo; Clase Azul Reposado; ultra-premium whiskey of your choice; ultra-premium liqueurs/bitters/aperitifs; premium beverages; selected origin & well-aged wines; premium champagnes.",
       cocktails:
-        "Pineapple Mescalita, Spicy Mango Margarita, Strawberry & White Chocolate Foam Daiquiri, Belvedere / Apple / Cinnamon Lime Super Juice, Hazelnut Old Fashioned.",
+        "Basil Mescalita, Spicy Mango Margarita, Strawberry Daiquiri (with white-chocolate foam), Clarified Pornstar Martini, Strawberry & Long-Pepper Negroni.",
     },
   ];
 
