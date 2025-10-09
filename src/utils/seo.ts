@@ -24,4 +24,19 @@ export const seoConfig = {
     description: "Ready to elevate your event? Contact Maison du Bar for premium mobile bar services. Serving all regions of Greece. Get your quote today.",
     canonical: "https://maisondubar.com/contact",
   },
+  privacyPolicy: {
+    title: "Privacy Policy | Maison du Bar",
+    description: "Learn how Maison du Bar protects your personal data. GDPR-compliant privacy policy for our luxury mobile bar services in Greece.",
+    canonical: "https://maisondubar.com/privacy-policy",
+  },
+  cookiePolicy: {
+    title: "Cookie Policy | Maison du Bar",
+    description: "Understand how Maison du Bar uses cookies on our website. Transparent cookie policy for our event bar services.",
+    canonical: "https://maisondubar.com/cookie-policy",
+  },
+  termsAndConditions: {
+    title: "Terms & Conditions | Maison du Bar",
+    description: "Terms of service for Maison du Bar luxury mobile bar services. Legal information for bookings and website use in Greece.",
+    canonical: "https://maisondubar.com/terms-and-conditions",
+  },
 };
