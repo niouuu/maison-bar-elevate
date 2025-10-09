@@ -18,29 +18,22 @@ const TermsAndConditions = () => {
       />
       <div className="min-h-screen flex flex-col bg-background overflow-x-hidden">
         <Navbar />
-        
+
         <main className="flex-grow">
           {/* Hero Section */}
           <section className="bg-black text-white pt-32 sm:pt-36 lg:pt-40 pb-16 sm:pb-20 lg:pb-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-center">
-                Terms & Conditions
-              </h1>
-              <p className="text-center mt-4 text-lg text-white/80">
-                Effective Date: March 1st, 2025
-              </p>
+              <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-center">Terms & Conditions</h1>
+              <p className="text-center mt-4 text-lg text-white/80">Effective Date: October 9th, 2025</p>
             </div>
           </section>
 
           {/* Content Section */}
           <section className="py-16 sm:py-20 lg:py-24 bg-white">
             <article className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-              
               {/* 1. Introduction */}
               <div className="mb-12">
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mb-6 text-foreground">
-                  1. Introduction
-                </h2>
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mb-6 text-foreground">1. Introduction</h2>
                 <p className="text-base text-gray-600 leading-relaxed mb-4">
                   Welcome to <strong>Maison du Bar Ο.Ε.</strong> ("we", "us", "our").
                 </p>
@@ -48,16 +41,15 @@ const TermsAndConditions = () => {
                   By using our website{" "}
                   <a href="https://maisondubar.com" className="text-black underline hover:opacity-70">
                     https://maisondubar.com
-                  </a>, you agree to the following Terms and Conditions.
-                  If you do not agree, please discontinue use of the site.
+                  </a>
+                  , you agree to the following Terms and Conditions. If you do not agree, please discontinue use of the
+                  site.
                 </p>
               </div>
 
               {/* 2. Services */}
               <div className="mb-12">
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mb-6 text-foreground">
-                  2. Services
-                </h2>
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mb-6 text-foreground">2. Services</h2>
                 <p className="text-base text-gray-600 leading-relaxed mb-4">
                   Maison du Bar provides <strong>mobile bar and event services</strong> across Greece.
                 </p>
@@ -72,9 +64,7 @@ const TermsAndConditions = () => {
 
               {/* 3. Use of Website */}
               <div className="mb-12">
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mb-6 text-foreground">
-                  3. Use of Website
-                </h2>
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mb-6 text-foreground">3. Use of Website</h2>
                 <p className="text-base text-gray-600 leading-relaxed mb-4">
                   You agree to use this website lawfully and respectfully.
                 </p>
@@ -102,7 +92,8 @@ const TermsAndConditions = () => {
                   5. Intellectual Property
                 </h2>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  All content, photos, text, and logo of Maison du Bar are protected by <strong>copyright</strong> and may not be reproduced without written consent.
+                  All content, photos, text, and logo of Maison du Bar are protected by <strong>copyright</strong> and
+                  may not be reproduced without written consent.
                 </p>
               </div>
 
@@ -112,17 +103,17 @@ const TermsAndConditions = () => {
                   6. Limitation of Liability
                 </h2>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  Maison du Bar shall not be held liable for indirect, incidental, or consequential damages resulting from use of this website or services.
+                  Maison du Bar shall not be held liable for indirect, incidental, or consequential damages resulting
+                  from use of this website or services.
                 </p>
               </div>
 
               {/* 7. Governing Law */}
               <div className="mb-12">
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mb-6 text-foreground">
-                  7. Governing Law
-                </h2>
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mb-6 text-foreground">7. Governing Law</h2>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  These Terms and Conditions are governed by <strong>Greek law</strong> and fall under the jurisdiction of the courts of Athens.
+                  These Terms and Conditions are governed by <strong>Greek law</strong> and fall under the jurisdiction
+                  of the courts of Athens.
                 </p>
               </div>
 
@@ -163,9 +154,7 @@ const TermsAndConditions = () => {
 
               {/* Related Links */}
               <div className="bg-black text-white rounded-lg p-8">
-                <h3 className="font-serif text-2xl sm:text-3xl mb-6 text-center">
-                  Related Legal Documents
-                </h3>
+                <h3 className="font-serif text-2xl sm:text-3xl mb-6 text-center">Related Legal Documents</h3>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     to="/privacy-policy"
@@ -181,7 +170,6 @@ const TermsAndConditions = () => {
                   </Link>
                 </div>
               </div>
-
             </article>
           </section>
         </main>

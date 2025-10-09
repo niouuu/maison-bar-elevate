@@ -17,24 +17,19 @@ const CookiePolicy = () => {
       />
       <div className="min-h-screen flex flex-col bg-background overflow-x-hidden">
         <Navbar />
-        
+
         <main className="flex-grow">
           {/* Hero Section */}
           <section className="bg-black text-white pt-32 sm:pt-36 lg:pt-40 pb-16 sm:pb-20 lg:pb-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-center">
-                Cookie Policy
-              </h1>
-              <p className="text-center mt-4 text-lg text-white/80">
-                Effective Date: March 1st, 2025
-              </p>
+              <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-center">Cookie Policy</h1>
+              <p className="text-center mt-4 text-lg text-white/80">Effective Date: October 9th, 2025</p>
             </div>
           </section>
 
           {/* Content Section */}
           <section className="py-16 sm:py-20 lg:py-24 bg-white">
             <article className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-              
               {/* 1. What Are Cookies */}
               <div className="mb-12">
                 <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mb-6 text-foreground">
@@ -45,7 +40,8 @@ const CookiePolicy = () => {
                   For more information about how we handle your personal data, please see our{" "}
                   <Link to="/privacy-policy" className="text-black underline hover:opacity-70">
                     Privacy Policy
-                  </Link>.
+                  </Link>
+                  .
                 </p>
               </div>
 
@@ -56,17 +52,13 @@ const CookiePolicy = () => {
                 </h2>
                 <div className="space-y-4">
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                    <h3 className="font-serif text-2xl sm:text-3xl mb-3 text-foreground">
-                      Essential Cookies
-                    </h3>
+                    <h3 className="font-serif text-2xl sm:text-3xl mb-3 text-foreground">Essential Cookies</h3>
                     <p className="text-base text-gray-600 leading-relaxed">
                       Required for basic site operation, e.g., loading pages and submitting forms.
                     </p>
                   </div>
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                    <h3 className="font-serif text-2xl sm:text-3xl mb-3 text-foreground">
-                      Functional Cookies
-                    </h3>
+                    <h3 className="font-serif text-2xl sm:text-3xl mb-3 text-foreground">Functional Cookies</h3>
                     <p className="text-base text-gray-600 leading-relaxed">
                       Ensure optimal website display and security.
                     </p>
@@ -83,7 +75,8 @@ const CookiePolicy = () => {
                   3. How to Control Cookies
                 </h2>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  You can disable cookies via your browser settings, but the website may not function correctly without them.
+                  You can disable cookies via your browser settings, but the website may not function correctly without
+                  them.
                 </p>
               </div>
 
@@ -93,7 +86,8 @@ const CookiePolicy = () => {
                   4. Third-Party Services
                 </h2>
                 <p className="text-base text-gray-600 leading-relaxed mb-4">
-                  Our hosting provider (Vercel / Lovable) may use technical cookies strictly for load balancing and security.
+                  Our hosting provider (Vercel / Lovable) may use technical cookies strictly for load balancing and
+                  security.
                 </p>
                 <p className="text-base text-gray-600 leading-relaxed">
                   Emails sent through Resend API use encrypted transmission and do not track recipients.
@@ -102,9 +96,7 @@ const CookiePolicy = () => {
 
               {/* 5. Updates */}
               <div className="mb-12">
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mb-6 text-foreground">
-                  5. Updates
-                </h2>
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mb-6 text-foreground">5. Updates</h2>
                 <p className="text-base text-gray-600 leading-relaxed">
                   We may occasionally update this Cookie Policy. Please revisit this page to stay informed.
                 </p>
@@ -112,9 +104,7 @@ const CookiePolicy = () => {
 
               {/* CTA to Privacy Policy */}
               <div className="bg-black text-white rounded-lg p-8 text-center">
-                <h3 className="font-serif text-2xl sm:text-3xl mb-4">
-                  Want to Learn More?
-                </h3>
+                <h3 className="font-serif text-2xl sm:text-3xl mb-4">Want to Learn More?</h3>
                 <p className="text-base mb-6">
                   Read our comprehensive Privacy Policy for full details on data protection.
                 </p>
@@ -125,7 +115,6 @@ const CookiePolicy = () => {
                   View Privacy Policy
                 </Link>
               </div>
-
             </article>
           </section>
         </main>
