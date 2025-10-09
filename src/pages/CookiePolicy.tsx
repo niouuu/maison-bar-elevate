@@ -20,7 +20,7 @@ const CookiePolicy = () => {
         
         <main className="flex-grow">
           {/* Hero Section */}
-          <section className="bg-black text-white py-16 sm:py-20 lg:py-24">
+          <section className="bg-black text-white pt-32 sm:pt-36 lg:pt-40 pb-16 sm:pb-20 lg:pb-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-center">
                 Cookie Policy
