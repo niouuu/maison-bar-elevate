@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-background border-t-2 border-border overflow-x-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 max-w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 w-full">
           {/* Brand */}
           <div className="text-center md:text-left space-y-4">
             <img
@@ -30,27 +30,6 @@ const Footer = () => {
                 { name: "The Bar", path: "/the-bar" },
                 { name: "About", path: "/about" },
                 { name: "Contact", path: "/contact" },
-              ].map((link) => (
-                <li key={link.path}>
-                  <Link
-                    to={link.path}
-                    className="font-sans text-sm lg:text-base text-muted-foreground hover:text-foreground transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div className="text-center md:text-left">
-            <h4 className="font-sans text-lg lg:text-xl font-bold text-foreground mb-4 lg:mb-6">Legal</h4>
-            <ul className="space-y-2 lg:space-y-3">
-              {[
-                { name: "Privacy Policy", path: "/privacy-policy" },
-                { name: "Cookie Policy", path: "/cookie-policy" },
-                { name: "Terms & Conditions", path: "/terms-and-conditions" },
               ].map((link) => (
                 <li key={link.path}>
                   <Link
@@ -110,7 +89,7 @@ const Footer = () => {
             © {currentYear} Maison du Bar. All rights reserved.
           </p>
           <p className="font-sans text-sm lg:text-base text-muted-foreground opacity-60">
-            Powered by{" "}
+            Designed by{" "}
             <a
               href="https://www.amox.gr/"
               target="_blank"

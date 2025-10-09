@@ -5,9 +5,6 @@ import { CheckCircle2 } from "lucide-react";
 import teamImage from "@/assets/ourmission.jpg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { SEO } from "@/components/SEO";
-import { seoConfig } from "@/utils/seo";
-import { organizationSchema } from "@/utils/schema";
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -37,14 +34,12 @@ const About = () => {
   ];
 
   return (
-    <>
-      <SEO {...seoConfig.about} schema={organizationSchema} />
-      <div className="min-h-screen bg-white">
-        <Navbar />
-        <ScrollToTop />
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <ScrollToTop />
 
-        {/* Hero Section */}
-        <header className="pt-32 sm:pt-40 pb-16 sm:pb-20 bg-black text-white">
+      {/* Hero Section */}
+      <section className="pt-32 sm:pt-40 pb-16 sm:pb-20 bg-black text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -52,35 +47,34 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-              <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8">
-                About Maison du Bar
-              </h1>
-              <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
-                Redefining luxury mobile bar services across Greece with elegance, expert bartenders, and exceptional cocktail experiences.
-              </p>
-            </motion.div>
-          </div>
-        </header>
+            <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8">
+              About Maison du Bar
+            </h1>
+            <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
+              Redefining mobile bar services with elegance, expertise, and exceptional experiences.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-        <main>
-          {/* Company Story */}
-          <section className="py-16 sm:py-20 lg:py-32 bg-white">
+      {/* Company Story */}
+      <section className="py-16 sm:py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-black">
               Our Story
             </h2>
-              <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-                Maison du Bar was born from a simple vision: to bring the sophistication and craft of premium cocktail
-                bars to any location across Greece. We recognized that exceptional events deserve exceptional bar service, but
-                traditional mobile bars often compromised on quality or aesthetics.
-              </p>
-              <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-                Our difference lies in our fully portable luxury bar, which can adapt to any event space with ease.
-                Whether you're hosting an outdoor garden wedding in Athens, a rooftop corporate event, or an intimate private
-                celebration on the Greek Islands, we deliver the same level of sophistication you'd expect from the finest cocktail
-                establishments across Greece.
-              </p>
+            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
+              Maison du Bar was born from a simple vision: to bring the sophistication and craft of premium cocktail
+              bars to any location. We recognized that exceptional events deserve exceptional bar service, but
+              traditional mobile bars often compromised on quality or aesthetics.
+            </p>
+            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
+              Our difference lies in our fully portable luxury bar, which can adapt to any event space with ease.
+              Whether you're hosting an outdoor garden wedding, a rooftop corporate event, or an intimate private
+              celebration, we deliver the same level of sophistication you'd expect from the finest cocktail
+              establishments.
+            </p>
           </div>
         </div>
       </section>
@@ -96,16 +90,16 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="order-2 lg:order-1"
             >
-                <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-black">Our Mission</h2>
-                <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-                  At Maison du Bar, we're committed to providing premium cocktail bar experiences that elevate every occasion across Greece. Our
-                  mission is to craft unique cocktail moments that your guests will remember long after the event ends — from weddings in Paros to corporate events in Athens.
-                </p>
-                <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-                  We believe that great cocktails are more than just beverages – they're conversation starters, memory
-                  makers, and essential elements of any celebration. That's why we pour our expertise, passion, and
-                  attention to detail into every cocktail we serve at events throughout Greece.
-                </p>
+              <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-black">Our Mission</h2>
+              <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
+                At Maison du Bar, we're committed to providing premium bar experiences that elevate every occasion. Our
+                mission is to craft unique cocktail moments that your guests will remember long after the event ends.
+              </p>
+              <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
+                We believe that great drinks are more than just beverages – they're conversation starters, memory
+                makers, and essential elements of any celebration. That's why we pour our expertise, passion, and
+                attention to detail into every cocktail we serve.
+              </p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -113,14 +107,14 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="relative order-1 lg:order-2"
-              >
-                <img
-                  src={teamImage}
-                  alt="Professional bartenders preparing luxury cocktails at Maison du Bar event in Greece"
-                  className="rounded-lg shadow-xl grayscale-hover w-full"
-                  loading="lazy"
-                />
-              </motion.div>
+            >
+              <img
+                src={teamImage}
+                alt="Professional bartenders preparing luxury cocktails at Maison du Bar event"
+                className="rounded-lg shadow-xl grayscale-hover w-full"
+                loading="lazy"
+              />
+            </motion.div>
           </div>
         </div>
       </section>
@@ -149,14 +143,12 @@ const About = () => {
                 </div>
               </motion.div>
             ))}
-            </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
 
       <Footer />
     </div>
-    </>
   );
 };
 

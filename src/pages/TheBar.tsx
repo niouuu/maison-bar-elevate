@@ -4,9 +4,6 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Gem, Boxes, PackageCheck, ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { seoConfig } from "@/utils/seo";
-import { barProductSchema } from "@/utils/schema";
 import stationDeusImage from "@/assets/Maison_du_Bar_0085.jpg";
 import stationDeusImageMobile from "@/assets/Maison_du_Bar_0090.jpg";
 import { motion } from "framer-motion";
@@ -196,26 +193,24 @@ const TheBar = () => {
   ];
 
   const detailImages = [
-    { src: detail1, alt: "Luxury mobile bar solid walnut countertop close-up view" },
-    { src: detail2, alt: "Premium materials and elegant finishes on portable bar" },
-    { src: detail3, alt: "Elegant black walnut wood finish detail on event bar" },
-    { src: detail4, alt: "Precision craftsmanship design detail of modular bar" },
-    { src: detail5, alt: "Professional bar setup with bottle display for Greek events" },
-    { src: detail6, alt: "Professional quality construction and materials for mobile bar" },
-    { src: detail7, alt: "American dark walnut wood grain detail on luxury bar" },
-    { src: detail8, alt: "Stainless steel interior detail and fixtures on portable bar" },
-    { src: detail9, alt: "Modular components and built-in LED lighting on event bar" },
+    { src: detail1, alt: "Solid walnut countertop close-up view" },
+    { src: detail2, alt: "Premium materials and elegant finishes" },
+    { src: detail3, alt: "Elegant black walnut wood finish detail" },
+    { src: detail4, alt: "Precision craftsmanship design detail" },
+    { src: detail5, alt: "Professional bar setup with bottle display" },
+    { src: detail6, alt: "Professional quality construction and materials" },
+    { src: detail7, alt: "American dark walnut wood grain detail" },
+    { src: detail8, alt: "Stainless steel interior detail and fixtures" },
+    { src: detail9, alt: "Modular components and built-in LED lighting" },
   ];
 
   return (
-    <>
-      <SEO {...seoConfig.theBar} schema={barProductSchema} />
-      <div className="min-h-screen bg-white">
-        <Navbar />
-        <ScrollToTop />
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <ScrollToTop />
 
-        {/* Hero Section */}
-        <header className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24">
         <div
           className="absolute inset-0 bg-cover bg-center hero-bg-responsive"
           style={
@@ -233,19 +228,18 @@ const TheBar = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
-          >
-            <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 elegant-text-shadow">
-              Our Signature Portable Luxury Bar
-            </h1>
-            <p className="font-sans text-lg sm:text-xl md:text-2xl text-white max-w-3xl mx-auto">
-              Premium modular bar for events across Greece – where luxury meets versatility
-            </p>
-          </motion.div>
-        </header>
+        >
+          <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 elegant-text-shadow">
+            Our Signature Bar Experience
+          </h1>
+          <p className="font-sans text-lg sm:text-xl md:text-2xl text-white max-w-3xl mx-auto">
+            Our signature portable bar – where luxury meets versatility
+          </p>
+        </motion.div>
+      </section>
 
-        <main>
-          {/* Description Section */}
-          <section className="py-16 sm:py-20 lg:py-32 bg-white">
+      {/* Description Section */}
+      <section className="py-16 sm:py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-black">
@@ -486,13 +480,11 @@ const TheBar = () => {
               </Button>
             </Link>
           </motion.div>
-            </div>
-          </section>
-        </main>
+        </div>
+      </section>
 
-        <Footer />
-      </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 

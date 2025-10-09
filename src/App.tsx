@@ -8,9 +8,6 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import TheBar from "./pages/TheBar";
 import Contact from "./pages/Contact";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import CookiePolicy from "./pages/CookiePolicy";
-import TermsAndConditions from "./pages/TermsAndConditions";
 import NotFound from "./pages/NotFound";
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
 
@@ -30,9 +27,6 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/the-bar" element={<TheBar />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/cookie-policy" element={<CookiePolicy />} />
-            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

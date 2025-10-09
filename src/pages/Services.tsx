@@ -7,9 +7,6 @@ import FAQ from "@/components/FAQ";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { seoConfig } from "@/utils/seo";
-import { serviceSchema } from "@/utils/schema";
 
 const Services = () => {
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -47,12 +44,12 @@ const Services = () => {
         "4 classic cocktails of your choice",
         "Full mobile bar setup",
         "All necessary equipment for the selected cocktails and long drinks",
-        "Professional bartenders and barbacks with years of hands - on work in hospitality industry.",
+        "Professional bartenders and barbacks with years of hospitality experience",
         "Regular ice",
         "Disposable cups",
       ],
       spirits:
-        "Smirnoff Vodka; Gordons Gin; Pampero Blanco Rum; Jose Cuervo Blanco Tequila; Plain whiskey of your choice; Plain liqueurs/bitters/aperitifs; Plain beverages; Plain wine of your choice.",
+        "Smirnoff Vodka; Gordon's Gin; Pampero Blanco Rum; Jose Cuervo Blanco Tequila; plain whiskey of your choice; plain liqueurs/bitters/aperitifs; plain beverages; plain wine of your choice.",
       cocktails: "Margarita, Paloma, Pornstar Martini, Negroni.",
     },
     {
@@ -63,12 +60,12 @@ const Services = () => {
         "5 classic cocktails of your choice",
         "Full mobile bar setup",
         "All necessary equipment for the selected cocktails and long drinks",
-        "Professional bartenders and barbacks with years of hands - on work in hospitality industry.",
+        "Professional bartenders and barbacks with years of experience",
         "Regular ice",
         "Glassware or disposable cups",
       ],
       spirits:
-        "Ketel One Vodka; Tanqueray Gin; Havana Club Añejo 3 Rum; Havana Club Añejo Reserva Rum; El Jimador Blanco & Reposado Tequila; Premium whiskey of your choice; Premium liqueurs/bitters/aperitifs; Premium beverages; selected-origin wines.",
+        "Ketel One Vodka; Tanqueray Gin; Havana Club Añejo 3 Rum; Havana Club Añejo Reserva Rum; El Jimador Blanco & Reposado Tequila; premium whiskey of your choice; premium liqueurs/bitters/aperitifs; premium beverages; selected-origin wines.",
       cocktails: "Margarita, Paloma, Pornstar Martini, Negroni, Dry Martini.",
     },
     {
@@ -79,13 +76,13 @@ const Services = () => {
         "4 signature cocktails of your choice",
         "Full mobile bar setup",
         "All necessary equipment for the selected cocktails and long drinks",
-        "Professional bartenders and barbacks with years of hands - on work in hospitality industry.",
+        "Professional bartenders and barbacks with years of hospitality experience",
         "Regular ice & ice cubes",
         "Glassware",
       ],
       spirits:
-        "Grey Goose Vodka; Belvedere Vodka; Tanqueray No. Ten; Hendrick's Gin; Ron Zacapa 23 Rum; Don Papa 7 Rum; Diplomático Reserva Exclusiva Rum; Don Julio Blanco & Reposado Tequila; Premium whiskey of your choice; Premium liqueurs/bitters/aperitifs; Premium beverages; selected-origin wines & champagnes.",
-      cocktails: "Spicy Pineapple Margarita, Mandarine Paloma, Peachy Negroni, Cherry Mai Tai.",
+        "Grey Goose Vodka; Belvedere Vodka; Tanqueray No. Ten; Hendrick's Gin; Ron Zacapa 23 Rum; Don Papa 7 Rum; Diplomático Reserva Exclusiva Rum; Don Julio Blanco & Reposado Tequila; premium whiskey of your choice; premium liqueurs/bitters/aperitifs; premium beverages; selected-origin wines & champagnes.",
+      cocktails: "Spicy Pineapple Margarita, Mandarin Paloma, Peachy Negroni, Cherry Mai Tai.",
     },
     {
       title: "🍾 Ultra Premium Pack",
@@ -95,27 +92,24 @@ const Services = () => {
         "5 signature cocktails of your choice",
         "Full mobile bar setup",
         "All necessary equipment for the selected cocktails and long drinks",
-        "Professional bartenders and barbacks with years of hands - on work in hospitality industry.",
+        "Professional bartenders and barbacks with years of hands-on experience in hospitality",
         "Regular ice, ice cubes, ice columns",
         "Glassware",
       ],
       spirits:
-        "Beluga Vodka (including Beluga Gold Line); Monkey 47; Hendrick's; Roku Gin; Ron Zacapa 23 & XO; Casamigos Blanco, Reposado & Mezcal Tequila; Don Julio 1942 Añejo; Clase Azul Reposado; Ultra-premium whiskey of your choice; Ultra-premium liqueurs/bitters/aperitifs; Premium beverages; Selected origin & well-aged wines; Premium champagnes.",
+        "Beluga Vodka (including Beluga Gold Line); Monkey 47; Hendrick's; Roku Gin; Ron Zacapa 23 & XO; Casamigos Blanco, Reposado & Mezcal; Don Julio 1942 Añejo; Clase Azul Reposado; ultra-premium whiskey of your choice; ultra-premium liqueurs/bitters/aperitifs; premium beverages; selected origin & well-aged wines; premium champagnes.",
       cocktails:
         "Basil Mescalita, Spicy Mango Margarita, Strawberry Daiquiri (with white-chocolate foam), Clarified Pornstar Martini, Strawberry & Long-Pepper Negroni.",
     },
   ];
 
   return (
-    <>
-      <SEO {...seoConfig.services} schema={serviceSchema} />
-      <div className="min-h-screen bg-white">
-        <Navbar />
-        <ScrollToTop />
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <ScrollToTop />
 
-        <main>
-          {/* Custom Design Intro Section */}
-          <section className="pt-32 sm:pt-40 pb-20 sm:pb-24 bg-white">
+      {/* Custom Design Intro Section */}
+      <section className="pt-32 sm:pt-40 pb-20 sm:pb-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={heroRef}
@@ -124,12 +118,14 @@ const Services = () => {
             transition={{ duration: 0.6 }}
             className="max-w-5xl mx-auto"
           >
-              <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-8 sm:mb-12 text-center">
-                Custom Cocktail Bar Services for Events in Greece
-              </h1>
-              <p className="font-sans text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-12 text-center">
-                In addition to our main packages, we offer fully customized mobile bar experiences crafted entirely to your preferences. From intimate gatherings in Athens to grand celebrations on the Greek Islands, every detail is tailored to create an unforgettable cocktail catering experience for your wedding, corporate event, or private party.
-              </p>
+            <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-8 sm:mb-12 text-center">
+              Exclusively Designed for You, by You
+            </h1>
+            <p className="font-sans text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-12 text-center">
+              In addition to our main packages, we also offer the option to create a fully customized bar experience
+              crafted entirely to your preferences. This 100% tailored solution allows you to choose every detail —
+              guaranteeing a truly personalized experience that reflects your unique taste and style.
+            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
               {customFeatures.map((feature, index) => (
@@ -158,9 +154,9 @@ const Services = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-black text-center mb-12 sm:mb-16"
-            >
-              Mobile Bar Service Packages
-            </motion.h2>
+          >
+            Our Service Packages
+          </motion.h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {servicePackages.map((pkg, index) => (
@@ -206,19 +202,17 @@ const Services = () => {
               variant="elegant-inverted"
               className="text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 h-auto font-sans font-medium"
             >
-                Request a Quote
-              </Button>
-            </Link>
-          </motion.div>
-        </section>
+              Request a Quote
+            </Button>
+          </Link>
+        </motion.div>
+      </section>
 
-        {/* FAQ Section */}
-        <FAQ />
-      </main>
+      {/* FAQ Section */}
+      <FAQ />
 
       <Footer />
     </div>
-    </>
   );
 };
 
