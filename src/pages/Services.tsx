@@ -49,7 +49,7 @@ const Services = () => {
         "Disposable cups",
       ],
       spirits:
-        "Smirnoff Vodka; Gordon's Gin; Pampero Blanco Rum; Jose Cuervo Blanco Tequila; plain whiskey of your choice; plain liqueurs/bitters/aperitifs; plain beverages; plain wine of your choice.",
+        "Smirnoff Vodka,Gordon's Gin,Pampero Blanco Rum,Jose Cuervo Blanco Tequila,plain whiskey of your choice,plain liqueurs/bitters/aperitifs,plain beverages,plain wine of your choice.",
       cocktails: "Margarita, Paloma, Pornstar Martini, Negroni.",
     },
     {
@@ -65,7 +65,7 @@ const Services = () => {
         "Glassware or disposable cups",
       ],
       spirits:
-        "Ketel One Vodka; Tanqueray Gin; Havana Club Añejo 3 Rum; Havana Club Añejo Reserva Rum; El Jimador Blanco & Reposado Tequila; premium whiskey of your choice; premium liqueurs/bitters/aperitifs; premium beverages; selected-origin wines.",
+        "Ketel One Vodka,Tanqueray Gin,Havana Club Añejo 3 Rum,Havana Club Añejo Reserva Rum,El Jimador Blanco & Reposado Tequila,premium whiskey of your choice,premium liqueurs/bitters/aperitifs,premium beverages,selected-origin wines.",
       cocktails: "Margarita, Paloma, Pornstar Martini, Negroni, Dry Martini.",
     },
     {
@@ -81,7 +81,7 @@ const Services = () => {
         "Glassware",
       ],
       spirits:
-        "Grey Goose Vodka; Belvedere Vodka; Tanqueray No. Ten; Hendrick's Gin; Ron Zacapa 23 Rum; Don Papa 7 Rum; Diplomático Reserva Exclusiva Rum; Don Julio Blanco & Reposado Tequila; premium whiskey of your choice; premium liqueurs/bitters/aperitifs; premium beverages; selected-origin wines & champagnes.",
+        "Grey Goose Vodka,Belvedere Vodka,Tanqueray No. Ten; Hendrick's Gin; Ron Zacapa 23 Rum; Don Papa 7 Rum; Diplomático Reserva Exclusiva Rum; Don Julio Blanco & Reposado Tequila; premium whiskey of your choice; premium liqueurs/bitters/aperitifs; premium beverages; selected-origin wines & champagnes.",
       cocktails: "Spicy Pineapple Margarita, Mandarin Paloma, Peachy Negroni, Cherry Mai Tai.",
     },
     {
