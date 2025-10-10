@@ -97,7 +97,7 @@ const Services = () => {
         "Glassware",
       ],
       spirits:
-        "Beluga Vodka (including Beluga Gold Line); Monkey 47; Hendrick's; Roku Gin; Ron Zacapa 23 & XO; Casamigos Blanco, Reposado & Mezcal; Don Julio 1942 Añejo; Clase Azul Reposado; ultra-premium whiskey of your choice; ultra-premium liqueurs/bitters/aperitifs; premium beverages; selected origin & well-aged wines; premium champagnes.",
+        "Beluga Vodka (including Beluga Gold Line), Monkey 47, Hendrick's, Roku Gin, Ron Zacapa 23 & XO, Casamigos Blanco, Reposado & Mezcal, Don Julio 1942 Añejo, Clase Azul Reposado, ultra-premium whiskey of your choice, ultra-premium liqueurs/bitters/aperitifs, premium beverages, selected origin & well-aged wines, premium champagnes.",
       cocktails:
         "Basil Mescalita, Spicy Mango Margarita, Strawberry Daiquiri (with white-chocolate foam), Clarified Pornstar Martini, Strawberry & Long-Pepper Negroni.",
     },
