@@ -65,15 +65,19 @@ const About = () => {
               Our Story
             </h2>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-              Maison du Bar was born from a simple vision: to bring the sophistication and craft of premium cocktail
-              bars to any location. We recognized that exceptional events deserve exceptional bar service, but
-              traditional mobile bars often compromised on quality or aesthetics.
+              The story of Maison du Bar began simply… through a casual conversation at a bar between three friends. An
+              idea was born naturally, united by our shared passion for the hospitality industry and the years of
+              experience we each bring to the table.
             </p>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-              Our difference lies in our fully portable luxury bar, which can adapt to any event space with ease.
-              Whether you're hosting an outdoor garden wedding, a rooftop corporate event, or an intimate private
-              celebration, we deliver the same level of sophistication you'd expect from the finest cocktail
-              establishments.
+              All three of us have worked for many years in some of Greece’s most vibrant destinations — Mykonos and
+              Antiparos in the Cyclades islands, and Kolonaki in the heart of Athens — gaining valuable knowledge,
+              skills, and a deep love for delivering high-level hospitality.
+            </p>
+            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
+              We’ve known and worked alongside each other for many years, so taking the next step together felt natural.
+              That’s how Maison du Bar was created — with a clear vision: to offer unique hospitality experiences and
+              raise the level of service for our guests as high as possible.{" "}
             </p>
           </div>
         </div>
