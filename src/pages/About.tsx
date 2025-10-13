@@ -99,7 +99,7 @@ const About = () => {
                 At Maison du Bar, our mission is to offer every client a truly luxury bar experience — an experience
                 where nothing is missing and everything is perfectly in place.
               </p>
-              <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
+              <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
                 From start to finish, we deliver everything a bar service needs to create a unique and memorable
                 atmosphere, with a strong focus on refined drinks and expertly crafted cocktails.
               </p>
