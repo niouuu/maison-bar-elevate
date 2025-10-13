@@ -1,9 +1,4 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const FAQ = () => {
   const faqs = [
@@ -29,8 +24,7 @@ const FAQ = () => {
     },
     {
       question: "Can we choose our own cocktail menu?",
-      answer:
-        "Absolutely. You can select from our recommended cocktails or work with us to create a custom menu.",
+      answer: "Absolutely. You can select from our recommended cocktails or work with us to create a custom menu.",
     },
     {
       question: "What is included in the setup?",
@@ -44,8 +38,7 @@ const FAQ = () => {
     },
     {
       question: "Where do you offer services?",
-      answer:
-        "We operate all across Greece, including mainland venues and every island destination.",
+      answer: "We operate all across Greece, including mainland venues and every island destination.",
     },
     {
       question: "Are transportation and accommodation included?",
@@ -58,24 +51,12 @@ const FAQ = () => {
         "Cancellations made at least 30 days before the event qualify for a full refund. Later cancellations result in the deposit being retained.",
     },
     {
-      question: "What happens if the event lasts longer than booked?",
-      answer:
-        "Extra hours are possible and will be charged additionally.",
-    },
-    {
-      question: "What if there is damage to glassware or equipment?",
-      answer:
-        "If more than 15% of the glassware is damaged, replacement costs will be charged. Any equipment damage caused by guests is also the client’s responsibility.",
-    },
-    {
       question: "Are your bartenders experienced?",
-      answer:
-        "Yes, our bartenders and barbacks are highly trained professionals with years of hospitality experience.",
+      answer: "Yes, our bartenders and barbacks are highly trained professionals with years of hospitality experience.",
     },
-     {
+    {
       question: "Do you provide staff beyond bartenders?",
-      answer:
-        "Yes, upon request we can provide barbacks, waitstaff, and additional event support.",
+      answer: "Yes, upon request we can provide barbacks, waitstaff, and additional event support.",
     },
   ];
 
@@ -86,9 +67,7 @@ const FAQ = () => {
           <h2 className="font-chamberi text-4xl md:text-5xl font-bold text-center mb-4 text-secondary-foreground">
             Frequently Asked Questions
           </h2>
-          <p className="text-center text-muted-foreground mb-12">
-            Find answers to common questions about our services
-          </p>
+          <p className="text-center text-muted-foreground mb-12">Find answers to common questions about our services</p>
 
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
@@ -98,9 +77,7 @@ const FAQ = () => {
                 className="bg-card border border-border rounded-lg px-6 shadow-sm hover:shadow-md transition-shadow"
               >
                 <AccordionTrigger className="text-left hover:no-underline">
-                  <span className="font-semibold text-card-foreground pr-4">
-                    {faq.question}
-                  </span>
+                  <span className="font-semibold text-card-foreground pr-4">{faq.question}</span>
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed pt-2 pb-4">
                   {faq.answer}
