@@ -71,8 +71,8 @@ const About = () => {
             </p>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
               All three of us have worked for many years in some of Greece’s most vibrant destinations — Mykonos and
-              Antiparos in the Cyclades islands, and Kolonaki in the heart of Athens — gaining valuable knowledge,
-              skills, and a deep love for delivering high-level hospitality.
+              Antiparos in the Cyclades islands and Kolonaki in the heart of Athens — gaining valuable knowledge, skills
+              and a deep love for delivering high-level hospitality.
             </p>
             <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
               We’ve known and worked alongside each other for many years, so taking the next step together felt natural.
