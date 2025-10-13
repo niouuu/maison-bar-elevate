@@ -96,13 +96,17 @@ const About = () => {
             >
               <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-black">Our Mission</h2>
               <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-                At Maison du Bar, we're committed to providing premium bar experiences that elevate every occasion. Our
-                mission is to craft unique cocktail moments that your guests will remember long after the event ends.
+                At Maison du Bar, our mission is to offer every client a truly luxury bar experience — an experience
+                where nothing is missing and everything is perfectly in place.
               </p>
               <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
-                We believe that great drinks are more than just beverages – they're conversation starters, memory
-                makers, and essential elements of any celebration. That's why we pour our expertise, passion, and
-                attention to detail into every cocktail we serve.
+                From start to finish, we deliver everything a bar service needs to create a unique and memorable
+                atmosphere, with a strong focus on refined drinks and expertly crafted cocktails.
+              </p>
+              <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed">
+                Our ultimate goal is simple yet powerful: to bring every client’s vision for their bar experience to
+                life. Whatever the request, we make it happen — turning the bar into the highlight of an unforgettable
+                event.
               </p>
             </motion.div>
             <motion.div
