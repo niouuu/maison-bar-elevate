@@ -238,97 +238,6 @@ const TheBar = () => {
         </motion.div>
       </section>
 
-      {/* Description Section */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-black">
-              Portable Luxury, Seamless Design
-            </h2>
-            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-              Our mobile bar is more than just a setup – it’s a statement piece that transforms any location into a
-              refined cocktail destination. Designed with both aesthetics and functionality in mind, it combines elegant
-              finishes, professional equipment, and a modular structure that adapts effortlessly to any venue.
-            </p>
-            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-              Every detail has been considered: from compact storage that fits into travel cases, to sleek surfaces and
-              integrated systems that ensure fast assembly, efficient service, and a flawless presentation. The result
-              is a bar that delivers luxury and performance, wherever your event takes place.
-            </p>
-
-            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-              Crafted from American dark walnut wood and featuring interior details made of stainless steel, the bar
-              embodies both durability and sophistication. It is fully mobile, easily transportable, and can adapt to
-              any type of event imaginable — from private gatherings and corporate functions to complete indoor
-              installations.
-            </p>
-
-            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-              It also includes built-in LED lighting inside and on the bottle shelves, adding a stylish glow and
-              enhancing the overall atmosphere. A fully functional bar, it includes every feature you would expect from
-              a world-class professional setup.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Design Details Gallery */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-white border-t border-gray-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-black">
-            Craftsmanship Up Close
-          </h2>
-          <p className="text-center font-sans text-gray-600 mb-12 max-w-2xl mx-auto">
-            Explore the exquisite details that make our bar truly exceptional
-          </p>
-
-          {!isMobile ? (
-            // Desktop: Grid Layout
-            <motion.div
-              ref={galleryRef}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
-            >
-              {detailImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={galleryInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
-                >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
-                </motion.div>
-              ))}
-            </motion.div>
-          ) : (
-            // Mobile: Horizontal Carousel
-            <Carousel className="w-full max-w-sm mx-auto">
-              <CarouselContent>
-                {detailImages.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <div className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md overflow-hidden">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-full object-cover object-bottom md:object-center"
-                        loading="lazy"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <MobileCarouselPrevious />
-              <MobileCarouselNext />
-            </Carousel>
-          )}
-        </div>
-      </section>
-
       {/* Feature Highlights */}
       <section className="py-16 sm:py-20 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -451,6 +360,97 @@ const TheBar = () => {
                 </div>
               ))}
             </div>
+          )}
+        </div>
+      </section>
+
+      {/* Description Section */}
+      <section className="py-16 sm:py-20 lg:py-32 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-black">
+              Portable Luxury, Seamless Design
+            </h2>
+            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
+              Our mobile bar is more than just a setup – it's a statement piece that transforms any location into a
+              refined cocktail destination. Designed with both aesthetics and functionality in mind, it combines elegant
+              finishes, professional equipment, and a modular structure that adapts effortlessly to any venue.
+            </p>
+            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
+              Every detail has been considered: from compact storage that fits into travel cases, to sleek surfaces and
+              integrated systems that ensure fast assembly, efficient service, and a flawless presentation. The result
+              is a bar that delivers luxury and performance, wherever your event takes place.
+            </p>
+
+            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
+              Crafted from American dark walnut wood and featuring interior details made of stainless steel, the bar
+              embodies both durability and sophistication. It is fully mobile, easily transportable, and can adapt to
+              any type of event imaginable — from private gatherings and corporate functions to complete indoor
+              installations.
+            </p>
+
+            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
+              It also includes built-in LED lighting inside and on the bottle shelves, adding a stylish glow and
+              enhancing the overall atmosphere. A fully functional bar, it includes every feature you would expect from
+              a world-class professional setup.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Design Details Gallery */}
+      <section className="py-16 sm:py-20 lg:py-32 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-black">
+            Craftsmanship Up Close
+          </h2>
+          <p className="text-center font-sans text-gray-600 mb-12 max-w-2xl mx-auto">
+            Explore the exquisite details that make our bar truly exceptional
+          </p>
+
+          {!isMobile ? (
+            // Desktop: Grid Layout
+            <motion.div
+              ref={galleryRef}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+            >
+              {detailImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={galleryInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </motion.div>
+              ))}
+            </motion.div>
+          ) : (
+            // Mobile: Horizontal Carousel
+            <Carousel className="w-full max-w-sm mx-auto">
+              <CarouselContent>
+                {detailImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md overflow-hidden">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover object-bottom md:object-center"
+                        loading="lazy"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <MobileCarouselPrevious />
+              <MobileCarouselNext />
+            </Carousel>
           )}
         </div>
       </section>
