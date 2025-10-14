@@ -29,7 +29,7 @@ const About = () => {
     },
     {
       title: "Premium Spirits",
-      description: "We source only the finest spirits, liqueurs, and ingredients to craft exceptional cocktails.",
+      description: "We source only the finest spirits, liqueurs and ingredients to craft exceptional cocktails.",
     },
   ];
 
