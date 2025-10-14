@@ -16,7 +16,7 @@ const Services = () => {
     {
       title: "Cocktails",
       description:
-        "Choose what cocktails will be served, how many you'd like, and even create a fully personalized cocktail list. Whether you prefer timeless classics or specially crafted signature cocktails, everything is possible.",
+        "Choose what cocktails will be served, how many you'd like and even create a fully personalized cocktail list. Whether you prefer timeless classics or specially crafted signature cocktails, everything is possible.",
     },
     {
       title: "Bar Setup",
