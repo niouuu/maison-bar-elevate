@@ -26,7 +26,7 @@ const Services = () => {
     {
       title: "Drinks & Beverages",
       description:
-        "Fully customize your selection. Choose from a wide range of spirits, wines, beers, and soft drinks to best suit your preferences.",
+        "Fully customize your selection. Choose from a wide range of spirits, wines, beers and soft drinks to best suit your preferences.",
     },
     {
       title: "Details & Extras",
