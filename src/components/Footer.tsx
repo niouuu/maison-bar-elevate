@@ -8,9 +8,9 @@ const Footer = () => {
   return (
     <footer className="bg-background border-t-2 border-border overflow-x-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 max-w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 lg:gap-14 w-full md:items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 lg:gap-14 w-full">
           {/* Brand */}
-          <div className="text-center md:text-left space-y-4 flex flex-col">
+          <div className="text-center md:text-left space-y-4">
             <img
               src={logoImage}
               alt="Maison du Bar"
