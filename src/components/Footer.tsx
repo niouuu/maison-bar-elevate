@@ -23,8 +23,10 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="flex flex-col items-center md:items-start">
-            <h4 className="font-sans text-lg lg:text-xl font-bold text-foreground mb-4 lg:mb-6 text-center md:text-left">Quick Links</h4>
-            <ul className="space-y-2 lg:space-y-3 flex flex-col items-center md:items-start">
+            <h4 className="font-sans text-lg lg:text-xl font-bold text-foreground mb-4 lg:mb-6 text-center md:text-left">
+              Quick Links
+            </h4>
+            <ul className="space-y-2 lg:space-y-4 flex flex-col items-center md:items-start">
               {[
                 { name: "Services", path: "/services" },
                 { name: "The Bar", path: "/the-bar" },
@@ -45,7 +47,9 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="flex flex-col items-center md:items-start">
-            <h4 className="font-sans text-lg lg:text-xl font-bold text-foreground mb-4 lg:mb-6 text-center md:text-left">Contact Us</h4>
+            <h4 className="font-sans text-lg lg:text-xl font-bold text-foreground mb-4 lg:mb-6 text-center md:text-left">
+              Contact Us
+            </h4>
             <div className="space-y-3 lg:space-y-4 flex flex-col items-center md:items-start w-full">
               <a
                 href="mailto:maisondubar25@gmail.com"
