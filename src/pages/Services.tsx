@@ -136,7 +136,21 @@ const Services = () => {
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
                   className="space-y-3"
                 >
-                  <h3 className="font-chamberi text-2xl font-bold text-black">{feature.title}</h3>
+                  <h3 className="font-chamberi text-2xl font-bold text-black">
+                    {feature.title === "Bar Setup" ? (
+                      <>
+                        Bar{" "}
+                        <Link 
+                          to="/the-bar#modular-bar-configurations" 
+                          className="underline hover:text-gray-700 transition-colors"
+                        >
+                          Setup
+                        </Link>
+                      </>
+                    ) : (
+                      feature.title
+                    )}
+                  </h3>
                   <p className="font-sans text-base text-gray-600 leading-relaxed">{feature.description}</p>
                 </motion.div>
               ))}
