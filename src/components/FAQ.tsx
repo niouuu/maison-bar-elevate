@@ -56,7 +56,7 @@ const FAQ = () => {
     },
     {
       question: "Do you provide staff beyond bartenders?",
-      answer: "Yes, upon request we can provide barbacks, waitstaff, and additional event support.",
+      answer: "Yes, upon request we can provide barbacks, waitstaff and additional event support.",
     },
   ];
 
