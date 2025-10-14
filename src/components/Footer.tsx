@@ -8,23 +8,23 @@ const Footer = () => {
   return (
     <footer className="bg-background border-t-2 border-border overflow-x-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 max-w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 lg:gap-14 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 w-full md:items-start">
           {/* Brand */}
-          <div className="text-center md:text-left space-y-4">
+          <div className="flex flex-col items-center md:items-start space-y-4">
             <img
               src={logoImage}
               alt="Maison du Bar"
-              className="h-32 sm:h-36 lg:h-40 w-auto object-contain mx-auto md:mx-0 max-w-[340px] sm:max-w-[400px]"
+              className="h-24 sm:h-28 md:h-32 w-auto object-contain max-w-[280px] sm:max-w-[320px]"
             />
-            <p className="font-sans text-sm lg:text-base text-muted-foreground leading-relaxed max-w-xs mx-auto md:mx-0">
+            <p className="font-sans text-sm lg:text-base text-muted-foreground leading-relaxed max-w-xs text-center md:text-left">
               Bringing luxury and sophistication to every event across Greece.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className="text-center md:text-left">
-            <h4 className="font-sans text-lg lg:text-xl font-bold text-foreground mb-4 lg:mb-6">Quick Links</h4>
-            <ul className="space-y-2 lg:space-y-3">
+          <div className="flex flex-col items-center md:items-start">
+            <h4 className="font-sans text-lg lg:text-xl font-bold text-foreground mb-4 lg:mb-6 text-center md:text-left">Quick Links</h4>
+            <ul className="space-y-2 lg:space-y-3 flex flex-col items-center md:items-start">
               {[
                 { name: "Services", path: "/services" },
                 { name: "The Bar", path: "/the-bar" },
@@ -44,9 +44,9 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="text-center md:text-left">
-            <h4 className="font-sans text-lg lg:text-xl font-bold text-foreground mb-4 lg:mb-6">Contact Us</h4>
-            <div className="space-y-3 lg:space-y-4">
+          <div className="flex flex-col items-center md:items-start">
+            <h4 className="font-sans text-lg lg:text-xl font-bold text-foreground mb-4 lg:mb-6 text-center md:text-left">Contact Us</h4>
+            <div className="space-y-3 lg:space-y-4 flex flex-col items-center md:items-start w-full">
               <a
                 href="mailto:maisondubar25@gmail.com"
                 className="flex items-center justify-center md:justify-start gap-3 font-sans text-sm lg:text-base text-muted-foreground hover:text-foreground transition-colors duration-200"
