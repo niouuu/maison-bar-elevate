@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-background border-t-2 border-border overflow-x-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 max-w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 lg:gap-14 w-full">
           {/* Brand */}
           <div className="text-center md:text-left space-y-4">
             <img
@@ -89,11 +89,11 @@ const Footer = () => {
             <Link to="/privacy-policy" className="hover:text-foreground transition-colors duration-200">
               Privacy Policy
             </Link>
-            <span className="text-border">|</span>
+            <span className="text-muted-foreground">•</span>
             <Link to="/cookie-policy" className="hover:text-foreground transition-colors duration-200">
               Cookie Policy
             </Link>
-            <span className="text-border">|</span>
+            <span className="text-muted-foreground">•</span>
             <Link to="/terms-and-conditions" className="hover:text-foreground transition-colors duration-200">
               Terms & Conditions
             </Link>
@@ -101,7 +101,10 @@ const Footer = () => {
           <p className="font-sans text-sm lg:text-base text-muted-foreground">
             © {currentYear} Maison du Bar. All rights reserved.
           </p>
-          <p className="font-sans text-sm lg:text-base text-muted-foreground opacity-60">
+          <p className="font-sans text-xs sm:text-sm text-muted-foreground">
+            Maison du Bar O.E. — Luxury Mobile Bar Services in Greece
+          </p>
+          <p className="font-sans text-xs text-muted-foreground opacity-60">
             Powered by{" "}
             <a
               href="https://www.amox.gr/"
