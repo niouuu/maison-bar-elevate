@@ -63,7 +63,7 @@ const Home = () => {
               Elevate Every Occasion
             </h2>
             <p className="font-sans text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Transform your event with our premium mobile bar service. We bring sophistication, style, and exceptional
+              Transform your event with our premium mobile bar service. We bring sophistication, style and exceptional
               service directly to your venue.
             </p>
           </motion.div>
