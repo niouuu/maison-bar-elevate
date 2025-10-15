@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Navbar from "@/components/Navbar";
@@ -10,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const Services = () => {
-  const [expandedPackageIndex, setExpandedPackageIndex] = useState<number | null>(null);
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [customRef, customInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
@@ -163,7 +161,7 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {servicePackages.map((pkg, index) => (
               <motion.div
-                key={index}
+                key={pkg.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -175,10 +173,6 @@ const Services = () => {
                   includes={pkg.includes}
                   spirits={pkg.spirits}
                   cocktails={pkg.cocktails}
-                  isExpanded={expandedPackageIndex === index}
-                  onToggle={() => {
-                    setExpandedPackageIndex(expandedPackageIndex === index ? null : index);
-                  }}
                 />
               </motion.div>
             ))}
