@@ -163,7 +163,7 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {servicePackages.map((pkg, index) => (
               <motion.div
-                key={pkg.title}
+                key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

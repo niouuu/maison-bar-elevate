@@ -48,7 +48,7 @@ const ServicePackageCard = ({
             )}
           </Button>
 
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             {isExpanded && (
               <motion.div
                 initial={{ height: 0, opacity: 0 }}
