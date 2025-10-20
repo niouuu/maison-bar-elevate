@@ -85,7 +85,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email using verified domain maisondubar.com
     const emailResponse = await resend.emails.send({
-      from: "Maison du Bar <info@maisondubar.com>",
+      from: "Maison du Bar <no-reply@maisondubar.com>",
       to: ["info@maisondubar.com"],
       replyTo: email,
       subject: "New Contact Form Submission – Maison du Bar",
