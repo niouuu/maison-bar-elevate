@@ -61,7 +61,14 @@ const Contact = () => {
 
       if (error) {
         console.error("Error sending email:", error);
-        toast.error("Failed to send message. Please try again or contact us directly.");
+        
+        const errorMessage = error.message || "Failed to send message";
+        
+        toast.error(
+          `${errorMessage}. Please try emailing us directly at info@maisondubar.com or calling +30 697 329 1777`,
+          { duration: 6000 }
+        );
+        
         setIsSubmitting(false);
         return;
       }

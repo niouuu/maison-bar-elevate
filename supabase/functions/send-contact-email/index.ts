@@ -1,7 +1,5 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "https://esm.sh/resend@4.0.0";
-
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -83,26 +81,37 @@ const handler = async (req: Request): Promise<Response> => {
       </div>
     `;
 
-    // Send email with timeout protection
-    const sendEmailWithTimeout = async (emailConfig: any, timeoutMs = 8000) => {
-      const timeoutPromise = new Promise((_, reject) =>
-        setTimeout(() => reject(new Error("Email send timeout")), timeoutMs),
-      );
+    // Initialize SMTP client with Papaki configuration
+    const client = new SMTPClient({
+      connection: {
+        hostname: Deno.env.get("SMTP_HOST") || "linux260.papaki.gr",
+        port: Number(Deno.env.get("SMTP_PORT")) || 465,
+        tls: true, // SSL encryption on port 465
+        auth: {
+          username: Deno.env.get("SMTP_USER") || "info@maisondubar.com",
+          password: Deno.env.get("SMTP_PASSWORD") || "",
+        },
+      },
+    });
 
-      return Promise.race([resend.emails.send(emailConfig), timeoutPromise]);
-    };
+    console.log("Attempting to send email via Papaki SMTP...");
 
-    const emailResponse = (await sendEmailWithTimeout({
-      from: "Maison du Bar <no-reply@maisondubar.com>",
-      to: [Deno.env.get("EMAIL_TO") ?? "info@maisondubar.com"],
-      replyTo: email,
+    // Send email via Papaki SMTP
+    await client.send({
+      from: Deno.env.get("SMTP_FROM") || "info@maisondubar.com",
+      to: "info@maisondubar.com", // Business inbox
+      replyTo: email, // Customer's email for direct replies
       subject: "New Contact Form Submission – Maison du Bar",
+      content: "auto", // Auto-detect HTML content
       html: emailBody,
-    })) as any;
+    });
 
-    console.log("Email sent successfully:", emailResponse);
+    // Close SMTP connection
+    await client.close();
 
-    return new Response(JSON.stringify({ success: true, id: emailResponse.data?.id }), {
+    console.log("Email sent successfully via Papaki SMTP");
+
+    return new Response(JSON.stringify({ success: true }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
@@ -111,17 +120,28 @@ const handler = async (req: Request): Promise<Response> => {
     });
   } catch (error: any) {
     console.error("Error in send-contact-email function:", error);
-    console.error("Error details:", {
+    console.error("SMTP Error details:", {
       message: error.message,
       name: error.name,
       stack: error.stack,
-      response: error.response?.data,
+      code: error.code, // SMTP error codes
+      command: error.command, // SMTP command that failed
     });
+
+    // Determine user-friendly error message
+    let userMessage = "Failed to send email";
+    if (error.message?.includes("authentication") || error.message?.includes("auth")) {
+      userMessage = "Email service authentication failed";
+    } else if (error.message?.includes("timeout") || error.message?.includes("ETIMEDOUT")) {
+      userMessage = "Email service connection timeout";
+    } else if (error.message?.includes("ECONNREFUSED")) {
+      userMessage = "Email service unavailable";
+    }
 
     return new Response(
       JSON.stringify({
-        error: error.message || "Failed to send email",
-        details: error.response?.data || null,
+        error: userMessage,
+        details: error.message || null,
       }),
       {
         status: 500,
