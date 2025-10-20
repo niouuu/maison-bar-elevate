@@ -83,10 +83,10 @@ const handler = async (req: Request): Promise<Response> => {
       </div>
     `;
 
-    // Send email using verified domain maisondubar.com
+    // Send email using Resend's verified sender
     const emailResponse = await resend.emails.send({
-      from: `Maison du Bar <${Deno.env.get("EMAIL_FROM")}>`,
-      to: [Deno.env.get("EMAIL_TO")],
+      from: "Maison du Bar <onboarding@resend.dev>",
+      to: [Deno.env.get("EMAIL_TO") ?? "info@maisondubar.com"],
       replyTo: email,
       subject: "New Contact Form Submission – Maison du Bar",
       html: emailBody,
@@ -103,10 +103,18 @@ const handler = async (req: Request): Promise<Response> => {
     });
   } catch (error: any) {
     console.error("Error in send-contact-email function:", error);
-    return new Response(JSON.stringify({ error: error.message || "Failed to send email" }), {
-      status: 500,
-      headers: { "Content-Type": "application/json", ...corsHeaders },
-    });
+    console.error("Error details:", JSON.stringify(error, null, 2));
+    
+    return new Response(
+      JSON.stringify({ 
+        error: error.message || "Failed to send email",
+        details: error.response?.data || null
+      }), 
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      }
+    );
   }
 };
 

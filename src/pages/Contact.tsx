@@ -61,13 +61,20 @@ const Contact = () => {
 
       if (error) {
         console.error("Error sending email:", error);
-        toast.error("Failed to send message. Please try again or contact us directly.");
+        const errorMessage = error.message || "Failed to send message";
+        toast.error(
+          `${errorMessage}. Please try emailing us directly at info@maisondubar.com`,
+          { duration: 6000 }
+        );
         setIsSubmitting(false);
         return;
       }
 
       console.log("Email sent successfully:", data);
-      toast.success("Thank you! We'll get back to you shortly.");
+      toast.success(
+        "Thank you for your inquiry! We've received your message and will respond within 24 hours.",
+        { duration: 5000 }
+      );
       
       // Reset form
       setFormData({
@@ -83,7 +90,10 @@ const Contact = () => {
       setCheckboxError("");
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("An unexpected error occurred. Please try again.");
+      toast.error(
+        "Connection error. Please check your internet and try again, or email us at info@maisondubar.com",
+        { duration: 6000 }
+      );
     } finally {
       setIsSubmitting(false);
     }
