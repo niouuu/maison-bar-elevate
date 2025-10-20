@@ -52,7 +52,7 @@ const PrivacyPolicy = () => {
                 <li><strong className="text-foreground">Company Name:</strong> Maison du Bar O.E.</li>
                 <li><strong className="text-foreground">Data Controller:</strong> Angelos Papadopoulos</li>
                 <li><strong className="text-foreground">Registered Address:</strong> Athens, Greece</li>
-                <li><strong className="text-foreground">Contact Email:</strong> <a href="mailto:maisondubar25@gmail.com" className="text-foreground underline hover:opacity-70">maisondubar25@gmail.com</a></li>
+                <li><strong className="text-foreground">Contact Email:</strong> <a href="mailto:info@maisondubar.com" className="text-foreground underline hover:opacity-70">info@maisondubar.com</a></li>
                 <li><strong className="text-foreground">Website:</strong> <a href="https://maisondubar.com" className="text-foreground underline hover:opacity-70">https://maisondubar.com</a></li>
               </ul>
             </div>
@@ -165,7 +165,7 @@ const PrivacyPolicy = () => {
                 <li><strong className="text-foreground">Right to Withdraw Consent (Article 7):</strong> Withdraw your consent at any time</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                To exercise any of these rights, please contact us at <a href="mailto:maisondubar25@gmail.com" className="text-foreground underline hover:opacity-70">maisondubar25@gmail.com</a>. We will respond to your request within 30 days.
+                To exercise any of these rights, please contact us at <a href="mailto:info@maisondubar.com" className="text-foreground underline hover:opacity-70">info@maisondubar.com</a>. We will respond to your request within 30 days.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 You also have the right to lodge a complaint with your local data protection authority if you believe your rights have been violated.
@@ -230,7 +230,7 @@ const PrivacyPolicy = () => {
                 If you have any questions about this Privacy Policy, your personal data, or wish to exercise your rights, please contact us:
               </p>
               <ul className="list-none space-y-2 text-muted-foreground ml-4">
-                <li><strong className="text-foreground">Email:</strong> <a href="mailto:maisondubar25@gmail.com" className="text-foreground underline hover:opacity-70">maisondubar25@gmail.com</a></li>
+                <li><strong className="text-foreground">Email:</strong> <a href="mailto:info@maisondubar.com" className="text-foreground underline hover:opacity-70">info@maisondubar.com</a></li>
                 <li><strong className="text-foreground">Data Controller:</strong> Angelos Papadopoulos</li>
                 <li><strong className="text-foreground">Company:</strong> Maison du Bar O.E.</li>
                 <li><strong className="text-foreground">Location:</strong> Athens, Greece</li>

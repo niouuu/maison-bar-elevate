@@ -153,7 +153,7 @@ const CookiePolicy = () => {
                 If you have any questions about this Cookie Policy or our use of cookies, please contact us:
               </p>
               <ul className="list-none space-y-2 text-muted-foreground ml-4">
-                <li><strong className="text-foreground">Email:</strong> <a href="mailto:maisondubar25@gmail.com" className="text-foreground underline hover:opacity-70">maisondubar25@gmail.com</a></li>
+                <li><strong className="text-foreground">Email:</strong> <a href="mailto:info@maisondubar.com" className="text-foreground underline hover:opacity-70">info@maisondubar.com</a></li>
                 <li><strong className="text-foreground">Company:</strong> Maison du Bar O.E.</li>
                 <li><strong className="text-foreground">Location:</strong> Athens, Greece</li>
                 <li><strong className="text-foreground">Website:</strong> <a href="https://maisondubar.com" className="text-foreground underline hover:opacity-70">https://maisondubar.com</a></li>
