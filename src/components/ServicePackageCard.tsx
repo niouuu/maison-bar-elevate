@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp, Check } from "lucide-react";
@@ -10,8 +11,6 @@ interface ServicePackageCardProps {
   includes: string[];
   spirits: string;
   cocktails: string;
-  isExpanded: boolean;
-  onToggle: () => void;
 }
 
 const ServicePackageCard = ({
@@ -20,9 +19,8 @@ const ServicePackageCard = ({
   includes,
   spirits,
   cocktails,
-  isExpanded,
-  onToggle,
 }: ServicePackageCardProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <Card className="h-full bg-white border-2 border-black shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
@@ -37,8 +35,8 @@ const ServicePackageCard = ({
 
           <Button
             variant="outline"
-            onClick={onToggle}
-            className="w-full justify-between font-sans font-medium border-2 border-black hover:text-white transition-colors"
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="w-full justify-between font-sans font-medium border-2 border-black hover:bg-black hover:text-white transition-colors"
           >
             View Details
             {isExpanded ? (

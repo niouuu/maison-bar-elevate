@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Navbar from "@/components/Navbar";
@@ -12,7 +11,6 @@ import { Link } from "react-router-dom";
 const Services = () => {
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [customRef, customInView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [expandedPackageIndex, setExpandedPackageIndex] = useState<number | null>(null);
 
   const customFeatures = [
     {
@@ -175,10 +173,6 @@ const Services = () => {
                   includes={pkg.includes}
                   spirits={pkg.spirits}
                   cocktails={pkg.cocktails}
-                  isExpanded={expandedPackageIndex === index}
-                  onToggle={() =>
-                    setExpandedPackageIndex(expandedPackageIndex === index ? null : index)
-                  }
                 />
               </motion.div>
             ))}
