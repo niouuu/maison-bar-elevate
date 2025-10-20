@@ -52,11 +52,11 @@ const Footer = () => {
             </h4>
             <div className="space-y-3 lg:space-y-4 flex flex-col items-center md:items-start w-full">
               <a
-                href="mailto:maisondubar25@gmail.com"
+                href="mailto:info@maisondubar.com"
                 className="flex items-center justify-center md:justify-start gap-3 font-sans text-sm lg:text-base text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
                 <Mail className="w-5 h-5 flex-shrink-0" />
-                <span className="break-all">maisondubar25@gmail.com</span>
+                <span className="break-all">info@maisondubar.com</span>
               </a>
               <a
                 href="tel:6973291777"
