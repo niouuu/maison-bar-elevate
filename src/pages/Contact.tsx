@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Select,
   SelectContent,
@@ -27,14 +28,24 @@ const Contact = () => {
     eventDate: "",
     guests: "",
     message: "",
+    agreeToTerms: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [checkboxError, setCheckboxError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
+      // Validate consent checkbox
+      if (!formData.agreeToTerms) {
+        setCheckboxError("Please agree to the Privacy Policy before submitting.");
+        setIsSubmitting(false);
+        return;
+      }
+      setCheckboxError("");
+
       // Validate email format
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(formData.email)) {
@@ -67,7 +78,9 @@ const Contact = () => {
         eventDate: "",
         guests: "",
         message: "",
+        agreeToTerms: false,
       });
+      setCheckboxError("");
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("An unexpected error occurred. Please try again.");
@@ -226,6 +239,51 @@ const Contact = () => {
                       placeholder="Tell us about your event and any specific requirements..."
                       className="mt-2 border-2 border-gray-300 focus:border-black"
                     />
+                  </div>
+
+                  {/* GDPR Consent Checkbox */}
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-3">
+                      <Checkbox
+                        id="agreeToTerms"
+                        checked={formData.agreeToTerms}
+                        onCheckedChange={(checked) => {
+                          setFormData({ ...formData, agreeToTerms: checked === true });
+                          if (checked) setCheckboxError("");
+                        }}
+                        className="mt-1"
+                      />
+                      <Label
+                        htmlFor="agreeToTerms"
+                        className="font-sans text-sm text-black leading-relaxed cursor-pointer"
+                      >
+                        I agree to the{" "}
+                        <a
+                          href="/privacy-policy"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-semibold underline hover:opacity-70"
+                        >
+                          Privacy Policy
+                        </a>{" "}
+                        and{" "}
+                        <a
+                          href="/terms-and-conditions"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-semibold underline hover:opacity-70"
+                        >
+                          Terms of Service
+                        </a>
+                        .
+                      </Label>
+                    </div>
+                    
+                    {checkboxError && (
+                      <p className="text-sm text-red-600 font-sans ml-7">
+                        {checkboxError}
+                      </p>
+                    )}
                   </div>
 
                   <Button
