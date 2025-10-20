@@ -45,41 +45,38 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     // Format email body
-    const emailBody = `
-      <div style="font-family: 'Helvetica Neue', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-        <h1 style="font-family: 'Chamberi Super Display', Georgia, serif; color: #000; border-bottom: 2px solid #000; padding-bottom: 15px;">
-          New Contact Form Submission
-        </h1>
-        
-        <div style="margin-top: 30px;">
-          <h2 style="color: #000; font-size: 18px; margin-bottom: 20px;">Contact Details:</h2>
-          
-          <div style="background: #f9f9f9; padding: 20px; border-left: 3px solid #000; margin-bottom: 15px;">
-            <p style="margin: 5px 0;"><strong>Name:</strong> ${name}</p>
-            <p style="margin: 5px 0;"><strong>Email:</strong> <a href="mailto:${email}" style="color: #000;">${email}</a></p>
-            ${phone ? `<p style="margin: 5px 0;"><strong>Phone:</strong> ${phone}</p>` : ""}
-          </div>
-
-          <h2 style="color: #000; font-size: 18px; margin: 30px 0 20px 0;">Event Information:</h2>
-          
-          <div style="background: #f9f9f9; padding: 20px; border-left: 3px solid #000; margin-bottom: 15px;">
-            <p style="margin: 5px 0;"><strong>Event Type:</strong> ${eventType}</p>
-            ${eventDate ? `<p style="margin: 5px 0;"><strong>Event Date:</strong> ${eventDate}</p>` : ""}
-            ${guests ? `<p style="margin: 5px 0;"><strong>Number of Guests:</strong> ${guests}</p>` : ""}
-          </div>
-
-          <h2 style="color: #000; font-size: 18px; margin: 30px 0 20px 0;">Message:</h2>
-          
-          <div style="background: #f9f9f9; padding: 20px; border-left: 3px solid #000;">
-            <p style="margin: 0; white-space: pre-wrap;">${message}</p>
-          </div>
-        </div>
-
-        <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px;">
-          <p>This email was sent from the Maison du Bar contact form.</p>
-        </div>
-      </div>
-    `;
+    const emailBody = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+<h1 style="font-family: 'Chamberi Super Display', Georgia, serif; color: #000; border-bottom: 2px solid #000; padding-bottom: 15px;">New Contact Form Submission</h1>
+<div style="margin-top: 30px;">
+<h2 style="color: #000; font-size: 18px; margin-bottom: 20px;">Contact Details:</h2>
+<div style="background: #f9f9f9; padding: 20px; border-left: 3px solid #000; margin-bottom: 15px;">
+<p style="margin: 5px 0;"><strong>Name:</strong> ${name}</p>
+<p style="margin: 5px 0;"><strong>Email:</strong> <a href="mailto:${email}" style="color: #000;">${email}</a></p>
+${phone ? `<p style="margin: 5px 0;"><strong>Phone:</strong> ${phone}</p>` : ""}
+</div>
+<h2 style="color: #000; font-size: 18px; margin: 30px 0 20px 0;">Event Information:</h2>
+<div style="background: #f9f9f9; padding: 20px; border-left: 3px solid #000; margin-bottom: 15px;">
+<p style="margin: 5px 0;"><strong>Event Type:</strong> ${eventType}</p>
+${eventDate ? `<p style="margin: 5px 0;"><strong>Event Date:</strong> ${eventDate}</p>` : ""}
+${guests ? `<p style="margin: 5px 0;"><strong>Number of Guests:</strong> ${guests}</p>` : ""}
+</div>
+<h2 style="color: #000; font-size: 18px; margin: 30px 0 20px 0;">Message:</h2>
+<div style="background: #f9f9f9; padding: 20px; border-left: 3px solid #000;">
+<p style="margin: 0; white-space: pre-wrap;">${message}</p>
+</div>
+</div>
+<div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px;">
+<p>This email was sent from the Maison du Bar contact form.</p>
+</div>
+</div>
+</body>
+</html>`.trim();
 
     // Initialize SMTP client with Papaki configuration
     const client = new SMTPClient({
@@ -102,7 +99,6 @@ const handler = async (req: Request): Promise<Response> => {
       to: "info@maisondubar.com", // Business inbox
       replyTo: email, // Customer's email for direct replies
       subject: "New Contact Form Submission – Maison du Bar",
-      content: "auto", // Auto-detect HTML content
       html: emailBody,
     });
 
