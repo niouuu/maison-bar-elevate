@@ -67,7 +67,7 @@ const Services = () => {
         "Glassware",
       ],
       spirits:
-        "Ketel One Vodka,Belvedere Vodka, Tanqueray Gin,Hendrick's Gin, Havana Club Anejo 3 Anos Rum, Don Julio Blanco Tequila, Don Julio Reposado Tequila, Johnnie Walker Black Label Whiskey, Plain Liquor,Bitter and Aperitif of your choice, Plain and Premium Beverages, Paraga Kyr Gianni Estate White Dry Wine(Malagouzia, Roditis), Paraga Kyr Gianni Estate Rose Medium Dry Wine(Xinomayro,Merlot), Paraga Kyr Gianni Estate Red Dry Wine(Merlot,Syrah,Xinomayro), Peroni Nastro Azzurro Beer.",
+        "Ketel One Vodka, Belvedere Vodka, Tanqueray Gin, Hendrick's Gin, Havana Club Anejo 3 Anos Rum, Don Julio Blanco Tequila, Don Julio Reposado Tequila, Johnnie Walker Black Label Whiskey, Plain Liquor, Bitter and Aperitif of your choice, Plain and Premium Beverages, Paraga Kyr Gianni Estate White Dry Wine(Malagouzia, Roditis), Paraga Kyr Gianni Estate Rose Medium Dry Wine(Xinomayro,Merlot), Paraga Kyr Gianni Estate Red Dry Wine(Merlot,Syrah,Xinomayro), Peroni Nastro Azzurro Beer.",
       cocktails: "Pre-Batched Margarita, Pre-Batched Negroni, Paloma.",
     },
     {
