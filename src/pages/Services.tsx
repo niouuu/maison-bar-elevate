@@ -92,7 +92,7 @@ const Services = () => {
       title: "🍾 Ultra Premium Pack",
       description: "The ultimate luxury bar experience for unforgettable events.",
       includes: [
-        "Full open bar with ultra-premium drinks (well-aged spirits, premium beverages, selected origin and well-aged wines, premium champagnes)",
+        "Full open bar with premium and ultra-premium drinks (well-aged spirits, premium beverages, selected origin and well-aged wines, premium champagnes)",
         "5 signature cocktails of your choice",
         "Full mobile bar setup",
         "All necessary equipment for the selected cocktails and long drinks",
