@@ -79,7 +79,7 @@ const Services = () => {
         "Full mobile bar setup",
         "All necessary equipment for the selected cocktails and long drinks",
         "Professional bartenders and barbacks with years of hands, on work in hospitality industry",
-        "Regular ice & ice cubes",
+        "Regular ice, ice cubes",
         "Glass Chiller",
         "Glassware",
       ],
