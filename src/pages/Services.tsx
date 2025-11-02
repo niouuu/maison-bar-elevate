@@ -50,7 +50,7 @@ const Services = () => {
         "Glassware",
       ],
       spirits:
-        "Smirnoff Vodka, Beefeater Gin, Pampero Blanco Rum, El Jimador Blanco Tequila, El Jimador Reposado Tequila, Jameson Irish Whiskey, Plain Liquor,Bitter and Aperitif of your choice, Plain Beverages, Paraga Kyr Gianni Estate White Dry Wine(Malagouzia, Roditis), Paraga Kyr Gianni Estate Rose Medium Dry Wine(Xinomayro, Merlot), Paraga Kyr Gianni Estate Red Dry Wine(Merlot,Syrah,Xinomayro), Peroni Nastro Azzurro Beer.",
+        "Smirnoff Vodka, Beefeater Gin, Pampero Blanco Rum, El Jimador Blanco Tequila, El Jimador Reposado Tequila, Jameson Irish Whiskey, Plain Liquor, Bitter and Aperitif of your choice, Plain Beverages, Paraga Kyr Gianni Estate White Dry Wine(Malagouzia, Roditis), Paraga Kyr Gianni Estate Rose Medium Dry Wine(Xinomayro, Merlot), Paraga Kyr Gianni Estate Red Dry Wine(Merlot,Syrah,Xinomayro), Peroni Nastro Azzurro Beer.",
       cocktails: "Pre-Batched Margarita, Pre-Batched Negroni, Paloma.",
     },
     {
@@ -67,7 +67,7 @@ const Services = () => {
         "Glassware",
       ],
       spirits:
-        "Ketel One Vodka,Belvedere Vodka,Tanqueray Gin,Hendrick's Gin, Havana Club Anejo 3 Anos Rum, Don Julio Blanco Tequila, Don Julio Reposado Tequila, Johnnie Walker Black Label Whiskey, Plain Liquor,Bitter and Aperitif of your choice, Plain and Premium Beverages, Paraga Kyr Gianni Estate White Dry Wine(Malagouzia, Roditis), Paraga Kyr Gianni Estate Rose Medium Dry Wine(Xinomayro,Merlot), Paraga Kyr Gianni Estate Red Dry Wine(Merlot,Syrah,Xinomayro), Peroni Nastro Azzurro Beer.",
+        "Ketel One Vodka,Belvedere Vodka, Tanqueray Gin,Hendrick's Gin, Havana Club Anejo 3 Anos Rum, Don Julio Blanco Tequila, Don Julio Reposado Tequila, Johnnie Walker Black Label Whiskey, Plain Liquor,Bitter and Aperitif of your choice, Plain and Premium Beverages, Paraga Kyr Gianni Estate White Dry Wine(Malagouzia, Roditis), Paraga Kyr Gianni Estate Rose Medium Dry Wine(Xinomayro,Merlot), Paraga Kyr Gianni Estate Red Dry Wine(Merlot,Syrah,Xinomayro), Peroni Nastro Azzurro Beer.",
       cocktails: "Pre-Batched Margarita, Pre-Batched Negroni, Paloma.",
     },
     {
@@ -84,7 +84,7 @@ const Services = () => {
         "Glassware",
       ],
       spirits:
-        "Grey Goose Vodka,Belvedere Vodka,Tanqueray No.Ten Gin, Hendrick's Gin, Ron Zacapa 23 Rum, Diplomatico Reserva Exclusiva Rum, Don Julio Blanco Tequila, Don Julio Reposado Tequila, Johhnie Walker Black Laber Whiskey, Premium Liquor,Bitter and Aperitif of your choice, Premium Beverages, Alpha Estate White Dry Wine(Sauvignon Blanc), Alpha Estate Rose Dry Wine(Xinomayro), Alpha Estate Red Dry Wine(Merlot,Xinomayro,Syrah),Pommery Brut Royal Champange, Peroni Nastro Azzurro Beer.",
+        "Grey Goose Vodka,Belvedere Vodka, Tanqueray No.Ten Gin, Hendrick's Gin, Ron Zacapa 23 Rum, Diplomatico Reserva Exclusiva Rum, Don Julio Blanco Tequila, Don Julio Reposado Tequila, Johhnie Walker Black Laber Whiskey, Premium Liquor, Bitter and Aperitif of your choice, Premium Beverages, Alpha Estate White Dry Wine(Sauvignon Blanc), Alpha Estate Rose Dry Wine(Xinomayro), Alpha Estate Red Dry Wine(Merlot,Xinomayro,Syrah), Pommery Brut Royal Champange, Peroni Nastro Azzurro Beer.",
       cocktails:
         "Pre-Batched Margarita, Pre-Batched Hazelnut Old Fashioned, Pre-Batched Coffee and Cocoa Negroni, Paloma.",
     },
@@ -104,7 +104,7 @@ const Services = () => {
       spirits:
         "Beluga Vodka, Beluga Gold Line Vodka, Monkey 47 Gin, Hendricks Gin, Roku Gin, Ron Zacapa 23 Rum, Ron Zacapa XO Rum, Casamigos Blanco Tequila, Casamigos Reposado Tequila, Casamigos Mezcal Tequila, Don Julio 1942 Añejo Tequila, Clase Azul Reposado Tequila, Ultra-premium whiskey of your choice, Ultra-premium liqueurs/bitters/aperitifs of your choice, Premium beverages, Selected origin & well-aged wines of your choice, Premium champagnes of your choice.",
       cocktails:
-        "Basil Mescalita, Spicy Mango Margarita, Strawberry Daiquiri (with white-chocolate foam), Clarified Pornstar Martini, Strawberry & Long-Pepper Negroni.",
+        "Pre-Batched Basil Mescalita, Pre-Batched Spicy Mango Margarita, Strawberry Daiquiri(with-chocolate foam), Pre-Batched Clarified Pornstar Martini, Pre-Batched Strawberry & Long-Pepper Negroni.",
     },
   ];
 
