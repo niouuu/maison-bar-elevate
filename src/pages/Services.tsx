@@ -75,7 +75,7 @@ const Services = () => {
       description: "A luxury experience with aged spirits and signature creations.",
       includes: [
         "Full open bar with premium drinks (aged spirits, premium beverages, selected origin and aged wines, champagnes)",
-        "4 signature cocktails of your choice",
+        "4 classic and signature cocktails of your choice",
         "Full mobile bar setup",
         "All necessary equipment for the selected cocktails and long drinks",
         "Professional bartenders and barbacks with years of hands, on work in hospitality industry",
