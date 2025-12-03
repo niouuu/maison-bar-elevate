@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const PrivacyPolicy = () => {
-  const currentDate = "October 10th, 2025";
+  const currentDate = "December 3rd, 2024";
 
   return (
     <>
@@ -67,7 +67,11 @@ const PrivacyPolicy = () => {
                 <li><strong className="text-foreground">Name:</strong> To address you properly in our communications</li>
                 <li><strong className="text-foreground">Email Address:</strong> To respond to your inquiries</li>
                 <li><strong className="text-foreground">Phone Number:</strong> To contact you regarding your event or service request</li>
-                <li><strong className="text-foreground">Message Content:</strong> To understand your needs and provide appropriate services</li>
+                <li><strong className="text-foreground">Event Type:</strong> To understand the nature of your event</li>
+                <li><strong className="text-foreground">Event Date:</strong> To check availability and plan accordingly</li>
+                <li><strong className="text-foreground">Number of Guests:</strong> To prepare an appropriate service proposal</li>
+                <li><strong className="text-foreground">Message Content:</strong> To understand your specific needs and preferences</li>
+                <li><strong className="text-foreground">Consent Confirmation:</strong> Your acknowledgment that you agree to our privacy terms</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 <strong className="text-foreground">We do not:</strong>
@@ -77,6 +81,7 @@ const PrivacyPolicy = () => {
                 <li>Process online payments or collect financial information</li>
                 <li>Use analytics tools (e.g., Google Analytics, Meta Pixel, Hotjar)</li>
                 <li>Track your browsing behavior</li>
+                <li>Use cookies or similar tracking technologies</li>
               </ul>
             </div>
 
@@ -89,9 +94,11 @@ const PrivacyPolicy = () => {
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
                 <li><strong className="text-foreground">Contact Form:</strong> When you submit an inquiry through our website's contact form</li>
               </ul>
-              <p className="text-muted-foreground leading-relaxed mt-4">
-                The data you provide is transmitted securely using the <strong className="text-foreground">Resend API</strong> for email delivery.
-              </p>
+              <div className="mt-6 bg-muted/30 border border-border rounded-lg p-6">
+                <p className="text-muted-foreground leading-relaxed">
+                  The information submitted through the contact form is sent to our email service hosted by Papaki. The processing is entirely server-side, and no cookies or third-party tracking tools are used. Data is used only to respond to inquiries and is not shared with external marketing services.
+                </p>
+              </div>
             </div>
 
             {/* Purpose and Legal Basis */}
@@ -124,10 +131,17 @@ const PrivacyPolicy = () => {
             <div className="mb-12">
               <h2 className="font-serif text-3xl font-bold mb-6">6. Cookies & Tracking Technologies</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Our website currently <strong className="text-foreground">does not use</strong> any cookies or tracking technologies for analytics, advertising, or behavioral tracking purposes.
+                Our website <strong className="text-foreground">does not use any cookies</strong> or tracking technologies. This includes:
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                If we implement cookies in the future, we will update this Privacy Policy and provide clear notice and consent options. For more information, please refer to our <a href="/cookie-policy" className="text-foreground underline hover:opacity-70">Cookie Policy</a>.
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                <li>No analytics cookies</li>
+                <li>No advertising or marketing cookies</li>
+                <li>No social media tracking cookies</li>
+                <li>No essential or functional cookies</li>
+                <li>No session cookies</li>
+              </ul>
+              <p className="text-muted-foreground leading-relaxed mt-4">
+                Because we do not use cookies, no cookie consent banner is displayed on our website. For more information, please refer to our <a href="/cookie-policy" className="text-foreground underline hover:opacity-70">Cookie Policy</a>.
               </p>
             </div>
 
@@ -141,7 +155,7 @@ const PrivacyPolicy = () => {
                 <strong className="text-foreground">Third-Party Service Providers:</strong>
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                <li><strong className="text-foreground">Resend API:</strong> We use Resend for sending emails. Resend processes your data solely for the purpose of email delivery and operates under GDPR-compliant terms.</li>
+                <li><strong className="text-foreground">Email Service (Papaki):</strong> Contact form submissions are sent to our email service hosted by Papaki. The data is processed server-side solely for the purpose of delivering your inquiry to us. No tracking or marketing processing occurs.</li>
                 <li><strong className="text-foreground">Hosting Provider (Vercel):</strong> Our website is hosted on Vercel, which provides secure infrastructure. Vercel complies with international data protection standards.</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
