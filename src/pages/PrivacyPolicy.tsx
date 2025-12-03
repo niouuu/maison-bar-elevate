@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const PrivacyPolicy = () => {
-  const currentDate = "December 3rd, 2024";
+  const currentDate = "December 3rd, 2025";
 
   return (
     <>
