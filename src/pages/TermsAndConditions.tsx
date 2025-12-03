@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const TermsAndConditions = () => {
-  const currentDate = "October 10th, 2025";
+  const currentDate = "December 3rd, 2024";
 
   return (
     <>
@@ -35,10 +35,10 @@ const TermsAndConditions = () => {
             <div className="mb-12">
               <h2 className="font-serif text-3xl font-bold mb-6">1. Introduction</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Welcome to Maison du Bar O.E. ("we," "us," "our"). These Terms & Conditions ("Terms") govern your use of our website <a href="https://maisondubar.com" className="text-foreground underline hover:opacity-70">https://maisondubar.com</a> and the services we offer.
+                Welcome to Maison du Bar O.E. ("we", "us", "our"). These Terms & Conditions ("Terms") govern your use of our website <a href="https://maisondubar.com" className="text-foreground underline hover:opacity-70">https://maisondubar.com</a> and the services we offer.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                By accessing or using our website, you agree to be bound by these Terms. If you do not agree with any part of these Terms, please do not use our website.
+                By accessing or using our website, you agree to be bound by these Terms. If you do not agree with any part of these Terms, please discontinue use of the website.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Maison du Bar provides luxury mobile bar services for private events, corporate functions, weddings, and other special occasions throughout Greece.
@@ -49,18 +49,18 @@ const TermsAndConditions = () => {
             <div className="mb-12">
               <h2 className="font-serif text-3xl font-bold mb-6">2. Use of the Website</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Our website is provided for informational purposes to showcase our services and allow potential clients to contact us. By using this website, you agree to:
+                Our website is intended to showcase our services and provide a contact method for potential clients. By using this website, you agree to:
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                <li>Use the website in compliance with all applicable laws and regulations</li>
+                <li>Use the website in compliance with applicable laws</li>
                 <li>Provide accurate and truthful information when contacting us</li>
-                <li>Not use the website for any unlawful, fraudulent, or harmful purposes</li>
-                <li>Not attempt to gain unauthorized access to any part of the website or its systems</li>
-                <li>Not transmit viruses, malware, or any harmful code</li>
-                <li>Not reproduce, duplicate, or exploit any content without our written permission</li>
+                <li>Not engage in unlawful, fraudulent, or harmful activities</li>
+                <li>Not attempt to access protected website areas or systems</li>
+                <li>Not transmit viruses, malware, or harmful code</li>
+                <li>Not reproduce, copy, or exploit website content without permission</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                We reserve the right to suspend or terminate your access to the website if you violate these Terms.
+                We reserve the right to suspend or terminate access for violations of these Terms.
               </p>
             </div>
 
@@ -68,24 +68,24 @@ const TermsAndConditions = () => {
             <div className="mb-12">
               <h2 className="font-serif text-3xl font-bold mb-6">3. Intellectual Property</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                All content on this website, including but not limited to text, images, graphics, logos, photographs, videos, and design elements, is the exclusive property of Maison du Bar O.E. or its licensors and is protected by:
+                All content on this website—including text, images, logos, graphics, design elements, and photographs—is the exclusive property of Maison du Bar O.E. or its licensors, protected by:
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                <li>Copyright laws</li>
-                <li>Trademark laws</li>
-                <li>Other intellectual property rights under Greek, EU, and international law</li>
+                <li>Copyright law</li>
+                <li>Trademark law</li>
+                <li>Applicable EU and international IP laws</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 <strong className="text-foreground">You may not:</strong>
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                <li>Copy, reproduce, distribute, or publicly display any content without our written consent</li>
-                <li>Use our brand name, logo, or trademarks without authorization</li>
-                <li>Create derivative works based on our content</li>
-                <li>Use our images or materials for commercial purposes</li>
+                <li>Copy, reproduce, or distribute the content</li>
+                <li>Use our trademarks or logo without written consent</li>
+                <li>Create derivative works</li>
+                <li>Use website content for commercial purposes</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                Unauthorized use of our intellectual property may result in legal action.
+                Unauthorized use may result in legal action.
               </p>
             </div>
 
@@ -93,24 +93,24 @@ const TermsAndConditions = () => {
             <div className="mb-12">
               <h2 className="font-serif text-3xl font-bold mb-6">4. Service Information</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Maison du Bar specializes in luxury mobile bar services for events, including but not limited to:
+                Maison du Bar offers luxury mobile bar services for:
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                <li>Private parties and celebrations</li>
-                <li>Corporate events and functions</li>
-                <li>Weddings and receptions</li>
-                <li>Special occasions and gatherings</li>
+                <li>Private parties</li>
+                <li>Corporate events</li>
+                <li>Weddings</li>
+                <li>Special occasions</li>
               </ul>
               
               <p className="text-muted-foreground leading-relaxed mt-6 mb-4">
-                <strong className="text-foreground">Important Notes:</strong>
+                <strong className="text-foreground">Important notes:</strong>
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                <li><strong className="text-foreground">No Online Sales:</strong> Our website is informational only. We do not sell products or services directly through the website.</li>
-                <li><strong className="text-foreground">No Binding Agreements:</strong> Contacting us through the website does not create a binding contract. Service agreements are made separately after consultation.</li>
-                <li><strong className="text-foreground">Service Availability:</strong> All services are subject to availability and confirmation. We reserve the right to decline service requests.</li>
-                <li><strong className="text-foreground">Pricing:</strong> Prices displayed on the website are indicative and may vary based on event requirements. Final pricing will be provided in a formal quote.</li>
-                <li><strong className="text-foreground">Accuracy of Information:</strong> While we strive to keep information accurate and up-to-date, we do not guarantee that all details (prices, service descriptions, availability) are error-free.</li>
+                <li><strong className="text-foreground">No Online Sales:</strong> Our website does not process transactions.</li>
+                <li><strong className="text-foreground">No Binding Agreement:</strong> Submitting a contact form does not constitute a contract.</li>
+                <li><strong className="text-foreground">Availability:</strong> All services are subject to availability and confirmation.</li>
+                <li><strong className="text-foreground">Pricing:</strong> Any pricing provided online is indicative; final pricing is issued in a formal quotation.</li>
+                <li><strong className="text-foreground">Accuracy:</strong> We strive to keep information updated but cannot guarantee complete accuracy at all times.</li>
               </ul>
             </div>
 
@@ -118,21 +118,18 @@ const TermsAndConditions = () => {
             <div className="mb-12">
               <h2 className="font-serif text-3xl font-bold mb-6">5. Limitation of Liability</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                To the fullest extent permitted by law, Maison du Bar O.E. and its directors, employees, agents, and partners shall not be liable for:
+                To the fullest extent permitted by law, Maison du Bar O.E. shall not be liable for:
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                <li>Any direct, indirect, incidental, consequential, or punitive damages arising from your use of the website</li>
+                <li>Direct, indirect, incidental, or consequential damages</li>
                 <li>Loss of data, profits, or business opportunities</li>
-                <li>Errors, omissions, or inaccuracies in website content</li>
-                <li>Interruptions or unavailability of the website</li>
-                <li>Viruses or malicious code transmitted through the website (despite our reasonable security measures)</li>
+                <li>Inaccuracies, errors, or interruptions on the website</li>
+                <li>Viruses or harmful code despite reasonable security measures</li>
                 <li>Third-party content, links, or services</li>
+                <li>Temporary or permanent unavailability of the website</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                <strong className="text-foreground">Website Availability:</strong> We do not guarantee that the website will be available at all times or free from errors. We reserve the right to suspend, modify, or discontinue the website at any time without notice.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mt-4">
-                <strong className="text-foreground">Service Liability:</strong> Liability for services provided at events will be governed by separate service agreements and applicable Greek law.
+                Liability for event-related services is governed by separate service agreements and Greek law.
               </p>
             </div>
 
@@ -140,18 +137,15 @@ const TermsAndConditions = () => {
             <div className="mb-12">
               <h2 className="font-serif text-3xl font-bold mb-6">6. External Links</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Our website may contain links to third-party websites or services (e.g., social media platforms, partners, suppliers) that are not owned or controlled by Maison du Bar.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites. You acknowledge and agree that:
+                The website may include links to third-party websites. We do not control or monitor these websites and are not responsible for their:
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                <li>We are not responsible for any damage or loss caused by your use of third-party websites</li>
-                <li>You access third-party websites at your own risk</li>
-                <li>You should review the terms and privacy policies of any third-party websites you visit</li>
+                <li>Content</li>
+                <li>Privacy practices</li>
+                <li>Security standards</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                The inclusion of any link does not imply endorsement by Maison du Bar.
+                You access third-party websites at your own risk. Inclusion of a link does not imply endorsement.
               </p>
             </div>
 
@@ -159,7 +153,7 @@ const TermsAndConditions = () => {
             <div className="mb-12">
               <h2 className="font-serif text-3xl font-bold mb-6">7. Data Protection & Privacy</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Your privacy is important to us. When you use our website or contact us, we collect and process personal data in accordance with:
+                We handle personal data in accordance with:
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
                 <li>The General Data Protection Regulation (GDPR)</li>
@@ -167,7 +161,10 @@ const TermsAndConditions = () => {
                 <li>Our <a href="/privacy-policy" className="text-foreground underline hover:opacity-70">Privacy Policy</a></li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                By using our website, you consent to the collection and use of your personal data as described in our Privacy Policy. For detailed information about how we handle your data, please review our:
+                By using our website or submitting our contact form, you consent to the processing of your personal data as described in our Privacy Policy.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mt-4">
+                Please review our:
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4 mt-2">
                 <li><a href="/privacy-policy" className="text-foreground underline hover:opacity-70">Privacy Policy</a></li>
@@ -179,13 +176,13 @@ const TermsAndConditions = () => {
             <div className="mb-12">
               <h2 className="font-serif text-3xl font-bold mb-6">8. Governing Law</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                These Terms & Conditions are governed by and construed in accordance with the laws of <strong className="text-foreground">Greece</strong> and the <strong className="text-foreground">European Union</strong>.
+                These Terms & Conditions are governed by Greek law and applicable EU legislation.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Any disputes arising from or relating to these Terms or your use of the website shall be subject to the exclusive jurisdiction of the courts of <strong className="text-foreground">Athens, Greece</strong>.
+                Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts of Athens, Greece.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                If any provision of these Terms is found to be invalid or unenforceable by a court, the remaining provisions shall continue in full force and effect.
+                If any provision of these Terms is found unenforceable, the remaining provisions will continue in effect.
               </p>
             </div>
 
@@ -193,13 +190,10 @@ const TermsAndConditions = () => {
             <div className="mb-12">
               <h2 className="font-serif text-3xl font-bold mb-6">9. Changes to These Terms</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                We reserve the right to update or modify these Terms & Conditions at any time without prior notice. When we make changes, we will update the "Effective Date" at the top of this page.
+                We may update or modify these Terms at any time. When changes are made, the "Effective Date" will be updated.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Your continued use of the website after any changes constitutes acceptance of the updated Terms. We encourage you to review these Terms periodically to stay informed about your rights and obligations.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                If you do not agree with the updated Terms, you must stop using the website immediately.
+                Continued use of the website after changes indicates acceptance of the revised Terms. If you do not agree with the updated Terms, you must stop using the website.
               </p>
             </div>
 
@@ -207,16 +201,16 @@ const TermsAndConditions = () => {
             <div className="mb-12">
               <h2 className="font-serif text-3xl font-bold mb-6">10. Contact Information</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                If you have any questions about these Terms & Conditions or need further clarification, please contact us:
+                For questions or clarifications regarding these Terms, please contact us:
               </p>
               <ul className="list-none space-y-2 text-muted-foreground ml-4">
-                <li><strong className="text-foreground">Company Name:</strong> Maison du Bar O.E.</li>
+                <li><strong className="text-foreground">Company:</strong> Maison du Bar O.E.</li>
                 <li><strong className="text-foreground">Email:</strong> <a href="mailto:info@maisondubar.com" className="text-foreground underline hover:opacity-70">info@maisondubar.com</a></li>
                 <li><strong className="text-foreground">Location:</strong> Athens, Greece</li>
                 <li><strong className="text-foreground">Website:</strong> <a href="https://maisondubar.com" className="text-foreground underline hover:opacity-70">https://maisondubar.com</a></li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-6">
-                Thank you for choosing Maison du Bar. We look forward to bringing luxury and sophistication to your next event.
+                Thank you for choosing Maison du Bar — we look forward to elevating your next event with our luxury bar experience.
               </p>
             </div>
 
