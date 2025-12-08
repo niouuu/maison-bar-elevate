@@ -15,94 +15,21 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { MapPin, Phone, Mail } from "lucide-react";
-import { toast } from "sonner";
 import { motion } from "framer-motion";
-import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    eventType: "",
-    eventDate: "",
-    guests: "",
-    message: "",
-    agreeToTerms: false,
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [eventType, setEventType] = useState("");
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
   const [checkboxError, setCheckboxError] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      // Validate consent checkbox
-      if (!formData.agreeToTerms) {
-        setCheckboxError("Please agree to the Privacy Policy before submitting.");
-        setIsSubmitting(false);
-        return;
-      }
-      setCheckboxError("");
-
-      // Validate email format
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(formData.email)) {
-        toast.error("Please enter a valid email address");
-        setIsSubmitting(false);
-        return;
-      }
-
-      // Call the edge function
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData,
-      });
-
-      if (error) {
-        console.error("Error sending email:", error);
-        
-        const errorMessage = error.message || "Failed to send message";
-        
-        toast.error(
-          `${errorMessage}. Please try emailing us directly at info@maisondubar.com or calling +30 697 329 1777`,
-          { duration: 6000 }
-        );
-        
-        setIsSubmitting(false);
-        return;
-      }
-
-      console.log("Email sent successfully:", data);
-      toast.success("Thank you! We'll get back to you shortly.");
-      
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        eventType: "",
-        eventDate: "",
-        guests: "",
-        message: "",
-        agreeToTerms: false,
-      });
-      setCheckboxError("");
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      toast.error("An unexpected error occurred. Please try again.");
-    } finally {
-      setIsSubmitting(false);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    if (!agreeToTerms) {
+      e.preventDefault();
+      setCheckboxError("Please agree to the Privacy Policy before submitting.");
+      return;
     }
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setCheckboxError("");
+    // Form will submit natively to Formspree
   };
 
   return (
@@ -146,15 +73,23 @@ const Contact = () => {
                 <h2 className="font-chamberi text-3xl font-bold mb-6 text-black">
                   Send Us a Message
                 </h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form 
+                  action="https://formspree.io/f/xnnebzno" 
+                  method="POST" 
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                >
+                  {/* Hidden input for event type (Radix Select doesn't work natively with forms) */}
+                  <input type="hidden" name="eventType" value={eventType} />
+                  {/* Hidden input for consent */}
+                  <input type="hidden" name="agreeToTerms" value={agreeToTerms ? "yes" : "no"} />
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="name" className="font-sans text-black">Name *</Label>
                       <Input
                         id="name"
                         name="name"
-                        value={formData.name}
-                        onChange={handleChange}
                         required
                         className="mt-2 border-2 border-gray-300 focus:border-black"
                       />
@@ -165,8 +100,6 @@ const Contact = () => {
                         id="email"
                         name="email"
                         type="email"
-                        value={formData.email}
-                        onChange={handleChange}
                         required
                         className="mt-2 border-2 border-gray-300 focus:border-black"
                       />
@@ -180,18 +113,14 @@ const Contact = () => {
                         id="phone"
                         name="phone"
                         type="tel"
-                        value={formData.phone}
-                        onChange={handleChange}
                         className="mt-2 border-2 border-gray-300 focus:border-black"
                       />
                     </div>
                     <div>
                       <Label htmlFor="eventType" className="font-sans text-black">Event Type *</Label>
                       <Select
-                        value={formData.eventType}
-                        onValueChange={(value) =>
-                          setFormData({ ...formData, eventType: value })
-                        }
+                        value={eventType}
+                        onValueChange={(value) => setEventType(value)}
                         required
                       >
                         <SelectTrigger className="mt-2 border-2 border-gray-300 focus:border-black">
@@ -215,8 +144,6 @@ const Contact = () => {
                         id="eventDate"
                         name="eventDate"
                         type="date"
-                        value={formData.eventDate}
-                        onChange={handleChange}
                         className="mt-2 border-2 border-gray-300 focus:border-black"
                       />
                     </div>
@@ -226,8 +153,6 @@ const Contact = () => {
                         id="guests"
                         name="guests"
                         type="number"
-                        value={formData.guests}
-                        onChange={handleChange}
                         placeholder="Approximate number"
                         className="mt-2 border-2 border-gray-300 focus:border-black"
                       />
@@ -239,8 +164,6 @@ const Contact = () => {
                     <Textarea
                       id="message"
                       name="message"
-                      value={formData.message}
-                      onChange={handleChange}
                       required
                       rows={5}
                       placeholder="Tell us about your event and any specific requirements..."
@@ -253,9 +176,9 @@ const Contact = () => {
                     <div className="flex items-start space-x-3">
                       <Checkbox
                         id="agreeToTerms"
-                        checked={formData.agreeToTerms}
+                        checked={agreeToTerms}
                         onCheckedChange={(checked) => {
-                          setFormData({ ...formData, agreeToTerms: checked === true });
+                          setAgreeToTerms(checked === true);
                           if (checked) setCheckboxError("");
                         }}
                         className="mt-1"
@@ -297,9 +220,8 @@ const Contact = () => {
                     type="submit"
                     size="lg"
                     className="w-full font-sans font-medium text-base py-6 bg-black text-white hover:bg-white hover:text-black border-2 border-black transition-all duration-300"
-                    disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sending..." : "Send Inquiry"}
+                    Send Inquiry
                   </Button>
                 </form>
               </div>
