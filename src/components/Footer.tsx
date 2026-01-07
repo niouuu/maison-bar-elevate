@@ -3,8 +3,6 @@ import { Mail, Phone, Instagram } from "lucide-react";
 import logoImage from "@/assets/maison-du-bar-new-logo.jpg";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-background border-t-2 border-border overflow-x-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 max-w-full">
@@ -103,7 +101,7 @@ const Footer = () => {
             </Link>
           </div>
           <p className="font-sans text-sm lg:text-base text-muted-foreground">
-            © {currentYear} Maison du Bar. All rights reserved.
+            © 2025 Maison du Bar. All rights reserved.
           </p>
           <p className="font-sans text-xs sm:text-sm text-muted-foreground">
             Maison du Bar O.E. — Luxury Mobile Bar Services in Greece
