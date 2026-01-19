@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import TheBar from "./pages/TheBar";
+import Details from "./pages/Details";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiePolicy from "./pages/CookiePolicy";
@@ -27,8 +28,9 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/about" element={<About />} />
             <Route path="/the-bar" element={<TheBar />} />
+            <Route path="/details" element={<Details />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />

@@ -398,63 +398,6 @@ const TheBar = () => {
         </div>
       </section>
 
-      {/* Design Details Gallery */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-white border-t border-gray-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-black">
-            Craftsmanship Up Close
-          </h2>
-          <p className="text-center font-sans text-gray-600 mb-12 max-w-2xl mx-auto">
-            Explore the exquisite details that make our bar truly exceptional
-          </p>
-
-          {!isMobile ? (
-            // Desktop: Grid Layout
-            <motion.div
-              ref={galleryRef}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
-            >
-              {detailImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={galleryInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
-                >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
-                </motion.div>
-              ))}
-            </motion.div>
-          ) : (
-            // Mobile: Horizontal Carousel
-            <Carousel className="w-full max-w-sm mx-auto">
-              <CarouselContent>
-                {detailImages.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <div className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md overflow-hidden">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-full object-cover object-bottom md:object-center"
-                        loading="lazy"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <MobileCarouselPrevious />
-              <MobileCarouselNext />
-            </Carousel>
-          )}
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 sm:py-20 lg:py-32 bg-black text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">

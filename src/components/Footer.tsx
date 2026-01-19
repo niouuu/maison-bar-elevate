@@ -28,6 +28,7 @@ const Footer = () => {
               {[
                 { name: "Services", path: "/services" },
                 { name: "The Bar", path: "/the-bar" },
+                { name: "Details", path: "/details" },
                 { name: "About", path: "/about" },
                 { name: "Contact", path: "/contact" },
               ].map((link) => (
