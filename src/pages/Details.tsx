@@ -207,7 +207,7 @@ const Details = () => {
           {!isMobile ? (
             <motion.div
               ref={interiorRef}
-              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
+              className="grid grid-cols-3 gap-6 max-w-5xl mx-auto"
             >
               {interiorImages.map((image, index) => (
                 <motion.div
@@ -215,10 +215,7 @@ const Details = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={interiorInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={cn(
-                    "bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group",
-                    (index === 0 || index === 4) ? "lg:col-span-2 aspect-[2/1]" : "aspect-square"
-                  )}
+                  className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
                 >
                   <img
                     src={image.src}
