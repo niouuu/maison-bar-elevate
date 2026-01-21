@@ -21,6 +21,15 @@ import craft4 from "@/assets/craft4.jpg";
 import details1 from "@/assets/details_1.jpg";
 import details2 from "@/assets/details_2.jpg";
 
+// Import interior images
+import details3 from "@/assets/details_3.jpg";
+import details4 from "@/assets/details_4.jpg";
+import details5 from "@/assets/details_5.jpg";
+import details6 from "@/assets/details_6.jpg";
+import details7 from "@/assets/details_7.jpg";
+import details8 from "@/assets/details__8.jpg";
+import details9 from "@/assets/details_9.jpg";
+
 // Custom mobile-friendly carousel navigation arrows
 const MobileCarouselPrevious = () => {
   const { scrollPrev, canScrollPrev } = useCarousel();
@@ -80,6 +89,11 @@ const Details = () => {
     threshold: 0.1,
   });
 
+  const [interiorRef, interiorInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   const isMobile = useIsMobile();
 
   const craftsmanshipImages = [
@@ -89,6 +103,16 @@ const Details = () => {
     { src: craft4, alt: "Precision craftsmanship design detail" },
     { src: details1, alt: "Craftsmanship detail view 1" },
     { src: details2, alt: "Craftsmanship detail view 2" },
+  ];
+
+  const interiorImages = [
+    { src: details3, alt: "Bar interior elegant lighting" },
+    { src: details4, alt: "Luxury bar surface details" },
+    { src: details5, alt: "Premium material finishes" },
+    { src: details6, alt: "Sophisticated storage design" },
+    { src: details7, alt: "Refined interior craftsmanship" },
+    { src: details8, alt: "Exquisite wood grain patterns" },
+    { src: details9, alt: "Signature interior elements" },
   ];
 
   return (
@@ -170,18 +194,61 @@ const Details = () => {
         </div>
       </section>
 
-      {/* Section 2: Details Are Never ENOUGH (Placeholder) */}
+      {/* Section 2: The Interior */}
       <section className="py-16 sm:py-20 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-black">
-            Details Are Never ENOUGH
+            The Interior
           </h2>
           <p className="text-center font-sans text-gray-600 mb-12 max-w-2xl mx-auto">
-            Coming soon...
+            Discover the elegant interior details of our signature bar
           </p>
-          <div className="max-w-4xl mx-auto h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-            <p className="font-sans text-gray-500 text-lg">Placeholder Section</p>
-          </div>
+
+          {!isMobile ? (
+            <motion.div
+              ref={interiorRef}
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
+            >
+              {interiorImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={interiorInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className={cn(
+                    "bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group",
+                    (index === 0 || index === 4) ? "lg:col-span-2 aspect-[2/1]" : "aspect-square"
+                  )}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </motion.div>
+              ))}
+            </motion.div>
+          ) : (
+            <Carousel className="w-full max-w-sm mx-auto">
+              <CarouselContent>
+                {interiorImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md overflow-hidden">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover object-center"
+                        loading="lazy"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <MobileCarouselPrevious />
+              <MobileCarouselNext />
+            </Carousel>
+          )}
         </div>
       </section>
 
