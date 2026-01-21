@@ -31,6 +31,7 @@ import frontView_op5 from "@/assets/option5.1.jpg";
 import topView_op5 from "@/assets/option5.2.jpg";
 import frontView_op6 from "@/assets/option6.1.jpg";
 import topView_op6 from "@/assets/option6.3.jpg";
+import detail1 from "@/assets/details_5.jpg";
 import detail2 from "@/assets/craft2.jpg";
 import detail3 from "@/assets/craft3.jpg";
 import detail4 from "@/assets/craft4.jpg";
@@ -192,6 +193,7 @@ const TheBar = () => {
   ];
 
   const detailImages = [
+    { src: detail1, alt: "Solid walnut countertop close-up view" },
     { src: detail2, alt: "Premium materials and elegant finishes" },
     { src: detail3, alt: "Elegant black walnut wood finish detail" },
     { src: detail4, alt: "Precision craftsmanship design detail" },
