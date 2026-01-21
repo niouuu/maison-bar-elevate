@@ -30,6 +30,13 @@ import details7 from "@/assets/details_7.jpg";
 import details8 from "@/assets/details__8.jpg";
 import details9 from "@/assets/details_9.jpg";
 
+// Import chiller images
+import chiller1 from "@/assets/chiller_1.jpg";
+import chiller2 from "@/assets/chiller_2.jpg";
+import chiller3 from "@/assets/chiller3.jpg";
+import chiller4 from "@/assets/chiller4.jpg";
+import chiller5 from "@/assets/chiller5.jpg";
+
 // Custom mobile-friendly carousel navigation arrows
 const MobileCarouselPrevious = () => {
   const { scrollPrev, canScrollPrev } = useCarousel();
@@ -94,6 +101,11 @@ const Details = () => {
     threshold: 0.1,
   });
 
+  const [chillerRef, chillerInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   const isMobile = useIsMobile();
 
   const craftsmanshipImages = [
@@ -113,6 +125,14 @@ const Details = () => {
     { src: details7, alt: "Refined interior craftsmanship" },
     { src: details8, alt: "Exquisite wood grain patterns" },
     { src: details9, alt: "Signature interior elements" },
+  ];
+
+  const chillerImages = [
+    { src: chiller1, alt: "Premium chiller unit front view" },
+    { src: chiller2, alt: "Chiller interior storage design" },
+    { src: chiller3, alt: "Temperature-controlled compartment" },
+    { src: chiller4, alt: "Elegant chiller finish detail" },
+    { src: chiller5, alt: "Chiller integrated with bar design" },
   ];
 
   return (
@@ -249,18 +269,58 @@ const Details = () => {
         </div>
       </section>
 
-      {/* Section 3: The Chiller (Placeholder) */}
+      {/* Section 3: The Chiller */}
       <section className="py-16 sm:py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-black">
             The Chiller
           </h2>
           <p className="text-center font-sans text-gray-600 mb-12 max-w-2xl mx-auto">
-            Coming soon...
+            Precision cooling meets elegant design
           </p>
-          <div className="max-w-4xl mx-auto h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-            <p className="font-sans text-gray-500 text-lg">Placeholder Section</p>
-          </div>
+
+          {!isMobile ? (
+            <motion.div
+              ref={chillerRef}
+              className="grid grid-cols-3 gap-6 max-w-5xl mx-auto"
+            >
+              {chillerImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={chillerInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </motion.div>
+              ))}
+            </motion.div>
+          ) : (
+            <Carousel className="w-full max-w-sm mx-auto">
+              <CarouselContent>
+                {chillerImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="aspect-square bg-gray-100 rounded-lg border border-gray-200 shadow-md overflow-hidden">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover object-center"
+                        loading="lazy"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <MobileCarouselPrevious />
+              <MobileCarouselNext />
+            </Carousel>
+          )}
         </div>
       </section>
 
