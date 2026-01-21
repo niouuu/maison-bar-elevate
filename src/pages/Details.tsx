@@ -13,11 +13,13 @@ import {
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 
-// Import the 4 specific images
+// Import the 6 specific images
 import craft3 from "@/assets/craft3.jpg";
 import craft5 from "@/assets/craft5.jpg";
 import maisondubar0062 from "@/assets/Maison_du_Bar_0062kin.jpg";
 import craft4 from "@/assets/craft4.jpg";
+import details1 from "@/assets/details_1.jpg";
+import details2 from "@/assets/details_2.jpg";
 
 // Custom mobile-friendly carousel navigation arrows
 const MobileCarouselPrevious = () => {
@@ -85,6 +87,8 @@ const Details = () => {
     { src: craft5, alt: "Professional bar setup with bottle display" },
     { src: maisondubar0062, alt: "Maison du Bar craftsmanship detail" },
     { src: craft4, alt: "Precision craftsmanship design detail" },
+    { src: details1, alt: "Craftsmanship detail view 1" },
+    { src: details2, alt: "Craftsmanship detail view 2" },
   ];
 
   return (
@@ -123,7 +127,7 @@ const Details = () => {
             // Desktop: 2x2 Grid Layout
             <motion.div
               ref={craftsmanshipRef}
-              className="grid grid-cols-2 gap-6 max-w-4xl mx-auto"
+              className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
             >
               {craftsmanshipImages.map((image, index) => (
                 <motion.div
