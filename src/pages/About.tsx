@@ -119,7 +119,7 @@ const About = () => {
               <img
                 src={teamImage}
                 alt="Professional bartenders preparing luxury cocktails at Maison du Bar event"
-                className="rounded-lg shadow-xl grayscale-hover w-full"
+                className="rounded-lg shadow-xl grayscale w-full"
                 loading="lazy"
               />
             </motion.div>
