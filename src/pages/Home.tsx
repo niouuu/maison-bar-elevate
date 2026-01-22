@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import BarReveal from "@/components/BarReveal";
+import Testimonials from "@/components/Testimonials";
+import FeaturedGallery from "@/components/FeaturedGallery";
 import heroImage from "@/assets/Maison_du_Bar_0078.jpg";
 import heroImageMobile from "@/assets/Maison_du_Bar_0062kin.jpg";
 
@@ -15,7 +18,7 @@ const Home = () => {
   const [ctaRef, ctaInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <ScrollToTop />
 
@@ -49,8 +52,11 @@ const Home = () => {
         </motion.div>
       </section>
 
+      {/* Bar Reveal Section with Parallax */}
+      <BarReveal />
+
       {/* Value Proposition */}
-      <section className="py-20 sm:py-24 lg:py-40 bg-white">
+      <section className="py-20 sm:py-24 lg:py-40 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={valueRef}
@@ -59,10 +65,10 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-16 lg:mb-20"
           >
-            <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 sm:mb-6">
+            <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6">
               Elevate Every Occasion
             </h2>
-            <p className="font-sans text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="font-sans text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Transform your event with our premium mobile bar service. We bring sophistication, style and exceptional
               service directly to your venue.
             </p>
@@ -96,19 +102,25 @@ const Home = () => {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="text-center group"
               >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center border-2 border-black rounded-full group-hover:bg-black transition-all duration-300">
-                  <feature.icon className="w-8 h-8 sm:w-10 sm:h-10 text-black group-hover:text-white transition-colors duration-300" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center border-2 border-foreground rounded-full group-hover:bg-foreground transition-all duration-300">
+                  <feature.icon className="w-8 h-8 sm:w-10 sm:h-10 text-foreground group-hover:text-background transition-colors duration-300" />
                 </div>
-                <h3 className="font-chamberi text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">{feature.title}</h3>
-                <p className="font-sans text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
+                <h3 className="font-chamberi text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">{feature.title}</h3>
+                <p className="font-sans text-sm sm:text-base text-muted-foreground leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* Featured Gallery */}
+      <FeaturedGallery />
+
       {/* CTA Section */}
-      <section className="py-20 sm:py-24 lg:py-40 bg-black text-white">
+      <section className="py-20 sm:py-24 lg:py-40 bg-foreground text-background">
         <motion.div
           ref={ctaRef}
           initial={{ opacity: 0, y: 30 }}
@@ -119,7 +131,7 @@ const Home = () => {
           <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
             Ready to Elevate Your Event?
           </h2>
-          <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto">
+          <p className="font-sans text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-12 max-w-3xl mx-auto">
             Let's create an unforgettable experience for your guests
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
