@@ -1,12 +1,31 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone, Instagram } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
 import logoImage from "@/assets/maison-du-bar-new-logo.jpg";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    
+    setIsSubmitting(true);
+    // Simulate newsletter signup
+    await new Promise(resolve => setTimeout(resolve, 500));
+    toast.success("Thank you for subscribing!");
+    setEmail("");
+    setIsSubmitting(false);
+  };
+
   return (
     <footer className="bg-background border-t-2 border-border overflow-x-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 max-w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 w-full md:items-start">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16 w-full md:items-start">
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start space-y-4">
             <img
@@ -84,6 +103,33 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+          </div>
+
+          {/* Newsletter */}
+          <div className="flex flex-col items-center md:items-start">
+            <h4 className="font-sans text-lg lg:text-xl font-bold text-foreground mb-4 lg:mb-6 text-center md:text-left">
+              Stay Updated
+            </h4>
+            <p className="font-sans text-sm text-muted-foreground mb-4 text-center md:text-left">
+              Join our mailing list for exclusive updates and offers.
+            </p>
+            <form onSubmit={handleNewsletterSubmit} className="w-full max-w-xs space-y-3">
+              <Input
+                type="email"
+                placeholder="Your email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="border-2 border-border focus:border-foreground"
+                required
+              />
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-foreground text-background hover:bg-background hover:text-foreground border-2 border-foreground transition-all duration-300"
+              >
+                {isSubmitting ? "Subscribing..." : "Subscribe"}
+              </Button>
+            </form>
           </div>
         </div>
 

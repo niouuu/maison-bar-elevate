@@ -30,7 +30,13 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background shadow-sm overflow-x-hidden">
+    <nav 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-x-hidden ${
+        isScrolled 
+          ? "bg-background/80 backdrop-blur-md shadow-sm" 
+          : "bg-background shadow-sm"
+      }`}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <div className="relative flex items-center justify-center h-20 sm:h-24 lg:h-28">
           {/* Logo - Absolutely positioned left */}
