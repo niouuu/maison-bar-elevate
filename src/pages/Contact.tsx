@@ -16,12 +16,9 @@ import {
 } from "@/components/ui/select";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { motion } from "framer-motion";
-import contactImage from "@/assets/Maison_du_Bar_0079.jpg";
 
 const Contact = () => {
   const [eventType, setEventType] = useState("");
-  const [packagePreference, setPackagePreference] = useState("");
-  const [heardFrom, setHeardFrom] = useState("");
   const [agreeToTerms, setAgreeToTerms] = useState(false);
   const [checkboxError, setCheckboxError] = useState("");
 
@@ -36,12 +33,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navbar />
       <ScrollToTop />
 
       {/* Hero Section */}
-      <section className="pt-32 sm:pt-40 pb-16 sm:pb-20 bg-foreground text-background">
+      <section className="pt-32 sm:pt-40 pb-16 sm:pb-20 bg-black text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -52,7 +49,7 @@ const Contact = () => {
             <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8">
               Get In Touch
             </h1>
-            <p className="font-sans text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
               Ready to bring luxury bar service to your event? Let's start planning
               your perfect experience.
             </p>
@@ -60,20 +57,20 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Section - Split Layout */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-background">
+      {/* Contact Section */}
+      <section className="py-16 sm:py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:pr-12"
+              className="lg:col-span-2"
             >
-              <div className="bg-background p-8 border-2 border-border rounded-lg lg:rounded-r-none">
-                <h2 className="font-chamberi text-3xl font-bold mb-6 text-foreground">
+              <div className="bg-white p-8 border-2 border-gray-200">
+                <h2 className="font-chamberi text-3xl font-bold mb-6 text-black">
                   Send Us a Message
                 </h2>
                 <form 
@@ -82,55 +79,54 @@ const Contact = () => {
                   onSubmit={handleSubmit}
                   className="space-y-6"
                 >
-                  {/* Hidden inputs for select values */}
+                  {/* Hidden input for event type (Radix Select doesn't work natively with forms) */}
                   <input type="hidden" name="eventType" value={eventType} />
-                  <input type="hidden" name="packagePreference" value={packagePreference} />
-                  <input type="hidden" name="heardFrom" value={heardFrom} />
+                  {/* Hidden input for consent */}
                   <input type="hidden" name="agreeToTerms" value={agreeToTerms ? "yes" : "no"} />
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="name" className="font-sans text-foreground">Name *</Label>
+                      <Label htmlFor="name" className="font-sans text-black">Name *</Label>
                       <Input
                         id="name"
                         name="name"
                         required
-                        className="mt-2 border-2 border-border focus:border-foreground"
+                        className="mt-2 border-2 border-gray-300 focus:border-black"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="email" className="font-sans text-foreground">Email *</Label>
+                      <Label htmlFor="email" className="font-sans text-black">Email *</Label>
                       <Input
                         id="email"
                         name="email"
                         type="email"
                         required
-                        className="mt-2 border-2 border-border focus:border-foreground"
+                        className="mt-2 border-2 border-gray-300 focus:border-black"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="phone" className="font-sans text-foreground">Phone</Label>
+                      <Label htmlFor="phone" className="font-sans text-black">Phone</Label>
                       <Input
                         id="phone"
                         name="phone"
                         type="tel"
-                        className="mt-2 border-2 border-border focus:border-foreground"
+                        className="mt-2 border-2 border-gray-300 focus:border-black"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="eventType" className="font-sans text-foreground">Event Type *</Label>
+                      <Label htmlFor="eventType" className="font-sans text-black">Event Type *</Label>
                       <Select
                         value={eventType}
                         onValueChange={(value) => setEventType(value)}
                         required
                       >
-                        <SelectTrigger className="mt-2 border-2 border-border focus:border-foreground">
+                        <SelectTrigger className="mt-2 border-2 border-gray-300 focus:border-black">
                           <SelectValue placeholder="Select event type" />
                         </SelectTrigger>
-                        <SelectContent className="bg-background border-2 border-foreground z-50">
+                        <SelectContent className="bg-white border-2 border-black z-50">
                           <SelectItem value="wedding">Wedding</SelectItem>
                           <SelectItem value="corporate">Corporate Event</SelectItem>
                           <SelectItem value="birthday">Birthday Party</SelectItem>
@@ -143,75 +139,35 @@ const Contact = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="eventDate" className="font-sans text-foreground">Event Date</Label>
+                      <Label htmlFor="eventDate" className="font-sans text-black">Event Date</Label>
                       <Input
                         id="eventDate"
                         name="eventDate"
                         type="date"
-                        className="mt-2 border-2 border-border focus:border-foreground"
+                        className="mt-2 border-2 border-gray-300 focus:border-black"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="guests" className="font-sans text-foreground">Number of Guests</Label>
+                      <Label htmlFor="guests" className="font-sans text-black">Number of Guests</Label>
                       <Input
                         id="guests"
                         name="guests"
                         type="number"
                         placeholder="Approximate number"
-                        className="mt-2 border-2 border-border focus:border-foreground"
+                        className="mt-2 border-2 border-gray-300 focus:border-black"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <Label htmlFor="packagePreference" className="font-sans text-foreground">Package Preference</Label>
-                      <Select
-                        value={packagePreference}
-                        onValueChange={(value) => setPackagePreference(value)}
-                      >
-                        <SelectTrigger className="mt-2 border-2 border-border focus:border-foreground">
-                          <SelectValue placeholder="Select package" />
-                        </SelectTrigger>
-                        <SelectContent className="bg-background border-2 border-foreground z-50">
-                          <SelectItem value="standard">Standard</SelectItem>
-                          <SelectItem value="advanced">Advanced</SelectItem>
-                          <SelectItem value="premium">Premium</SelectItem>
-                          <SelectItem value="ultra-premium">Ultra Premium</SelectItem>
-                          <SelectItem value="custom">Custom Package</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    <div>
-                      <Label htmlFor="heardFrom" className="font-sans text-foreground">How did you hear about us?</Label>
-                      <Select
-                        value={heardFrom}
-                        onValueChange={(value) => setHeardFrom(value)}
-                      >
-                        <SelectTrigger className="mt-2 border-2 border-border focus:border-foreground">
-                          <SelectValue placeholder="Select option" />
-                        </SelectTrigger>
-                        <SelectContent className="bg-background border-2 border-foreground z-50">
-                          <SelectItem value="instagram">Instagram</SelectItem>
-                          <SelectItem value="google">Google Search</SelectItem>
-                          <SelectItem value="referral">Friend/Family Referral</SelectItem>
-                          <SelectItem value="event-planner">Event Planner</SelectItem>
-                          <SelectItem value="previous-event">Saw at Previous Event</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-
                   <div>
-                    <Label htmlFor="message" className="font-sans text-foreground">Message *</Label>
+                    <Label htmlFor="message" className="font-sans text-black">Message *</Label>
                     <Textarea
                       id="message"
                       name="message"
                       required
                       rows={5}
                       placeholder="Tell us about your event and any specific requirements..."
-                      className="mt-2 border-2 border-border focus:border-foreground"
+                      className="mt-2 border-2 border-gray-300 focus:border-black"
                     />
                   </div>
 
@@ -229,7 +185,7 @@ const Contact = () => {
                       />
                       <Label
                         htmlFor="agreeToTerms"
-                        className="font-sans text-sm text-foreground leading-relaxed cursor-pointer"
+                        className="font-sans text-sm text-black leading-relaxed cursor-pointer"
                       >
                         I agree to the{" "}
                         <a
@@ -254,7 +210,7 @@ const Contact = () => {
                     </div>
                     
                     {checkboxError && (
-                      <p className="text-sm text-destructive font-sans ml-7">
+                      <p className="text-sm text-red-600 font-sans ml-7">
                         {checkboxError}
                       </p>
                     )}
@@ -263,115 +219,72 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full font-sans font-medium text-base py-6 bg-foreground text-background hover:bg-background hover:text-foreground border-2 border-foreground transition-all duration-300"
+                    className="w-full font-sans font-medium text-base py-6 bg-black text-white hover:bg-white hover:text-black border-2 border-black transition-all duration-300"
                   >
                     Send Inquiry
                   </Button>
                 </form>
               </div>
-
-              {/* Contact Information - Below form on mobile */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="mt-8 lg:hidden"
-              >
-                <div className="bg-background p-8 border-2 border-border rounded-lg">
-                  <h2 className="font-chamberi text-2xl font-bold mb-6 text-foreground">
-                    Contact Information
-                  </h2>
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-4">
-                      <Mail className="text-foreground flex-shrink-0 mt-1" size={20} />
-                      <div>
-                        <p className="font-sans font-semibold text-foreground text-sm">Email</p>
-                        <a
-                          href="mailto:info@maisondubar.com"
-                          className="font-sans text-muted-foreground hover:text-foreground transition-colors text-sm"
-                        >
-                          info@maisondubar.com
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start space-x-4">
-                      <Phone className="text-foreground flex-shrink-0 mt-1" size={20} />
-                      <div>
-                        <p className="font-sans font-semibold text-foreground text-sm">Phone</p>
-                        <a
-                          href="tel:6973291777"
-                          className="font-sans text-muted-foreground hover:text-foreground transition-colors text-sm block"
-                        >
-                          697 329 1777
-                        </a>
-                        <a
-                          href="tel:6944199717"
-                          className="font-sans text-muted-foreground hover:text-foreground transition-colors text-sm block"
-                        >
-                          694 419 9717
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start space-x-4">
-                      <MapPin className="text-foreground flex-shrink-0 mt-1" size={20} />
-                      <div>
-                        <p className="font-sans font-semibold text-foreground text-sm">Service Area</p>
-                        <p className="font-sans text-muted-foreground text-sm">
-                          Serving all regions of Greece
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
             </motion.div>
 
-            {/* Right side - Image and Contact Info (Desktop) */}
+            {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="hidden lg:flex flex-col"
+              className="space-y-6"
             >
-              {/* Full-height bar image */}
-              <div className="relative flex-grow rounded-r-lg overflow-hidden">
-                <img
-                  src={contactImage}
-                  alt="Maison du Bar luxury bar setup"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                
-                {/* Contact info overlay on image */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                  <h3 className="font-chamberi text-2xl font-bold mb-4">Contact Information</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <Mail className="flex-shrink-0" size={18} />
-                      <a href="mailto:info@maisondubar.com" className="font-sans text-sm hover:underline">
+              <div className="bg-white p-8 border-2 border-gray-200">
+                <h2 className="font-chamberi text-2xl font-bold mb-6 text-black">
+                  Contact Information
+                </h2>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4">
+                    <Mail className="text-black flex-shrink-0 mt-1" size={20} />
+                    <div>
+                      <p className="font-sans font-semibold text-black text-sm">Email</p>
+                      <a
+                        href="mailto:info@maisondubar.com"
+                        className="font-sans text-gray-600 hover:text-black transition-colors text-sm"
+                      >
                         info@maisondubar.com
                       </a>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <Phone className="flex-shrink-0" size={18} />
-                      <div className="font-sans text-sm">
-                        <a href="tel:6973291777" className="hover:underline">697 329 1777</a>
-                        <span className="mx-2">•</span>
-                        <a href="tel:6944199717" className="hover:underline">694 419 9717</a>
-                      </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <Phone className="text-black flex-shrink-0 mt-1" size={20} />
+                    <div>
+                      <p className="font-sans font-semibold text-black text-sm">Phone</p>
+                      <a
+                        href="tel:6973291777"
+                        className="font-sans text-gray-600 hover:text-black transition-colors text-sm block"
+                      >
+                        697 329 1777
+                      </a>
+                      <a
+                        href="tel:6944199717"
+                        className="font-sans text-gray-600 hover:text-black transition-colors text-sm block"
+                      >
+                        694 419 9717
+                      </a>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <MapPin className="flex-shrink-0" size={18} />
-                      <span className="font-sans text-sm">Serving all regions of Greece</span>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <MapPin className="text-black flex-shrink-0 mt-1" size={20} />
+                    <div>
+                      <p className="font-sans font-semibold text-black text-sm">Service Area</p>
+                      <p className="font-sans text-gray-600 text-sm">
+                        Serving all regions of Greece
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
+
+              
             </motion.div>
           </div>
         </div>

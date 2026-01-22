@@ -1,14 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import MaterialsHighlight from "@/components/MaterialsHighlight";
-import ImageLightbox from "@/components/ImageLightbox";
 import { Gem, Boxes, PackageCheck, ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import stationDeusImage from "@/assets/Maison_du_Bar_0085.jpg";
 import stationDeusImageMobile from "@/assets/Maison_du_Bar_0090.jpg";
-import dimensionBar from "@/assets/dimension_bar.png";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -16,6 +13,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
   useCarousel,
 } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -42,14 +41,6 @@ import detail7 from "@/assets/craft7.jpg";
 import detail8 from "@/assets/craft8.jpg";
 import detail9 from "@/assets/craft9.jpg";
 
-// Event gallery images
-import event1 from "@/assets/Maison_du_Bar_0003.jpg";
-import event2 from "@/assets/Maison_du_Bar_0007.jpg";
-import event3 from "@/assets/Maison_du_Bar_0021.jpg";
-import event4 from "@/assets/Maison_du_Bar_0073.jpg";
-import event5 from "@/assets/Maison_du_Bar_0076.jpg";
-import event6 from "@/assets/Maison_du_Bar_0099.jpg";
-
 // Custom mobile-friendly carousel navigation arrows
 const MobileCarouselPrevious = () => {
   const { scrollPrev, canScrollPrev } = useCarousel();
@@ -62,7 +53,7 @@ const MobileCarouselPrevious = () => {
         "absolute left-2 top-1/2 -translate-y-1/2 z-10",
         "h-10 w-10 rounded-full",
         "bg-white/80 backdrop-blur-sm border border-gray-300",
-        "text-foreground",
+        "text-black",
         "shadow-md hover:shadow-lg",
         "transition-all duration-300",
         "disabled:opacity-30 disabled:cursor-not-allowed",
@@ -88,7 +79,7 @@ const MobileCarouselNext = () => {
         "absolute right-2 top-1/2 -translate-y-1/2 z-10",
         "h-10 w-10 rounded-full",
         "bg-white/80 backdrop-blur-sm border border-gray-300",
-        "text-foreground",
+        "text-black",
         "shadow-md hover:shadow-lg",
         "transition-all duration-300",
         "disabled:opacity-30 disabled:cursor-not-allowed",
@@ -116,17 +107,6 @@ const TheBar = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  // Lightbox state
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxImages, setLightboxImages] = useState<{ src: string; alt: string }[]>([]);
-  const [lightboxIndex, setLightboxIndex] = useState(0);
-
-  const openLightbox = (images: { src: string; alt: string }[], index: number) => {
-    setLightboxImages(images);
-    setLightboxIndex(index);
-    setLightboxOpen(true);
-  };
 
   const features = [
     {
@@ -224,17 +204,8 @@ const TheBar = () => {
     { src: detail9, alt: "Modular components and built-in LED lighting" },
   ];
 
-  const eventImages = [
-    { src: event1, alt: "Elegant bar setup at a beachside wedding" },
-    { src: event2, alt: "Corporate event bar service" },
-    { src: event3, alt: "Luxury private party bar experience" },
-    { src: event4, alt: "Bar service at an island villa celebration" },
-    { src: event5, alt: "Professional bartender crafting cocktails" },
-    { src: event6, alt: "Evening event with ambient bar lighting" },
-  ];
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navbar />
       <ScrollToTop />
 
@@ -268,9 +239,9 @@ const TheBar = () => {
       </section>
 
       {/* Feature Highlights */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-muted">
+      <section className="py-16 sm:py-20 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 lg:mb-20 text-foreground">
+          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 lg:mb-20 text-black">
             What Makes Maison Du Bar Unique
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto" ref={ref}>
@@ -282,39 +253,36 @@ const TheBar = () => {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="text-center group"
               >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 flex items-center justify-center border-2 border-foreground rounded-full group-hover:bg-foreground transition-all duration-300">
-                  <feature.icon className="w-8 h-8 sm:w-10 sm:h-10 text-foreground group-hover:text-background transition-colors duration-300" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 flex items-center justify-center border-2 border-black rounded-full group-hover:bg-black transition-all duration-300">
+                  <feature.icon className="w-8 h-8 sm:w-10 sm:h-10 text-black group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="font-chamberi text-xl sm:text-2xl font-bold mb-4 text-foreground">{feature.title}</h3>
-                <p className="font-sans text-sm sm:text-base text-muted-foreground leading-relaxed">{feature.description}</p>
+                <h3 className="font-chamberi text-xl sm:text-2xl font-bold mb-4 text-black">{feature.title}</h3>
+                <p className="font-sans text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Materials Highlight Section */}
-      <MaterialsHighlight />
-
       {/* Gallery Section - Bar Configuration Options */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-background">
+      <section className="py-16 sm:py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
+          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-black">
             Modular Bar Configurations
           </h2>
-          <p className="text-center font-sans text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-center font-sans text-gray-600 mb-12 max-w-2xl mx-auto">
             Choose the perfect setup for your event
           </p>
 
           {!isMobile ? (
             // Desktop: Tabs Layout
             <Tabs value={selectedOption} onValueChange={setSelectedOption} className="max-w-6xl mx-auto">
-              <TabsList className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 bg-muted p-2 rounded-lg h-auto">
+              <TabsList className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 bg-gray-100 p-2 rounded-lg h-auto">
                 {barOptions.map((option) => (
                   <TabsTrigger
                     key={option.id}
                     value={option.id}
-                    className="font-chamberi text-base sm:text-lg py-3 data-[state=active]:bg-foreground data-[state=active]:text-background rounded-md transition-all duration-300"
+                    className="font-chamberi text-base sm:text-lg py-3 data-[state=active]:bg-black data-[state=active]:text-white rounded-md transition-all duration-300"
                   >
                     <div className="text-center">
                       <div className="font-bold">{option.title}</div>
@@ -339,7 +307,7 @@ const TheBar = () => {
                     {option.images.map((image, idx) => (
                       <div
                         key={idx}
-                        className="aspect-[4/3] bg-muted rounded-lg border border-border shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group relative w-full max-w-2xl"
+                        className="aspect-[4/3] bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group relative w-full max-w-2xl"
                       >
                         <img
                           src={image.src}
@@ -362,17 +330,17 @@ const TheBar = () => {
               {barOptions.map((option) => (
                 <div key={option.id} className="space-y-4">
                   <div className="text-center">
-                    <h3 className="font-chamberi text-2xl font-bold text-foreground">{option.title}</h3>
-                    <p className="font-sans text-muted-foreground text-sm">{option.bartenderSetup}</p>
-                    <p className="font-sans text-muted-foreground text-sm">{option.guestCount}</p>
-                    <p className="font-sans text-muted-foreground text-sm">{option.length}</p>
+                    <h3 className="font-chamberi text-2xl font-bold text-black">{option.title}</h3>
+                    <p className="font-sans text-gray-600 text-sm">{option.bartenderSetup}</p>
+                    <p className="font-sans text-gray-600 text-sm">{option.guestCount}</p>
+                    <p className="font-sans text-gray-600 text-sm">{option.length}</p>
                   </div>
 
                   <Carousel className="w-full max-w-sm mx-auto">
                     <CarouselContent>
                       {option.images.map((image, idx) => (
                         <CarouselItem key={idx}>
-                          <div className="aspect-[4/3] bg-muted rounded-lg border border-border shadow-md overflow-hidden relative">
+                          <div className="aspect-[4/3] bg-gray-100 rounded-lg border border-gray-200 shadow-md overflow-hidden relative">
                             <img
                               src={image.src}
                               alt={image.label}
@@ -396,52 +364,32 @@ const TheBar = () => {
         </div>
       </section>
 
-      {/* Dimensions Infographic */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
-            Bar Dimensions
-          </h2>
-          <p className="text-center font-sans text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Technical specifications for event planning
-          </p>
-          <div className="max-w-4xl mx-auto">
-            <img
-              src={dimensionBar}
-              alt="Bar dimensions technical drawing"
-              className="w-full h-auto rounded-lg shadow-lg"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Description Section */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-background">
+      <section className="py-16 sm:py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-foreground">
+            <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-black">
               Portable Luxury, Seamless Design
             </h2>
-            <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
               Our mobile bar is more than just a setup – it's a statement piece that transforms any location into a
               refined cocktail destination. Designed with both aesthetics and functionality in mind, it combines elegant
               finishes, professional equipment and a modular structure that adapts effortlessly to any venue.
             </p>
-            <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
               Every detail has been considered: from compact storage that fits into travel cases, to sleek surfaces and
               integrated systems that ensure fast assembly, efficient service and a flawless presentation. The result is
               a bar that delivers luxury and performance, wherever your event takes place.
             </p>
 
-            <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
               Crafted from American dark walnut wood and featuring interior details made of stainless steel, the bar
               embodies both durability and sophistication. It is fully mobile, easily transportable and can adapt to any
               type of event imaginable — from private gatherings and corporate functions to complete indoor
               installations.
             </p>
 
-            <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
               It also includes built-in LED lighting inside and on the bottle shelves, adding a stylish glow and
               enhancing the overall atmosphere. A fully functional bar, it includes every feature you would expect from
               a world-class professional setup.
@@ -450,40 +398,8 @@ const TheBar = () => {
         </div>
       </section>
 
-      {/* See It In Action - Event Gallery */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-muted" ref={galleryRef}>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
-            See It In Action
-          </h2>
-          <p className="text-center font-sans text-muted-foreground mb-12 max-w-2xl mx-auto">
-            From beachside weddings to rooftop celebrations, our bar adapts to any setting
-          </p>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {eventImages.map((image, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={galleryInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="aspect-square overflow-hidden rounded-lg cursor-pointer group"
-                onClick={() => openLightbox(eventImages, index)}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-foreground text-background">
+      <section className="py-16 sm:py-20 lg:py-32 bg-black text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -494,7 +410,7 @@ const TheBar = () => {
             <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Reserve Our Signature Bar Experience
             </h2>
-            <p className="font-sans text-base sm:text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+            <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
               Transform your event with our stunning portable bar. Contact us to discuss availability and packages.
             </p>
             <Link to="/contact">
@@ -509,15 +425,6 @@ const TheBar = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* Image Lightbox */}
-      <ImageLightbox
-        images={lightboxImages}
-        currentIndex={lightboxIndex}
-        isOpen={lightboxOpen}
-        onClose={() => setLightboxOpen(false)}
-        onIndexChange={setLightboxIndex}
-      />
 
       <Footer />
     </div>

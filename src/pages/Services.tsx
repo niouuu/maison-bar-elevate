@@ -5,8 +5,6 @@ import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServicePackageCard";
 import FAQ from "@/components/FAQ";
 import ScrollToTop from "@/components/ScrollToTop";
-import CocktailShowcase from "@/components/CocktailShowcase";
-import ProcessTimeline from "@/components/ProcessTimeline";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -111,12 +109,12 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navbar />
       <ScrollToTop />
 
       {/* Custom Design Intro Section */}
-      <section className="pt-32 sm:pt-40 pb-20 sm:pb-24 bg-background">
+      <section className="pt-32 sm:pt-40 pb-20 sm:pb-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={heroRef}
@@ -125,10 +123,10 @@ const Services = () => {
             transition={{ duration: 0.6 }}
             className="max-w-5xl mx-auto"
           >
-            <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 sm:mb-12 text-center">
+            <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-8 sm:mb-12 text-center">
               Exclusively Designed for You, by You
             </h1>
-            <p className="font-sans text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 text-center">
+            <p className="font-sans text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-12 text-center">
               In addition to our main packages, we also offer the option to create a fully customized bar experience
               crafted entirely to your preferences. This 100% tailored solution allows you to choose every detail —
               guaranteeing a truly personalized experience that reflects your unique taste and style.
@@ -143,8 +141,8 @@ const Services = () => {
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
                   className="space-y-3"
                 >
-                  <h3 className="font-chamberi text-2xl font-bold text-foreground">{feature.title}</h3>
-                  <p className="font-sans text-base text-muted-foreground leading-relaxed">{feature.description}</p>
+                  <h3 className="font-chamberi text-2xl font-bold text-black">{feature.title}</h3>
+                  <p className="font-sans text-base text-gray-600 leading-relaxed">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -152,18 +150,15 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Cocktail Showcase */}
-      <CocktailShowcase />
-
       {/* Service Packages Section */}
-      <section className="py-20 sm:py-24 lg:py-32 bg-muted">
+      <section className="py-20 sm:py-24 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-foreground text-center mb-12 sm:mb-16"
+            className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-black text-center mb-12 sm:mb-16"
           >
             Our Service Packages
           </motion.h2>
@@ -190,11 +185,8 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Process Timeline */}
-      <ProcessTimeline />
-
       {/* Custom Package Section */}
-      <section className="py-20 sm:py-24 lg:py-40 bg-foreground text-background">
+      <section className="py-20 sm:py-24 lg:py-40 bg-black text-white">
         <motion.div
           ref={customRef}
           initial={{ opacity: 0, y: 30 }}
@@ -205,7 +197,7 @@ const Services = () => {
           <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Need Something Unique?
           </h2>
-          <p className="font-sans text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
             We specialize in creating custom packages tailored to your exact needs. Let's discuss how we can make your
             vision a reality.
           </p>
