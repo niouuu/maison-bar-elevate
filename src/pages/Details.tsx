@@ -163,8 +163,8 @@ const Details = () => {
           <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-black">
             Craftsmanship Up Close
           </h2>
-          <p className="text-center font-sans text-gray-600 mb-12 max-w-2xl mx-auto">
-            Explore the exquisite details that make our bar truly exceptional
+          <p className="text-center font-sans text-gray-600 mb-12 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+            The wood is made from dark American walnut, known for its rich color, durability, and natural elegance.
           </p>
 
           {!isMobile ? (
@@ -220,8 +220,8 @@ const Details = () => {
           <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-black">
             The Interior
           </h2>
-          <p className="text-center font-sans text-gray-600 mb-12 max-w-2xl mx-auto">
-            Discover the elegant interior details of our signature bar
+          <p className="text-center font-sans text-gray-600 mb-12 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+            The bar is internally constructed from stainless steel. All details are fully custom-made, and every product has been carefully selected with great attention to detail to ensure the highest quality and a refined final result.
           </p>
 
           {!isMobile ? (
@@ -275,8 +275,8 @@ const Details = () => {
           <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-black">
             The Chiller
           </h2>
-          <p className="text-center font-sans text-gray-600 mb-12 max-w-2xl mx-auto">
-            Precision cooling meets elegant design
+          <p className="text-center font-sans text-gray-600 mb-12 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+            Our exclusive glass chiller uses CO₂ to instantly chill glassware to -40°C, ensuring every cocktail and long drink is served perfectly chilled and beautifully presented.
           </p>
 
           {!isMobile ? (
