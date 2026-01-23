@@ -84,7 +84,7 @@ const About = () => {
       </section>
 
       {/* Mission Section with Image */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-gray-50">
+      <section className="py-16 sm:py-20 lg:py-32 bg-muted">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
             <motion.div
@@ -92,7 +92,7 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="order-2 lg:order-1"
+              className="order-1"
             >
               <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-black">Our Mission</h2>
               <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
@@ -114,7 +114,7 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative order-1 lg:order-2"
+              className="relative order-2"
             >
               <img
                 src={teamImage}
