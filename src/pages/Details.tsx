@@ -210,12 +210,12 @@ const Details = () => {
       <section
         id="craftsmanship"
         ref={craftsmanshipSectionRef}
-        className="py-16 sm:py-20 lg:py-32 bg-background"
+        className="py-20 sm:py-24 lg:py-40 bg-background"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             style={{ y: craftTitleY }}
-            className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-foreground"
+            className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 text-foreground"
           >
             Craftsmanship Up Close
           </motion.h2>
@@ -279,12 +279,12 @@ const Details = () => {
       <section
         id="interior"
         ref={interiorSectionRef}
-        className="py-16 sm:py-20 lg:py-32 bg-muted"
+        className="py-20 sm:py-24 lg:py-40 bg-muted"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             style={{ y: interiorTitleY }}
-            className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-foreground"
+            className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 text-foreground"
           >
             The Interior
           </motion.h2>
@@ -346,12 +346,12 @@ const Details = () => {
       <section
         id="chiller"
         ref={chillerSectionRef}
-        className="py-16 sm:py-20 lg:py-32 bg-background"
+        className="py-20 sm:py-24 lg:py-40 bg-background"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             style={{ y: chillerTitleY }}
-            className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-foreground"
+            className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 text-foreground"
           >
             The Chiller
           </motion.h2>
@@ -410,7 +410,7 @@ const Details = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-32 bg-primary">
+      <section className="py-20 sm:py-24 lg:py-40 bg-primary">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -418,22 +418,27 @@ const Details = () => {
           transition={{ duration: 0.8 }}
           className="container mx-auto px-4 text-center"
         >
-          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
             Ready to Experience Excellence?
           </h2>
           <p className="font-sans text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
             Bring the Maison du Bar experience to your next event. Every detail crafted to perfection.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/contact">
-              <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 py-6 text-lg">
+              <Button
+                size="lg"
+                variant="elegant-inverted"
+                className="text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 h-auto font-sans font-medium w-full sm:w-auto"
+              >
                 Contact Us
               </Button>
             </Link>
             <Link to="/the-bar">
               <Button
-                variant="outline"
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-6 text-lg"
+                size="lg"
+                variant="elegant-inverted"
+                className="text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 h-auto font-sans font-medium w-full sm:w-auto"
               >
                 View The Bar
               </Button>
