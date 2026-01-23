@@ -270,15 +270,13 @@ const Details = () => {
               <CarouselContent>
                 {craftsmanshipImages.map((image, index) => (
                   <CarouselItem key={index}>
-                    <div
-                      className="aspect-square bg-muted shadow-lg overflow-hidden cursor-pointer"
-                      onClick={() => openLightbox(craftsmanshipImages, index)}
-                    >
+                    <div className="aspect-square bg-muted shadow-lg overflow-hidden touch-pan-x">
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-full object-cover object-bottom md:object-center"
+                        className="w-full h-full object-cover object-bottom md:object-center cursor-pointer"
                         loading="lazy"
+                        onClick={() => openLightbox(craftsmanshipImages, index)}
                       />
                     </div>
                   </CarouselItem>
@@ -340,15 +338,13 @@ const Details = () => {
               <CarouselContent>
                 {interiorImages.map((image, index) => (
                   <CarouselItem key={index}>
-                    <div
-                      className="aspect-square bg-muted shadow-lg overflow-hidden cursor-pointer"
-                      onClick={() => openLightbox(interiorImages, index)}
-                    >
+                    <div className="aspect-square bg-muted shadow-lg overflow-hidden touch-pan-x">
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-full object-cover object-center"
+                        className="w-full h-full object-cover object-center cursor-pointer"
                         loading="lazy"
+                        onClick={() => openLightbox(interiorImages, index)}
                       />
                     </div>
                   </CarouselItem>
@@ -410,15 +406,13 @@ const Details = () => {
               <CarouselContent>
                 {chillerImages.map((image, index) => (
                   <CarouselItem key={index}>
-                    <div
-                      className="aspect-square bg-muted shadow-lg overflow-hidden cursor-pointer"
-                      onClick={() => openLightbox(chillerImages, index)}
-                    >
+                    <div className="aspect-square bg-muted shadow-lg overflow-hidden touch-pan-x">
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-full object-cover object-center"
+                        className="w-full h-full object-cover object-center cursor-pointer"
                         loading="lazy"
+                        onClick={() => openLightbox(chillerImages, index)}
                       />
                     </div>
                   </CarouselItem>
