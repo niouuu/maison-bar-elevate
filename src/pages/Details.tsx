@@ -9,12 +9,7 @@ import CarouselDots from "@/components/CarouselDots";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  useCarousel,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, useCarousel } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -189,13 +184,10 @@ const Details = () => {
       {/* Hero Section - Enhanced with image background */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20 sm:pt-24">
         {/* Background Image with Gradient Overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${craft3})` }}
-        >
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${craft3})` }}>
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70" />
         </div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -204,14 +196,14 @@ const Details = () => {
         >
           {/* Decorative line */}
           <div className="w-16 h-px bg-white/40 mx-auto mb-8" />
-          
+
           <h1 className="font-chamberi text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 sm:mb-8 elegant-text-shadow tracking-tight">
             Discover the Details
           </h1>
           <p className="font-sans text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto tracking-wide">
             Every element tells a story of craftsmanship and elegance
           </p>
-          
+
           {/* Decorative line */}
           <div className="w-16 h-px bg-white/40 mx-auto mt-8" />
         </motion.div>
@@ -221,15 +213,11 @@ const Details = () => {
       <SectionNavigation sections={sections} />
 
       {/* Section 1: Craftsmanship Up Close */}
-      <section
-        id="craftsmanship"
-        ref={craftsmanshipSectionRef}
-        className="py-20 sm:py-24 lg:py-40 bg-background"
-      >
+      <section id="craftsmanship" ref={craftsmanshipSectionRef} className="py-20 sm:py-24 lg:py-40 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           {/* Decorative line */}
           <div className="w-12 h-px bg-foreground/20 mx-auto mb-8" />
-          
+
           <motion.h2
             style={{ y: craftTitleY }}
             className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-foreground tracking-tight"
@@ -242,10 +230,7 @@ const Details = () => {
 
           {!isMobile ? (
             // Desktop: 2x3 Grid Layout - Editorial style
-            <motion.div
-              ref={craftsmanshipRef}
-              className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto"
-            >
+            <motion.div ref={craftsmanshipRef} className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {craftsmanshipImages.map((image, index) => (
                 <motion.div
                   key={index}
@@ -291,15 +276,11 @@ const Details = () => {
       </section>
 
       {/* Section 2: The Interior */}
-      <section
-        id="interior"
-        ref={interiorSectionRef}
-        className="py-20 sm:py-24 lg:py-40 bg-muted"
-      >
+      <section id="interior" ref={interiorSectionRef} className="py-20 sm:py-24 lg:py-40 bg-muted">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           {/* Decorative line */}
           <div className="w-12 h-px bg-foreground/20 mx-auto mb-8" />
-          
+
           <motion.h2
             style={{ y: interiorTitleY }}
             className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-foreground tracking-tight"
@@ -307,14 +288,13 @@ const Details = () => {
             The Interior
           </motion.h2>
           <p className="text-center font-sans text-muted-foreground mb-16 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed tracking-wide">
-            The bar is internally constructed from stainless steel. All details are fully custom-made, and every product has been carefully selected with great attention to detail to ensure the highest quality and a refined final result.
+            The bar is internally constructed from stainless steel. All details are fully custom-made and every product
+            has been carefully selected with great attention to detail to ensure the highest quality and a refined final
+            result.
           </p>
 
           {!isMobile ? (
-            <motion.div
-              ref={interiorRef}
-              className="grid grid-cols-3 gap-8 max-w-5xl mx-auto"
-            >
+            <motion.div ref={interiorRef} className="grid grid-cols-3 gap-8 max-w-5xl mx-auto">
               {interiorImages.map((image, index) => (
                 <motion.div
                   key={index}
@@ -359,15 +339,11 @@ const Details = () => {
       </section>
 
       {/* Section 3: The Chiller */}
-      <section
-        id="chiller"
-        ref={chillerSectionRef}
-        className="py-20 sm:py-24 lg:py-40 bg-background"
-      >
+      <section id="chiller" ref={chillerSectionRef} className="py-20 sm:py-24 lg:py-40 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           {/* Decorative line */}
           <div className="w-12 h-px bg-foreground/20 mx-auto mb-8" />
-          
+
           <motion.h2
             style={{ y: chillerTitleY }}
             className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-foreground tracking-tight"
@@ -375,14 +351,12 @@ const Details = () => {
             The Chiller
           </motion.h2>
           <p className="text-center font-sans text-muted-foreground mb-16 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed tracking-wide">
-            Our exclusive glass chiller uses CO₂ to instantly chill glassware to -40°C, ensuring every cocktail and long drink is served perfectly chilled and beautifully presented.
+            Our exclusive glass chiller uses CO₂ to instantly chill glassware to -40°C, ensuring every cocktail and long
+            drink is served perfectly chilled and beautifully presented.
           </p>
 
           {!isMobile ? (
-            <motion.div
-              ref={chillerRef}
-              className="grid grid-cols-3 gap-8 max-w-5xl mx-auto"
-            >
+            <motion.div ref={chillerRef} className="grid grid-cols-3 gap-8 max-w-5xl mx-auto">
               {chillerImages.map((image, index) => (
                 <motion.div
                   key={index}
@@ -437,7 +411,7 @@ const Details = () => {
         >
           {/* Decorative line */}
           <div className="w-12 h-px bg-primary-foreground/30 mx-auto mb-8" />
-          
+
           <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 tracking-tight">
             Ready to Experience Excellence?
           </h2>
