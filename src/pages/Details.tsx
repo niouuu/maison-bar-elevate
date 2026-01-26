@@ -40,7 +40,7 @@ import details9 from "@/assets/details_9.jpg";
 import chiller1 from "@/assets/chiller_1.jpg";
 import chiller2 from "@/assets/chiller_2.jpg";
 import chiller3 from "@/assets/chiller3.jpg";
-import chiller4 from "@/assets/chiller4.jpg";
+import chiller4 from "@/assets/chiller4_2.png";
 import chiller5 from "@/assets/chiller5.jpg";
 
 // Custom mobile-friendly carousel navigation arrows - refined for luxury feel
