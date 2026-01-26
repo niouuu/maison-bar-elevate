@@ -309,7 +309,8 @@ const Details = () => {
                     alt={image.alt}
                     className={cn(
                       "w-full h-full object-cover group-hover:scale-105 group-hover:opacity-95 transition-all duration-500",
-                      index >= 5 && "object-bottom"
+                      index === 5 && "object-bottom",
+                      index === 6 && "object-[center_75%]"
                     )}
                     loading="lazy"
                   />
@@ -327,7 +328,9 @@ const Details = () => {
                         alt={image.alt}
                         className={cn(
                           "w-full h-full object-cover cursor-pointer",
-                          index >= 5 ? "object-bottom" : "object-center"
+                          index === 5 && "object-bottom",
+                          index === 6 && "object-[center_75%]",
+                          index < 5 && "object-center"
                         )}
                         loading="lazy"
                         onClick={() => openLightbox(interiorImages, index)}
@@ -375,7 +378,10 @@ const Details = () => {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:opacity-95 transition-all duration-500"
+                    className={cn(
+                      "w-full h-full object-cover group-hover:scale-105 group-hover:opacity-95 transition-all duration-500",
+                      index === 0 && "object-bottom"
+                    )}
                     loading="lazy"
                   />
                 </motion.div>
@@ -390,7 +396,10 @@ const Details = () => {
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-full object-cover object-center cursor-pointer"
+                        className={cn(
+                          "w-full h-full object-cover cursor-pointer",
+                          index === 0 ? "object-bottom" : "object-center"
+                        )}
                         loading="lazy"
                         onClick={() => openLightbox(chillerImages, index)}
                       />
