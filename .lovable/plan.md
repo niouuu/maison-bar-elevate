@@ -1,31 +1,60 @@
 
 
-## Adjust Object Position for Last 2 Interior Images
+## Adjust Image Positions in Interior and Chiller Sections
 
 ### Overview
-The last 2 photos in the Interior section (details8 and details9) are currently cropped at the center, which cuts off the wood elements at the bottom. We need to position these images lower so the wood is visible without zooming.
+Two image position adjustments are needed:
+1. **Chiller first image (chiller1)**: Position it lower to show less hand and more of the wood/THRILL unit
+2. **Interior last image (details9)**: Position it slightly higher - not full center, but not full bottom either
 
 ---
 
-### Problem Analysis
-Based on your screenshots:
-- **details8**: Crystal glass with wood surface at bottom - currently cropped too high
-- **details9**: Cocktail menu with candle - wood surface not visible
-
-Currently, all Interior images use `object-cover` (which defaults to `object-center`), causing the bottom portion with the wood to be cut off.
-
----
-
-### Solution
+### Changes Required
 
 **File:** `src/pages/Details.tsx`
 
-We need to apply conditional `object-bottom` styling to the last 2 images (index 5 and 6) in the Interior section, for both desktop and mobile views.
+#### Change 1: Interior Section - Last Image (details9) - Custom Position
 
-**Change 1: Desktop Grid (lines 307-312)**
+The last image (index 6) currently uses `object-bottom` which is too low. We need a custom position between center and bottom. Using Tailwind's arbitrary value `object-[center_75%]` will position it 75% down (closer to bottom but not all the way).
 
-Update the img className to conditionally apply `object-bottom` for the last 2 images:
+**Desktop Grid (lines 310-313):**
+```tsx
+// Current:
+className={cn(
+  "w-full h-full object-cover group-hover:scale-105 group-hover:opacity-95 transition-all duration-500",
+  index >= 5 && "object-bottom"
+)}
 
+// Updated:
+className={cn(
+  "w-full h-full object-cover group-hover:scale-105 group-hover:opacity-95 transition-all duration-500",
+  index === 5 && "object-bottom",
+  index === 6 && "object-[center_75%]"
+)}
+```
+
+**Mobile Carousel (lines 328-330):**
+```tsx
+// Current:
+className={cn(
+  "w-full h-full object-cover cursor-pointer",
+  index >= 5 ? "object-bottom" : "object-center"
+)}
+
+// Updated:
+className={cn(
+  "w-full h-full object-cover cursor-pointer",
+  index === 5 && "object-bottom",
+  index === 6 && "object-[center_75%]",
+  index < 5 && "object-center"
+)}
+```
+
+#### Change 2: Chiller Section - First Image (chiller1) - Object Bottom
+
+Add `object-bottom` to the first chiller image (index 0) to show more of the wood and less of the hand.
+
+**Desktop Grid (lines 375-379):**
 ```tsx
 // Current:
 <img
@@ -41,16 +70,13 @@ Update the img className to conditionally apply `object-bottom` for the last 2 i
   alt={image.alt}
   className={cn(
     "w-full h-full object-cover group-hover:scale-105 group-hover:opacity-95 transition-all duration-500",
-    index >= 5 && "object-bottom"
+    index === 0 && "object-bottom"
   )}
   loading="lazy"
 />
 ```
 
-**Change 2: Mobile Carousel (lines 322-328)**
-
-Apply the same conditional styling:
-
+**Mobile Carousel (lines 390-394):**
 ```tsx
 // Current:
 <img
@@ -58,7 +84,7 @@ Apply the same conditional styling:
   alt={image.alt}
   className="w-full h-full object-cover object-center cursor-pointer"
   loading="lazy"
-  onClick={() => openLightbox(interiorImages, index)}
+  onClick={() => openLightbox(chillerImages, index)}
 />
 
 // Updated:
@@ -67,10 +93,10 @@ Apply the same conditional styling:
   alt={image.alt}
   className={cn(
     "w-full h-full object-cover cursor-pointer",
-    index >= 5 ? "object-bottom" : "object-center"
+    index === 0 ? "object-bottom" : "object-center"
   )}
   loading="lazy"
-  onClick={() => openLightbox(interiorImages, index)}
+  onClick={() => openLightbox(chillerImages, index)}
 />
 ```
 
@@ -78,18 +104,21 @@ Apply the same conditional styling:
 
 ### Technical Details
 
-- **`object-bottom`**: Tailwind class that sets `object-position: bottom`, which aligns the image to show the bottom portion
-- **`cn()` utility**: Already imported in the file, allows conditional class concatenation
-- **Index check**: `index >= 5` targets the last 2 images (details8 at index 5, details9 at index 6) out of the 7 interior images
+| Position | Tailwind Class | Effect |
+|----------|---------------|--------|
+| Center (default) | `object-center` | Shows middle of image |
+| Bottom | `object-bottom` | Shows bottom portion |
+| 75% down | `object-[center_75%]` | Shows between center and bottom |
+
+- **`cn()` utility**: Already imported, handles conditional class merging
+- **Index-based conditions**: Target specific images by their array index
 
 ---
 
 ### Summary
 
-| File | Changes |
-|------|---------|
-| `src/pages/Details.tsx` | Add conditional `object-bottom` styling for interior images at index 5 and 6 in both desktop grid and mobile carousel |
-
-### Result
-The last 2 interior photos will now show the wood surface at the bottom of the images, providing a better preview without requiring the customer to zoom in.
+| Section | Image | Change |
+|---------|-------|--------|
+| Chiller | chiller1 (index 0) | Add `object-bottom` to show more wood |
+| Interior | details9 (index 6) | Change from `object-bottom` to `object-[center_75%]` for a middle position |
 
