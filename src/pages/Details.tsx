@@ -26,7 +26,7 @@ import details2 from "@/assets/details_2.jpg";
 import details3 from "@/assets/details_3.jpg";
 import details4 from "@/assets/details_4.jpg";
 import details5 from "@/assets/details_5.jpg";
-import details6 from "@/assets/details_6.jpg";
+import details6 from "@/assets/details6_1.png";
 import details7 from "@/assets/details_7.jpg";
 import details8 from "@/assets/details__8.jpg";
 import details9 from "@/assets/details_9.jpg";
