@@ -225,7 +225,7 @@ const Details = () => {
             Craftsmanship Up Close
           </motion.h2>
           <p className="text-center font-sans text-muted-foreground mb-16 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed tracking-wide">
-            The wood is made from dark American walnut, known for its rich color, durability, and natural elegance.
+            The wood is made from dark American walnut, known for its rich color, durability and natural elegance.
           </p>
 
           {!isMobile ? (
