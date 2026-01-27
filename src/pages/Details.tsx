@@ -215,15 +215,6 @@ const Details = () => {
       {/* Section 1: Craftsmanship Up Close */}
       <section id="craftsmanship" ref={craftsmanshipSectionRef} className="py-20 sm:py-24 lg:py-40 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-          {/* Decorative line */}
-          <div className="w-12 h-px bg-foreground/20 mx-auto mb-8" />
-
-          <motion.h2
-            style={{ y: craftTitleY }}
-            className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-foreground tracking-tight"
-          >
-            Craftsmanship Up Close
-          </motion.h2>
           <p className="text-center font-sans text-muted-foreground mb-16 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed tracking-wide">
             The wood is made from dark American walnut, known for its rich color, durability and natural elegance.
           </p>
