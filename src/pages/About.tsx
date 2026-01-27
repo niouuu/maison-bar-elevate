@@ -51,7 +51,7 @@ const About = () => {
               About Maison du Bar
             </h1>
             <p className="font-sans text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
-              Redefining mobile bar services with elegance, expertise, and exceptional experiences.
+              Redefining mobile bar services with elegance, expertise and exceptional experiences.
             </p>
           </motion.div>
         </div>
