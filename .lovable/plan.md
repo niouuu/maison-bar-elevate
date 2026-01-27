@@ -1,11 +1,9 @@
 
 
-## Adjust Image Positions in Interior and Chiller Sections
+## Update First Section: Remove Title "Craftsmanship Up Close"
 
 ### Overview
-Two image position adjustments are needed:
-1. **Chiller first image (chiller1)**: Position it lower to show less hand and more of the wood/THRILL unit
-2. **Interior last image (details9)**: Position it slightly higher - not full center, but not full bottom either
+The section navigation already shows "The Wood" as the label. We need to remove the visible heading "Craftsmanship Up Close" from the first section while keeping the descriptive paragraph.
 
 ---
 
@@ -13,112 +11,37 @@ Two image position adjustments are needed:
 
 **File:** `src/pages/Details.tsx`
 
-#### Change 1: Interior Section - Last Image (details9) - Custom Position
+**Remove lines 218-226** - Delete the decorative line and H2 heading:
 
-The last image (index 6) currently uses `object-bottom` which is too low. We need a custom position between center and bottom. Using Tailwind's arbitrary value `object-[center_75%]` will position it 75% down (closer to bottom but not all the way).
-
-**Desktop Grid (lines 310-313):**
 ```tsx
-// Current:
-className={cn(
-  "w-full h-full object-cover group-hover:scale-105 group-hover:opacity-95 transition-all duration-500",
-  index >= 5 && "object-bottom"
-)}
+// Lines to REMOVE:
+{/* Decorative line */}
+<div className="w-12 h-px bg-foreground/20 mx-auto mb-8" />
 
-// Updated:
-className={cn(
-  "w-full h-full object-cover group-hover:scale-105 group-hover:opacity-95 transition-all duration-500",
-  index === 5 && "object-bottom",
-  index === 6 && "object-[center_75%]"
-)}
+<motion.h2
+  style={{ y: craftTitleY }}
+  className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-foreground tracking-tight"
+>
+  Craftsmanship Up Close
+</motion.h2>
 ```
 
-**Mobile Carousel (lines 328-330):**
-```tsx
-// Current:
-className={cn(
-  "w-full h-full object-cover cursor-pointer",
-  index >= 5 ? "object-bottom" : "object-center"
-)}
-
-// Updated:
-className={cn(
-  "w-full h-full object-cover cursor-pointer",
-  index === 5 && "object-bottom",
-  index === 6 && "object-[center_75%]",
-  index < 5 && "object-center"
-)}
-```
-
-#### Change 2: Chiller Section - First Image (chiller1) - Object Bottom
-
-Add `object-bottom` to the first chiller image (index 0) to show more of the wood and less of the hand.
-
-**Desktop Grid (lines 375-379):**
-```tsx
-// Current:
-<img
-  src={image.src}
-  alt={image.alt}
-  className="w-full h-full object-cover group-hover:scale-105 group-hover:opacity-95 transition-all duration-500"
-  loading="lazy"
-/>
-
-// Updated:
-<img
-  src={image.src}
-  alt={image.alt}
-  className={cn(
-    "w-full h-full object-cover group-hover:scale-105 group-hover:opacity-95 transition-all duration-500",
-    index === 0 && "object-bottom"
-  )}
-  loading="lazy"
-/>
-```
-
-**Mobile Carousel (lines 390-394):**
-```tsx
-// Current:
-<img
-  src={image.src}
-  alt={image.alt}
-  className="w-full h-full object-cover object-center cursor-pointer"
-  loading="lazy"
-  onClick={() => openLightbox(chillerImages, index)}
-/>
-
-// Updated:
-<img
-  src={image.src}
-  alt={image.alt}
-  className={cn(
-    "w-full h-full object-cover cursor-pointer",
-    index === 0 ? "object-bottom" : "object-center"
-  )}
-  loading="lazy"
-  onClick={() => openLightbox(chillerImages, index)}
-/>
-```
+**After the change**, the section will start directly with the descriptive paragraph about the American walnut wood.
 
 ---
 
-### Technical Details
+### Result
 
-| Position | Tailwind Class | Effect |
-|----------|---------------|--------|
-| Center (default) | `object-center` | Shows middle of image |
-| Bottom | `object-bottom` | Shows bottom portion |
-| 75% down | `object-[center_75%]` | Shows between center and bottom |
-
-- **`cn()` utility**: Already imported, handles conditional class merging
-- **Index-based conditions**: Target specific images by their array index
+The first section will now:
+- Display only the descriptive text about dark American walnut
+- Match the navigation label "The Wood"
+- Remove the redundant "Craftsmanship Up Close" title
 
 ---
 
 ### Summary
 
-| Section | Image | Change |
-|---------|-------|--------|
-| Chiller | chiller1 (index 0) | Add `object-bottom` to show more wood |
-| Interior | details9 (index 6) | Change from `object-bottom` to `object-[center_75%]` for a middle position |
+| File | Change |
+|------|--------|
+| `src/pages/Details.tsx` | Remove decorative line and H2 "Craftsmanship Up Close" heading (lines 218-226) |
 
