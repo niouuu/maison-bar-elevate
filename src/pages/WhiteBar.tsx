@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import whiteBarDesktopFallback from "@/assets/white1.jpeg";
-import whiteBarMobileFallback from "@/assets/white3.PNG";
+import whiteBarMobileFallback from "@/assets/white3.png";
 import whiteBarDesktop960 from "@/assets/white-bar/white-bar-desktop-960.webp";
 import whiteBarDesktop1440 from "@/assets/white-bar/white-bar-desktop-1440.webp";
 import whiteBarDesktop1920 from "@/assets/white-bar/white-bar-desktop-1920.webp";
