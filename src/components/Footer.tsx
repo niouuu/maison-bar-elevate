@@ -107,17 +107,6 @@ const Footer = () => {
           <p className="font-sans text-xs sm:text-sm text-muted-foreground">
             Maison du Bar O.E. — Luxury Mobile Bar Services in Greece
           </p>
-          <p className="font-sans text-xs text-muted-foreground opacity-60">
-            Powered by{" "}
-            <a
-              href="https://www.amox.gr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground hover:opacity-70 transition-opacity duration-200 font-semibold"
-            >
-              AMOX
-            </a>
-          </p>
         </div>
       </div>
     </footer>
