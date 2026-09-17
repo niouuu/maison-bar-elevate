@@ -11,6 +11,7 @@ const Navbar = () => {
   const [isMobileBarOpen, setIsMobileBarOpen] = useState(false);
   const location = useLocation();
   const barLinkRef = useRef<HTMLAnchorElement>(null);
+  const barMenuRef = useRef<HTMLDivElement>(null);
   const barMenuItemRefs = useRef<Array<HTMLAnchorElement | null>>([]);
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -68,7 +69,7 @@ const Navbar = () => {
     if (event.key === "ArrowDown") {
       event.preventDefault();
       openBarMenu();
-      requestAnimationFrame(() => barMenuItemRefs.current[0]?.focus());
+      window.setTimeout(() => barMenuItemRefs.current[0]?.focus(), 0);
     }
     if (event.key === "Escape") {
       setIsBarMenuOpen(false);
@@ -142,6 +143,7 @@ const Navbar = () => {
                 />
               </Link>
               <div
+                ref={barMenuRef}
                 role="menu"
                 aria-label="The Bar"
                 className={`absolute left-1/2 top-full z-50 min-w-52 -translate-x-1/2 bg-background px-3 py-3 shadow-soft transition-all duration-200 ${
