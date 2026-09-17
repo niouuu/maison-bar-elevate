@@ -16,6 +16,7 @@ import whiteBarMobile1122 from "@/assets/white-bar/white-bar-mobile-1122.webp";
 import stoneLeft480 from "@/assets/white-bar/white-stone-left-480.webp";
 import stoneLeft720 from "@/assets/white-bar/white-stone-left-720.webp";
 import stoneLeft960 from "@/assets/white-bar/white-stone-left-960.webp";
+import stoneLeft1440 from "@/assets/white-bar/white-stone-left-1440.webp";
 import stoneLeftFallback from "@/assets/white-bar/white-stone-left-960.jpg";
 import stoneRight480 from "@/assets/white-bar/white-stone-right-480.webp";
 import stoneRight720 from "@/assets/white-bar/white-stone-right-720.webp";
