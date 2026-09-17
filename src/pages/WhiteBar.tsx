@@ -13,6 +13,14 @@ import whiteBarDesktop1920 from "@/assets/white-bar/white-bar-desktop-1920.webp"
 import whiteBarMobile640 from "@/assets/white-bar/white-bar-mobile-640.webp";
 import whiteBarMobile960 from "@/assets/white-bar/white-bar-mobile-960.webp";
 import whiteBarMobile1122 from "@/assets/white-bar/white-bar-mobile-1122.webp";
+import stoneLeft480 from "@/assets/white-bar/white-stone-left-480.webp";
+import stoneLeft720 from "@/assets/white-bar/white-stone-left-720.webp";
+import stoneLeft960 from "@/assets/white-bar/white-stone-left-960.webp";
+import stoneLeftFallback from "@/assets/white-bar/white-stone-left-960.jpg";
+import stoneRight480 from "@/assets/white-bar/white-stone-right-480.webp";
+import stoneRight720 from "@/assets/white-bar/white-stone-right-720.webp";
+import stoneRight960 from "@/assets/white-bar/white-stone-right-960.webp";
+import stoneRightFallback from "@/assets/white-bar/white-stone-right-960.jpg";
 
 const pageTitle = "The White Bar | Maison du Bar";
 const pageDescription =
