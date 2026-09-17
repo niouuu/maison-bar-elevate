@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Gem, Boxes, PackageCheck, ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import stationDeusImage from "@/assets/Maison_du_Bar_0085.jpg";
 import stationDeusImageMobile from "@/assets/Maison_du_Bar_0090.jpg";
 import { motion } from "framer-motion";
@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import topView_op1 from "@/assets/option1.2.jpg";
 import frontView_op2 from "@/assets/option2.1.jpg";
 import topView_op2 from "@/assets/option2.2.jpg";
@@ -95,6 +95,7 @@ const MobileCarouselNext = () => {
 };
 
 const TheBar = () => {
+  const location = useLocation();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -102,6 +103,15 @@ const TheBar = () => {
 
   const isMobile = useIsMobile();
   const [selectedOption, setSelectedOption] = useState("option1");
+
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    const timer = setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [location]);
 
   const [galleryRef, galleryInView] = useInView({
     triggerOnce: true,
@@ -265,7 +275,7 @@ const TheBar = () => {
       </section>
 
       {/* Gallery Section - Bar Configuration Options */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-white">
+      <section id="configurations" className="py-16 sm:py-20 lg:py-32 bg-white scroll-mt-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-black">
             Modular Bar Configurations
