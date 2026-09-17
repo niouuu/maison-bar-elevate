@@ -88,35 +88,71 @@ const WhiteBar = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.6 }}
-          className="container mx-auto px-4 sm:px-6 lg:px-8 text-center"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7 }}
+          className="container mx-auto px-4 sm:px-6 lg:px-8"
         >
-          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-foreground">
-            White Stone Finish
-          </h2>
-          <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Our mobile bar can be fully transformed with a white stone-effect finish, offering a clean, minimal and
-            sophisticated aesthetic.
-          </p>
-          <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-6">
-            The entire exterior of the bar is dressed with flexible gypsum-based panels featuring a natural stone
-            texture, creating the appearance of a solid architectural surface while maintaining the modular character of
-            our bar.
-          </p>
-          <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-6">
-            The white finish can cover the entire bar setup, making it an ideal choice for weddings, Cycladic settings
-            and events where a bright, elegant and timeless aesthetic is desired.
-          </p>
-          <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-6">
-            The white finish is available across all our modular configurations —{" "}
-            <Link
-              to="/the-bar#configurations"
-              className="text-foreground underline decoration-foreground/40 decoration-1 underline-offset-4 hover:decoration-accent hover:decoration-2 transition-all duration-300"
-            >
-              see the full range of bar setups
-            </Link>
-          </p>
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.4fr_1fr] lg:gap-16 lg:items-center">
+            <div className="order-2 lg:order-1">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet={`${stoneLeft480} 480w, ${stoneLeft720} 720w, ${stoneLeft960} 960w`}
+                  sizes="(min-width: 1024px) 28vw, 100vw"
+                />
+                <img
+                  src={stoneLeftFallback}
+                  alt="Maison du Bar counter with backlit spirits display against an ivy-covered white wall"
+                  className="w-full aspect-[3/4] object-cover object-[center_70%]"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+
+            <div className="order-1 lg:order-2 text-center">
+              <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-foreground">
+                White Stone Finish
+              </h2>
+              <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed text-left">
+                Our mobile bar can be fully transformed with a white stone-effect finish, offering a clean, minimal and
+                sophisticated aesthetic.
+              </p>
+              <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed text-left mt-6">
+                The entire exterior of the bar is dressed with flexible gypsum-based panels featuring a natural stone
+                texture, creating the appearance of a solid architectural surface while maintaining the modular
+                character of our bar.
+              </p>
+              <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed text-left mt-6">
+                The white finish can cover the entire bar setup, making it an ideal choice for weddings, Cycladic
+                settings and events where a bright, elegant and timeless aesthetic is desired.
+              </p>
+              <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed text-left mt-6">
+                The white finish is available across all our modular configurations —{" "}
+                <Link
+                  to="/the-bar#configurations"
+                  className="text-foreground underline decoration-foreground/40 decoration-1 underline-offset-4 hover:decoration-accent hover:decoration-2 transition-all duration-300"
+                >
+                  see the full range of bar setups
+                </Link>
+              </p>
+            </div>
+
+            <div className="order-3">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet={`${stoneRight480} 480w, ${stoneRight720} 720w, ${stoneRight960} 960w`}
+                  sizes="(min-width: 1024px) 28vw, 100vw"
+                />
+                <img
+                  src={stoneRightFallback}
+                  alt="White stone-effect bar with a walnut counter overlooking the Aegean sea"
+                  className="w-full aspect-[3/4] object-cover object-[center_60%]"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          </div>
         </motion.div>
       </section>
 
