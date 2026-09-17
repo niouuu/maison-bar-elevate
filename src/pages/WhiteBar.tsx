@@ -90,9 +90,9 @@ const WhiteBar = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7 }}
-          className="container mx-auto px-4 sm:px-6 lg:px-8"
+          className="mx-auto w-full max-w-[1800px] px-4 sm:px-6 lg:px-12 xl:px-16"
         >
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.4fr_1fr] lg:gap-16 lg:items-center">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.2fr_1fr_1.2fr] lg:gap-12 xl:gap-20 lg:items-center">
             <div className="order-2 lg:order-1">
               <picture>
                 <source
