@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import TheBar from "./pages/TheBar";
+import WhiteBar from "./pages/WhiteBar";
 import Details from "./pages/Details";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/the-bar" element={<TheBar />} />
+            <Route path="/the-bar/white" element={<WhiteBar />} />
             <Route path="/details" element={<Details />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
