@@ -104,6 +104,15 @@ const TheBar = () => {
   const isMobile = useIsMobile();
   const [selectedOption, setSelectedOption] = useState("option1");
 
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    const timer = setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [location]);
+
   const [galleryRef, galleryInView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
