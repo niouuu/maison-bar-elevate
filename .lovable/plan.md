@@ -1,47 +1,23 @@
-
-
-## Update First Section: Remove Title "Craftsmanship Up Close"
+## Remove AMOX Branding from the Site
 
 ### Overview
-The section navigation already shows "The Wood" as the label. We need to remove the visible heading "Craftsmanship Up Close" from the first section while keeping the descriptive paragraph.
-
----
+Remove the "Powered by AMOX" credit from the site footer. A search of the entire project confirms this is the only AMOX-related reference (text and link).
 
 ### Changes Required
 
-**File:** `src/pages/Details.tsx`
+**File:** `src/components/Footer.tsx`
 
-**Remove lines 218-226** - Delete the decorative line and H2 heading:
+Remove the final paragraph in the footer's bottom section (lines 110–120), which currently renders:
 
 ```tsx
-// Lines to REMOVE:
-{/* Decorative line */}
-<div className="w-12 h-px bg-foreground/20 mx-auto mb-8" />
-
-<motion.h2
-  style={{ y: craftTitleY }}
-  className="font-chamberi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-foreground tracking-tight"
->
-  Craftsmanship Up Close
-</motion.h2>
+<p className="font-sans text-xs text-muted-foreground opacity-60">
+  Powered by{" "}
+  <a href="https://www.amox.gr/" ...>AMOX</a>
+</p>
 ```
-
-**After the change**, the section will start directly with the descriptive paragraph about the American walnut wood.
-
----
 
 ### Result
 
-The first section will now:
-- Display only the descriptive text about dark American walnut
-- Match the navigation label "The Wood"
-- Remove the redundant "Craftsmanship Up Close" title
-
----
-
-### Summary
-
-| File | Change |
-|------|--------|
-| `src/pages/Details.tsx` | Remove decorative line and H2 "Craftsmanship Up Close" heading (lines 218-226) |
-
+- The footer's bottom bar keeps the legal links (Privacy, Cookies, Terms), the copyright line, and the company line.
+- No AMOX text or link remains anywhere on the site.
+- No other pages, styles, or components are touched.
