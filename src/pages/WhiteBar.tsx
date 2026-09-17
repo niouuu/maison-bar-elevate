@@ -56,7 +56,7 @@ const WhiteBar = () => {
             src={whiteBarMobileFallback}
             alt="White stone-effect Maison du Bar mobile bar in a bright Cycladic setting"
             className="h-full w-full object-cover object-center md:object-[center_65%]"
-            fetchpriority="high"
+            loading="eager"
           />
         </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/20 via-foreground/35 to-foreground/75" />
