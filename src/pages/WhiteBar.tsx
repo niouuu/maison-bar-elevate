@@ -100,6 +100,15 @@ const WhiteBar = () => {
             The white finish can cover the entire bar setup, making it an ideal choice for weddings, Cycladic settings
             and events where a bright, elegant and timeless aesthetic is desired.
           </p>
+          <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-6">
+            The white finish is available across all our modular configurations —{" "}
+            <Link
+              to="/the-bar#configurations"
+              className="text-foreground underline decoration-foreground/40 decoration-1 underline-offset-4 hover:decoration-accent hover:decoration-2 transition-all duration-300"
+            >
+              see the full range of bar setups
+            </Link>
+          </p>
         </motion.div>
       </section>
 
