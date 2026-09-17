@@ -97,8 +97,8 @@ const WhiteBar = () => {
               <picture>
                 <source
                   type="image/webp"
-                  srcSet={`${stoneLeft480} 480w, ${stoneLeft720} 720w, ${stoneLeft960} 960w`}
-                  sizes="(min-width: 1024px) 28vw, 100vw"
+                  srcSet={`${stoneLeft480} 480w, ${stoneLeft720} 720w, ${stoneLeft960} 960w, ${stoneLeft1440} 1440w`}
+                  sizes="(min-width: 1024px) 34vw, 100vw"
                 />
                 <img
                   src={stoneLeftFallback}
