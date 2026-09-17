@@ -99,7 +99,7 @@ const Navbar = () => {
             <img
               src={logoImage}
               alt="Maison du Bar"
-              className="h-24 sm:h-28 lg:h-32 w-auto object-contain max-w-[240px] sm:max-w-[280px]"
+              className="h-16 sm:h-20 lg:h-24 w-auto object-contain max-w-[240px] sm:max-w-[280px]"
             />
           </Link>
 

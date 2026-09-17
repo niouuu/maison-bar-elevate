@@ -16,10 +16,12 @@ import whiteBarMobile1122 from "@/assets/white-bar/white-bar-mobile-1122.webp";
 import stoneLeft480 from "@/assets/white-bar/white-stone-left-480.webp";
 import stoneLeft720 from "@/assets/white-bar/white-stone-left-720.webp";
 import stoneLeft960 from "@/assets/white-bar/white-stone-left-960.webp";
+import stoneLeft1440 from "@/assets/white-bar/white-stone-left-1440.webp";
 import stoneLeftFallback from "@/assets/white-bar/white-stone-left-960.jpg";
 import stoneRight480 from "@/assets/white-bar/white-stone-right-480.webp";
 import stoneRight720 from "@/assets/white-bar/white-stone-right-720.webp";
 import stoneRight960 from "@/assets/white-bar/white-stone-right-960.webp";
+import stoneRight1440 from "@/assets/white-bar/white-stone-right-1440.webp";
 import stoneRightFallback from "@/assets/white-bar/white-stone-right-960.jpg";
 
 const pageTitle = "The White Bar | Maison du Bar";
@@ -90,15 +92,15 @@ const WhiteBar = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7 }}
-          className="container mx-auto px-4 sm:px-6 lg:px-8"
+          className="mx-auto w-full max-w-[1800px] px-4 sm:px-6 lg:px-12 xl:px-16"
         >
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.4fr_1fr] lg:gap-16 lg:items-center">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.2fr_1fr_1.2fr] lg:gap-12 xl:gap-20 lg:items-center">
             <div className="order-2 lg:order-1">
               <picture>
                 <source
                   type="image/webp"
-                  srcSet={`${stoneLeft480} 480w, ${stoneLeft720} 720w, ${stoneLeft960} 960w`}
-                  sizes="(min-width: 1024px) 28vw, 100vw"
+                  srcSet={`${stoneLeft480} 480w, ${stoneLeft720} 720w, ${stoneLeft960} 960w, ${stoneLeft1440} 1440w`}
+                  sizes="(min-width: 1024px) 34vw, 100vw"
                 />
                 <img
                   src={stoneLeftFallback}
@@ -141,8 +143,8 @@ const WhiteBar = () => {
               <picture>
                 <source
                   type="image/webp"
-                  srcSet={`${stoneRight480} 480w, ${stoneRight720} 720w, ${stoneRight960} 960w`}
-                  sizes="(min-width: 1024px) 28vw, 100vw"
+                  srcSet={`${stoneRight480} 480w, ${stoneRight720} 720w, ${stoneRight960} 960w, ${stoneRight1440} 1440w`}
+                  sizes="(min-width: 1024px) 34vw, 100vw"
                 />
                 <img
                   src={stoneRightFallback}
