@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Sparkles, Truck, Palette } from "lucide-react";
+
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Button } from "@/components/ui/button";
@@ -68,42 +68,6 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
-            {[
-              {
-                icon: Sparkles,
-                title: "Premium Experience",
-                description:
-                  "Exceptional service and a curated selection of premium drinks, designed to elevate every celebration.",
-              },
-              {
-                icon: Truck,
-                title: "Fully Portable",
-                description:
-                  "A complete luxury mobile bar setup, ready to elevate your event anywhere in Greece – from city venues to the islands.",
-              },
-              {
-                icon: Palette,
-                title: "Customizable Service",
-                description:
-                  "Tailor-made packages designed to reflect your unique style and create an unforgettable experience.",
-              },
-            ].map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={valueInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="text-center group"
-              >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center border-2 border-black rounded-full group-hover:bg-black transition-all duration-300">
-                  <feature.icon className="w-8 h-8 sm:w-10 sm:h-10 text-black group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="font-chamberi text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">{feature.title}</h3>
-                <p className="font-sans text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
