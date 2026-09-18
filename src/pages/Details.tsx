@@ -14,13 +14,15 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-// Import the 6 specific images
+// Import the 8 specific images
 import craft3 from "@/assets/craft3.jpg";
 import craft5 from "@/assets/craft5.jpg";
 import maisondubar0062 from "@/assets/Maison_du_Bar_0062kin.jpg";
 import craft4 from "@/assets/craft4.jpg";
 import details1 from "@/assets/details_1.jpg";
 import details2 from "@/assets/details_2.jpg";
+import thewood1 from "@/assets/thewood1.jpg";
+import thewood2 from "@/assets/thewood2.jpg";
 
 // Import interior images
 import details3 from "@/assets/details_3.jpg";
@@ -156,6 +158,8 @@ const Details = () => {
     { src: craft4, alt: "Precision craftsmanship design detail" },
     { src: details1, alt: "Craftsmanship detail view 1" },
     { src: details2, alt: "Craftsmanship detail view 2" },
+    { src: thewood1, alt: "American walnut bar top grain detail" },
+    { src: thewood2, alt: "Polished walnut surface in natural light" },
   ];
 
   const interiorImages = [
@@ -310,7 +314,7 @@ const Details = () => {
                     className={cn(
                       "w-full h-full object-cover group-hover:scale-105 group-hover:opacity-95 transition-all duration-500",
                       index === 5 && "object-bottom",
-                      index === 6 && "object-[center_75%]"
+                      index === 6 && "object-[center_75%]",
                     )}
                     loading="lazy"
                   />
@@ -330,7 +334,7 @@ const Details = () => {
                           "w-full h-full object-cover cursor-pointer",
                           index === 5 && "object-bottom",
                           index === 6 && "object-[center_75%]",
-                          index < 5 && "object-center"
+                          index < 5 && "object-center",
                         )}
                         loading="lazy"
                         onClick={() => openLightbox(interiorImages, index)}
@@ -380,7 +384,7 @@ const Details = () => {
                     alt={image.alt}
                     className={cn(
                       "w-full h-full object-cover group-hover:scale-105 group-hover:opacity-95 transition-all duration-500",
-                      index === 0 && "object-bottom"
+                      index === 0 && "object-bottom",
                     )}
                     loading="lazy"
                   />
@@ -398,7 +402,7 @@ const Details = () => {
                         alt={image.alt}
                         className={cn(
                           "w-full h-full object-cover cursor-pointer",
-                          index === 0 ? "object-bottom" : "object-center"
+                          index === 0 ? "object-bottom" : "object-center",
                         )}
                         loading="lazy"
                         onClick={() => openLightbox(chillerImages, index)}
