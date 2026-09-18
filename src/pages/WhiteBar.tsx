@@ -98,9 +98,16 @@ const WhiteBar = () => {
             <div className="order-2 lg:order-1">
               <picture>
                 <source
+                  media="(min-width: 1024px)"
+                  type="image/webp"
+                  srcSet={`${whiteBarMobile640} 640w, ${whiteBarMobile960} 960w, ${whiteBarMobile1122} 1122w`}
+                  sizes="34vw"
+                />
+                <source media="(min-width: 1024px)" srcSet={whiteBarMobileFallback} />
+                <source
                   type="image/webp"
                   srcSet={`${stoneLeft480} 480w, ${stoneLeft720} 720w, ${stoneLeft960} 960w, ${stoneLeft1440} 1440w`}
-                  sizes="(min-width: 1024px) 34vw, 100vw"
+                  sizes="100vw"
                 />
                 <img
                   src={stoneLeftFallback}
