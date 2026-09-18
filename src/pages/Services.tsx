@@ -40,7 +40,7 @@ const Services = () => {
       title: "Standard Pack",
       summary: [
         { title: "Full open bar with plain drinks", detail: "Alcoholic spirits, beverages, wines, beers, water" },
-        { title: "Welcome drinks", detail: "Prosecco or homemade lemonade with flavors" },
+        { title: "Welcome drinks (Optional)", detail: "Prosecco or homemade lemonade with flavors" },
         { title: "Dinner beverages", detail: "Wine, water & soft drinks" },
         { title: "4 Classic cocktails of your choice" },
         { title: "Full mobile bar setup" },
@@ -119,7 +119,7 @@ const Services = () => {
           title: "Full open bar with plain and premium drinks",
           detail: "Alcoholic spirits, beverages, wines, beers, water",
         },
-        { title: "Welcome drinks", detail: "Prosecco or homemade lemonade with flavors" },
+        { title: "Welcome drinks (Optional)", detail: "Prosecco or homemade lemonade with flavors" },
         { title: "Dinner beverages", detail: "Wine, water & soft drinks" },
         { title: "4 Classic and signature cocktails of your choice" },
         { title: "Full mobile bar setup" },
