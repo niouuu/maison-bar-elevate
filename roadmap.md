@@ -6,4 +6,4 @@
 - [x] Add accessible desktop dropdown and mobile accordion for The Bar.
 - [x] Verify desktop, mobile, keyboard navigation, imagery, metadata, and build status.
 - [x] Confirm the current Services package cards and whether the supplied Standard/Premium menu content exists in code.
-- [ ] Replace all four Services package cards with new Standard and Premium printed-menu cards using the supplied content.
+- [x] Replace all four Services package cards with new Standard and Premium printed-menu cards using the supplied content.
