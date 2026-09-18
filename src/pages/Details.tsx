@@ -32,6 +32,8 @@ import details6 from "@/assets/details6_1.png";
 import details7 from "@/assets/details_7.jpg";
 import details8 from "@/assets/details__8.jpg";
 import details9 from "@/assets/details_9.jpg";
+import interior1 from "@/assets/interior1.jpg";
+import interior2 from "@/assets/interior2.jpg";
 
 // Import chiller images
 import chiller1 from "@/assets/chiller_1.jpg";
@@ -170,6 +172,8 @@ const Details = () => {
     { src: details7, alt: "Refined interior craftsmanship" },
     { src: details8, alt: "Exquisite wood grain patterns" },
     { src: details9, alt: "Signature interior elements" },
+    { src: interior1, alt: "Stainless steel interior construction detail" },
+    { src: interior2, alt: "Custom-made interior fittings" },
   ];
 
   const chillerImages = [
