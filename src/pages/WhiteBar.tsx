@@ -164,6 +164,22 @@ const WhiteBar = () => {
                 />
               </picture>
             </div>
+
+            <div className="order-4 lg:hidden">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet={`${stoneExtra640} 640w, ${stoneExtra960} 960w`}
+                  sizes="100vw"
+                />
+                <img
+                  src={stoneExtraFallback}
+                  alt="White stone-effect Maison du Bar bar in a bright Cycladic setting"
+                  className="w-full aspect-[3/4] object-cover object-[center_65%]"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
           </div>
         </motion.div>
       </section>
