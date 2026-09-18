@@ -45,6 +45,13 @@ All colors MUST be HSL.
     --elegant-off-white: 0 0% 96.1%;
     --elegant-gray: 0 0% 50%;
     --elegant-gray-light: 0 0% 95%;
+
+    /* Printed menu package cards */
+    --menu-paper: 42 38% 96%;
+    --menu-ink: 30 8% 16%;
+    --menu-muted: 30 5% 38%;
+    --menu-rule: 30 7% 45%;
+    --menu-gold: 40 43% 42%;
     
     /* Shadows for depth */
     --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.08);
