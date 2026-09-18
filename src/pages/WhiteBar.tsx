@@ -23,6 +23,9 @@ import stoneRight720 from "@/assets/white-bar/white-stone-right-720.webp";
 import stoneRight960 from "@/assets/white-bar/white-stone-right-960.webp";
 import stoneRight1440 from "@/assets/white-bar/white-stone-right-1440.webp";
 import stoneRightFallback from "@/assets/white-bar/white-stone-right-960.jpg";
+import stoneExtra640 from "@/assets/white-bar/white-stone-extra-640.webp";
+import stoneExtra960 from "@/assets/white-bar/white-stone-extra-960.webp";
+import stoneExtraFallback from "@/assets/white-bar/white-stone-extra-960.jpg";
 
 const pageTitle = "The White Bar | Maison du Bar";
 const pageDescription =
@@ -157,6 +160,22 @@ const WhiteBar = () => {
                   src={stoneRightFallback}
                   alt="White stone-effect bar with a walnut counter overlooking the Aegean sea"
                   className="w-full aspect-[3/4] object-cover object-[center_60%]"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+
+            <div className="order-4 lg:hidden">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet={`${stoneExtra640} 640w, ${stoneExtra960} 960w`}
+                  sizes="100vw"
+                />
+                <img
+                  src={stoneExtraFallback}
+                  alt="White stone-effect Maison du Bar bar in a bright Cycladic setting"
+                  className="w-full aspect-[3/4] object-cover object-[center_65%]"
                   loading="lazy"
                 />
               </picture>
