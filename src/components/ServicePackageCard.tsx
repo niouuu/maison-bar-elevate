@@ -38,8 +38,8 @@ const MenuCategoryBlock = ({ category, premium }: { category: MenuCategory; prem
       {category.title}
     </h5>
     <ul className="mt-3 space-y-1.5 pl-5 font-sans text-sm leading-snug text-menu-ink sm:text-[15px]">
-      {category.items.map((item) => (
-        <li key={`${category.title}-${item.name}`} className="list-disc pl-1">
+      {category.items.map((item, index) => (
+        <li key={`${category.title}-${item.name}-${index}`} className="list-disc pl-1">
           <span>{item.name}</span>
           {item.detail && <span className="block text-[0.9em] text-menu-muted">{item.detail}</span>}
         </li>
