@@ -37,74 +37,159 @@ const Services = () => {
 
   const servicePackages = [
     {
-      title: "🍹 Standard Pack",
-      description: "Perfect for intimate gatherings and small events.",
-      includes: [
-        "Full open bar with plain drinks (alcoholic spirits, beverages, wines, beers)",
-        "3 classic cocktails of your choice",
-        "Full mobile bar setup",
-        "All necessary equipment for the selected cocktails and long drinks",
-        "Professional bartenders and barbacks with years of hands-on work in hospitality experience",
-        "Regular ice, Ice cubes",
-        "Glass Chiller",
-        "Glassware",
+      title: "Standard Pack",
+      summary: [
+        { title: "Full open bar with plain drinks", detail: "Alcoholic spirits, beverages, wines, beers, water" },
+        { title: "Welcome drinks", detail: "Prosecco or homemade lemonade with flavors" },
+        { title: "Dinner beverages", detail: "Wine, water & soft drinks" },
+        { title: "4 Classic cocktails of your choice" },
+        { title: "Full mobile bar setup" },
+        { title: "All necessary equipment", detail: "for the selected cocktails and long drinks" },
+        {
+          title: "Professional bartenders and barbacks",
+          detail: "with years of hands - on work in hospitality industry",
+        },
+        { title: "Regular ice, crushed ice" },
+        { title: "Glass Chiller" },
+        { title: "Glassware" },
       ],
-      spirits:
-        "Smirnoff Vodka, Beefeater Gin, Pampero Blanco Rum, El Jimador Blanco Tequila, El Jimador Reposado Tequila, Jameson Irish Whiskey, Plain Liquor-Bitter and Aperitif of your choice, Plain Beverages, Paraga Kyr Gianni Estate White Dry Wine(Malagouzia, Roditis), Paraga Kyr Gianni Estate Rose Medium Dry Wine(Xinomayro, Merlot), Paraga Kyr Gianni Estate Red Dry Wine(Merlot,Syrah,Xinomayro), Peroni Nastro Azzurro Beer.",
-      cocktails: "Pre-Batched Margarita, Pre-Batched Negroni, Paloma.",
+      categories: [
+        {
+          title: "Spirits",
+          items: [
+            { name: "Smirnoff Vodka" },
+            { name: "Tanqueray Gin" },
+            { name: "Havana Club Anejo 3 Años Rum" },
+            { name: "El Jimador Blanco Tequila" },
+            { name: "El Jimador Reposado Tequila" },
+            { name: "Johnnie Walker Red Scotch Whiskey" },
+            { name: "Jameson Irish Whiskey" },
+            { name: "Aperol" },
+            { name: "Campari bitter" },
+            { name: "Mastiha Greek spirit" },
+          ],
+        },
+        {
+          title: "Wines",
+          items: [
+            { name: "Paraga Kyr Gianni Estate White Dry Wine", detail: "Malagouzia, Roditis" },
+            { name: "Paraga Kyr Gianni Estate Rose Medium Dry Wine", detail: "Xinomavro, Merlot" },
+            { name: "Paraga Kyr Gianni Estate Red Dry Wine", detail: "Merlot, Syrah, Xinomavro" },
+            { name: "Prosecco", detail: "Miravento" },
+          ],
+        },
+        {
+          title: "Beers",
+          items: [
+            { name: "Peroni Nastro Azzurro Beer" },
+            { name: "Peroni Nastro Azzurro Beer", detail: "non alcoholic" },
+          ],
+        },
+        {
+          title: "Cocktails",
+          items: [
+            { name: "Pornstar martini" },
+            { name: "Paloma" },
+            { name: "Negroni" },
+            { name: "Aperol spritz" },
+          ],
+        },
+        {
+          title: "Beverages",
+          items: [
+            { name: "Soda water" },
+            { name: "Grapefruit soda" },
+            { name: "Tonic" },
+            { name: "Coca cola" },
+            { name: "Coca cola zero" },
+            { name: "Sprite" },
+            { name: "Lemon juice" },
+            { name: "Cranberry juice" },
+            { name: "Orange juice" },
+          ],
+        },
+        { title: "Water", items: [{ name: "Still water" }, { name: "Sparkling water" }] },
+      ],
     },
     {
-      title: "🍸 Advanced Pack",
-      description: "Designed for elevated occasions with premium options.",
-      includes: [
-        "Full open bar with plain and premium drinks (premium alcoholic spirits, premium beverages, wines, beers)",
-        "3 classic cocktails of your choice",
-        "Full mobile bar setup",
-        "All necessary equipment for the selected cocktails and long drinks",
-        "Professional bartenders and barbacks with years of hands-on work in hospitality industry",
-        "Regular ice, Ice Cubes",
-        "Glass Chiller",
-        "Glassware",
+      title: "Premium Pack",
+      premium: true,
+      summary: [
+        {
+          title: "Full open bar with plain and premium drinks",
+          detail: "Alcoholic spirits, beverages, wines, beers, water",
+        },
+        { title: "Welcome drinks", detail: "Prosecco or homemade lemonade with flavors" },
+        { title: "Dinner beverages", detail: "Wine, water & soft drinks" },
+        { title: "4 Classic and signature cocktails of your choice" },
+        { title: "Full mobile bar setup" },
+        { title: "All necessary equipment", detail: "for the selected cocktails and long drinks" },
+        {
+          title: "Professional bartenders and barbacks",
+          detail: "with years of hands - on work in hospitality industry",
+        },
+        { title: "Regular ice, ice cubes, crushed ice" },
+        { title: "Glass Chiller" },
+        { title: "Glassware" },
       ],
-      spirits:
-        "Ketel One Vodka, Belvedere Vodka, Tanqueray Gin, Hendrick's Gin, Havana Club Anejo 3 Anos Rum, Don Julio Blanco Tequila, Don Julio Reposado Tequila, Johnnie Walker Black Label Whiskey, Plain Liquor-Bitter and Aperitif of your choice, Plain and Premium Beverages, Paraga Kyr Gianni Estate White Dry Wine(Malagouzia, Roditis), Paraga Kyr Gianni Estate Rose Medium Dry Wine(Xinomayro,Merlot), Paraga Kyr Gianni Estate Red Dry Wine(Merlot,Syrah,Xinomayro), Peroni Nastro Azzurro Beer.",
-      cocktails: "Pre-Batched Margarita, Pre-Batched Negroni, Paloma.",
-    },
-    {
-      title: "🥂 Premium Pack",
-      description: "A luxury experience with aged spirits and signature creations.",
-      includes: [
-        "Full open bar with premium drinks (aged spirits, premium beverages, selected origin and aged wines, champagnes)",
-        "4 classic and signature cocktails of your choice",
-        "Full mobile bar setup",
-        "All necessary equipment for the selected cocktails and long drinks",
-        "Professional bartenders and barbacks with years of hands, on work in hospitality industry",
-        "Regular ice, ice cubes",
-        "Glass Chiller",
-        "Glassware",
+      categories: [
+        {
+          title: "Spirits",
+          items: [
+            { name: "Belvedere Vodka" },
+            { name: "Hendricks Gin" },
+            { name: "Havana Club Anejo Reserva 3 Años Rum" },
+            { name: "Casamigos Blanco Tequila" },
+            { name: "Casamigos Reposado Tequila" },
+            { name: "Johnnie Walker Black Scotch Whiskey" },
+            { name: "Jameson Irish Whiskey" },
+            { name: "Aperol" },
+            { name: "Campari bitter" },
+            { name: "Mastiha Greek spirit" },
+          ],
+        },
+        {
+          title: "Wines",
+          items: [
+            { name: "Alpha Estate White Dry Wine", detail: "Sauvignon Blanc" },
+            { name: "Alpha Estate Rose Dry Wine", detail: "Xinomavro" },
+            { name: "Alpha Estate Red Dry Wine", detail: "Merlot, Xinomavro, Syrah" },
+            { name: "Prosecco", detail: "Miravento" },
+          ],
+        },
+        {
+          title: "Beers",
+          items: [
+            { name: "Peroni Nastro Azzurro Beer" },
+            { name: "Peroni Nastro Azzurro Beer", detail: "non alcoholic" },
+          ],
+        },
+        {
+          title: "Cocktails",
+          items: [
+            { name: "Pornstar martini with white chocolate foam" },
+            { name: "Spicy Paloma with pepper mix" },
+            { name: "Negroni infused with peaches" },
+            { name: "Aperol spritz infused with berrie mix" },
+          ],
+        },
+        {
+          title: "Beverages",
+          items: [
+            { name: "Soda water" },
+            { name: "Grapefruit soda" },
+            { name: "Ginger beer" },
+            { name: "Tonic" },
+            { name: "Coca cola" },
+            { name: "Coca cola zero" },
+            { name: "Sprite" },
+            { name: "Lemon juice" },
+            { name: "Cranberry juice" },
+            { name: "Orange juice" },
+          ],
+        },
+        { title: "Water", items: [{ name: "Still water" }, { name: "Sparkling water" }] },
       ],
-      spirits:
-        "Grey Goose Vodka, Belvedere Vodka, Tanqueray No.Ten Gin, Hendrick's Gin, Ron Zacapa 23 Rum, Diplomatico Reserva Exclusiva Rum, Don Julio Blanco Tequila, Don Julio Reposado Tequila, Johhnie Walker Black Laber Whiskey, Premium Liquor-Bitter and Aperitif of your choice, Premium Beverages, Alpha Estate White Dry Wine(Sauvignon Blanc), Alpha Estate Rose Dry Wine(Xinomayro), Alpha Estate Red Dry Wine(Merlot,Xinomayro,Syrah), Pommery Brut Royal Champange, Peroni Nastro Azzurro Beer.",
-      cocktails:
-        "Pre-Batched Margarita, Pre-Batched Hazelnut Old Fashioned, Pre-Batched Coffee and Cocoa Negroni, Paloma.",
-    },
-    {
-      title: "🍾 Ultra Premium Pack",
-      description: "The ultimate luxury bar experience for unforgettable events.",
-      includes: [
-        "Full open bar with premium and ultra-premium drinks (well-aged spirits, premium beverages, selected origin and well-aged wines, premium champagnes)",
-        "5 signature cocktails of your choice",
-        "Full mobile bar setup",
-        "All necessary equipment for the selected cocktails and long drinks",
-        "Professional bartenders and barbacks with years of hands-on experience in hospitality",
-        "Regular ice, ice cubes, ice columns",
-        "Glassware",
-        "Glass Chiller",
-      ],
-      spirits:
-        "Beluga Vodka, Beluga Gold Line Vodka, Monkey 47 Gin, Hendricks Gin, Roku Gin, Ron Zacapa 23 Rum, Ron Zacapa XO Rum, Casamigos Blanco Tequila, Casamigos Reposado Tequila, Casamigos Mezcal Tequila, Don Julio 1942 Añejo Tequila, Clase Azul Reposado Tequila, Ultra-premium whiskey of your choice, Ultra-premium liqueurs/bitters/aperitifs of your choice, Premium beverages, Selected origin & well-aged wines of your choice, Premium champagnes of your choice.",
-      cocktails:
-        "Pre-Batched Basil Mescalita, Pre-Batched Spicy Mango Margarita, Strawberry Daiquiri(with-chocolate foam), Pre-Batched Clarified Pornstar Martini, Pre-Batched Strawberry & Long-Pepper Negroni.",
     },
   ];
 
@@ -174,10 +259,9 @@ const Services = () => {
               >
                 <ServiceCard
                   title={pkg.title}
-                  description={pkg.description}
-                  includes={pkg.includes}
-                  spirits={pkg.spirits}
-                  cocktails={pkg.cocktails}
+                  summary={pkg.summary}
+                  categories={pkg.categories}
+                  premium={pkg.premium}
                 />
               </motion.div>
             ))}

@@ -51,6 +51,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        menu: {
+          paper: "hsl(var(--menu-paper))",
+          ink: "hsl(var(--menu-ink))",
+          muted: "hsl(var(--menu-muted))",
+          rule: "hsl(var(--menu-rule))",
+          gold: "hsl(var(--menu-gold))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
