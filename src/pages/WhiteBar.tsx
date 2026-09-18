@@ -23,6 +23,9 @@ import stoneRight720 from "@/assets/white-bar/white-stone-right-720.webp";
 import stoneRight960 from "@/assets/white-bar/white-stone-right-960.webp";
 import stoneRight1440 from "@/assets/white-bar/white-stone-right-1440.webp";
 import stoneRightFallback from "@/assets/white-bar/white-stone-right-960.jpg";
+import stoneExtra640 from "@/assets/white-bar/white-stone-extra-640.webp";
+import stoneExtra960 from "@/assets/white-bar/white-stone-extra-960.webp";
+import stoneExtraFallback from "@/assets/white-bar/white-stone-extra-960.jpg";
 
 const pageTitle = "The White Bar | Maison du Bar";
 const pageDescription =
