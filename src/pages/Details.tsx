@@ -20,7 +20,6 @@ import craft5 from "@/assets/craft5.jpg";
 import maisondubar0062 from "@/assets/Maison_du_Bar_0062kin.jpg";
 import craft4 from "@/assets/craft4.jpg";
 import details1 from "@/assets/details_1.jpg";
-import details2 from "@/assets/details_2.jpg";
 import thewood1 from "@/assets/thewood1.jpg";
 import thewood2 from "@/assets/thewood2.jpg";
 
@@ -159,7 +158,6 @@ const Details = () => {
     { src: maisondubar0062, alt: "Maison du Bar craftsmanship detail" },
     { src: craft4, alt: "Precision craftsmanship design detail" },
     { src: details1, alt: "Craftsmanship detail view 1" },
-    { src: details2, alt: "Craftsmanship detail view 2" },
     { src: thewood1, alt: "American walnut bar top grain detail" },
     { src: thewood2, alt: "Polished walnut surface in natural light" },
   ];
