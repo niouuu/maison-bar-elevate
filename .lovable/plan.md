@@ -1,18 +1,18 @@
-# Restyle Standard and Premium package cards
+# Rebuild Services package cards
 
 ## Scope
-- Restyle only the Standard Pack and Premium Pack cards on the Services page.
-- Keep Advanced Pack, Ultra Premium Pack, the section heading, surrounding page, and all package wording unchanged.
+- Delete the current Standard, Advanced, Premium, and Ultra Premium cards and their accordion implementation.
+- Build exactly two new cards: Standard and Premium.
+- Leave the Services section heading and every other part of the site unchanged.
 
-## Changes
-- Present each selected card as a square-cornered warm off-white printed menu sheet with charcoal text, no emoji, no shadow, and no rounded corners.
-- Show the package heading, full-width rule, small uppercase caption, and existing inclusions before expansion.
-- Format parenthetical details beneath their main inclusion in lighter, smaller type without changing the wording.
-- Expand into a menu-style drinks area with responsive category columns, simple bullet lists, category dividers, and the closing brand line.
-- Add a faint centered Maison du Bar watermark behind desktop expanded content, hidden on mobile.
-- Give Premium restrained gold rules and category headings; Standard remains charcoal.
-- Retain the existing expand/collapse and quote actions, restyled to suit the printed-sheet treatment.
+## New cards
+- Transcribe the summary inclusions and full drinks lists from the four supplied menu sheets.
+- Use a warm off-white, square-cornered printed-menu treatment with charcoal text, no emoji, rounding, or shadows.
+- Show the package name, rule, caption, and summary inclusions before expansion, with detail lines separated beneath bold main phrases.
+- Expand into categorized lists: desktop uses Spirits/Beverages on the left and Wines/Beers/Cocktails/Water on the right; mobile uses Spirits, Wines, Beers, Cocktails, Beverages, Water.
+- Add a faint decorative Maison du Bar watermark behind expanded desktop content and the closing “MORE THAN DRINKS — MEMORABLE EXPERIENCE” line.
+- Use a restrained gold accent for Premium rules and category headings.
 
 ## Validation
-- Check both selected cards collapsed and expanded on desktop and mobile.
-- Confirm Advanced and Ultra Premium remain unchanged and the page builds cleanly.
+- Verify collapsed and expanded cards on desktop and mobile.
+- Confirm only Standard and Premium remain and the project builds cleanly.
