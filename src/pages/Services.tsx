@@ -235,60 +235,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Our Cocktails Section */}
-      <section className="pb-20 sm:pb-24 lg:pb-32 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-5xl mx-auto"
-          >
-            <h2 className="font-chamberi text-4xl sm:text-5xl md:text-6xl font-bold text-black uppercase">
-              Our Cocktails
-            </h2>
-            <div className="mt-5 flex flex-wrap items-center gap-x-8 gap-y-2 font-sans text-[11px] sm:text-xs uppercase tracking-widest text-gray-500">
-              <span>Crafted for your event</span>
-              <span aria-hidden="true" className="h-px w-10 bg-gray-300" />
-              <span>Made to be remembered</span>
-            </div>
-
-            <div className="mt-10 space-y-6 font-sans text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl">
-              <p>Our cocktail selection is designed to complement the style and atmosphere of each event.</p>
-              <p>
-                Depending on the selected package, guests can enjoy a selection of classic cocktails, while our
-                upgraded packages also include signature cocktails created by Maison Du Bar.
-              </p>
-              <p>
-                Cocktail selections can be customized according to your preferences and the style of your event.
-              </p>
-            </div>
-
-            <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
-              <div>
-                <h3 className="font-chamberi text-2xl sm:text-3xl font-bold text-black uppercase">Classic Cocktails</h3>
-                <span aria-hidden="true" className="mt-3 block h-0.5 w-12 bg-black" />
-                <p className="mt-6 font-sans text-base text-gray-600 leading-relaxed max-w-md">
-                  Timeless favourites, carefully prepared by our bar team. Selected classics are pre-batched to
-                  ensure perfect balance, consistency and quality in every serve.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-chamberi text-2xl sm:text-3xl font-bold text-black uppercase">
-                  Signature Cocktails
-                </h3>
-                <span aria-hidden="true" className="mt-3 block h-0.5 w-12 bg-black" />
-                <p className="mt-6 font-sans text-base text-gray-600 leading-relaxed max-w-md">
-                  Unique Maison Du Bar creations combining premium ingredients, homemade elements and modern
-                  techniques.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Service Packages Section */}
       <section className="py-20 sm:py-24 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
