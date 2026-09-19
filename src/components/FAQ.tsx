@@ -41,16 +41,6 @@ const FAQ = () => {
       answer: "We operate all across Greece, including mainland venues and every island destination.",
     },
     {
-      question: "Are transportation and accommodation included?",
-      answer:
-        "Transportation costs and staff accommodation are not included in the package and are charged separately depending on the location of your event.",
-    },
-    {
-      question: "What is your cancellation policy?",
-      answer:
-        "Cancellations made at least 30 days before the event qualify for a full refund. Later cancellations result in the deposit being retained.",
-    },
-    {
       question: "Are your bartenders experienced?",
       answer: "Yes, our bartenders and barbacks are highly trained professionals with years of hospitality experience.",
     },
