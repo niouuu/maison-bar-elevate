@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import { Gem, Boxes, PackageCheck, ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import stationDeusImage from "@/assets/Maison_du_Bar_0085.jpg";
@@ -96,10 +96,6 @@ const MobileCarouselNext = () => {
 
 const TheBar = () => {
   const location = useLocation();
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
 
   const isMobile = useIsMobile();
   const [selectedOption, setSelectedOption] = useState("option1");
@@ -117,24 +113,6 @@ const TheBar = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  const features = [
-    {
-      icon: Gem,
-      title: "Elegant Design",
-      description: "A refined, minimal aesthetic that enhances any event.",
-    },
-    {
-      icon: Boxes,
-      title: "Modular Flexibility",
-      description: "Adaptable to any space, from intimate gatherings to grand celebrations.",
-    },
-    {
-      icon: PackageCheck,
-      title: "Effortless Setup",
-      description: "Quick to assemble, discreet to transport, always event-ready.",
-    },
-  ];
 
   const barOptions = [
     {
@@ -248,31 +226,6 @@ const TheBar = () => {
         </motion.div>
       </section>
 
-      {/* Feature Highlights */}
-      <section className="py-16 sm:py-20 lg:py-32 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-chamberi text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 lg:mb-20 text-black">
-            What Makes Maison Du Bar Unique
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto" ref={ref}>
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="text-center group"
-              >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 flex items-center justify-center border-2 border-black rounded-full group-hover:bg-black transition-all duration-300">
-                  <feature.icon className="w-8 h-8 sm:w-10 sm:h-10 text-black group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="font-chamberi text-xl sm:text-2xl font-bold mb-4 text-black">{feature.title}</h3>
-                <p className="font-sans text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Gallery Section - Bar Configuration Options */}
       <section id="configurations" className="py-16 sm:py-20 lg:py-32 bg-white scroll-mt-24">
