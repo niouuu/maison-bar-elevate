@@ -236,7 +236,7 @@ const Services = () => {
       </section>
 
       {/* Our Cocktails Section */}
-      <section className="py-20 sm:py-24 lg:py-32 bg-white">
+      <section className="pb-20 sm:pb-24 lg:pb-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
