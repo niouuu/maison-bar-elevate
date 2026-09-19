@@ -152,12 +152,12 @@ const Details = () => {
   };
 
   const craftsmanshipImages = [
+    { src: thewood2, alt: "Polished walnut surface in natural light" },
     { src: craft3, alt: "Elegant black walnut wood finish detail" },
     { src: craft5, alt: "Professional bar setup with bottle display" },
     { src: craft4, alt: "Precision craftsmanship design detail" },
     { src: details1, alt: "Craftsmanship detail view 1" },
     { src: thewood1, alt: "American walnut bar top grain detail" },
-    { src: thewood2, alt: "Polished walnut surface in natural light" },
   ];
 
   const interiorImages = [
