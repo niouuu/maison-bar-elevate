@@ -98,7 +98,7 @@ const WhiteBar = () => {
           className="mx-auto w-full max-w-[1800px] px-4 sm:px-6 lg:px-12 xl:px-16"
         >
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.2fr_1fr_1.2fr] lg:gap-12 xl:gap-20 lg:items-center">
-            <div className="order-2 lg:order-1">
+            <div className="order-3 lg:order-1">
               <picture>
                 <source
                   media="(min-width: 1024px)"
@@ -149,7 +149,7 @@ const WhiteBar = () => {
               </p>
             </div>
 
-            <div className="order-3">
+            <div className="order-2 lg:order-3">
               <picture>
                 <source
                   type="image/webp"
