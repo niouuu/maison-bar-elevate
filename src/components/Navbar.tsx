@@ -46,8 +46,8 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
   const isBarActive = location.pathname === "/the-bar" || location.pathname === "/the-bar/white";
   const barChildren = [
-    { name: "Signature Bar", path: "/the-bar" },
-    { name: "White Bar", path: "/the-bar/white" },
+    { name: "Original Design", path: "/the-bar" },
+    { name: "White Cycladic design", path: "/the-bar/white" },
   ];
 
   const openBarMenu = () => {
@@ -135,7 +135,7 @@ const Navbar = () => {
                   isBarActive ? "after:!w-[60%]" : ""
                 }`}
               >
-                The Bar
+                Bar Options
                 <ChevronDown
                   aria-hidden="true"
                   className={`h-4 w-4 transition-transform duration-200 ${isBarMenuOpen ? "rotate-180" : ""}`}
@@ -143,7 +143,7 @@ const Navbar = () => {
               </Link>
               <div
                 role="menu"
-                aria-label="The Bar"
+                aria-label="Bar Options"
                 className={`absolute left-1/2 top-full z-50 min-w-52 -translate-x-1/2 bg-background px-3 py-3 shadow-soft transition-all duration-200 ${
                   isBarMenuOpen
                     ? "visible translate-y-0 opacity-100"
@@ -221,7 +221,7 @@ const Navbar = () => {
                   isBarActive ? "after:!w-[calc(100%-2rem)]" : ""
                 }`}
               >
-                The Bar
+                Bar Options
                 <ChevronDown
                   aria-hidden="true"
                   className={`h-5 w-5 transition-transform duration-200 ${isMobileBarOpen ? "rotate-180" : ""}`}
