@@ -7,3 +7,6 @@
 - [x] Verify desktop, mobile, keyboard navigation, imagery, metadata, and build status.
 - [x] Confirm the current Services package cards and whether the supplied Standard/Premium menu content exists in code.
 - [x] Replace all four Services package cards with new Standard and Premium printed-menu cards using the supplied content.
+- [ ] Add the Cocktails page with two seven-photo galleries, route metadata, and scoped lightboxes.
+- [ ] Add Cocktails as a top-level navigation item between Bar Options and Details.
+- [ ] Verify the Cocktails page on desktop and mobile.
