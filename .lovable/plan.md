@@ -2,7 +2,7 @@
 
 ## Page and navigation
 - Create `/cocktails` and register it in the existing site routes.
-- Add **Cocktails** to desktop and mobile navigation immediately after **Bar Options** and before **Details**, preserving all other navigation labels and behavior.
+- Keep the current top-level order of **Home**, **Services**, the **Bar Options** dropdown, **Details**, **About**, and **Contact**. Add **Cocktails** as its own top-level item immediately after the complete **Bar Options** dropdown and before **Details** on desktop and mobile; it will not be a dropdown child.
 - Reuse the existing Navbar, Footer, ScrollToTop, typography, spacing, colors, and motion language.
 
 ## Page content
