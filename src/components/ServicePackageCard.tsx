@@ -27,14 +27,9 @@ interface ServicePackageCardProps {
   premium?: boolean;
 }
 
-const MenuCategoryBlock = ({ category, premium }: { category: MenuCategory; premium: boolean }) => (
+const MenuCategoryBlock = ({ category }: { category: MenuCategory }) => (
   <section className="border-t border-menu-rule pt-4 first:border-t-0 first:pt-0">
-    <h5
-      className={cn(
-        "font-chamberi text-2xl uppercase leading-none text-menu-ink",
-        premium && "text-menu-gold",
-      )}
-    >
+    <h5 className="font-chamberi text-2xl uppercase leading-none text-menu-ink">
       {category.title}
     </h5>
     <ul className="mt-3 space-y-1.5 pl-5 font-sans text-sm leading-snug text-menu-ink sm:text-[15px]">
@@ -125,19 +120,19 @@ const ServicePackageCard = ({ title, summary, categories, premium = false }: Ser
 
                   <div className="mt-7 space-y-7 md:hidden">
                     {mobileOrder.map((item) => (
-                      <MenuCategoryBlock key={item.title} category={item} premium={premium} />
+                      <MenuCategoryBlock key={item.title} category={item} />
                     ))}
                   </div>
 
                   <div className="mt-7 hidden grid-cols-2 gap-10 md:grid">
                     <div className="space-y-7 border-r border-menu-rule pr-10">
                       {leftColumn.map((item) => (
-                        <MenuCategoryBlock key={item.title} category={item} premium={premium} />
+                        <MenuCategoryBlock key={item.title} category={item} />
                       ))}
                     </div>
                     <div className="space-y-7">
                       {rightColumn.map((item) => (
-                        <MenuCategoryBlock key={item.title} category={item} premium={premium} />
+                        <MenuCategoryBlock key={item.title} category={item} />
                       ))}
                     </div>
                   </div>
