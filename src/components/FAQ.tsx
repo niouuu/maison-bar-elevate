@@ -5,7 +5,7 @@ const FAQ = () => {
     {
       question: "What packages do you offer?",
       answer:
-        "We offer four main packages – Standard, Advanced, Premium, and Ultra Premium – each including a full mobile bar, professional bartenders, and a curated selection of drinks.",
+        "We offer two main packages – Standard, Premium – each including a full mobile bar, professional bartenders, and a curated selection of drinks.",
     },
     {
       question: "Can I create a fully customized package?",
