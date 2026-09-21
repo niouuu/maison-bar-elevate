@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -11,7 +11,23 @@ import ImageLightbox from "@/components/ImageLightbox";
 import CarouselDots from "@/components/CarouselDots";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, useCarousel } from "@/components/ui/carousel";
-import { useIsMobile } from "@/hooks/use-mobile";
+
+const DESKTOP_BREAKPOINT = 1024;
+
+function useIsDesktop() {
+  const [isDesktop, setIsDesktop] = useState<boolean | undefined>(undefined);
+
+  useEffect(() => {
+    const mql = window.matchMedia(`(min-width: ${DESKTOP_BREAKPOINT}px)`);
+    const onChange = () => setIsDesktop(window.innerWidth >= DESKTOP_BREAKPOINT);
+    mql.addEventListener("change", onChange);
+    setIsDesktop(window.innerWidth >= DESKTOP_BREAKPOINT);
+    return () => mql.removeEventListener("change", onChange);
+  }, []);
+
+  return !!isDesktop;
+}
+
 import cocktails1 from "@/assets/cocktails1.jpg";
 import cocktails2 from "@/assets/cocktails2.jpg";
 import cocktails3 from "@/assets/cocktails3.jpg";
@@ -61,7 +77,7 @@ const MobileCarouselPrevious = () => {
       size="icon"
       onClick={scrollPrev}
       disabled={!canScrollPrev}
-      className="absolute left-3 top-1/2 z-10 h-12 w-12 -translate-y-1/2 rounded-full border-border bg-background/95 text-foreground shadow-lg backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:bg-background hover:shadow-xl active:scale-95 disabled:cursor-not-allowed disabled:opacity-20 md:hidden"
+      className="absolute left-3 top-1/2 z-10 h-12 w-12 -translate-y-1/2 rounded-full border-border bg-background/95 text-foreground shadow-lg backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:bg-background hover:shadow-xl active:scale-95 disabled:cursor-not-allowed disabled:opacity-20 lg:hidden"
       aria-label="Previous cocktail"
     >
       <ArrowLeft className="h-5 w-5" strokeWidth={1.5} />
@@ -79,7 +95,7 @@ const MobileCarouselNext = () => {
       size="icon"
       onClick={scrollNext}
       disabled={!canScrollNext}
-      className="absolute right-3 top-1/2 z-10 h-12 w-12 -translate-y-1/2 rounded-full border-border bg-background/95 text-foreground shadow-lg backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:bg-background hover:shadow-xl active:scale-95 disabled:cursor-not-allowed disabled:opacity-20 md:hidden"
+      className="absolute right-3 top-1/2 z-10 h-12 w-12 -translate-y-1/2 rounded-full border-border bg-background/95 text-foreground shadow-lg backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:bg-background hover:shadow-xl active:scale-95 disabled:cursor-not-allowed disabled:opacity-20 lg:hidden"
       aria-label="Next cocktail"
     >
       <ArrowRight className="h-5 w-5" strokeWidth={1.5} />
@@ -93,10 +109,10 @@ interface CocktailGalleryProps {
 }
 
 const CocktailGallery = ({ images, onOpen }: CocktailGalleryProps) => {
-  const isMobile = useIsMobile();
+  const isDesktop = useIsDesktop();
   const [galleryRef, galleryInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
-  if (isMobile) {
+  if (!isDesktop) {
     return (
       <Carousel className="mx-auto w-full max-w-md">
         <CarouselContent>
@@ -122,7 +138,7 @@ const CocktailGallery = ({ images, onOpen }: CocktailGalleryProps) => {
   }
 
   return (
-    <motion.div ref={galleryRef} className="grid w-full grid-cols-3 gap-8">
+    <motion.div ref={galleryRef} className="grid w-full grid-cols-2 gap-6 lg:gap-8">
       {images.map((image, index) => (
         <motion.button
           type="button"
