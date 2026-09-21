@@ -31,7 +31,6 @@ function useIsDesktop() {
 import cocktails1 from "@/assets/cocktails1.jpg";
 import cocktails2 from "@/assets/cocktails2.jpg";
 import cocktails3 from "@/assets/cocktails3.jpg";
-import cocktails4 from "@/assets/cocktails4.jpg";
 import cocktails5 from "@/assets/cocktails5.jpeg";
 import cocktails6 from "@/assets/cocktails6.jpeg";
 import cocktails7 from "@/assets/cocktails7.jpg";
@@ -42,6 +41,7 @@ import cocktails11 from "@/assets/cocktails11.jpeg";
 import cocktails12 from "@/assets/cocktails12.png";
 import cocktails13 from "@/assets/cocktails13.jpeg";
 import cocktails14 from "@/assets/cocktails14.jpg";
+import cocktails4 from "@/assets/cocktails4.jpg";
 
 interface CocktailImage {
   src: string;
