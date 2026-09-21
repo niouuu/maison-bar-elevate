@@ -60,10 +60,10 @@ export const classicImages: CocktailImage[] = [
 ];
 
 export const signatureImages: CocktailImage[] = [
-  { src: cocktails1, alt: "Classic cocktail presented with a refined garnish" },
   { src: cocktails2, alt: "Freshly prepared classic cocktail at the Maison du Bar counter" },
   { src: cocktails3, alt: "Elegant classic cocktail served over ice" },
   { src: cocktails4, alt: "Balanced classic cocktail with a citrus garnish" },
+  { src: cocktails1, alt: "Classic cocktail presented with a refined garnish" },
   { src: cocktails11, alt: "Handcrafted signature cocktail for a private event" },
 ];
 
