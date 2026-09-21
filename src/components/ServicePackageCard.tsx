@@ -120,19 +120,19 @@ const ServicePackageCard = ({ title, summary, categories, premium = false }: Ser
 
                   <div className="mt-7 space-y-7 md:hidden">
                     {mobileOrder.map((item) => (
-                      <MenuCategoryBlock key={item.title} category={item} premium={premium} />
+                      <MenuCategoryBlock key={item.title} category={item} />
                     ))}
                   </div>
 
                   <div className="mt-7 hidden grid-cols-2 gap-10 md:grid">
                     <div className="space-y-7 border-r border-menu-rule pr-10">
                       {leftColumn.map((item) => (
-                        <MenuCategoryBlock key={item.title} category={item} premium={premium} />
+                        <MenuCategoryBlock key={item.title} category={item} />
                       ))}
                     </div>
                     <div className="space-y-7">
                       {rightColumn.map((item) => (
-                        <MenuCategoryBlock key={item.title} category={item} premium={premium} />
+                        <MenuCategoryBlock key={item.title} category={item} />
                       ))}
                     </div>
                   </div>
