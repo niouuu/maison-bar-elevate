@@ -27,14 +27,9 @@ interface ServicePackageCardProps {
   premium?: boolean;
 }
 
-const MenuCategoryBlock = ({ category, premium }: { category: MenuCategory; premium: boolean }) => (
+const MenuCategoryBlock = ({ category }: { category: MenuCategory }) => (
   <section className="border-t border-menu-rule pt-4 first:border-t-0 first:pt-0">
-    <h5
-      className={cn(
-        "font-chamberi text-2xl uppercase leading-none text-menu-ink",
-        premium && "text-menu-gold",
-      )}
-    >
+    <h5 className="font-chamberi text-2xl uppercase leading-none text-menu-ink">
       {category.title}
     </h5>
     <ul className="mt-3 space-y-1.5 pl-5 font-sans text-sm leading-snug text-menu-ink sm:text-[15px]">
