@@ -5,7 +5,7 @@ const FAQ = () => {
     {
       question: "What packages do you offer?",
       answer:
-        "We offer two main packages – Standard, Premium – each including a full mobile bar, professional bartenders, and a curated selection of drinks.",
+        "We offer two main packages – Standard, Premium – each including a full mobile bar, professional bartenders and a curated selection of drinks.",
     },
     {
       question: "Can I create a fully customized package?",
@@ -15,7 +15,7 @@ const FAQ = () => {
     {
       question: "What drinks are included in each package?",
       answer:
-        "Each package includes an open bar with spirits, wines, beers, and cocktails tailored to the selected level (classic, premium, or ultra-premium).",
+        "Each package includes an open bar with spirits, wines, beers and cocktails tailored to the selected level (classic, premium, or ultra-premium).",
     },
     {
       question: "Do you only serve cocktails?",
