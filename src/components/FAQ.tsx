@@ -29,7 +29,7 @@ const FAQ = () => {
     {
       question: "What is included in the setup?",
       answer:
-        "We provide the full mobile bar setup, glassware (or disposables, depending on package), ice, equipment, and professional bartenders.",
+        "We provide the full mobile bar setup, glassware (or disposables, depending on package), ice, equipment and professional bartenders.",
     },
     {
       question: "Do you provide the alcohol, or do we need to purchase it?",
