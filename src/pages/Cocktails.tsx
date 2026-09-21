@@ -18,7 +18,7 @@ import cocktails3 from "@/assets/cocktails3.jpg";
 import cocktails4 from "@/assets/cocktails4.jpg";
 import cocktails5 from "@/assets/cocktails5.jpeg";
 import cocktails6 from "@/assets/cocktails6.jpeg";
-import cocktails7 from "@/assets/cocktails7.JPG";
+import cocktails7 from "@/assets/cocktails7.jpg";
 import cocktails8 from "@/assets/cocktails8.jpeg";
 import cocktails9 from "@/assets/cocktails9.jpeg";
 import cocktails10 from "@/assets/cocktails10.png";
