@@ -20,7 +20,7 @@ const FAQ = () => {
     {
       question: "What drinks are included in each package?",
       answer:
-        "Each package includes an open bar with spirits, wines, beers and cocktails tailored to the selected level (classic, premium, or ultra-premium).",
+        "Each package includes an open bar with spirits, wines, beers and cocktails tailored to the selected level (classic, premium or ultra-premium).",
     },
     {
       question: "Do you only serve cocktails?",
