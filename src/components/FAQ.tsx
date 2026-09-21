@@ -48,6 +48,11 @@ const FAQ = () => {
       question: "Do you provide staff beyond bartenders?",
       answer: "Yes, upon request we can provide barbacks, waitstaff and additional event support.",
     },
+    {
+      question: "What colour options are available for the bar?",
+      answer:
+        "Our bar is available in two finishes. Black Matte pairs a deep matte exterior with a rich American walnut bar top for a refined, evening elegance. White Cycladic dresses the exterior in textured, stone-effect panels for a bright, timeless aesthetic — ideal for weddings and island settings. Both finishes are available across all our modular configurations.",
+    },
   ];
 
   return (
