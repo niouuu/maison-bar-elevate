@@ -8,6 +8,11 @@ const FAQ = () => {
         "We offer two main packages – Standard, Premium – each including a full mobile bar, professional bartenders and a curated selection of drinks.",
     },
     {
+      question: "What colour options are available for the bar?",
+      answer:
+        "Our bar is available in two finishes. Black Matte pairs a deep matte exterior with a rich American walnut bar top for a refined, evening elegance. White Cycladic dresses the exterior in textured, stone-effect panels for a bright, timeless aesthetic — ideal for weddings and island settings. Both finishes are available across all our modular configurations.",
+    },
+    {
       question: "Can I create a fully customized package?",
       answer:
         "Yes. In addition to our standard packages, you can design a 100% personalized bar experience, choosing everything from cocktails and spirits to glassware and details.",
@@ -47,11 +52,6 @@ const FAQ = () => {
     {
       question: "Do you provide staff beyond bartenders?",
       answer: "Yes, upon request we can provide barbacks, waitstaff and additional event support.",
-    },
-    {
-      question: "What colour options are available for the bar?",
-      answer:
-        "Our bar is available in two finishes. Black Matte pairs a deep matte exterior with a rich American walnut bar top for a refined, evening elegance. White Cycladic dresses the exterior in textured, stone-effect panels for a bright, timeless aesthetic — ideal for weddings and island settings. Both finishes are available across all our modular configurations.",
     },
   ];
 
