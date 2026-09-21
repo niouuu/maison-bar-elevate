@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -11,7 +11,23 @@ import ImageLightbox from "@/components/ImageLightbox";
 import CarouselDots from "@/components/CarouselDots";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, useCarousel } from "@/components/ui/carousel";
-import { useIsMobile } from "@/hooks/use-mobile";
+
+const DESKTOP_BREAKPOINT = 1024;
+
+function useIsDesktop() {
+  const [isDesktop, setIsDesktop] = useState<boolean | undefined>(undefined);
+
+  useEffect(() => {
+    const mql = window.matchMedia(`(min-width: ${DESKTOP_BREAKPOINT}px)`);
+    const onChange = () => setIsDesktop(window.innerWidth >= DESKTOP_BREAKPOINT);
+    mql.addEventListener("change", onChange);
+    setIsDesktop(window.innerWidth >= DESKTOP_BREAKPOINT);
+    return () => mql.removeEventListener("change", onChange);
+  }, []);
+
+  return !!isDesktop;
+}
+
 import cocktails1 from "@/assets/cocktails1.jpg";
 import cocktails2 from "@/assets/cocktails2.jpg";
 import cocktails3 from "@/assets/cocktails3.jpg";
@@ -61,7 +77,7 @@ const MobileCarouselPrevious = () => {
       size="icon"
       onClick={scrollPrev}
       disabled={!canScrollPrev}
-      className="absolute left-3 top-1/2 z-10 h-12 w-12 -translate-y-1/2 rounded-full border-border bg-background/95 text-foreground shadow-lg backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:bg-background hover:shadow-xl active:scale-95 disabled:cursor-not-allowed disabled:opacity-20 md:hidden"
+      className="absolute left-3 top-1/2 z-10 h-12 w-12 -translate-y-1/2 rounded-full border-border bg-background/95 text-foreground shadow-lg backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:bg-background hover:shadow-xl active:scale-95 disabled:cursor-not-allowed disabled:opacity-20 lg:hidden"
       aria-label="Previous cocktail"
     >
       <ArrowLeft className="h-5 w-5" strokeWidth={1.5} />
@@ -79,7 +95,7 @@ const MobileCarouselNext = () => {
       size="icon"
       onClick={scrollNext}
       disabled={!canScrollNext}
-      className="absolute right-3 top-1/2 z-10 h-12 w-12 -translate-y-1/2 rounded-full border-border bg-background/95 text-foreground shadow-lg backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:bg-background hover:shadow-xl active:scale-95 disabled:cursor-not-allowed disabled:opacity-20 md:hidden"
+      className="absolute right-3 top-1/2 z-10 h-12 w-12 -translate-y-1/2 rounded-full border-border bg-background/95 text-foreground shadow-lg backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:bg-background hover:shadow-xl active:scale-95 disabled:cursor-not-allowed disabled:opacity-20 lg:hidden"
       aria-label="Next cocktail"
     >
       <ArrowRight className="h-5 w-5" strokeWidth={1.5} />
@@ -93,10 +109,10 @@ interface CocktailGalleryProps {
 }
 
 const CocktailGallery = ({ images, onOpen }: CocktailGalleryProps) => {
-  const isMobile = useIsMobile();
+  const isDesktop = useIsDesktop();
   const [galleryRef, galleryInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
-  if (isMobile) {
+  if (!isDesktop) {
     return (
       <Carousel className="mx-auto w-full max-w-md">
         <CarouselContent>
@@ -122,7 +138,7 @@ const CocktailGallery = ({ images, onOpen }: CocktailGalleryProps) => {
   }
 
   return (
-    <motion.div ref={galleryRef} className="grid w-full grid-cols-3 gap-8">
+    <motion.div ref={galleryRef} className="grid w-full grid-cols-2 gap-6 lg:gap-8">
       {images.map((image, index) => (
         <motion.button
           type="button"
@@ -224,50 +240,58 @@ const Cocktails = () => {
 
       <section className="bg-muted py-20 sm:py-24 lg:py-40">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.7 }}
-            className="mb-14 sm:mb-16"
-          >
-            <h2 className="font-chamberi text-3xl uppercase text-foreground sm:text-4xl md:text-5xl">
-              Classic Cocktails
-            </h2>
-            <div className="mt-5 h-px w-full bg-menu-rule" />
-            <p className="mt-6 max-w-3xl font-sans text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Timeless favourites, carefully prepared by our bar team. Selected classics are pre-batched to ensure
-              perfect balance, consistency and quality in every serve.
-            </p>
-          </motion.div>
-          <CocktailGallery images={classicImages} onOpen={openLightbox} />
+          <div className="lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-10 xl:gap-16">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.7 }}
+              className="lg:col-start-1 lg:row-start-1"
+            >
+              <h2 className="font-chamberi text-3xl uppercase text-foreground sm:text-4xl lg:text-3xl xl:text-4xl">
+                Classic Cocktails
+              </h2>
+              <div className="mt-5 h-px w-full bg-menu-rule" />
+              <p className="mt-6 font-sans text-base leading-relaxed text-muted-foreground sm:text-lg">
+                Timeless favourites, carefully prepared by our bar team. Selected classics are pre-batched to ensure
+                perfect balance, consistency and quality in every serve.
+              </p>
+            </motion.div>
+
+            <div className="mt-10 sm:mt-12 lg:col-start-1 lg:row-start-2 lg:mt-14">
+              <CocktailGallery images={classicImages} onOpen={openLightbox} />
+            </div>
+
+            <div
+              className="hidden w-px bg-menu-rule lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:block"
+              aria-hidden="true"
+            />
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.7 }}
+              className="lg:col-start-3 lg:row-start-1"
+            >
+              <h2 className="font-chamberi text-3xl uppercase text-foreground sm:text-4xl lg:text-3xl xl:text-4xl">
+                Signature Cocktails
+              </h2>
+              <div className="mt-5 h-px w-full bg-menu-rule" />
+              <p className="mt-6 font-sans text-base leading-relaxed text-muted-foreground sm:text-lg">
+                Unique Maison du Bar creations combining premium ingredients, homemade elements and modern techniques.
+              </p>
+            </motion.div>
+
+            <div className="my-12 h-px w-full bg-border sm:my-14 lg:hidden" aria-hidden="true" />
+
+            <div className="mt-10 sm:mt-12 lg:col-start-3 lg:row-start-2 lg:mt-14">
+              <CocktailGallery images={signatureImages} onOpen={openLightbox} />
+            </div>
+          </div>
         </div>
       </section>
 
-      <div className="bg-muted px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto h-px max-w-6xl bg-border" />
-      </div>
-
-      <section className="bg-muted py-20 sm:py-24 lg:py-40">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.7 }}
-            className="mb-14 sm:mb-16"
-          >
-            <h2 className="font-chamberi text-3xl uppercase text-foreground sm:text-4xl md:text-5xl">
-              Signature Cocktails
-            </h2>
-            <div className="mt-5 h-px w-full bg-menu-rule" />
-            <p className="mt-6 max-w-3xl font-sans text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Unique Maison du Bar creations combining premium ingredients, homemade elements and modern techniques.
-            </p>
-          </motion.div>
-          <CocktailGallery images={signatureImages} onOpen={openLightbox} />
-        </div>
-      </section>
 
       <section className="bg-primary py-20 sm:py-24 lg:py-40">
         <motion.div
