@@ -52,17 +52,17 @@ export const classicImages: CocktailImage[] = [
   { src: cocktails8, alt: "Maison du Bar signature cocktail with a distinctive garnish" },
   { src: cocktails9, alt: "Creative signature cocktail made with premium ingredients" },
   { src: cocktails10, alt: "Modern signature cocktail in elegant glassware" },
-  { src: cocktails5, alt: "Classic cocktail prepared for an elegant event" },
   { src: cocktails6, alt: "Premium classic cocktail in delicate glassware" },
   { src: cocktails7, alt: "Maison du Bar classic cocktail presentation" },
   { src: cocktails13, alt: "Signature cocktail featuring homemade elements" },
   { src: cocktails12, alt: "Contemporary Maison du Bar cocktail creation" },
+  { src: cocktails5, alt: "Classic cocktail prepared for an elegant event" },
 ];
 
 export const signatureImages: CocktailImage[] = [
+  { src: cocktails4, alt: "Balanced classic cocktail with a citrus garnish" },
   { src: cocktails2, alt: "Freshly prepared classic cocktail at the Maison du Bar counter" },
   { src: cocktails3, alt: "Elegant classic cocktail served over ice" },
-  { src: cocktails4, alt: "Balanced classic cocktail with a citrus garnish" },
   { src: cocktails1, alt: "Classic cocktail presented with a refined garnish" },
   { src: cocktails11, alt: "Handcrafted signature cocktail for a private event" },
 ];
