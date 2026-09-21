@@ -123,7 +123,7 @@ const CocktailGallery = ({ images, onOpen }: CocktailGalleryProps) => {
   }
 
   return (
-    <motion.div ref={galleryRef} className="mx-auto grid max-w-5xl grid-cols-3 gap-8">
+    <motion.div ref={galleryRef} className="grid w-full grid-cols-3 gap-8">
       {images.map((image, index) => (
         <motion.button
           type="button"
