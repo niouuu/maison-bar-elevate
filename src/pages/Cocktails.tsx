@@ -54,8 +54,8 @@ export const classicImages: CocktailImage[] = [
   { src: cocktails6, alt: "Premium classic cocktail in delicate glassware" },
   { src: cocktails10, alt: "Modern signature cocktail in elegant glassware" },
   { src: cocktails7, alt: "Maison du Bar classic cocktail presentation" },
-  { src: cocktails13, alt: "Signature cocktail featuring homemade elements" },
   { src: cocktails12, alt: "Contemporary Maison du Bar cocktail creation" },
+  { src: cocktails13, alt: "Signature cocktail featuring homemade elements" },
   { src: cocktails5, alt: "Classic cocktail prepared for an elegant event" },
 ];
 
