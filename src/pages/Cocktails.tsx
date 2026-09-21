@@ -40,6 +40,7 @@ export const classicImages: CocktailImage[] = [
   { src: cocktails5, alt: "Classic cocktail prepared for an elegant event" },
   { src: cocktails6, alt: "Premium classic cocktail in delicate glassware" },
   { src: cocktails7, alt: "Maison du Bar classic cocktail presentation" },
+  { src: cocktails12, alt: "Contemporary Maison du Bar cocktail creation" },
 ];
 
 export const signatureImages: CocktailImage[] = [
@@ -48,8 +49,6 @@ export const signatureImages: CocktailImage[] = [
   { src: cocktails3, alt: "Elegant classic cocktail served over ice" },
   { src: cocktails4, alt: "Balanced classic cocktail with a citrus garnish" },
   { src: cocktails11, alt: "Handcrafted signature cocktail for a private event" },
-  { src: cocktails12, alt: "Contemporary Maison du Bar cocktail creation" },
-  { src: cocktails14, alt: "Refined signature cocktail ready to be served" },
 ];
 
 const MobileCarouselPrevious = () => {
