@@ -240,50 +240,58 @@ const Cocktails = () => {
 
       <section className="bg-muted py-20 sm:py-24 lg:py-40">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.7 }}
-            className="mb-14 sm:mb-16"
-          >
-            <h2 className="font-chamberi text-3xl uppercase text-foreground sm:text-4xl md:text-5xl">
-              Classic Cocktails
-            </h2>
-            <div className="mt-5 h-px w-full bg-menu-rule" />
-            <p className="mt-6 max-w-3xl font-sans text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Timeless favourites, carefully prepared by our bar team. Selected classics are pre-batched to ensure
-              perfect balance, consistency and quality in every serve.
-            </p>
-          </motion.div>
-          <CocktailGallery images={classicImages} onOpen={openLightbox} />
+          <div className="lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-10 xl:gap-16">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.7 }}
+              className="lg:col-start-1 lg:row-start-1"
+            >
+              <h2 className="font-chamberi text-3xl uppercase text-foreground sm:text-4xl lg:text-3xl xl:text-4xl">
+                Classic Cocktails
+              </h2>
+              <div className="mt-5 h-px w-full bg-menu-rule" />
+              <p className="mt-6 font-sans text-base leading-relaxed text-muted-foreground sm:text-lg">
+                Timeless favourites, carefully prepared by our bar team. Selected classics are pre-batched to ensure
+                perfect balance, consistency and quality in every serve.
+              </p>
+            </motion.div>
+
+            <div className="mt-10 sm:mt-12 lg:col-start-1 lg:row-start-2 lg:mt-14">
+              <CocktailGallery images={classicImages} onOpen={openLightbox} />
+            </div>
+
+            <div
+              className="hidden w-px bg-menu-rule lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:block"
+              aria-hidden="true"
+            />
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.7 }}
+              className="lg:col-start-3 lg:row-start-1"
+            >
+              <h2 className="font-chamberi text-3xl uppercase text-foreground sm:text-4xl lg:text-3xl xl:text-4xl">
+                Signature Cocktails
+              </h2>
+              <div className="mt-5 h-px w-full bg-menu-rule" />
+              <p className="mt-6 font-sans text-base leading-relaxed text-muted-foreground sm:text-lg">
+                Unique Maison du Bar creations combining premium ingredients, homemade elements and modern techniques.
+              </p>
+            </motion.div>
+
+            <div className="my-12 h-px w-full bg-border sm:my-14 lg:hidden" aria-hidden="true" />
+
+            <div className="mt-10 sm:mt-12 lg:col-start-3 lg:row-start-2 lg:mt-14">
+              <CocktailGallery images={signatureImages} onOpen={openLightbox} />
+            </div>
+          </div>
         </div>
       </section>
 
-      <div className="bg-muted px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto h-px max-w-6xl bg-border" />
-      </div>
-
-      <section className="bg-muted py-20 sm:py-24 lg:py-40">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.7 }}
-            className="mb-14 sm:mb-16"
-          >
-            <h2 className="font-chamberi text-3xl uppercase text-foreground sm:text-4xl md:text-5xl">
-              Signature Cocktails
-            </h2>
-            <div className="mt-5 h-px w-full bg-menu-rule" />
-            <p className="mt-6 max-w-3xl font-sans text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Unique Maison du Bar creations combining premium ingredients, homemade elements and modern techniques.
-            </p>
-          </motion.div>
-          <CocktailGallery images={signatureImages} onOpen={openLightbox} />
-        </div>
-      </section>
 
       <section className="bg-primary py-20 sm:py-24 lg:py-40">
         <motion.div
