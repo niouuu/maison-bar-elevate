@@ -5,27 +5,27 @@ const FAQ = () => {
     {
       question: "What packages do you offer?",
       answer:
-        "We offer two main packages – Standard, Premium – each including a full mobile bar, professional bartenders and a curated selection of drinks.",
+        "We offer two main packages, Standard and Premium, each including a full mobile bar, professional bartenders and a curated selection of drinks.",
     },
     {
       question: "What colour options are available for the bar?",
       answer:
-        "Our bar is available in two finishes. Black Matte pairs a deep matte exterior with a rich American walnut bar top for a refined, evening elegance. White Cycladic dresses the exterior in textured, stone-effect panels for a bright, timeless aesthetic — ideal for weddings and island settings. Both finishes are available across all our modular configurations.",
+        "Our bar is available in two finishes. Black Matte pairs a deep black exterior with a rich American walnut bar top for refined evening elegance. White Cycladic dresses the exterior in textured, stone-effect panels for a bright, timeless aesthetic — ideal for weddings and island settings. Both finishes are available across all our modular configurations.",
     },
     {
-      question: "Can I create a fully customized package?",
+      question: "Can I create a fully customised package?",
       answer:
-        "Yes. In addition to our standard packages, you can design a 100% personalized bar experience, choosing everything from cocktails and spirits to glassware and details.",
+        "Yes. In addition to our set packages, you can design a completely personalised bar experience, choosing everything from cocktails and spirits to glassware and details.",
     },
     {
       question: "What drinks are included in each package?",
       answer:
-        "Each package includes an open bar with spirits, wines, beers and cocktails tailored to the selected level (standard,premium).",
+        "Each package includes an open bar with spirits, wines, beers and cocktails tailored to the selected level (Standard or Premium).",
     },
     {
       question: "Do you only serve cocktails?",
       answer:
-        "No. We provide a wide variety of drinks including spirits, wines, beers, soft drinks, and alcohol-free options.",
+        "No. We provide a wide variety of drinks, including spirits, wines, beers, soft drinks and alcohol-free options.",
     },
     {
       question: "Can we choose our own cocktail menu?",
@@ -33,8 +33,7 @@ const FAQ = () => {
     },
     {
       question: "What is included in the setup?",
-      answer:
-        "We provide the full mobile bar setup, glassware (or disposables, depending on package), ice, equipment and professional bartenders.",
+      answer: "We provide the full mobile bar setup, glassware, ice, equipment and professional bartenders.",
     },
     {
       question: "Do you provide the alcohol, or do we need to purchase it?",
@@ -42,16 +41,16 @@ const FAQ = () => {
         "We supply all the drinks as part of our packages. However, if you prefer, we can also work with beverages you provide.",
     },
     {
-      question: "Where do you offer services?",
-      answer: "We operate all across Greece, including mainland venues and every island destination.",
+      question: "Where do you offer your services?",
+      answer: "We operate throughout Greece, including mainland venues and island destinations.",
     },
     {
       question: "Are your bartenders experienced?",
-      answer: "Yes, our bartenders and barbacks are highly trained professionals with years of hospitality experience.",
+      answer: "Yes. Our bartenders and barbacks are highly trained professionals with years of hospitality experience.",
     },
     {
       question: "Do you provide staff beyond bartenders?",
-      answer: "Yes, upon request we can provide barbacks, waitstaff and additional event support.",
+      answer: "Yes. Upon request, we can provide additional barbacks, waiting staff and event support.",
     },
   ];
 
