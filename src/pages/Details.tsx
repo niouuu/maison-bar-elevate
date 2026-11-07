@@ -33,7 +33,7 @@ import interior1 from "@/assets/interior1.jpg";
 import interior2 from "@/assets/interior2.jpg";
 
 // Import chiller images
-import chiller1 from "@/assets/chiller_1.jpg";
+import chiller1 from "@/assets/IMG_2093.jpg";
 import chiller2 from "@/assets/chiller_2.jpg";
 import chiller3 from "@/assets/chiller3.jpg";
 import chiller4 from "@/assets/chiller4_2.png";
@@ -171,7 +171,7 @@ const Details = () => {
   ];
 
   const chillerImages = [
-    { src: chiller1, alt: "Premium chiller unit front view" },
+    { src: chiller1, alt: "Bartender lifting a chilled glass from the vapor-filled chiller" },
     { src: chiller2, alt: "Chiller interior storage design" },
     { src: chiller3, alt: "Temperature-controlled compartment" },
     { src: chiller4, alt: "Elegant chiller finish detail" },
