@@ -171,11 +171,11 @@ const Details = () => {
   ];
 
   const chillerImages = [
-    { src: chiller1, alt: "Bartender lifting a chilled glass from the vapor-filled chiller" },
+    { src: chiller1, alt: "Premium chiller unit front view" },
     { src: chiller2, alt: "Chiller interior storage design" },
     { src: chiller3, alt: "Temperature-controlled compartment" },
     { src: chiller4, alt: "Elegant chiller finish detail" },
-    { src: chiller5, alt: "Chiller integrated with bar design" },
+    { src: chiller5, alt: "Bartender lifting a chilled glass from the vapor-filled chiller" },
   ];
 
   return (
