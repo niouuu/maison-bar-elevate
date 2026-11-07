@@ -38,8 +38,8 @@ import cocktails8 from "@/assets/cocktails8.jpeg";
 import cocktails9 from "@/assets/cocktails9.jpeg";
 import cocktails10 from "@/assets/cocktails10.png";
 import cocktails11 from "@/assets/cocktails11.jpeg";
-import cocktails12 from "@/assets/cocktails12.png";
-import cocktails13 from "@/assets/cocktails13.jpeg";
+import cocktails12 from "@/assets/IMG_2094.jpg";
+import cocktails13 from "@/assets/IMG_2125.jpg";
 import cocktails14 from "@/assets/cocktails14.jpg";
 import cocktails4 from "@/assets/cocktails4.jpg";
 
